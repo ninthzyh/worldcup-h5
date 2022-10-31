@@ -3,11 +3,11 @@
     <div class="schedule-item">
       <div class="item-left">
         <div class="team">
-          <div class="team-icon"></div>
+          <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :border="`${$vw(1)} solid #fff`" />
           <div class="team-name">英格兰</div>
         </div>
         <div class="team">
-          <div class="team-icon"></div>
+          <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :border="`${$vw(1)} solid #fff`" />
           <div class="team-name">英格兰</div>
         </div>
       </div>
@@ -18,6 +18,14 @@
     </div>
   </div>
 </template>
+<script>
+import NationalFlag from "./NationalFlag";
+export default {
+  components: {
+    NationalFlag,
+  },
+};
+</script>
 <style lang="scss" scoped>
 @import "~@/assets/vw";
 .schedule-list {
@@ -39,14 +47,8 @@
       .team {
         display: flex;
         align-items: center;
-        .team-icon {
-          width: vw(24);
-          height: vw(24);
-          border-radius: 50%;
-          margin-right: vw(16);
-          background: #fff;
-        }
         .team-name {
+          margin-left: vw(16);
           font-weight: 400;
           line-height: vw(20);
         }

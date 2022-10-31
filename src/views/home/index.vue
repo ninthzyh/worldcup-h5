@@ -4,11 +4,25 @@
       <div class="logo"></div>
     </div>
     <div class="content">
-      <div class="home-screen"></div>
+      <div class="home-screen">
+        <div class="screen-label">
+          <span class="live-icon">LIVE</span>
+          <span class="today">今日 16:00</span>
+          <div class="vs">
+            <div>葡萄牙<span class="line">-</span></div>
+            <div>乌拉圭</div>
+          </div>
+          <div class="flag">
+            <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :border="`${$vw(1)} solid #fff`" />
+            <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :border="`${$vw(1)} solid #fff`" />
+          </div>
+          <div class="watching">立即观赛</div>
+        </div>
+      </div>
       <div class="nav-wrap">
         <div class="title">世界杯导航</div>
         <div class="nav">
-          <div class="nav-item" v-for="(item,index) in navList" :key="index">
+          <div class="nav-item" v-for="(item,index) in navList" :key="index" @click="()=>onNavClick(item.url)">
             <div class="icon-wrap">
               <div :class="item.class"></div>
             </div>
@@ -25,8 +39,8 @@
               <div class="status-icon" v-if="item.live"></div>
             </div>
             <div class="team">
-              <div class="team-item"></div>
-              <div class="team-item"></div>
+              <national-flag :width="`${$vw(40)}`" :height="`${$vw(40)}`" :border="`${$vw(1)} solid #fff`" />
+              <national-flag :width="`${$vw(40)}`" :height="`${$vw(40)}`" :border="`${$vw(1)} solid #fff`" />
             </div>
             <div class="team-name">卡塔尔<span>0</span></div>
             <div class="team-name">卡塔尔<span>1</span></div>
@@ -39,10 +53,12 @@
   </div>
 </template>
 <script>
-import ScheduleList from "../../components/scheduleList";
+import ScheduleList from "../../components/ScheduleList";
+import NationalFlag from "../../components/NationalFlag";
 export default {
   components: {
     ScheduleList,
+    NationalFlag,
   },
   data() {
     return {
@@ -50,18 +66,22 @@ export default {
         {
           label: "赛程",
           class: "schedule",
+          url:'/catalogue/schedule'
         },
         {
           label: "排名",
           class: "rank",
+          url:'/catalogue/rank'
         },
         {
           label: "分组",
           class: "groups",
+          url:'/catalogue/groups'
         },
         {
           label: "晋级",
           class: "rise",
+          url:'/catalogue/rise'
         },
       ],
       doingList: [
@@ -91,6 +111,11 @@ export default {
       ],
     };
   },
+  methods:{
+    onNavClick(url){
+      this.$router.push(url)
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
@@ -123,6 +148,50 @@ export default {
       height: vw(194);
       background: url("~@/assets/images/home-header.png") no-repeat
         center/contain;
+      .screen-label {
+        padding: vw(13) vw(16);
+        font-family: "PingFang SC";
+        font-weight: 600;
+        line-height: vw(24);
+        .live-icon {
+          background: #d81739;
+          border-radius: vw(1);
+          font-family: "Inter";
+          font-size: vw(8);
+          color: #000000;
+          padding: vw(4);
+          margin-right: vw(8);
+        }
+        .today {
+          font-size: vw(8);
+          color: rgba(255, 255, 255, 0.7);
+        }
+        .vs {
+          font-family: "Inter";
+          font-size: vw(24);
+          line-height: vw(29);
+          padding: vw(7) 0;
+          .line {
+            padding-left: vw(8);
+          }
+        }
+        .flag {
+          display: flex;
+          padding-bottom: vw(12);
+          > div:not(:last-child) {
+            margin-right: vw(12);
+          }
+        }
+        .watching {
+          color: #000000;
+          background: rgba(255, 255, 255, 0.87);
+          border-radius: 2px;
+          padding: vw(4) vw(8);
+          transform: scale(0.6);
+          transform-origin: 0 0;
+          width: vw(57);
+        }
+      }
     }
     .title {
       font-weight: 500;
@@ -228,13 +297,6 @@ export default {
             display: flex;
             justify-content: space-between;
             padding-bottom: vw(16);
-            .team-item {
-              width: vw(40);
-              height: vw(40);
-              background-blend-mode: lighten;
-              border-radius: 50%;
-              border: vw(1) solid #ffffff;
-            }
           }
           .team-name {
             line-height: vw(28);
