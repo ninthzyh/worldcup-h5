@@ -11,12 +11,12 @@ export default {
   props: {
     width: {
       //默认宽
-      type: Number,
+      type: String,
       default: 0,
     },
     height: {
       //默认高
-      type: Number,
+      type: String,
       default: 0,
     },
     border: {
