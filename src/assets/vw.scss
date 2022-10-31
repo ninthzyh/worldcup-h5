@@ -1,0 +1,33 @@
+$vw_base: 375;
+@function vw($px) {
+  @return($px / $vw_base) * 100vw
+}
+
+.font-10{
+  font-size: vw(12);
+  transform: scale(0.83333);
+  transform-origin: 50% 50%;
+}
+.font-12{
+  font-size: vw(12);
+}
+.font-14{
+  font-size: vw(14);
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.national-flag{
+  height: vw(20);
+  vertical-align: middle;
+}
+
+.ellipsis{
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
