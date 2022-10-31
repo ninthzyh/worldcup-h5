@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style>
+<style  lang="scss">
 @import "./assets/common.scss";
 #app {
   height: 100vh;
