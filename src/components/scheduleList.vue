@@ -3,12 +3,12 @@
     <div class="schedule-item" v-for="(item,index) in dataList" :key="index">
       <div class="item-left">
         <div class="team">
-          <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :border="`${$vw(1)} solid #fff`" />
+          <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :border="`${$vw(1)} solid #fff`" :img="item.homeFlag"/>
           <div class="team-name">{{item.homeName}}</div>
           <div class="team-score">{{item.homeScore}}</div>
         </div>
         <div class="team">
-          <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :border="`${$vw(1)} solid #fff`" />
+          <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :border="`${$vw(1)} solid #fff`" :img="item.awayFlag"/>
           <div class="team-name">{{item.awayName}}</div>
           <div class="team-score">{{item.awayScore}}</div>
         </div>

@@ -70,7 +70,7 @@ export default {
 <style lang="scss" scoped>
 @import "~@/assets/vw";
 .menu-container {
-  height: vw(156);
+  height: vw(136);
   background: linear-gradient(180deg, #96263a 12.77%, #0c0e11 88.3%);
   .menu-header {
     display: flex;
