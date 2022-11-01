@@ -7525,6 +7525,11 @@ uuid@^3.0.1, uuid@^3.3.2:
   resolved "https://registry.npmmirror.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
+v-calendar-mobile@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.npmmirror.com/v-calendar-mobile/-/v-calendar-mobile-1.0.3.tgz#36650f16ecc7f2254b56e5d78857c3c69929c5d7"
+  integrity sha512-yvbN5vC02yuizdW5q7+DOJ757XS7GtZ3Zg5uYQcfXTLftRVetmSVSK1hbGV2wED8tkQY+fTp0vH7m3nqlcPr8g==
+
 validate-npm-package-license@^3.0.1:
   version "3.0.4"
   resolved "https://registry.npmmirror.com/validate-npm-package-license/-/validate-npm-package-license-3.0.4.tgz#fc91f6b9c7ba15c857f4cb2c5defeec39d4f410a"

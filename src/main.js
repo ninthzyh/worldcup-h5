@@ -9,6 +9,16 @@ Vue.config.productionTip = false
 Vue.prototype.$vw = function (px) {
   return `${(px / 375) * 100}vw`
 }
+// 比赛状态
+Vue.prototype.$matchStatus = {
+  'Fixture':'未开始',
+  'Playing':'进行中',
+  'Played':'已结束',
+  'Cancelled':'取消',
+  'Postponed':'延期',
+  'Suspended':'暂停',
+  'Awarded':'官方裁定',
+}
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

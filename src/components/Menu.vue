@@ -68,7 +68,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/vw";
+@import "~@/assets/vw";
 .menu-container {
   height: vw(156);
   background: linear-gradient(180deg, #96263a 12.77%, #0c0e11 88.3%);
@@ -82,8 +82,8 @@ export default {
       background: url("~@/assets/images/back.svg") no-repeat center/contain;
     }
     .world-cup-logo {
-      width: vw(144);
-      height: vw(44);
+      width: vw(112);
+      height: vw(33);
       background: url("~@/assets/images/world-cup-logo.svg") no-repeat
         center/contain;
       margin: 0 auto;
