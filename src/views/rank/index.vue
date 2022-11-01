@@ -6,14 +6,39 @@
     </div>
     <div class="rank-content">
       <template v-if="type==='team'">
-        <rank-card title="进球榜" url='/catalogue/goalsList' :cardData="teamData.goalList" type="team" :top="true" />
-        <rank-card title="助攻榜" url='' :cardData="teamData.assistList" type="team" :top="true" />
-        <rank-card title="平均控球率" url='' :cardData="teamData.possessionList" type="team" :top="true" />
+        <rank-card :title="goal.title" :pageSize="3" :top="true" :config="teamConfig" :cardData="teamData.goalList">
+          <template v-slot:subtitle>
+            <div class="arrow-right" @click="()=>jumpTo(goal)"></div>
+          </template>
+        </rank-card>
+        <rank-card :title="assist.title" :pageSize="3" :top="true" :config="teamConfig" :cardData="teamData.assistList">
+          <template v-slot:subtitle>
+            <div class="arrow-right" @click="()=>jumpTo(assist)"></div>
+          </template>
+        </rank-card>
+        <rank-card :title="possession.title" :pageSize="3" :top="true" :config="teamConfig"
+          :cardData="teamData.possessionList">
+          <template v-slot:subtitle>
+            <div class="arrow-right" @click="()=>jumpTo(possession)"></div>
+          </template>
+        </rank-card>
       </template>
       <template v-else>
-        <rank-card title="进球榜" :subTitle="true" :cardData="playerData.goalList" type="player" :top="true" />
-        <rank-card title="助攻榜" :subTitle="true" :cardData="playerData.assistList" type="player" :top="true" />
-        <rank-card title="进球+助攻" :subTitle="true" :cardData="playerData.goalAndAssistList" type="player" :top="true" />
+        <rank-card :title="goal.title" :pageSize="3" :top="true" :config="playerConfig" :cardData="playerData.goalList">
+          <template v-slot:subtitle>
+            <div class="arrow-right" @click="()=>jumpTo(goal)"></div>
+          </template>
+        </rank-card>
+        <rank-card :title="assist.title" :pageSize="3" :top="true" :config="playerConfig" :cardData="playerData.assistList">
+          <template v-slot:subtitle>
+            <div class="arrow-right" @click="()=>jumpTo(assist)"></div>
+          </template>
+        </rank-card>
+        <rank-card :title="goalAndAssist.title" :pageSize="3" :top="true" :config="playerConfig" :cardData="playerData.goalAndAssistList">
+          <template v-slot:subtitle>
+            <div class="arrow-right" @click="()=>jumpTo(goalAndAssist)"></div>
+          </template>
+        </rank-card>
       </template>
     </div>
   </div>
@@ -102,7 +127,7 @@ export default {
             playerId: "h17s3qts1dz1zqjw19jazzkl",
             playerName: "C·罗纳尔多",
             playerFlag: null,
-            statValue: 4,
+            statValue: 54,
             position: "前锋",
           },
           {
@@ -167,12 +192,50 @@ export default {
           },
         ],
       }, //球员数据
+      teamConfig: {
+        name: "teamName",
+        flag: "teamFlag",
+        score: "statValue",
+      },
+      playerConfig: {
+        name: "playerName",
+        flag: "playerFlag",
+        score: "statValue",
+        position: "position",
+      },
+      goal: {
+        key: "goalList",
+        title: "进球榜",
+        subtitle: "进球",
+      },
+      assist: {
+        key: "assistList",
+        title: "助攻榜",
+        subtitle: "进球",
+      },
+      possession: {
+        key: "possessionList",
+        title: "平均控球率",
+        subtitle: "进球",
+      },
+      goalAndAssist: {
+        key: "goalAndAssistList",
+        title: "进球+助攻",
+        subtitle: "进球",
+      },
     };
   },
   methods: {
     // 球队|球员radio点击事件
     onRadio(type) {
       this.type = type;
+    },
+    // > 跳转到卡片详情页
+    jumpTo(item) {
+      this.$router.push({
+        name: "goalsList",
+        params: { ...item, config: this.teamConfig },
+      });
     },
   },
 };
@@ -202,6 +265,12 @@ export default {
   }
   .rank-content {
     padding: vw(16) vw(24);
+    .arrow-right {
+      height: vw(16);
+      width: vw(16);
+      background: url("~@/assets/images/arrow-right.svg") no-repeat
+        center/contain;
+    }
   }
 }
 </style>

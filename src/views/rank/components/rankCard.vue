@@ -2,95 +2,98 @@
   <div class="rank-card">
     <div class="rank-title">
       {{title}}
-      <div class="arrow-right" @click="jumpTo"></div>
+      <slot name="subtitle"></slot>
     </div>
     <div class="rank-content" ref="scroll">
-      <div class="rank-content-item" v-for="(item,index) in cardData" :key="index">
+      <div class="rank-content-item" v-for="(item,index) in list" :key="index">
         <div class="item-left">
           <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :border="`${$vw(1)} solid #fff`"
-            :img="item[config[type]['flag']]" />
+            :img="item[config.flag]" />
           <div class="text">
-            {{item[config[type]['name']]}}
-            <div v-if="subTitle" class="subtitle">{{item[config[type]['position']]}}</div>
+            {{item[config.name]}}
+            <div class="describe">{{item[config.position]}}</div>
           </div>
         </div>
-        <!-- top&&列表中第一个加得分红色背景 -->
-        <div :class="`${(top&&index===0)?'first':''} score`">{{item[config[type]['score']]}}</div>
+        <div :class="`${(top&&index===0)?'first':''} score`">{{item[config.score]}}</div>
       </div>
     </div>
+    <Loading v-if="loading" />
   </div>
 </template>
 <script>
 import NationalFlag from "../../../components/NationalFlag";
+import Loading from "../../../components/Loading";
 export default {
   components: {
     NationalFlag,
-  },
-  mounted() {
-    window.addEventListener("scroll", this.handleScroll, true);
-  },
-  beforeDestroy() {
-    window.removeEventListener("scroll", this.handleScroll, true);
+    Loading,
   },
   props: {
-    //  类型：球队team|球员player
-    type: {
-      type: String,
-      default: "team",
-    },
     // 标题
     title: {
       type: String,
       default: "",
     },
     // 球员位置小标题
-    subTitle: {
+    describe: {
       type: Boolean,
       default: false,
-    },
-    // 卡片跳转路由
-    url: {
-      type: String,
-      default: "",
     },
     // 卡片data
     cardData: {
       type: Array,
       default: [],
     },
-    // top得分红点
+
+    // top得分红点,不滚动加载
     top: {
       type: Boolean,
       default: false,
     },
+    // 每页条数
+    pageSize: {
+      type: Number,
+      default: 1,
+    },
+    config: {
+      type: Object,
+      default: {},
+    },
+  },
+  watch: {
+    cardData: {
+      immediate: true,
+      handler(newData, oldData) {
+        this.getData();
+      },
+      deep: true,
+    },
+  },
+  mounted() {
+    this.getData();
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll, true);
   },
   data() {
     return {
-      config: {
-        team: {
-          name: "teamName",
-          flag: "teamFlag",
-          score: "statValue",
-        },
-        player: {
-          name: "playerName",
-          flag: "playerFlag",
-          score: "statValue",
-          position: "position",
-        },
-      }, //映射
+      pagination: {
+        current: 1,
+        total: 0,
+      },
+      list: [],
+      loading: false,
     };
   },
   methods: {
-    // > 跳转到卡片详情页
-    jumpTo() {
-      if (this.url) {
-        this.$router.push({
-          name: "goalsList",
-          params: {
-            title: this.title,
-          },
-        });
+    getData() {
+      // 取列表中前pageSize条
+      this.list = [...this.cardData].splice(0, this.pageSize);
+      // top1得分红点，不滚动加载
+      if (!this.top) {
+        // 总条数
+        this.pagination.total = this.cardData.length;
+        window.addEventListener("scroll", this.handleScroll, true);
       }
     },
     //滚动事件
@@ -110,12 +113,22 @@ export default {
     //滚动刷新
     loadMore() {
       //Math.ceil()向上取整，小数部分直接舍去，并向正数部分进1
-      //   if (
-      //     Math.ceil(this.page.total / this.page.pageSize) > this.page.currentPage
-      //   ) {
-      //     this.page.currentPage++;
-      //     this.getList();
-      //   }
+      if (
+        Math.ceil(this.pagination.total / this.pageSize) >
+        this.pagination.current
+      ) {
+        this.loading = true;
+        // loading 0.5s
+        let timer = setTimeout(() => {
+          this.loading = false;
+        }, 500);
+        this.pagination.current++;
+        // 列表数据=当前页数*每页多少个
+        this.list = [...this.cardData].slice(
+          0,
+          this.pagination.current * this.pageSize
+        );
+      }
     },
   },
 };
@@ -130,6 +143,7 @@ export default {
   font-family: "PingFang SC";
   font-style: normal;
   color: #ffffff;
+//   height: 0;
   .rank-title {
     font-weight: 600;
     font-size: vw(14);
@@ -138,15 +152,9 @@ export default {
     align-items: center;
     justify-content: space-between;
     padding-bottom: vw(20);
-    .arrow-right {
-      height: vw(16);
-      width: vw(16);
-      background: url("~@/assets/images/arrow-right.svg") no-repeat
-        center/contain;
-    }
   }
   .rank-content {
-    height: 100px;
+    // height: calc(100vh - #{vw(44)});
     overflow: auto;
     .rank-content-item {
       display: flex;
@@ -162,7 +170,7 @@ export default {
           font-weight: 500;
           font-size: vw(12);
           line-height: vw(24);
-          .subtitle {
+          .describe {
             font-weight: 400;
             transform: scale(0.8);
             transform-origin: 0 0;

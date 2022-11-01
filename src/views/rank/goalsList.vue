@@ -7,8 +7,11 @@
       </div>
     </div>
     <div class="list-content">
-      <rank-card title="进球榜" :cardData="teamData.goalList" type="team" />
-
+      <rank-card :title="$route.params.title" :pageSize="10" :config="$route.params.config" :cardData="teamData[$route.params.key]">
+        <template v-slot:subtitle>
+          <div class="subtitle">{{$route.params.subtitle}}</div>
+        </template>
+      </rank-card>
     </div>
   </div>
 </template>
@@ -17,12 +20,78 @@ import RankCard from "./components/rankCard";
 export default {
   components: { RankCard },
   mounted() {
-    console.log(this.$route);
+    // 球员|球队页面没有参数，刷新页面跳转到上一级排名页面
+    if (!Object.keys(this.$route.params).length) {
+      this.$router.push("/catalogue/rank");
+    }
   },
-  data(){
-    return{
+  data() {
+    return {
       teamData: {
         goalList: [
+          {
+            teamId: "4pz87gsel7183b7kcadw1dwzv",
+            teamName: "法国",
+            teamFlag: null,
+            statValue: 14,
+            statValueStr: "14",
+          },
+          {
+            teamId: "4njsfszcgd9m765d6suktsz2a",
+            teamName: "克罗地亚",
+            teamFlag: null,
+            statValue: 14,
+            statValueStr: "14",
+          },
+          {
+            teamId: "ck8m1cn23sukwsurgx5qakttk",
+            teamName: "英格兰",
+            teamFlag: null,
+            statValue: 12,
+            statValueStr: "12",
+          },
+          {
+            teamId: "4pz87gsel7183b7kcadw1dwzv",
+            teamName: "法国",
+            teamFlag: null,
+            statValue: 14,
+            statValueStr: "14",
+          },
+          {
+            teamId: "4njsfszcgd9m765d6suktsz2a",
+            teamName: "克罗地亚",
+            teamFlag: null,
+            statValue: 14,
+            statValueStr: "14",
+          },
+          {
+            teamId: "ck8m1cn23sukwsurgx5qakttk",
+            teamName: "英格兰",
+            teamFlag: null,
+            statValue: 12,
+            statValueStr: "12",
+          },
+          {
+            teamId: "4pz87gsel7183b7kcadw1dwzv",
+            teamName: "法国",
+            teamFlag: null,
+            statValue: 14,
+            statValueStr: "14",
+          },
+          {
+            teamId: "4njsfszcgd9m765d6suktsz2a",
+            teamName: "克罗地亚",
+            teamFlag: null,
+            statValue: 14,
+            statValueStr: "14",
+          },
+          {
+            teamId: "ck8m1cn23sukwsurgx5qakttk",
+            teamName: "英格兰",
+            teamFlag: null,
+            statValue: 12,
+            statValueStr: "12",
+          },
           {
             teamId: "4pz87gsel7183b7kcadw1dwzv",
             teamName: "法国",
@@ -48,7 +117,7 @@ export default {
         assistList: [
           {
             teamId: "f0frccyrlq2jjihdraoie2e2d",
-            teamName: "俄罗斯",
+            teamName: "1俄罗斯",
             teamFlag: null,
             statValue: 8,
             statValueStr: "8",
@@ -92,7 +161,7 @@ export default {
           },
         ],
       }, //球队数据
-    }
+    };
   },
   methods: {
     onBack() {
@@ -132,6 +201,11 @@ export default {
     flex: 1;
     padding: vw(24) vw(22) vw(80) vw(26);
     border-top: vw(1) solid rgba(255, 255, 255, 0.12);
+    .subtitle {
+      font-weight: 500;
+      font-size: vw(12);
+      line-height: vw(24);
+    }
   }
 }
 </style>
