@@ -24,6 +24,11 @@ export default {
       type: String,
       default: "0 solid #ffffff",
     },
+    img:{
+      // 国旗图片
+      type:String,
+      default:''
+    }
   },
 };
 </script>

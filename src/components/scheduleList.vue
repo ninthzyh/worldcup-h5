@@ -27,8 +27,8 @@ import NationalFlag from "./NationalFlag";
 export default {
   props: {
     dataList: {
-      value: [],
-      default: Array,
+      type: Array,
+      default: [],
     },
   },
   components: {
@@ -47,7 +47,6 @@ export default {
   .schedule-item {
     background: rgba(0, 0, 0, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(vw(8));
     border-radius: vw(16);
     padding: vw(20);
     display: flex;

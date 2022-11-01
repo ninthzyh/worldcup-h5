@@ -130,8 +130,9 @@ export default {
   font-style: normal;
   color: #ffffff;
   height: calc(100vh - #{vw(156)});
+  overflow: auto;
   .schedule-content {
-    padding: vw(18);
+    padding: vw(24) vw(16);
     .round-title {
       font-weight: 500;
       font-size: vw(16);

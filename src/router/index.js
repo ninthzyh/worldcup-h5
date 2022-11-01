@@ -6,6 +6,7 @@ import Schedule from "@/views/schedule";
 import Rank from "@/views/rank";
 import Groups from "@/views/groups";
 import Rise from "@/views/rise";
+import GoalsList from "@/views/rank/goalsList";
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
         { path: 'groups', component: Groups },
         { path: 'rise', component: Rise },
       ]
+    },
+    {
+      path: '/catalogue/goalsList',
+      name: 'goalsList',
+      component: GoalsList,
     }
   ]
 })

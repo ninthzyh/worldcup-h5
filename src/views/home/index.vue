@@ -8,15 +8,15 @@
         <div class="screen-label">
           <div class="screen-live">
             <span class="live-icon">LIVE</span>
-            <span class="today">今日 16:00</span>
+            <span class="today">今日 {{bannerData.matchDatetime}}</span>
           </div>
           <div class="vs">
-            <div>葡萄牙<span class="line">-</span></div>
-            <div>乌拉圭</div>
+            <div>{{bannerData.homeName}}<span class="line">-</span></div>
+            <div>{{bannerData.awayName}}</div>
           </div>
           <div class="flag">
-            <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :border="`${$vw(1)} solid #fff`" />
-            <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :border="`${$vw(1)} solid #fff`" />
+            <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :border="`${$vw(1)} solid #fff`" :img="bannerData.homeFlag"/>
+            <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :border="`${$vw(1)} solid #fff`" :img="bannerData.awayFlag" />
           </div>
           <div class="watching">立即观赛</div>
         </div>
@@ -163,6 +163,31 @@ export default {
           awayScore: null,
         },
       ],
+      bannerData: {
+        matchId: "bzyh8uc9dcu6mnj4zpx9nh6hg",
+        matchDate: "2022-11-21",
+        matchDatetime: "13:00",
+        homeId: "ck8m1cn23sukwsurgx5qakttk",
+        homeCode: "ENG",
+        homeName: "英格兰",
+        homeShortName: "英格兰",
+        homeOfficialName: null,
+        homeFlag: null,
+        awayId: "cubclbw5k5gdqdau95bnav0nn",
+        awayCode: "IRN",
+        awayName: "伊朗",
+        awayShortName: "伊朗",
+        awayOfficialName: null,
+        awayFlag: null,
+        stageId: "2awryriz2besyqksnv5o9db3e",
+        stageName: "小组赛",
+        seriesId: "2b1930z6tow4xzg7wtpoy47sa",
+        seriesName: "B组",
+        matchStatus: "Fixture",
+        matchOutcome: null,
+        homeScore: null,
+        awayScore: null,
+      },
       // doingList: [
       //   {
       //     live: true,
@@ -296,7 +321,6 @@ export default {
         .nav-item {
           background: rgba(255, 255, 255, 0.04);
           border: vw(1) solid rgba(255, 255, 255, 0.12);
-          backdrop-filter: blur(vw(8));
           border-radius: vw(8);
           padding: vw(16) vw(24) vw(8) vw(24);
           .icon-wrap {
