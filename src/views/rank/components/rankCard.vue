@@ -102,7 +102,7 @@ export default {
     .arrow-right {
       height: vw(16);
       width: vw(16);
-      background: url("~@/assets/images/arrow-right.svg") no-repeat
+      background: url("~@/assets/images/arrow-right-small.svg") no-repeat
         center/contain;
     }
   }
