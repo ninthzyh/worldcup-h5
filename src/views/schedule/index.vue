@@ -31,7 +31,7 @@ export default {
       minDate: new Date(2022, 10, 20), //2022-11-20
       maxDate: new Date(2022, 11, 18), //2022-12-18
       dateStr: this.formatDate(new Date(2022, 10, 20)), //日期默认：2022-11-20 string
-      date:null,//
+      date:null,// value:Date
       show: false,
       stageList: [
         {
@@ -129,7 +129,9 @@ export default {
   },
   methods: {
     // ＋、-
-    onClick() {},
+    onClick() {
+      
+    },
     // 日期选中确定
     onConfirm(date) {
       this.show = false;
