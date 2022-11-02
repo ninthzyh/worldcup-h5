@@ -1,10 +1,6 @@
 <template>
   <div class="schedule">
-    <!-- <v-calendar-mobile :changeMode="true">
-        <template slot="dateCell" slot-scope="{day}">
-          {{day.day}}
-        </template>
-      </v-calendar-mobile> -->
+
     <div class="schedule-content">
       <div v-for="(item,index) in stageList" :key="index">
         <div class="round-title">{{item.stage}}</div>
@@ -18,9 +14,7 @@
 </template>
 <script>
 import ScheduleList from "../../components/ScheduleList";
-import vCalendarMobile from "v-calendar-mobile";
-// import Vue from 'vue'
-// Vue.use(vCalendarMobile);
+
 export default {
   components: {
     ScheduleList,
@@ -129,7 +123,7 @@ export default {
   font-family: "PingFang SC";
   font-style: normal;
   color: #ffffff;
-  height: calc(100vh - #{vw(156)});
+  height: calc(100vh - #{vw(136)});
   overflow: auto;
   .schedule-content {
     padding: vw(24) vw(16);

@@ -197,7 +197,7 @@ export default {
   font-style: normal;
   font-weight: 500;
   color: #ffffff;
-  height: calc(100vh - #{vw(156)});
+  height: calc(100vh - #{vw(136)});
   overflow: auto;
   .radio {
     font-size: vw(12);
