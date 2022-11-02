@@ -1,12 +1,12 @@
 <template>
-  <div class="national-flag" :style="{
+  <img :src="`${img?'':defaultFlag}`" alt="" class="national-flag" :style="{
         width,
         height,
-        border
+        margin
   }">
-  </div>
 </template>
 <script>
+import defaultFlag from "../assets/images/default-flag.svg";
 export default {
   props: {
     width: {
@@ -19,24 +19,21 @@ export default {
       type: String,
       default: 0,
     },
-    border: {
-      //默认边框
+    margin: {
+      //默认边距
       type: String,
-      default: "0 solid #ffffff",
+      default: "0 0 0 0",
     },
-    img:{
+    img: {
       // 国旗图片
-      type:String,
-      default:''
-    }
+      type: String,
+      default: '',
+    },
   },
+  data(){
+    return{
+      defaultFlag
+    }
+  }
 };
 </script>
-<style lang="scss" scoped>
-@import "~@/assets/vw";
-.national-flag {
-  background-blend-mode: lighten;
-  border-radius: 50%;
-  // border: vw(1) solid #ffffff;
-}
-</style>

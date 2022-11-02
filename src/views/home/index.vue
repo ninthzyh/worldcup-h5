@@ -15,8 +15,8 @@
             <div>{{bannerData.awayName}}</div>
           </div>
           <div class="flag">
-            <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :border="`${$vw(1)} solid #fff`" :img="bannerData.homeFlag"/>
-            <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :border="`${$vw(1)} solid #fff`" :img="bannerData.awayFlag" />
+            <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :margin="`0 ${$vw(12)} 0 0`" :img="''"/>
+            <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :img="bannerData.awayFlag" />
           </div>
           <div class="watching">立即观赛</div>
         </div>
@@ -41,8 +41,8 @@
               <div class="status-icon" v-if="item.live"></div>
             </div>
             <div class="team">
-              <national-flag :width="`${$vw(40)}`" :height="`${$vw(40)}`" :border="`${$vw(1)} solid #fff`" />
-              <national-flag :width="`${$vw(40)}`" :height="`${$vw(40)}`" :border="`${$vw(1)} solid #fff`" />
+              <national-flag :width="`${$vw(40)}`" :height="`${$vw(40)}`"   />
+              <national-flag :width="`${$vw(40)}`" :height="`${$vw(40)}`"   />
             </div>
             <div class="team-name">卡塔尔<span>0</span></div>
             <div class="team-name">卡塔尔<span>1</span></div>

@@ -15,7 +15,7 @@
         <div class="rank-content" ref="scroll">
           <div class="rank-content-item" v-for="(item,index) in list" :key="index">
             <div class="item-left">
-              <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :border="`${$vw(1)} solid #fff`"
+              <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`"  
                 :img="item[queryParams.config.flag]" />
               <div class="text">
                 {{item[queryParams.config.name]}}
