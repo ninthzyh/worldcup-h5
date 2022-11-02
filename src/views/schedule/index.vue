@@ -1,6 +1,6 @@
 <template>
   <div class="schedule">
-
+    <div class="calender" @click="show = true">123</div>
     <div class="schedule-content">
       <div v-for="(item,index) in stageList" :key="index">
         <div class="round-title">{{item.stage}}</div>
@@ -10,17 +10,21 @@
         </div>
       </div>
     </div>
+    <van-calendar v-model="show" :show-confirm="false" />
   </div>
 </template>
 <script>
+import Vue from "vue";
+import { Calendar } from "vant";
 import ScheduleList from "../../components/ScheduleList";
-
+Vue.use(Calendar);
 export default {
   components: {
     ScheduleList,
   },
   data() {
     return {
+      show: false,
       stageList: [
         {
           stage: "小组赛",
@@ -122,9 +126,11 @@ export default {
 .schedule {
   font-family: "PingFang SC";
   font-style: normal;
-  color: #ffffff;
+  // color: #ffffff;
   height: calc(100vh - #{vw(136)});
   overflow: auto;
+  .calender {
+  }
   .schedule-content {
     padding: vw(24) vw(16);
     .round-title {
