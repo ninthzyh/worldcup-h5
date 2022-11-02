@@ -3,12 +3,12 @@
     <div class="schedule-item" v-for="(item,index) in dataList" :key="index">
       <div class="item-left">
         <div class="team">
-          <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :img="item.homeFlag" />
+          <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :img="item.homeFlag" />
           <div class="team-name">{{item.homeName}}</div>
           <div class="team-score">{{item.homeScore}}</div>
         </div>
         <div class="team">
-          <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :img="item.awayFlag" />
+          <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :img="item.awayFlag" />
           <div class="team-name">{{item.awayName}}</div>
           <div class="team-score">{{item.awayScore}}</div>
         </div>
@@ -16,7 +16,9 @@
       <div class="item-right">
         <div class="time">{{item.matchDatetime}}</div>
         <div class="status live" v-if="item.matchStatus==='Playing'">LIVE</div>
-        <div class="status postponed" v-if="item.matchStatus==='Postponed'"><div class="info"></div>延迟</div>
+        <div class="status postponed" v-if="item.matchStatus==='Postponed'">
+          <div class="info"></div>延迟
+        </div>
         <div class="status" v-else>{{$matchStatus[item.matchStatus]}}</div>
       </div>
     </div>
@@ -40,7 +42,6 @@ export default {
 <style lang="scss" scoped>
 @import "~@/assets/vw";
 .schedule-list {
-  padding: vw(8) vw(18) vw(16) vw(18);
   font-family: "PingFang SC";
   font-style: normal;
   color: #ffffff;
@@ -48,11 +49,13 @@ export default {
   .schedule-item {
     background: rgba(0, 0, 0, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(#{vw(8)});
     border-radius: vw(16);
-    padding: vw(20);
+    padding: vw(15);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-sizing: border-box;
     .item-left {
       flex: 1;
       .team {
@@ -75,7 +78,7 @@ export default {
     }
     .item-right {
       border-left: 1px solid rgba(255, 255, 255, 0.24);
-      padding: vw(13) vw(20) vw(13) vw(40);
+      padding: vw(13) vw(26) vw(13) vw(42);
       text-align: center;
       font-family: "Inter";
       font-weight: 600;
@@ -87,7 +90,7 @@ export default {
       .status {
         line-height: vw(17);
         font-weight: 400;
-        font-family: "PingFang SC";
+        font-family: "Formular";
       }
       .live {
         line-height: vw(17);

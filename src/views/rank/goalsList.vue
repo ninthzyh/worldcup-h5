@@ -15,8 +15,7 @@
         <div class="rank-content" ref="scroll">
           <div class="rank-content-item" v-for="(item,index) in list" :key="index">
             <div class="item-left">
-              <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`"  
-                :img="item[queryParams.config.flag]" />
+              <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :img="item[queryParams.config.flag]" />
               <div class="text">
                 {{item[queryParams.config.name]}}
                 <div class="describe">{{item[queryParams.config.position]}}</div>
@@ -28,6 +27,7 @@
         <Loading v-if="loading" />
       </div>
     </div>
+    <div class="bg"></div>
   </div>
 </template>
 <script>
@@ -353,18 +353,24 @@ export default {
   }
   .list-content {
     flex: 1;
-    padding: vw(24) vw(22) vw(50) vw(26);
     border-top: vw(1) solid rgba(255, 255, 255, 0.12);
+    padding: vw(24) vw(22) vw(40) vw(26);
+    position: relative;
     .rank-card {
       background: rgba(0, 0, 0, 0.04);
       border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(#{vw(8)});
       border-radius: vw(16);
       font-family: "PingFang SC";
       font-style: normal;
       color: #ffffff;
-      height: 100%;
+      height: calc(100% - #{vw(65)});
       display: flex;
       flex-direction: column;
+      position: absolute;
+      width: calc(100% - #{vw(48)});
+
+      z-index: 1;
       .rank-title {
         font-weight: 600;
         font-size: vw(14);
@@ -384,12 +390,12 @@ export default {
       .rank-content {
         flex: 1 0 0;
         overflow: auto;
+        padding: 0 vw(16);
         .rank-content-item {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: vw(16);
-          border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+          padding: vw(16) 0;
           .item-left {
             display: flex;
             align-items: center;
@@ -409,13 +415,16 @@ export default {
           }
           .score {
             font-weight: 600;
-            font-size: vw(14);
+            font-size: vw(12);
             line-height: vw(16);
-            height: vw(24);
             width: vw(26);
             display: flex;
             align-items: center;
             justify-content: center;
+            font-family: "Inter";
+          }
+          &:not(:last-child) {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
           }
         }
       }
@@ -423,6 +432,15 @@ export default {
         margin-bottom: vw(16);
       }
     }
+  }
+  .bg {
+    width: 100%;
+    height: vw(375);
+    background: url("~@/assets/images/bg.svg") no-repeat center/contain;
+    position: absolute;
+    left: 0;
+    top: vw(224);
+    z-index: 0;
   }
 }
 </style>

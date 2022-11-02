@@ -7,15 +7,15 @@
       <div class="home-screen">
         <div class="screen-label">
           <div class="screen-live">
-            <span class="live-icon">LIVE</span>
-            <span class="today">今日 {{bannerData.matchDatetime}}</span>
+            <div class="live-icon">LIVE</div>
+            <div class="today">今日 {{bannerData.matchDatetime}}</div>
           </div>
           <div class="vs">
             <div>{{bannerData.homeName}}<span class="line">-</span></div>
             <div>{{bannerData.awayName}}</div>
           </div>
           <div class="flag">
-            <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :margin="`0 ${$vw(12)} 0 0`" :img="''"/>
+            <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :margin="`0 ${$vw(12)} 0 0`" :img="''" />
             <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :img="bannerData.awayFlag" />
           </div>
           <div class="watching">立即观赛</div>
@@ -32,25 +32,10 @@
           </div>
         </div>
       </div>
-      <!-- <div class="doing">
-        <div class="title">进行中<span>查看所有</span></div>
-        <div class="doing-card-wrap">
-          <div :class="item.live?'live-bg':'wait-bg'" v-for="(item,index) in doingList" :key="index">
-            <div class="status-wrap">
-              <div :class="item.live?'is-live':'wait'">{{item.live?'LIVE':item.time}}</div>
-              <div class="status-icon" v-if="item.live"></div>
-            </div>
-            <div class="team">
-              <national-flag :width="`${$vw(40)}`" :height="`${$vw(40)}`"   />
-              <national-flag :width="`${$vw(40)}`" :height="`${$vw(40)}`"   />
-            </div>
-            <div class="team-name">卡塔尔<span>0</span></div>
-            <div class="team-name">卡塔尔<span>1</span></div>
-          </div>
-        </div>
-      </div> -->
-      <div class="title">今日赛程<span>查看所有</span></div>
-      <schedule-list :dataList="matchList" />
+      <div class="today-schedule">
+        <div class="title">今日赛程<span>查看所有</span></div>
+        <schedule-list :dataList="matchList" />
+      </div>
     </div>
   </div>
 </template>
@@ -190,31 +175,6 @@ export default {
         homeScore: null,
         awayScore: null,
       },
-      // doingList: [
-      //   {
-      //     live: true,
-      //     teama: "卡塔尔",
-      //     teamb: "卡塔尔",
-      //     scorea: 0,
-      //     scoreb: 1,
-      //   },
-      //   {
-      //     live: false,
-      //     time: "16:00",
-      //     teama: "卡塔尔",
-      //     teamb: "卡塔尔",
-      //     scorea: 0,
-      //     scoreb: 1,
-      //   },
-      //   {
-      //     live: false,
-      //     time: "16:00",
-      //     teama: "卡塔尔",
-      //     teamb: "卡塔尔",
-      //     scorea: 0,
-      //     scoreb: 1,
-      //   },
-      // ],
     };
   },
   methods: {
@@ -256,24 +216,31 @@ export default {
         center/contain;
       .screen-label {
         padding: vw(13) vw(16);
-        font-family: "PingFang SC";
+        font-family: "Inter";
         font-weight: 600;
         line-height: vw(24);
         .screen-live {
-          transform: scale(0.5);
-          transform-origin: 0 0;
+          display: flex;
+          align-items: center;
           .live-icon {
             background: #d81739;
             border-radius: vw(1);
             font-family: "Inter";
-            font-size: vw(8);
+            font-size: vw(14);
             color: #000000;
-            padding: vw(4);
+            padding: vw(4) vw(8);
             margin-right: vw(8);
+            transform: scale(0.5);
+            transform-origin: 0 0;
           }
           .today {
-            font-size: vw(8);
+            transform: scale(0.5);
+            transform-origin: -60% 0;
+            font-size: vw(17);
             color: rgba(255, 255, 255, 0.7);
+            font-family: "PingFang SC";
+            font-weight: 600;
+            line-height: vw(24);
           }
         }
         .vs {
@@ -298,9 +265,10 @@ export default {
           background: rgba(255, 255, 255, 0.87);
           border-radius: 2px;
           padding: vw(4) vw(8);
-          transform: scale(0.6);
+          transform: scale(0.5);
           transform-origin: 0 0;
-          width: vw(57);
+          width: 21%;
+          text-align: center;
         }
       }
     }
@@ -332,6 +300,7 @@ export default {
             padding: vw(4);
             @mixin nav-item-icon($url) {
               height: vw(16);
+              // width: vw(16);
               background: url($url) no-repeat center/contain;
             }
             .schedule {
@@ -354,75 +323,9 @@ export default {
         }
       }
     }
-    // .doing {
-    //   .doing-card-wrap {
-    //     overflow-x: auto;
-    //     white-space: nowrap;
-    //     padding-left: vw(18);
-    //     .live-bg {
-    //       background: #872133;
-    //       @extend .doing-card;
-    //     }
-    //     .wait-bg {
-    //       background: rgba(255, 255, 255, 0.04);
-    //       border: 1px solid rgba(255, 255, 255, 0.12);
-    //       backdrop-filter: blur(8px);
-    //       @extend .doing-card;
-    //     }
-    //     .doing-card {
-    //       border-radius: 8px;
-    //       width: vw(103);
-    //       padding: vw(12) vw(15) vw(17) vw(16);
-    //       display: inline-block;
-    //       margin-right: vw(8);
-    //       .status-wrap {
-    //         display: flex;
-    //         justify-content: space-between;
-    //         align-items: center;
-    //         padding-bottom: vw(16);
-    //         .status {
-    //           font-family: "Sahar";
-    //           font-style: normal;
-    //           font-weight: 700;
-    //           font-size: vw(12);
-    //           padding: vw(3) vw(10);
-    //         }
-    //         .is-live {
-    //           background: #ffffff;
-    //           border-radius: vw(25);
-    //           color: #872133;
-    //           @extend .status;
-    //         }
-    //         .wait {
-    //           @extend .status;
-    //         }
-    //         .status-icon {
-    //           width: vw(6);
-    //           height: vw(6);
-    //           background: #42c0af;
-    //           border-radius: 50%;
-    //         }
-    //       }
-    //       .team {
-    //         display: flex;
-    //         justify-content: space-between;
-    //         padding-bottom: vw(16);
-    //       }
-    //       .team-name {
-    //         line-height: vw(28);
-    //         font-weight: 600;
-    //         > span {
-    //           float: right;
-    //           font-family: "Sahar";
-    //           font-weight: 700;
-    //         }
-    //       }
-    //       .team-name:not(:last-child) {
-    //         margin-bottom: vw(8);
-    //       }
-    //     }
-    //   }
-    // }
+    .today-schedule {
+      padding: 0 vw(16);
+    }
   }
 }
 </style>

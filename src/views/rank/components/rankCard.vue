@@ -86,6 +86,7 @@ export default {
 .rank-card {
   background: rgba(0, 0, 0, 0.04);
   border: vw(1) solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(#{vw(8)});
   border-radius: vw(16);
   padding: vw(16);
   font-family: "PingFang SC";
@@ -98,7 +99,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: vw(20);
+    padding-bottom: vw(24);
     .arrow-right {
       height: vw(16);
       width: vw(16);
@@ -139,6 +140,7 @@ export default {
         display: flex;
         align-items: center;
         justify-content: center;
+        font-family: 'Inter';
       }
       .first {
         background: #812334;

@@ -15,7 +15,7 @@
           <div class="table-content" v-for="(it,idx) in item.dataList" :key="idx">
             <div class="rows-first">
               <div class="index">{{idx+1}}</div>
-              <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :margin="`0 ${$vw(8)}`" :img="it.teamFlag" />
+              <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :margin="`0 ${$vw(13)}`" :img="it.teamFlag" />
               <div class="team-name">{{it.teamName}}</div>
             </div>
             <div class="rows-other">{{it.matchesPlayed}}</div>
@@ -28,10 +28,10 @@
       </div>
       <div class="group-logo"></div>
     </div>
-
     <div class="tips">
       <div class="legend"></div>晋级淘汰赛资格
     </div>
+    <div class="bg"></div>
   </div>
 </template>
 <script>
@@ -512,11 +512,15 @@ export default {
   font-family: "PingFang SC";
   font-style: normal;
   color: #fff;
+  position: relative;
+
   .groups-content {
     padding: vw(56) vw(24) 0 vw(24);
     height: calc(100% - #{vw(116)});
+    width: calc(100% - #{vw(48)});
     overflow: auto;
-    position: relative;
+    position: absolute;
+    z-index: 1;
     .group-logo {
       width: vw(56);
       height: vw(56);
@@ -528,6 +532,7 @@ export default {
     .group-item {
       background: rgba(0, 0, 0, 0.04);
       border: vw(1) solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(vw(8));
       border-radius: vw(16);
       font-family: "PingFang SC";
       font-style: normal;
@@ -555,7 +560,7 @@ export default {
             flex-basis: 125px;
             text-align: left;
             > span {
-              margin-right: vw(4);
+              margin-right: vw(14);
             }
           }
           .label {
@@ -603,7 +608,8 @@ export default {
     display: flex;
     align-items: center;
     padding: vw(16) vw(24) vw(28) vw(24);
-
+    position: absolute;
+    bottom: 0;
     .legend {
       width: vw(8);
       height: vw(8);
@@ -611,6 +617,15 @@ export default {
       border-radius: 50%;
       margin-right: vw(4);
     }
+  }
+  .bg {
+    width: 100%;
+    height: vw(375);
+    background: url("~@/assets/images/bg.svg") no-repeat center/contain;
+    position: absolute;
+    left: 0;
+    top: vw(152);
+    z-index: 0;
   }
 }
 </style>

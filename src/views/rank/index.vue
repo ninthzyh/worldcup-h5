@@ -7,15 +7,16 @@
     <div class="rank-content">
       <template v-if="isSelect">
         <rank-card :config="teamConfig" title="进球榜" :cardData="teamData" type="goalList" />
-        <rank-card :config="teamConfig" title="助攻榜" :cardData="teamData"  type="assistList" />
-        <rank-card :config="teamConfig" title="平均控球率" :cardData="teamData"  type="possessionList" />
+        <rank-card :config="teamConfig" title="助攻榜" :cardData="teamData" type="assistList" />
+        <rank-card :config="teamConfig" title="平均控球率" :cardData="teamData" type="possessionList" />
       </template>
       <template v-else>
-        <rank-card :config="playerConfig" title="进球榜" :cardData="playerData"  type="goalList" />
-        <rank-card :config="playerConfig" title="助攻榜" :cardData="playerData"  type="assistList" />
-        <rank-card :config="playerConfig" title="进球+助攻" :cardData="playerData"  type="goalAndAssistList" />
+        <rank-card :config="playerConfig" title="进球榜" :cardData="playerData" type="goalList" />
+        <rank-card :config="playerConfig" title="助攻榜" :cardData="playerData" type="assistList" />
+        <rank-card :config="playerConfig" title="进球+助攻" :cardData="playerData" type="goalAndAssistList" />
       </template>
     </div>
+    <div class="bg"></div>
   </div>
 </template>
 <script>
@@ -24,7 +25,7 @@ export default {
   components: { RankCard },
   data() {
     return {
-      isSelect:true,
+      isSelect: true,
       teamData: {
         goalList: [
           {
@@ -168,13 +169,13 @@ export default {
         ],
       }, //球员数据
       teamConfig: {
-        type:'team',
+        type: "team",
         name: "teamName",
         flag: "teamFlag",
         score: "statValue",
       },
       playerConfig: {
-        type:'player',
+        type: "player",
         name: "playerName",
         flag: "playerFlag",
         score: "statValue",
@@ -185,7 +186,7 @@ export default {
   methods: {
     // 球队|球员radio点击事件
     onRadio() {
-      this.isSelect=!this.isSelect
+      this.isSelect = !this.isSelect;
     },
   },
 };
@@ -198,7 +199,7 @@ export default {
   font-weight: 500;
   color: #ffffff;
   height: calc(100vh - #{vw(136)});
-  overflow: auto;
+  position: relative;
   .radio {
     font-size: vw(12);
     line-height: vw(32);
@@ -215,6 +216,20 @@ export default {
   }
   .rank-content {
     padding: vw(16) vw(24);
+    overflow: auto;
+    height: calc(100% - #{vw(80)});
+    width: calc(100% - #{vw(48)});
+    z-index: 1;
+    position: absolute;
+  }
+  .bg {
+    width: 100%;
+    height: vw(375);
+    background: url("~@/assets/images/bg.svg") no-repeat center/contain;
+    position: absolute;
+    left: 0;
+    top: vw(152);
+    z-index: 0;
   }
 }
 </style>
