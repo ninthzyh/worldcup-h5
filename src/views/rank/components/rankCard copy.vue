@@ -2,7 +2,7 @@
   <div class="rank-card">
     <div class="rank-title">
       {{title}}
-      <div class="arrow-right" @click="jumpTo"></div>
+      <slot name="subtitle"></slot>
     </div>
     <div class="rank-content" ref="scroll">
       <div class="rank-content-item" v-for="(item,index) in list" :key="index">
@@ -14,16 +14,19 @@
             <div class="describe">{{item[config.position]}}</div>
           </div>
         </div>
-        <div :class="`${(index===0)?'first':''} score`">{{item[config.score]}}</div>
+        <div :class="`${(top&&index===0)?'first':''} score`">{{item[config.score]}}</div>
       </div>
     </div>
+    <Loading v-if="loading" />
   </div>
 </template>
 <script>
 import NationalFlag from "../../../components/NationalFlag";
+import Loading from "../../../components/Loading";
 export default {
   components: {
     NationalFlag,
+    Loading,
   },
   props: {
     // 标题
@@ -38,13 +41,19 @@ export default {
     },
     // 卡片data
     cardData: {
-      type: Object,
-      default: {},
+      type: Array,
+      default: [],
     },
-    // 卡片类型
-    type: {
-      type: String,
-      default: "",
+
+    // top得分红点,不滚动加载
+    top: {
+      type: Boolean,
+      default: false,
+    },
+    // 每页条数
+    pageSize: {
+      type: Number,
+      default: 1,
     },
     config: {
       type: Object,
@@ -60,8 +69,18 @@ export default {
       deep: true,
     },
   },
+  mounted() {
+    this.getData();
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll, true);
+  },
   data() {
     return {
+      pagination: {
+        current: 1,
+        total: 0,
+      },
       list: [],
       loading: false,
     };
@@ -69,14 +88,47 @@ export default {
   methods: {
     getData() {
       // 取列表中前pageSize条
-      this.list = [...this.cardData[this.type]].splice(0, 3);
+      this.list = [...this.cardData].splice(0, this.pageSize);
+      // top1得分红点，不滚动加载
+      if (!this.top) {
+        // 总条数
+        this.pagination.total = this.cardData.length;
+        window.addEventListener("scroll", this.handleScroll, true);
+      }
     },
-    // > 跳转到卡片详情页
-    jumpTo() {
-      this.$router.push({
-        name: "goalsList",
-        params: { type: this.type, title: this.title, config: this.config },
-      });
+    //滚动事件
+    handleScroll() {
+      let scroll = this.$refs.scroll;
+      // 获取元素高度
+      let height = scroll.offsetHeight;
+      // 滚动区域到头部的距离
+      let top = scroll.scrollTop;
+      // 滚动条高度
+      let scrollHeight = scroll.scrollHeight;
+      // 滚动区域到头部的距离 + 屏幕高度 = 可滚动的总高度 //触底时自动加载
+      if (top + height >= scrollHeight) {
+        this.loadMore();
+      }
+    },
+    //滚动刷新
+    loadMore() {
+      //Math.ceil()向上取整，小数部分直接舍去，并向正数部分进1
+      if (
+        Math.ceil(this.pagination.total / this.pageSize) >
+        this.pagination.current
+      ) {
+        this.loading = true;
+        // loading 0.5s
+        let timer = setTimeout(() => {
+          this.loading = false;
+        }, 500);
+        this.pagination.current++;
+        // 列表数据=当前页数*每页多少个
+        this.list = [...this.cardData].slice(
+          0,
+          this.pagination.current * this.pageSize
+        );
+      }
     },
   },
 };
@@ -91,6 +143,7 @@ export default {
   font-family: "PingFang SC";
   font-style: normal;
   color: #ffffff;
+//   height: 0;
   .rank-title {
     font-weight: 600;
     font-size: vw(14);
@@ -99,14 +152,10 @@ export default {
     align-items: center;
     justify-content: space-between;
     padding-bottom: vw(20);
-    .arrow-right {
-      height: vw(16);
-      width: vw(16);
-      background: url("~@/assets/images/arrow-right.svg") no-repeat
-        center/contain;
-    }
   }
   .rank-content {
+    // height: calc(100vh - #{vw(44)});
+    overflow: auto;
     .rank-content-item {
       display: flex;
       align-items: center;
