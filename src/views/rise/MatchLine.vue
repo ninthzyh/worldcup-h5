@@ -1,7 +1,7 @@
 <template>
 <div class="match-line" :style="`width: ${$vw(width)}`">
   <div v-if="position === 'top'" class="top-two"></div>
-  <div :style="position === 'middle' ? `height:${$vw(32)}` : ''" class="one"></div>
+  <div  class="one"></div>
   <div v-if="position === 'bottom'" class="bottom-two"></div>
 </div>
 </template>

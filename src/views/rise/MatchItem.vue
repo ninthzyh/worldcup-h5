@@ -20,6 +20,9 @@
       <span class="score-">-</span>
       <span>{{matchItem.awayGoals}}</span>
     </div>
+    <div v-if="tips" class="tips" :style="`left:calc(50% - ${$vw(tipsWidth/2)});width:${$vw(tipsWidth)};`">
+      {{tips}}
+    </div>
   </div>
 </template>
 
@@ -36,6 +39,14 @@ export default {
     type: {
       type: String,
       default: "top",
+    },
+    tips: {
+      type: String,
+      default: "",
+    },
+    tipsWidth: {
+      type: Number,
+      default: 80,
     },
     matchItem: {
       type: Object,
@@ -58,6 +69,7 @@ export default {
   background: rgba(255, 255, 255, 0.06);
   border-radius: vw(4);
   padding-top: vw(8);
+  position: relative;
   .logo-container{
     display: flex;
     justify-content: space-around;
@@ -90,6 +102,16 @@ export default {
       flex: 0 0 vw(30);
       text-align: center;
     }
+  }
+  .tips{
+    position: absolute;
+    bottom: vw(-14);
+    text-align: center;
+    height: vw(20);
+    line-height: vw(20);
+    font-size: vw(12);
+    background: #8E2538;
+    border-radius: vw(20);
   }
 }
 
