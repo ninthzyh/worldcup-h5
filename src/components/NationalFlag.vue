@@ -1,14 +1,21 @@
 <template>
-  <div class="national-flag" :style="{
+  <img :src="`${img?'':defaultFlag}`" alt="" class="national-flag" :style="{
         width: computedWidth,
         height: computedHeight,
-        border: computedBorder
-  }">
-  </div>
+        border: computedBorder,
+        margin: computedMargin,
+  }" />
 </template>
 <script>
+import defaultFlag from "../assets/images/default-flag.svg";
+
 export default {
-  props: ['width','height','border'],
+  props: ['width','height','border', 'margin'],
+  data(){
+    return{
+      defaultFlag
+    }
+  },
   computed:{
     computedWidth(){
       return this.width || '100%'
@@ -19,6 +26,9 @@ export default {
     computedBorder(){
       return this.border || '0 solid #ffffff'
     },
+    computedMargin(){
+      return this.margin || "0 0 0 0"
+    },
   }
 };
 </script>
@@ -28,6 +38,5 @@ export default {
   background-blend-mode: lighten;
   border-radius: 50%;
   background-color: #ffffff;
-  // border: vw(1) solid #ffffff;
 }
 </style>
