@@ -10,7 +10,7 @@
 import defaultFlag from "../assets/images/default-flag.svg";
 
 export default {
-  props: ['width','height','border', 'margin'],
+  props: ['width','height','border', 'margin','img'],
   data(){
     return{
       defaultFlag

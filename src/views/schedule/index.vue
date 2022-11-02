@@ -1,6 +1,10 @@
 <template>
   <div class="schedule">
-    <div class="calender" @click="show = true">123</div>
+    <div class="calender-wrap">
+      <div class="arrow-left" @click="onClick"></div>
+      <div class="calender" @click="show = true">{{dateStr}}</div>
+      <div class="arrow-right" @click="onClick"></div>
+    </div>
     <div class="schedule-content">
       <div v-for="(item,index) in stageList" :key="index">
         <div class="round-title">{{item.stage}}</div>
@@ -10,7 +14,7 @@
         </div>
       </div>
     </div>
-    <van-calendar v-model="show" :show-confirm="false" />
+    <van-calendar v-model="show" @confirm="onConfirm" :min-date="minDate" :max-date="maxDate" />
   </div>
 </template>
 <script>
@@ -24,6 +28,10 @@ export default {
   },
   data() {
     return {
+      minDate: new Date(2022, 10, 20), //2022-11-20
+      maxDate: new Date(2022, 11, 18), //2022-12-18
+      dateStr: this.formatDate(new Date(2022, 10, 20)), //日期默认：2022-11-20 string
+      date:null,// value:Date
       show: false,
       stageList: [
         {
@@ -119,6 +127,25 @@ export default {
       ],
     };
   },
+  methods: {
+    // ＋、-
+    onClick() {
+      
+    },
+    // 日期选中确定
+    onConfirm(date) {
+      this.show = false;
+      this.date = date;
+      this.dateStr = this.formatDate(date);
+    },
+    // 选中日期，月日星期
+    formatDate(date) {
+      const dayList = ["日", "一", "二", "三", "四", "五", "六"];
+      return `${date.getMonth() + 1}月${date.getDate()}日 星期${
+        dayList[date.getDay()]
+      }`;
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -126,14 +153,41 @@ export default {
 .schedule {
   font-family: "PingFang SC";
   font-style: normal;
-  // color: #ffffff;
-  height: calc(100vh - #{vw(136)});
-  overflow: auto;
-  .calender {
+
+  .calender-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+    padding: vw(16) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    @mixin common-icon($url) {
+      width: vw(16);
+      height: vw(16);
+      background: url($url) no-repeat center/contain;
+      margin: 0 vw(18);
+    }
+    .arrow-left {
+      @include common-icon("~@/assets/images/arrow-left.svg");
+    }
+    .arrow-right {
+      @include common-icon("~@/assets/images/arrow-right.svg");
+    }
+    .calender {
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 2px;
+      flex: 1;
+      height: vw(40);
+      text-align: center;
+      line-height: vw(40);
+    }
   }
   .schedule-content {
     padding: vw(24) vw(16);
+    height: calc(100vh - #{vw(257)});
+    overflow: auto;
     .round-title {
+      color: #ffffff;
       font-weight: 500;
       font-size: vw(16);
       line-height: vw(22);
