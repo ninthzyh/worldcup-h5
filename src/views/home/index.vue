@@ -15,7 +15,7 @@
             <div>{{bannerData.awayName}}</div>
           </div>
           <div class="flag">
-            <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :margin="`0 ${$vw(12)} 0 0`" :img="''"/>
+            <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :margin="`0 ${$vw(12)} 0 0`" :img="''" />
             <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :img="bannerData.awayFlag" />
           </div>
           <div class="watching">立即观赛</div>
@@ -236,6 +236,7 @@ export default {
     position: fixed;
     min-width: 100%;
     width: max-content;
+    z-index: 9;
     .logo {
       position: absolute;
       margin: vw(52) auto auto auto;
