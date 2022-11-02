@@ -3,12 +3,12 @@
     <div class="schedule-item" v-for="(item,index) in dataList" :key="index">
       <div class="item-left">
         <div class="team">
-          <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`"   :img="item.homeFlag"/>
+          <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :img="item.homeFlag" />
           <div class="team-name">{{item.homeName}}</div>
           <div class="team-score">{{item.homeScore}}</div>
         </div>
         <div class="team">
-          <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`"   :img="item.awayFlag"/>
+          <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :img="item.awayFlag" />
           <div class="team-name">{{item.awayName}}</div>
           <div class="team-score">{{item.awayScore}}</div>
         </div>
@@ -16,6 +16,7 @@
       <div class="item-right">
         <div class="time">{{item.matchDatetime}}</div>
         <div class="status live" v-if="item.matchStatus==='Playing'">LIVE</div>
+        <div class="status postponed" v-if="item.matchStatus==='Postponed'"><div class="info"></div>延迟</div>
         <div class="status" v-else>{{$matchStatus[item.matchStatus]}}</div>
       </div>
     </div>
@@ -76,20 +77,35 @@ export default {
       border-left: 1px solid rgba(255, 255, 255, 0.24);
       padding: vw(13) vw(20) vw(13) vw(40);
       text-align: center;
+      font-family: "Inter";
+      font-weight: 600;
       .time {
         line-height: vw(17);
-        font-weight: 500;
+        font-weight: 600;
         padding-bottom: vw(4);
       }
       .status {
         line-height: vw(17);
         font-weight: 400;
+        font-family: "PingFang SC";
       }
       .live {
-        font-family: "Inter";
-        font-weight: 600;
         line-height: vw(17);
         color: #bd223b;
+      }
+      .postponed {
+        font-weight: 400;
+        font-family: "PingFang SC";
+        color: #42c0b3;
+        display: flex;
+        align-items: center;
+        line-height: vw(20);
+        .info {
+          margin-right: vw(4);
+          width: vw(16);
+          height: vw(16);
+          background: url("~@/assets/images/info.svg") no-repeat center/contain;
+        }
       }
     }
     &:not(:last-child) {

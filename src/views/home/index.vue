@@ -15,7 +15,7 @@
             <div>{{bannerData.awayName}}</div>
           </div>
           <div class="flag">
-            <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :margin="`0 ${$vw(12)} 0 0`" :img="''" />
+            <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :margin="`0 ${$vw(12)} 0 0`" :img="''"/>
             <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :img="bannerData.awayFlag" />
           </div>
           <div class="watching">立即观赛</div>
@@ -57,6 +57,8 @@
 <script>
 import ScheduleList from "../../components/ScheduleList";
 import NationalFlag from "../../components/NationalFlag";
+
+// 编译后代码
 export default {
   components: {
     ScheduleList,
