@@ -359,7 +359,6 @@ export default {
       background: rgba(0, 0, 0, 0.04);
       border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: vw(16);
-      // padding: vw(16);
       font-family: "PingFang SC";
       font-style: normal;
       color: #ffffff;
