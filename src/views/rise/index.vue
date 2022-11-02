@@ -10,12 +10,13 @@
   </div>
   <MatchLine position="middle" :width="375"/>
   <div class="center-container">
-    <MatchItem :match-item="topMatchList[0].list[0]"/>
-    <MatchItem :match-item="topMatchList[0].list[0]"/>
+    <MatchItem tips="3/4名决赛" :match-item="topMatchList[0].list[0]"/>
+    <MatchItem tips="决赛" :tips-width="48" :match-item="topMatchList[0].list[0]"/>
     <div class="champion-container">
       <div class="champion">
         <NationalFlag />
       </div>
+      <p>冠军</p>
     </div>
   </div>
   <MatchLine position="middle" :width="375"/>
@@ -140,8 +141,10 @@ export default {
 @import "../../assets/vw";
 .groups-container{
   background-color: #0c0e11;
-  height: calc(100vh - #{vw(188)});
+  height: calc(100vh - #{vw(138)});
   overflow: auto;
+  padding: vw(48) 0;
+  box-sizing: border-box;
   .match-list{
     display: flex;
     justify-content: space-around;
@@ -151,7 +154,9 @@ export default {
     justify-content: space-around;
     .champion-container{
       width: vw(80);
+      text-align: center;
       .champion{
+        display: inline-block;
         box-sizing: border-box;
         width: vw(62);
         height: vw(62);
