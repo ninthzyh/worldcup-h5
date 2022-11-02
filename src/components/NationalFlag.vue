@@ -1,30 +1,25 @@
 <template>
   <div class="national-flag" :style="{
-        width,
-        height,
-        border
+        width: computedWidth,
+        height: computedHeight,
+        border: computedBorder
   }">
   </div>
 </template>
 <script>
 export default {
-  props: {
-    width: {
-      //默认宽
-      type: String,
-      default: 0,
+  props: ['width','height','border'],
+  computed:{
+    computedWidth(){
+      return this.width || '100%'
     },
-    height: {
-      //默认高
-      type: String,
-      default: 0,
+    computedHeight(){
+      return this.height || '100%'
     },
-    border: {
-      //默认边框
-      type: String,
-      default: "0 solid #ffffff",
+    computedBorder(){
+      return this.border || '0 solid #ffffff'
     },
-  },
+  }
 };
 </script>
 <style lang="scss" scoped>
@@ -32,6 +27,7 @@ export default {
 .national-flag {
   background-blend-mode: lighten;
   border-radius: 50%;
+  background-color: #ffffff;
   // border: vw(1) solid #ffffff;
 }
 </style>
