@@ -1,9 +1,9 @@
 <template>
   <div class="schedule">
     <div class="calender-wrap">
-      <div class="arrow-left" @click="onClick"></div>
+      <div class="arrow-left" @click="()=>onClick(-1)"></div>
       <div class="calender" @click="show = true">{{dateStr}}</div>
-      <div class="arrow-right" @click="onClick"></div>
+      <div class="arrow-right" @click="()=>onClick(1)"></div>
     </div>
     <div class="schedule-content">
       <div v-for="(item,index) in stageList" :key="index">
@@ -14,7 +14,8 @@
         </div>
       </div>
     </div>
-    <van-calendar v-model="show" @confirm="onConfirm" :min-date="minDate" :max-date="maxDate" />
+    <van-calendar ref="calender" class="calender-popup" v-model="show" @confirm="onConfirm" :min-date="minDate"
+      :max-date="maxDate" />
   </div>
 </template>
 <script>
@@ -31,7 +32,7 @@ export default {
       minDate: new Date(2022, 10, 20), //2022-11-20
       maxDate: new Date(2022, 11, 18), //2022-12-18
       dateStr: this.formatDate(new Date(2022, 10, 20)), //日期默认：2022-11-20 string
-      date:null,// value:Date
+      date: new Date(2022, 10, 20), // value:Date
       show: false,
       stageList: [
         {
@@ -128,9 +129,23 @@ export default {
     };
   },
   methods: {
-    // ＋、-
-    onClick() {
-      
+    // 当前时间＋、-
+    onClick(num) {
+      // 选中时间不超过限制的最大最小时间，Date类型比较大小
+      // date<=最小时间，不能再减少一天
+      // date>=最大时间，不能再增加一天
+      if (
+        (this.date <= this.minDate && num < 0) ||
+        (this.date >= this.maxDate && num > 0)
+      )
+        return;
+
+      this.date = new Date(this.date.setDate(this.date.getDate() + num));
+      this.dateStr = this.formatDate(this.date);
+      // 修改时间弹窗中选中的日期颜色
+      this.$nextTick(() => {
+        this.$refs.calender.reset(this.date);
+      });
     },
     // 日期选中确定
     onConfirm(date) {
@@ -158,7 +173,6 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #ffffff;
     padding: vw(16) 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     @mixin common-icon($url) {
@@ -187,7 +201,6 @@ export default {
     height: calc(100vh - #{vw(257)});
     overflow: auto;
     .round-title {
-      color: #ffffff;
       font-weight: 500;
       font-size: vw(16);
       line-height: vw(22);
@@ -201,6 +214,9 @@ export default {
       color: rgba(255, 255, 255, 0.7);
       padding-top: vw(16);
     }
+  }
+  .calender-popup {
+    color: #000;
   }
 }
 </style>
