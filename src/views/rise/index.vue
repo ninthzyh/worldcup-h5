@@ -141,8 +141,10 @@ export default {
 @import "../../assets/vw";
 .groups-container{
   background-color: #0c0e11;
-  height: calc(100vh - #{vw(188)});
+  height: calc(100vh - #{vw(138)});
   overflow: auto;
+  padding: vw(48) 0;
+  box-sizing: border-box;
   .match-list{
     display: flex;
     justify-content: space-around;

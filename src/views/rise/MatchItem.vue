@@ -12,8 +12,8 @@
       </div>
     </div>
     <div class="logo-container">
-      <div>{{matchItem.homeCountryName}}</div>
-      <div>{{matchItem.awayCountryName}}</div>
+      <div>{{matchItem.homeCountryName || '--'}}</div>
+      <div>{{matchItem.awayCountryName || '--'}}</div>
     </div>
     <div class="score">
       <span style="text-align: right">{{matchItem.homeGoals}}</span>
@@ -69,6 +69,7 @@ export default {
   background: rgba(255, 255, 255, 0.06);
   border-radius: vw(4);
   padding-top: vw(8);
+  box-sizing: border-box;
   position: relative;
   .logo-container{
     display: flex;
