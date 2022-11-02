@@ -1,5 +1,6 @@
 <template>
 <div class="groups-container">
+  <div style="width: 126px"><SwitchTab /></div>
   <div v-for="row in topMatchList" class="match-list" :key="row.key">
     <template v-if="row.key.indexOf('row') !== -1">
       <MatchItem v-for="(item, index) in row.list" :key="index" :match-item="item"/>
@@ -10,8 +11,8 @@
   </div>
   <MatchLine position="middle" :width="375"/>
   <div class="center-container">
-    <MatchItem tips="3/4名决赛" :match-item="topMatchList[0].list[0]"/>
-    <MatchItem tips="决赛" :tips-width="48" :match-item="topMatchList[0].list[0]"/>
+    <MatchItem tips="3/4名决赛" :match-item="topMatchList[0] && topMatchList[0].list[0]"/>
+    <MatchItem tips="决赛" :tips-width="48" :match-item="topMatchList[0] && topMatchList[0].list[0]"/>
     <div class="champion-container">
       <div class="champion">
         <NationalFlag />
@@ -35,9 +36,10 @@
 import MatchItem from "./MatchItem";
 import MatchLine from "./MatchLine";
 import NationalFlag from "../../components/NationalFlag";
+import SwitchTab from "../../components/SwitchTab";
 export default {
   name: "index",
-  components: {NationalFlag, MatchItem, MatchLine},
+  components: {SwitchTab, NationalFlag, MatchItem, MatchLine},
   data(){
     return{
       topMatchList: [],
@@ -64,7 +66,7 @@ export default {
   },
   methods:{
     getList(){
-      new Promise((resolve)=>{resolve(require('../rise/request.json'))}).then(res=>{
+      new Promise((resolve)=>{resolve(require('./request.json'))}).then(res=>{
         let matchList = res.data;
         const topMatchList = [];
         const bottomMatchList = [];
@@ -91,25 +93,25 @@ export default {
           list: [matchList.semifinals1?matchList.semifinals1:this.defaultTeamItem],
         });
         bottomMatchList.push({
-          key: "topArea_row3",
+          key: "bottomArea_row3",
           list: [matchList.semifinals2?matchList.semifinals2:this.defaultTeamItem],
         });
         bottomMatchList.push({
-          key: "topArea_line1",
+          key: "bottomArea_line2",
           width: 176,
           list: [null],
         });
         bottomMatchList.push({
-          key: "topArea_row2",
+          key: "bottomArea_row2",
           list: this._rowMatchFormatHandler(2, matchList.quarter2),
         });
         bottomMatchList.push({
-          key: "topArea_line1",
+          key: "bottomArea_line1",
           width: 88,
           list: [null,null],
         });
         bottomMatchList.push({
-          key: "topArea_row1",
+          key: "bottomArea_row1",
           list: this._rowMatchFormatHandler(4, matchList.eighth2),
         });
         this.topMatchList = topMatchList;
