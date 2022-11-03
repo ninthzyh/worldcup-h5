@@ -13,6 +13,7 @@
             <div class="label">积分</div>
           </div>
           <div class="table-content" v-for="(it,idx) in item.dataList" :key="idx">
+            <div :class="`${idx<2?'line':''}`"></div>
             <div class="rows-first">
               <div class="index">{{idx+1}}</div>
               <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :margin="`0 ${$vw(13)}`" :img="it.teamFlag" />
@@ -23,6 +24,7 @@
             <div class="rows-other">{{it.matchesDrawn}}</div>
             <div class="rows-other">{{it.matchesLost}}</div>
             <div class="rows-other">{{it.points}}</div>
+
           </div>
         </div>
       </div>
@@ -578,6 +580,14 @@ export default {
           font-size: vw(14);
           &:not(:last-child) {
             border-bottom: vw(1) solid rgba(255, 255, 255, 0.12);
+          }
+          .line {
+            width: vw(3);
+            height: vw(42);
+            position: absolute;
+            left: 0;
+            background: #bd223b;
+            border-radius: 2px;
           }
           .rows-first {
             flex-basis: 125px;
