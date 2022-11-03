@@ -149,8 +149,8 @@ export default {
 <style lang="scss" scoped>
 @import "../../assets/vw";
 .groups-container{
-  background-color: #0c0e11;
-  height: calc(100vh - #{vw(138)});
+  // background-color: #0c0e11;
+  height: calc(100vh - #{vw(116)});
   overflow: auto;
   padding: vw(48) 0;
   box-sizing: border-box;
