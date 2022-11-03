@@ -7,6 +7,7 @@ import Rank from "@/views/rank";
 import Groups from "@/views/groups";
 import Rise from "@/views/rise";
 import GoalsList from "@/views/rank/goalsList";
+import Squad from "@/views/squad";
 
 Vue.use(Router)
 
@@ -35,6 +36,12 @@ export default new Router({
       path: '/catalogue/goalsList',
       name: 'goalsList',
       component: GoalsList,
-    }
+    },
+    {
+      path: '/squad',
+      name: 'squad',
+      component: Squad,
+    },
+
   ]
 })

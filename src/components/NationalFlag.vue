@@ -35,7 +35,7 @@ export default {
 <style lang="scss" scoped>
 @import "~@/assets/vw";
 .national-flag {
-  background-blend-mode: lighten;
+  //background-blend-mode: lighten;
   border-radius: 50%;
   background-color: #ffffff;
 }
