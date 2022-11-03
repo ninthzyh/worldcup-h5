@@ -331,12 +331,12 @@ export default {
   display: flex;
   flex-direction: column;
   .menu-container {
-    height: vw(136);
+    height: vw(76);
     background: linear-gradient(180deg, #96263a 12.77%, #0c0e11 88.3%);
     .menu-header {
       display: flex;
       align-items: center;
-      padding: vw(55) vw(34) vw(20) vw(10);
+      padding: vw(23) vw(34) vw(20) vw(10);
       .back {
         height: vw(24);
         width: vw(24);
@@ -403,12 +403,10 @@ export default {
               padding-left: vw(16);
               font-weight: 500;
               font-size: vw(12);
-              line-height: vw(24);
+              line-height: vw(16);
               .describe {
                 font-weight: 400;
-                transform: scale(0.8);
-                transform-origin: 0 0;
-                line-height: vw(10);
+                line-height: vw(16);
                 color: rgba(255, 255, 255, 0.54);
               }
             }

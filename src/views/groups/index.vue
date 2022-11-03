@@ -508,7 +508,7 @@ export default {
 <style lang="scss" scoped>
 @import "~@/assets/vw";
 .groups {
-  height: calc(100vh - #{vw(136)});
+  height: calc(100vh - #{vw(116)});
   font-family: "PingFang SC";
   font-style: normal;
   color: #fff;

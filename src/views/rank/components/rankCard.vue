@@ -95,11 +95,11 @@ export default {
   .rank-title {
     font-weight: 600;
     font-size: vw(14);
-    line-height: vw(24);
+    line-height: vw(16);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: vw(24);
+    padding-bottom: vw(16);
     .arrow-right {
       height: vw(16);
       width: vw(16);
@@ -121,7 +121,7 @@ export default {
           padding-left: vw(16);
           font-weight: 500;
           font-size: vw(12);
-          line-height: vw(24);
+          line-height: vw(16);
           .describe {
             font-weight: 400;
             transform: scale(0.8);

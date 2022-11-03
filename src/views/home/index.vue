@@ -193,7 +193,7 @@ export default {
   height: 100%;
   overflow: auto;
   .home-logo {
-    height: vw(96);
+    height: vw(56);
     background: #0c0e11;
     position: fixed;
     min-width: 100%;
@@ -201,14 +201,14 @@ export default {
     z-index: 9;
     .logo {
       position: absolute;
-      margin: vw(52) auto auto auto;
+      margin-top: vw(16);
       width: 100%;
       height: vw(24);
       background: url("~@/assets/images/logo.svg") no-repeat center/contain;
     }
   }
   .content {
-    margin-top: vw(96);
+    margin-top: vw(56);
     .home-screen {
       width: 100%;
       height: vw(194);
@@ -293,14 +293,23 @@ export default {
           background: rgba(255, 255, 255, 0.04);
           border: vw(1) solid rgba(255, 255, 255, 0.12);
           border-radius: vw(8);
-          padding: vw(16) vw(24) vw(8) vw(24);
+          width: vw(70);
+          height: vw(70);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
           .icon-wrap {
             background: #8d2537;
             border-radius: 2px;
-            padding: vw(4);
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             @mixin nav-item-icon($url) {
               height: vw(16);
-              // width: vw(16);
+              width: vw(16);
               background: url($url) no-repeat center/contain;
             }
             .schedule {
@@ -318,7 +327,7 @@ export default {
           }
           .nav-item-label {
             font-weight: 400;
-            line-height: vw(28);
+            line-height: vw(24);
           }
         }
       }

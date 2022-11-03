@@ -198,8 +198,8 @@ export default {
     }
   }
   .schedule-content {
-    padding: vw(24) vw(16);
-    height: calc(100vh - #{vw(257)});
+    padding: vw(26) vw(16);
+    height: calc(100vh - #{vw(241)});
     overflow: auto;
     z-index: 1;
     position: absolute;

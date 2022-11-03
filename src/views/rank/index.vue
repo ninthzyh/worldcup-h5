@@ -198,13 +198,13 @@ export default {
   font-style: normal;
   font-weight: 500;
   color: #ffffff;
-  height: calc(100vh - #{vw(136)});
+  height: calc(100vh - #{vw(116)});
   position: relative;
   .radio {
     font-size: vw(12);
     line-height: vw(32);
     color: rgba(255, 255, 255, 0.54);
-    padding: vw(16) vw(24) 0 vw(24);
+    padding: vw(24) vw(24) 0 vw(24);
     > span {
       padding: vw(8) vw(16);
     }
@@ -215,9 +215,9 @@ export default {
     }
   }
   .rank-content {
-    padding: vw(16) vw(24);
+    padding: vw(24);
     overflow: auto;
-    height: calc(100% - #{vw(80)});
+    height: calc(100% - #{vw(104)});
     width: calc(100% - #{vw(48)});
     z-index: 1;
     position: absolute;
