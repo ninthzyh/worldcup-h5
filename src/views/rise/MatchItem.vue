@@ -12,13 +12,13 @@
       </div>
     </div>
     <div class="logo-container">
-      <div>{{matchItem.homeCountryName || '--'}}</div>
-      <div>{{matchItem.awayCountryName || '--'}}</div>
+      <div>{{matchItem.homeName || '--'}}</div>
+      <div>{{matchItem.awayName || '--'}}</div>
     </div>
     <div class="score">
-      <span style="text-align: right">{{matchItem.homeGoals}}</span>
+      <span style="text-align: right">{{matchItem.homeScore}}</span>
       <span class="score-">-</span>
-      <span>{{matchItem.awayGoals}}</span>
+      <span>{{matchItem.awayScore}}</span>
     </div>
     <div v-if="tips" class="tips" :style="`left:calc(50% - ${$vw(tipsWidth/2)});width:${$vw(tipsWidth)};`">
       {{tips}}

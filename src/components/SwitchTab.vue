@@ -6,11 +6,18 @@
           <div class="logo">
             <NationalFlag />
           </div>
-          <span>{{ tab.text }}</span>
+          <span class="font-10" style="width: auto">{{ tab.text }}</span>
         </slot>
       </div>
     </div>
-    <div class="select-item" :class="position">{{ selected.text }}</div>
+    <div class="select-item" :class="position">
+      <div class="logo">
+        <NationalFlag />
+      </div>
+      <span class="font-10" style="width: auto">
+        {{ selected.text }}
+      </span>
+    </div>
   </div>
 </template>
 
@@ -33,6 +40,11 @@ export default {
     return{
       position: 'left',
       selected: this.tabList[0]
+    }
+  },
+  watch:{
+    tabList(newVal){
+      this.selected = newVal[0]
     }
   },
   methods:{
@@ -58,15 +70,14 @@ export default {
     display: flex;
     .switch-item{
       border-radius: vw(20);
+      @extend .flex-center;
       flex: 1;
-      .logo{
-        display: inline-block;
-        line-height: vw(24);
-        width: vw(12);
-        height: vw(12);
-        margin-bottom: vw(12);
-      }
     }
+  }
+  .logo{
+    @extend .flex-center;
+    width: vw(12);
+    height: vw(12);
   }
   .select-item{
     position: absolute;
@@ -74,10 +85,10 @@ export default {
     left: 0;
     width: 55%;
     height: vw(20);
-    line-height: vw(20);
     background: #FFFFFF;
     color: rgba(0, 0, 0, 0.87);
     border-radius: vw(12);
+    @extend .flex-center;
     &.left{
       right: unset;
       left: 0;

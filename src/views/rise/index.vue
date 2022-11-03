@@ -1,6 +1,5 @@
 <template>
 <div class="groups-container">
-  <div style="width: 126px"><SwitchTab /></div>
   <div v-for="row in topMatchList" class="match-list" :key="row.key">
     <template v-if="row.key.indexOf('row') !== -1">
       <MatchItem v-for="(item, index) in row.list" :key="index" :match-item="item"/>
@@ -11,13 +10,13 @@
   </div>
   <MatchLine position="middle" :width="375"/>
   <div class="center-container">
-    <MatchItem tips="3/4名决赛" :match-item="topMatchList[0] && topMatchList[0].list[0]"/>
-    <MatchItem tips="决赛" :tips-width="48" :match-item="topMatchList[0] && topMatchList[0].list[0]"/>
-    <div class="champion-container">
+    <MatchItem tips="3/4名决赛" :match-item="thirdFinal"/>
+    <MatchItem tips="决赛" :tips-width="48" :match-item="firstFinal"/>
+    <div v-if="champion && champion.championName" class="champion-container">
       <div class="champion">
         <NationalFlag />
       </div>
-      <p>冠军</p>
+      <p>{{ champion.championName }}</p>
     </div>
   </div>
   <MatchLine position="middle" :width="375"/>
@@ -36,26 +35,29 @@
 import MatchItem from "./MatchItem";
 import MatchLine from "./MatchLine";
 import NationalFlag from "../../components/NationalFlag";
-import SwitchTab from "../../components/SwitchTab";
+import {rise} from "../../api";
 export default {
   name: "index",
-  components: {SwitchTab, NationalFlag, MatchItem, MatchLine},
+  components: {NationalFlag, MatchItem, MatchLine},
   data(){
     return{
       topMatchList: [],
       bottomMatchList: [],
+      thirdFinal: {},
+      firstFinal: {},
+      champion:{},
       defaultTeamItem: {
         stageName: "",
         homeGroup: null,
-        homeCountryId: "",
-        homeCountryName: "",
-        homeCountryLogo: "",
+        homeId: "",
+        homeName: "",
+        homeFlag: "",
         homeGoals: null,
         isHomePromoted: true,
         awayGroup: null,
-        awayCountryId: "",
-        awayCountryName: "",
-        awayCountryLogo: "",
+        awayId: "",
+        awayName: "",
+        awayFlag: "",
         awayGoals: null,
         isAwayPromoted: false,
       }
@@ -72,7 +74,7 @@ export default {
         const bottomMatchList = [];
         topMatchList.push({
           key: "topArea_row1",
-          list: this._rowMatchFormatHandler(4, matchList.eighth1),
+          list: this._rowMatchFormatHandler(4, matchList.eighthUp),
         });
         topMatchList.push({
           key: "topArea_line1",
@@ -81,7 +83,7 @@ export default {
         });
         topMatchList.push({
           key: "topArea_row2",
-          list: this._rowMatchFormatHandler(2, matchList.quarter1),
+          list: this._rowMatchFormatHandler(2, matchList.quarterUp),
         });
         topMatchList.push({
           key: "topArea_line2",
@@ -90,11 +92,11 @@ export default {
         });
         topMatchList.push({
           key: "topArea_row3",
-          list: [matchList.semifinals1?matchList.semifinals1:this.defaultTeamItem],
+          list: [matchList.semifinalsUp?matchList.semifinalsUp:this.defaultTeamItem],
         });
         bottomMatchList.push({
           key: "bottomArea_row3",
-          list: [matchList.semifinals2?matchList.semifinals2:this.defaultTeamItem],
+          list: [matchList.semifinalsDown?matchList.semifinalsDown:this.defaultTeamItem],
         });
         bottomMatchList.push({
           key: "bottomArea_line2",
@@ -103,7 +105,7 @@ export default {
         });
         bottomMatchList.push({
           key: "bottomArea_row2",
-          list: this._rowMatchFormatHandler(2, matchList.quarter2),
+          list: this._rowMatchFormatHandler(2, matchList.quarterDown),
         });
         bottomMatchList.push({
           key: "bottomArea_line1",
@@ -112,11 +114,16 @@ export default {
         });
         bottomMatchList.push({
           key: "bottomArea_row1",
-          list: this._rowMatchFormatHandler(4, matchList.eighth2),
+          list: this._rowMatchFormatHandler(4, matchList.eighthDown),
         });
         this.topMatchList = topMatchList;
         this.bottomMatchList = bottomMatchList;
-        console.log(topMatchList,bottomMatchList)
+        this.thirdFinal = matchList.thirdFinal,
+        this.firstFinal = matchList.firstFinal,
+        this.champion = {
+          championName: matchList.championName,
+          championFlag: matchList.championFlag,
+        }
       })
     },
     _rowMatchFormatHandler(num, arr) {
