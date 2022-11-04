@@ -15,18 +15,6 @@
       v-for="(item, index) in teamInfors"
       :key="item.teamId"
     >
-      <span class="teamInfor">
-        <span class="teamInfor_main">
-          <span class="teamImg">
-            <TeamLogo :src="item.teamLogo"></TeamLogo>
-          </span>
-          <span
-            class="teamName"
-            v-text="_teamNameFormatHandler(item.teamName)"
-          ></span>
-          <!-- <span class="videoIcon"></span> -->
-        </span>
-      </span>
       <span class="teamLineup">
         <span
           v-if="item.lineup"
@@ -34,23 +22,7 @@
           v-text="_lineupFormatHandler(item.lineup)"
         ></span>
       </span>
-      <span class="teamCoach" v-text="_valFormatHandler(item.coach)"></span>
     </div>
-    <!-- <div class="teamInforArea away">
-      <span class="teamInfor">
-        <span class="teamInfor_main">
-          <span class="teamImg">
-            <img src="" />
-          </span>
-          <span class="teamName" v-text="'卡塔尔'"></span>
-          <span class="videoIcon"></span>
-        </span>
-      </span>
-      <span class="teamLineup">
-        <span class="lineupText" v-text="'4-1-2-1-2'"></span>
-      </span>
-      <span class="teamCoach" v-text="'主教练名称'"></span>
-    </div> -->
     <div
       class="playerPos"
       v-show="
@@ -64,8 +36,7 @@
         v-for="(team, tIndex) in allStartPlayerList"
         :key="tIndex"
         :class="[
-          tIndex == 0 ? 'topTeam' : '',
-          tIndex == 1 ? 'bottomTeam' : '',
+          'topTeam',
           classLineupList[tIndex] ? `lineupType${classLineupList[tIndex]}` : '',
         ]"
       >
@@ -85,93 +56,9 @@
               class="playerName"
               v-text="_valFormatHandler(player.playerName)"
             ></span>
-            <span
-              class="rightTopEvent"
-              v-if="
-                player.eventCodeWebs.topRightEvent &&
-                player.eventCodeWebs.topRightEvent.length > 0
-              "
-            >
-              <template
-                v-for="(event, index) in player.eventCodeWebs.topRightEvent"
-              >
-                <span
-                  :key="index"
-                  v-if="event.eventCode == yellowCode"
-                  class="eventItem yellow"
-                ></span>
-                <span
-                  :key="index"
-                  v-if="event.eventCode == redCode"
-                  class="eventItem red"
-                ></span>
-              </template>
-            </span>
-            <span class="rightBottomEvent" v-show="player.score">
-              <span
-                class="gradScore"
-                v-text="_scoreFormatHandler(player.score)"
-              ></span>
-            </span>
-
-            <span
-              class="leftTopEvent"
-              v-if="
-                player.eventCodeWebs.topLeftEvent &&
-                player.eventCodeWebs.topLeftEvent.length > 0
-              "
-            >
-              <span
-                v-if="
-                  player.eventCodeWebs.topLeftEvent[0] &&
-                  player.eventCodeWebs.topLeftEvent[0].eventCode == goalCode
-                "
-                class="eventItem goal"
-              ></span>
-            </span>
-            <span
-              class="leftBottomEvent"
-              v-if="
-                player.eventCodeWebs.bottomLeftEvent &&
-                player.eventCodeWebs.bottomLeftEvent.length > 0
-              "
-            >
-              <span
-                v-if="
-                  player.eventCodeWebs.bottomLeftEvent[0] &&
-                  player.eventCodeWebs.bottomLeftEvent[0].eventCode ==
-                    offStageCode
-                "
-                class="eventItem offStage"
-              ></span>
-            </span>
           </span>
         </span>
       </span>
-      <!-- <span
-        class="bottomTeam"
-        :class="classLineupList[1] ? `lineupType${classLineupList[1]}` : ''"
-      >
-        <span class="playerItem" v-for="i in 11" :key="i">
-          <span class="playerItem_res">
-            <span class="playerNum" v-text="99"></span>
-            <span class="playerName" v-text="'球员名称称'"></span>
-            <span class="rightTopEvent">
-              <span v-if="i % 2 == 0" class="eventItem yellow"></span>
-              <span v-else class="eventItem red"></span>
-            </span>
-            <span class="rightBottomEvent">
-              <span class="gradScore" v-text="100.2"></span>
-            </span>
-            <span class="leftTopEvent">
-              <span v-if="i > 7" class="eventItem goal"></span>
-            </span>
-            <span class="leftBottomEvent">
-              <span v-if="i % 2 == 0" class="eventItem offStage"></span>
-            </span>
-          </span>
-        </span>
-      </span> -->
     </div>
   </div>
 </template>
@@ -257,7 +144,7 @@ export default {
   },
   computed: {
     classLineupList() {
-      if (this.teamInfors && this.teamInfors.length == 2) {
+      if (this.teamInfors) {
         let homeLineup = this._lineupFormatHandler(
           this.teamInfors[0] && this.teamInfors[0].lineup
             ? this.teamInfors[0].lineup
@@ -283,7 +170,7 @@ export default {
       let startPlayerList = [];
       let allStartPlayerList = [];
       let formatStartLineups = [];
-      if (this.teamInfors && this.teamInfors.length == 2 && this.list) {
+      if (this.teamInfors && this.list) {
         this.list.forEach((teams) => {
           const formatTeams = [];
           teams.forEach((player) => {
@@ -561,13 +448,15 @@ export default {
       justify-content: center;
       align-items: center;
       .lineupText {
-        width: auto;
-        background-color: rgba(0, 0, 0, 0.3);
-        border-radius: vw(11);
-        padding: 0 vw(5);
+        display: inline-block;
+        height: vw(20);
+        line-height: vw(20);
+        padding: 0 vw(8);
+        text-align: center;
         font-size: vw(12);
-        line-height: vw(22);
-        height: vw(22);
+        border-radius: vw(10);
+        color: rgba(255, 255, 255, 0.54);
+        background: rgba(255, 255, 255, 0.12);
       }
     }
   }
@@ -594,11 +483,15 @@ export default {
         color: rgba(255, 255, 255, 0.85);
         .playerNum {
           position: absolute;
+          display: inline-block;
           top: 0;
           left: 0;
           z-index: 2;
-          width: 100%;
-          font-size: vw(9);
+          width: vw(24);
+          height: vw(24);
+          font-size: vw(12);
+          background-color: #7A293F;
+          border-radius: 50%;
           line-height: vw(24);
           text-align: center;
         }
@@ -607,7 +500,7 @@ export default {
           top: vw(20);
           left: 50%;
           z-index: 2;
-          transform: translateX(-50%);
+          transform: translateX(-50%) scale(0.83333);
           width: 200%;
           padding-top: vw(5);
           font-size: vw(9);
