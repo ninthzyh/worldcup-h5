@@ -27,7 +27,6 @@
         <Loading v-if="loading" />
       </div>
     </div>
-    <div class="bg"></div>
   </div>
 </template>
 <script>
@@ -330,6 +329,8 @@ export default {
   height: 100%;
   display: flex;
   flex-direction: column;
+  background: url("~@/assets/images/bg.svg") no-repeat center/contain;
+
   .menu-container {
     height: vw(76);
     background: linear-gradient(180deg, #96263a 12.77%, #0c0e11 88.3%);
@@ -355,7 +356,6 @@ export default {
     flex: 1;
     border-top: vw(1) solid rgba(255, 255, 255, 0.12);
     padding: vw(24) vw(22) vw(40) vw(26);
-    position: relative;
     .rank-card {
       background: rgba(0, 0, 0, 0.04);
       border: 1px solid rgba(255, 255, 255, 0.12);
@@ -367,10 +367,6 @@ export default {
       height: calc(100% - #{vw(65)});
       display: flex;
       flex-direction: column;
-      position: absolute;
-      width: calc(100% - #{vw(48)});
-
-      z-index: 1;
       .rank-title {
         font-weight: 600;
         font-size: vw(14);
@@ -430,15 +426,6 @@ export default {
         margin-bottom: vw(16);
       }
     }
-  }
-  .bg {
-    width: 100%;
-    height: vw(375);
-    background: url("~@/assets/images/bg.svg") no-repeat center/contain;
-    position: absolute;
-    left: 0;
-    top: vw(224);
-    z-index: 0;
   }
 }
 </style>

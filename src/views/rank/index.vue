@@ -16,7 +16,6 @@
         <rank-card :config="playerConfig" title="进球+助攻" :cardData="playerData" type="goalAndAssistList" />
       </template>
     </div>
-    <div class="bg"></div>
   </div>
 </template>
 <script>
@@ -199,7 +198,7 @@ export default {
   font-weight: 500;
   color: #ffffff;
   height: calc(100vh - #{vw(116)});
-  position: relative;
+  background: url("~@/assets/images/bg.svg") no-repeat center/contain;
   .radio {
     font-size: vw(12);
     line-height: vw(32);
@@ -218,18 +217,6 @@ export default {
     padding: vw(24);
     overflow: auto;
     height: calc(100% - #{vw(104)});
-    width: calc(100% - #{vw(48)});
-    z-index: 1;
-    position: absolute;
-  }
-  .bg {
-    width: 100%;
-    height: vw(375);
-    background: url("~@/assets/images/bg.svg") no-repeat center/contain;
-    position: absolute;
-    left: 0;
-    top: vw(152);
-    z-index: 0;
   }
 }
 </style>

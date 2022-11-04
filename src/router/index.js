@@ -7,9 +7,7 @@ import Rank from "@/views/rank";
 import Groups from "@/views/groups";
 import Rise from "@/views/rise";
 import GoalsList from "@/views/rank/goalsList";
-import AnalysisTab from "@/views/analysis/components/analysisTab";
-import MatchAnalysis from "@/views/analysis/matchAnalysis";
-import Forecast from "@/views/analysis/Forecast";
+import Analysis from "@/views/analysis";
 import Squad from "@/views/squad";
 
 Vue.use(Router)
@@ -47,12 +45,7 @@ export default new Router({
     },
     {
       path: '/analysis',
-      component: AnalysisTab,
-      children: [
-        { path: 'squad', component: Squad },
-        { path: 'matchAnalysis', component: MatchAnalysis },
-        { path: 'forecast', component: Forecast },
-      ]
+      component: Analysis,
     },
   ]
 })

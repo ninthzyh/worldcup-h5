@@ -10,11 +10,6 @@
       </div>
       <div class="bg-line"></div>
     </div>
-    <router-view v-slot="{ Component }">
-      <transition name="fade" mode="out-in">
-        <component :is="Component"></component>
-      </transition>
-    </router-view>
   </div>
 </template>
 
@@ -25,31 +20,20 @@ export default {
       menuList: [
         {
           text: "比赛数据",
-          route: "/analysis/squad",
         },
         {
           text: "赛事分析",
-          route: "/analysis/matchAnalysis",
         },
         {
           text: "智能预测",
-          route: "/analysis/forecast",
         },
       ],
       selectIndex: 0,
     };
   },
-  mounted() {
-    this.selectIndex = this.menuList.findIndex((item) => {
-      return item.route === this.$route.fullPath;
-    });
-  },
   methods: {
     jumpTo(index, menu) {
       this.selectIndex = index;
-      if (menu.route) {
-        this.$router.push({ path: menu.route });
-      }
     },
   },
 };
@@ -58,7 +42,6 @@ export default {
 <style lang="scss" scoped>
 @import "~@/assets/vw";
 .menu-container {
-//   height: vw(39);
   padding-top: vw(13);
   .container {
     display: flex;

@@ -24,7 +24,6 @@
             <div class="rows-other">{{it.matchesDrawn}}</div>
             <div class="rows-other">{{it.matchesLost}}</div>
             <div class="rows-other">{{it.points}}</div>
-
           </div>
         </div>
       </div>
@@ -33,7 +32,6 @@
     <div class="tips">
       <div class="legend"></div>晋级淘汰赛资格
     </div>
-    <div class="bg"></div>
   </div>
 </template>
 <script>
@@ -514,15 +512,13 @@ export default {
   font-family: "PingFang SC";
   font-style: normal;
   color: #fff;
-  position: relative;
+  background: url("~@/assets/images/bg.svg") no-repeat center/contain;
 
   .groups-content {
     padding: vw(56) vw(24) 0 vw(24);
     height: calc(100% - #{vw(116)});
-    width: calc(100% - #{vw(48)});
     overflow: auto;
-    position: absolute;
-    z-index: 1;
+    position: relative;
     .group-logo {
       width: vw(56);
       height: vw(56);
@@ -627,15 +623,6 @@ export default {
       border-radius: 50%;
       margin-right: vw(4);
     }
-  }
-  .bg {
-    width: 100%;
-    height: vw(375);
-    background: url("~@/assets/images/bg.svg") no-repeat center/contain;
-    position: absolute;
-    left: 0;
-    top: vw(152);
-    z-index: 0;
   }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="schedule-list">
-    <div class="schedule-item" v-for="(item,index) in dataList" :key="index" @click="onClick">
+    <div class="schedule-item" v-for="(item,index) in dataList" :key="index" @click="()=>onClick(item)">
       <div class="item-left">
         <div class="team">
           <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :img="item.homeFlag" />
@@ -38,9 +38,10 @@ export default {
     NationalFlag,
   },
   methods:{
-    onClick(){
+    onClick(item){
       this.$router.push({
-        path:'/analysis/squad',
+        path:'/analysis',
+        query:{}
       })
     }
   }

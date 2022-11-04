@@ -7,7 +7,7 @@
       <div class="home-screen">
         <div class="screen-label">
           <div class="screen-live">
-            <div class="live-icon">LIVE</div>
+            <div :class="`${true?'live-icon':'hot-icon'}`"></div>
             <div class="today">今日 {{bannerData.matchDatetime}}</div>
           </div>
           <div class="vs">
@@ -19,6 +19,16 @@
             <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :img="bannerData.awayFlag" />
           </div>
           <div class="watching">立即观赛</div>
+          <div class="des">
+            <div class="des-item">
+              <div class="position"></div>
+              <div class="des-laguage">
+                <div class="des-en">Al Thumama Stadium</div>
+                <div class="des-cn">球场</div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
       <div class="nav-wrap">
@@ -221,21 +231,25 @@ export default {
         line-height: vw(24);
         .screen-live {
           display: flex;
-          align-items: center;
-          .live-icon {
-            background: #d81739;
-            border-radius: vw(1);
-            font-family: "Inter";
-            font-size: vw(14);
-            color: #000000;
-            padding: vw(4) vw(8);
+          height: vw(12);
+          margin-bottom: vw(12);
+          .common-status {
+            width: vw(23);
+            height: vw(12);
             margin-right: vw(8);
-            transform: scale(0.5);
-            transform-origin: 0 0;
+          }
+          .live-icon {
+            @extend .common-status;
+            background: url("~@/assets/images/live.svg") no-repeat
+              center/contain;
+          }
+          .hot-icon {
+            @extend .common-status;
+            background: url("~@/assets/images/hot.svg") no-repeat center/contain;
           }
           .today {
             transform: scale(0.5);
-            transform-origin: -60% 0;
+            transform-origin: 0 0;
             font-size: vw(17);
             color: rgba(255, 255, 255, 0.7);
             font-family: "PingFang SC";
@@ -269,6 +283,39 @@ export default {
           transform-origin: 0 0;
           width: 21%;
           text-align: center;
+        }
+        .des {
+          display: flex;
+          @mixin des-icon($url) {
+            margin-right: vw(4);
+            width: vw(12);
+            height: vw(12);
+            background: url($url) no-repeat center/contain;
+          }
+          .des-item {
+            display: flex;
+            .position {
+              @include des-icon("~@/assets/images/position.svg");
+            }
+            .des-laguage {
+              font-style: normal;
+              font-size: vw(8);
+              line-height: vw(10);
+              .des-en {
+                font-family: "Inter";
+                font-weight: 500;
+                color: rgba(255, 255, 255, 0.7);
+                margin-bottom: vw(1);
+                transform: scale(0.5);
+          transform-origin: 0 0;
+              }
+              .des-cn {
+                font-family: "PingFang SC";
+                font-weight: 400;
+                color: rgba(255, 255, 255, 0.32);
+              }
+            }
+          }
         }
       }
     }

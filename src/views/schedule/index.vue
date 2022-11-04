@@ -14,7 +14,6 @@
         </div>
       </div>
     </div>
-    <div class="bg"></div>
     <van-calendar ref="calender" class="calender-popup" v-model="show" @confirm="onConfirm" :min-date="minDate"
       :max-date="maxDate" />
   </div>
@@ -169,7 +168,8 @@ export default {
 .schedule {
   font-family: "PingFang SC";
   font-style: normal;
-  position: relative;
+  height: calc(100vh - #{vw(116)});
+  background: url("~@/assets/images/bg.svg") no-repeat center/contain;
   .calender-wrap {
     display: flex;
     align-items: center;
@@ -201,9 +201,6 @@ export default {
     padding: vw(26) vw(16);
     height: calc(100vh - #{vw(241)});
     overflow: auto;
-    z-index: 1;
-    position: absolute;
-    width: calc(100% - #{vw(32)});
     .round-title {
       font-weight: 500;
       font-size: vw(16);
@@ -221,15 +218,6 @@ export default {
   }
   .calender-popup {
     color: #000;
-  }
-  .bg {
-    width: 100%;
-    height: vw(375);
-    background: url("~@/assets/images/bg.svg") no-repeat center/contain;
-    position: absolute;
-    left: 0;
-    top: vw(152);
-    z-index: 0;
   }
 }
 </style>
