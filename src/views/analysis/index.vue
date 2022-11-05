@@ -58,7 +58,8 @@ export default {
   .tab-content {
     flex: 1;
     background: url("~@/assets/images/bg.png") no-repeat center/contain;
-    margin: vw(24) vw(32);
+    padding: 0 vw(32);
+    margin: vw(24) 0;
     overflow: auto;
   }
 }
