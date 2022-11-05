@@ -38,16 +38,14 @@
             </div>
           </div>
           <div class="brain">
-            <div class="brain-bg">
-              <div class="transparent"></div>
-              <div class="gradient"></div>
-              <div class="brain-icon"></div>
-            </div>
+            <div class="brain-bg"></div>
+            <div class="brain-icon"></div>
             <div class="brain-text">
               <div>全球最权威的体育数据库</div>
               <div>每场实时采集 3000+ 数据点</div>
               <div>预测多种结果类型，迅速更新</div>
             </div>
+            <div class="gradient"></div>
           </div>
           <div class="lock-bar">
             <div class="lock-text">解锁四大解析数据，低至 ¥<span>8</span>/每场</div>
@@ -56,6 +54,7 @@
               <div class="arrow-circle"></div>
             </div>
           </div>
+          <div class="ai-transparent"></div>
         </div>
       </template>
     </ForecastCard>
@@ -70,8 +69,6 @@ export default {
 <style lang="scss" scoped>
 @import "~@/assets/vw";
 .ai {
-  font-family: "PingFang SC";
-  font-style: normal;
   margin-bottom: vw(16);
   .title-icon {
     height: vw(15);
@@ -82,10 +79,13 @@ export default {
   .ai-content {
     padding: 0 vw(16);
     margin-top: vw(-4);
+    position: relative;
     .start-forecast {
       display: flex;
       align-items: center;
       .start-forecast-box {
+        font-family: "PingFang SC";
+        font-style: normal;
         padding: vw(4) vw(8);
         font-weight: 400;
         font-size: vw(10);
@@ -127,6 +127,8 @@ export default {
         align-items: center;
         justify-content: center;
         .label {
+          font-family: "PingFang SC";
+          font-style: normal;
           font-weight: 500;
           font-size: vw(10);
           line-height: vw(12);
@@ -157,12 +159,13 @@ export default {
         justify-content: center;
         padding-top: vw(12);
         .hit-label {
+          font-family: "PingFang SC";
+          font-style: normal;
           font-weight: 600;
           font-size: vw(12);
           margin-right: vw(6);
         }
         .percent {
-          font-family: "SF Pro Display";
           color: #e49640;
           display: flex;
           align-items: start;
@@ -183,41 +186,17 @@ export default {
       display: flex;
       justify-content: center;
       margin-top: vw(16);
-      .brain-bg {
-        position: relative;
-      }
+      position: relative;
       .brain-icon {
         height: vw(56);
         width: vw(103);
         background: url("~@/assets/images/brain.svg") no-repeat center/contain;
         margin-left: vw(16);
-        z-index: 1;
-
       }
-//       .transparent{
-//         position: absolute;
-//         top: 0;
-//         height: vw(58);
-//         width: vw(53);
-//         background: rgba(0, 0, 0, 0.04);
-// backdrop-filter: blur(32px);
-//         z-index: 0;
-//       }
-//       .gradient {
-//         position: absolute;
-//         top: 0;
-//         z-index: -1;
-//         height: vw(28);
-//         width: vw(23);
-//         background: linear-gradient(
-//           112.13deg,
-//           #a108a8 3.05%,
-//           #e7292d 53.54%,
-//           #faa51a 100%
-//         );
-//       }
       .brain-text {
         > div {
+          font-family: "PingFang SC";
+          font-style: normal;
           font-weight: 500;
           font-size: vw(10);
           line-height: vw(18);
@@ -228,6 +207,30 @@ export default {
             margin-bottom: vw(4);
           }
         }
+      }
+      // .transparent {
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   height: 100%;
+      //   width: vw(103);
+      //   background: rgba(0, 0, 0, 0.04);
+      //   backdrop-filter: blur(32px);
+      //   z-index: 0;
+      // }
+      .gradient {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        height: vw(58);
+        width: vw(53);
+        background: linear-gradient(
+          112.13deg,
+          #a108a8 3.05%,
+          #e7292d 53.54%,
+          #faa51a 100%
+        );
       }
     }
     .lock-bar {
@@ -241,6 +244,8 @@ export default {
       margin: vw(10) 0 vw(15) 0;
       display: flex;
       .lock-text {
+        font-family: "PingFang SC";
+        font-style: normal;
         font-weight: 400;
         font-size: vw(10);
         display: flex;
@@ -267,6 +272,7 @@ export default {
         margin: vw(2) 0;
         .unlock {
           font-family: "PingFang SC";
+          font-style: normal;
           font-weight: 500;
           font-size: vw(10);
           text-transform: uppercase;
@@ -282,6 +288,16 @@ export default {
           margin-left: 2px;
         }
       }
+    }
+    .ai-transparent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.04);
+      backdrop-filter: blur(32px);
+      z-index: -1;
     }
   }
 }

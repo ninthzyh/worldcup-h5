@@ -1,21 +1,21 @@
 <template>
-  <div class="win">
-    <ForecastCard title="胜率预测">
+  <div class="score">
+    <ForecastCard title="比分预测 / 前 3 项">
       <template v-slot:title-right>
         <div class="title-icon"></div>
       </template>
       <template v-slot:card-content>
-        <div class="win-content">
-          <div class="win-describe">主队获胜，平局和和客队获胜的概率：</div>
-          <div class="win-percent">
-            <div class="home-win">
+        <div class="score-content">
+          <div class="score-describe">根据 AI 算法推测出的最有可能结果：</div>
+          <div class="score-percent">
+            <!-- <div class="home-win">
               <div class="percent">18<span>%</span></div>
               <div class="text">主胜</div>
             </div>
             <div class="draw">
               <div class="percent">18<span>%</span></div>
               <div class="text">平</div>
-            </div>
+            </div> -->
             <div class="away-win">
               <div class="away-win-content">
                 <div class="percent">64<span>%</span></div>
@@ -39,7 +39,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "~@/assets/vw";
-.win {
+.score {
   font-style: normal;
   margin-bottom: vw(16);
   .title-icon {
@@ -47,18 +47,18 @@ export default {
     width: vw(16);
     background: url("~@/assets/images/info-white.svg") no-repeat center/contain;
   }
-  .win-content {
+  .score-content {
     padding: 0 vw(16);
     font-family: "PingFang SC";
     font-style: normal;
-    .win-describe {
+    .score-describe {
       padding-top: vw(13);
       border-top: 1px solid rgba(255, 255, 255, 0.12);
       font-weight: 300;
       font-size: vw(10);
       line-height: 110%;
     }
-    .win-percent {
+    .score-percent {
       margin: vw(24) 0;
       display: flex;
       height: vw(120);

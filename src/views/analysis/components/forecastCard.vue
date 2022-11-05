@@ -5,19 +5,18 @@
       <slot name="title-right"></slot>
     </div>
     <slot name="card-content"></slot>
-    <div class="card-transparent"></div>
   </div>
 </template>
 <script>
 export default {
-  props: ["title", "cus-class"],
+  props: ["title","cus-class"],
 };
 </script>
 <style lang="scss" scoped>
 @import "~@/assets/vw";
 
 .card {
-  padding: 1px;
+  padding: vw(1);
   border: none;
   background-color: transparent;
   box-sizing: border-box;
@@ -31,7 +30,6 @@ export default {
         第二个背景需要作为渐变边框，因此需要从边框处开始裁切 */
   background-clip: content-box, padding-box;
   backdrop-filter: blur(#{vw(32)});
-  z-index: 0;
   .card-header {
     padding: vw(16) vw(16) vw(15) vw(16);
     font-family: "PingFang SC";
@@ -49,16 +47,6 @@ export default {
       font-size: 16px;
       line-height: 24px;
     }
-  }
-  .card-transparent {
-    border-radius: vw(16);
-    position: absolute;
-    width: calc(100% - #{vw(2)});
-    height: calc(100% - #{vw(2)});
-    top: 0;
-    background: rgba(0, 0, 0, 0.04);
-    backdrop-filter: blur(32px);
-    z-index: -1;
   }
 }
 </style>
