@@ -169,7 +169,7 @@ export default {
   font-family: "PingFang SC";
   font-style: normal;
   height: calc(100vh - #{vw(116)});
-  background: url("~@/assets/images/bg.svg") no-repeat center/contain;
+  background: url("~@/assets/images/bg.png") no-repeat center/contain;
   .calender-wrap {
     display: flex;
     align-items: center;

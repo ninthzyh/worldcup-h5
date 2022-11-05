@@ -18,7 +18,7 @@
             <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :margin="`0 ${$vw(12)} 0 0`" :img="''" />
             <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :img="bannerData.awayFlag" />
           </div>
-          <div class="watching">立即观赛</div>
+          <div class="watching"></div>
           <div class="des">
             <div class="des-item">
               <div class="position"></div>
@@ -27,7 +27,20 @@
                 <div class="des-cn">球场</div>
               </div>
             </div>
-
+            <div class="des-item">
+              <div class="people"></div>
+              <div class="des-laguage">
+                <div class="des-en">120,000</div>
+                <div class="des-cn">容纳人数</div>
+              </div>
+            </div>
+            <div class="des-item">
+              <div class="lawn"></div>
+              <div class="des-laguage">
+                <div class="des-en">草地</div>
+                <div class="des-cn">场地表面</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -222,13 +235,17 @@ export default {
     .home-screen {
       width: 100%;
       height: vw(194);
-      background: url("~@/assets/images/home-header.png") no-repeat
+      background: url("~@/assets/images/home-header.svg") no-repeat
         center/contain;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
       .screen-label {
-        padding: vw(13) vw(16);
+        padding: vw(16);
         font-family: "Inter";
         font-weight: 600;
         line-height: vw(24);
+        height: 100%;
+        box-sizing: border-box;
         .screen-live {
           display: flex;
           height: vw(12);
@@ -275,17 +292,15 @@ export default {
           }
         }
         .watching {
-          color: #000000;
-          background: rgba(255, 255, 255, 0.87);
-          border-radius: 2px;
-          padding: vw(4) vw(8);
-          transform: scale(0.5);
-          transform-origin: 0 0;
-          width: 21%;
-          text-align: center;
+          width: vw(40);
+          height: vw(16);
+          background: url("~@/assets/images/watching.svg") no-repeat
+            center/contain;
+          margin-bottom: vw(1);
         }
         .des {
           display: flex;
+          justify-content: end;
           @mixin des-icon($url) {
             margin-right: vw(4);
             width: vw(12);
@@ -297,23 +312,33 @@ export default {
             .position {
               @include des-icon("~@/assets/images/position.svg");
             }
+            .people {
+              @include des-icon("~@/assets/images/people.svg");
+            }
+            .lawn {
+              @include des-icon("~@/assets/images/lawn.svg");
+            }
             .des-laguage {
               font-style: normal;
               font-size: vw(8);
-              line-height: vw(10);
               .des-en {
+                line-height: vw(10);
                 font-family: "Inter";
                 font-weight: 500;
                 color: rgba(255, 255, 255, 0.7);
-                margin-bottom: vw(1);
-                transform: scale(0.5);
-          transform-origin: 0 0;
+                margin-bottom: vw(4);
+                // transform: scale(0.5);
+                // transform-origin: 0 0;
               }
               .des-cn {
+                line-height: vw(10);
                 font-family: "PingFang SC";
                 font-weight: 400;
                 color: rgba(255, 255, 255, 0.32);
               }
+            }
+            &:not(:last-child) {
+              margin-right: vw(16);
             }
           }
         }
