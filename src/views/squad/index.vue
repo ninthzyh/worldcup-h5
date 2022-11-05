@@ -7,6 +7,9 @@
           <SwitchTab :tabList="tabList" />
         </div>
       </div>
+      <span class="formation">
+        {{teamInfors[0].lineup}}
+      </span>
       <StartLineup
         :list="startLineup"
         :teamInfors="[teamInfors[0]]"
@@ -160,6 +163,18 @@ export default {
       width: vw(180);
       display: inline-block;
     }
+  }
+
+  .formation{
+    display: inline-block;
+    height: vw(20);
+    line-height: vw(20);
+    padding: 0 vw(8);
+    text-align: center;
+    font-size: vw(12);
+    border-radius: vw(10);
+    color: rgba(255, 255, 255, 0.54);
+    background: rgba(255, 255, 255, 0.12);
   }
 
   .tabItem {

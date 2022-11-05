@@ -10,35 +10,17 @@
 <template>
   <div class="startLineup">
     <div
-      class="teamInforArea"
-      :class="[index === 0 ? 'home' : '', index === 1 ? 'away' : '']"
-      v-for="(item, index) in teamInfors"
-      :key="item.teamId"
-    >
-      <span class="teamLineup">
-        <span
-          v-if="item.lineup"
-          class="lineupText"
-          v-text="_lineupFormatHandler(item.lineup)"
-        ></span>
-      </span>
-    </div>
-    <div
       class="playerPos"
       v-show="
         list &&
         list instanceof Array &&
-        list.length == 2 &&
-        classLineupList.length == 2
+        list.length == 2
       "
     >
       <span
         v-for="(team, tIndex) in allStartPlayerList"
         :key="tIndex"
-        :class="[
-          'topTeam',
-          classLineupList[tIndex] ? `lineupType${classLineupList[tIndex]}` : '',
-        ]"
+        :class="classLineupList ? `lineupType${classLineupList}` : ''"
       >
         <span
           v-show="!isThemeFlagArr.includes(tIndex == 0 ? 'home' : 'away')"
@@ -149,15 +131,10 @@ export default {
           this.teamInfors[0] && this.teamInfors[0].lineup
             ? this.teamInfors[0].lineup
             : ""
-        );
-        let awayLineup = this._lineupFormatHandler(
-          this.teamInfors[1] && this.teamInfors[1].lineup
-            ? this.teamInfors[1].lineup
-            : ""
-        );
-        return [homeLineup, awayLineup];
+        )
+        return homeLineup;
       } else {
-        return ["", ""];
+        return "";
       }
     },
   },
@@ -393,10 +370,11 @@ export default {
 .startLineup {
   position: relative;
   width: 100%;
-  height: vw(562);
+  height: vw(277);
+  background-image: url("../../assets/images/half.svg");
   //background-image: url(../view/img/lineup_bg.png);
   background-size: 100% 100%;
-  background-position: left top;
+  //background-position: left top;
   background-repeat: no-repeat;
   * {
     box-sizing: border-box;
@@ -462,11 +440,11 @@ export default {
   }
   .playerPos {
     position: absolute;
-    top: vw(40);
-    left: vw(13);
+    top: vw(20);
+    left: vw(15);
     z-index: 10;
     width: calc(100% - #{vw(26)});
-    height: vw(482);
+    height: vw(257);
     .playerItem {
       position: absolute;
       z-index: 20;
@@ -513,103 +491,56 @@ export default {
       }
     }
     & {
-      & .lineupType4-4-2.topTeam .playerItem {
+      & .lineupType4-4-2 .playerItem {
         &:first-child {
-          top: 3%;
+          top: 6%;
           left: 50%;
           transform: translateX(-50%);
         }
         &:nth-child(2) {
-          top: 15%;
+          top: 30%;
           left: 8.25%;
         }
         &:nth-child(3) {
-          top: 15%;
+          top: 30%;
           left: 32%;
         }
         &:nth-child(4) {
-          top: 15%;
+          top: 30%;
           right: 32%;
         }
         &:nth-child(5) {
-          top: 15%;
+          top: 30%;
           right: 8.25%;
         }
         &:nth-child(6) {
-          top: 27%;
+          top: 54%;
           left: 8.25%;
         }
         &:nth-child(7) {
-          top: 27%;
+          top: 54%;
           left: 32%;
         }
         &:nth-child(8) {
-          top: 27%;
+          top: 54%;
           right: 32%;
         }
         &:nth-child(9) {
-          top: 27%;
+          top: 54%;
           right: 8.25%;
         }
         &:nth-child(10) {
-          top: 39%;
+          top: 54%;
           left: 26%;
         }
         &:nth-child(11) {
-          top: 39%;
-          right: 26%;
-        }
-      }
-      & .lineupType4-4-2.bottomTeam .playerItem {
-        &:first-child {
-          bottom: 3%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: 15%;
-          left: 8.25%;
-        }
-        &:nth-child(3) {
-          bottom: 15%;
-          left: 32%;
-        }
-        &:nth-child(4) {
-          bottom: 15%;
-          right: 32%;
-        }
-        &:nth-child(5) {
-          bottom: 15%;
-          right: 8.25%;
-        }
-        &:nth-child(6) {
-          bottom: 27%;
-          left: 8.25%;
-        }
-        &:nth-child(7) {
-          bottom: 27%;
-          left: 32%;
-        }
-        &:nth-child(8) {
-          bottom: 27%;
-          right: 32%;
-        }
-        &:nth-child(9) {
-          bottom: 27%;
-          right: 8.25%;
-        }
-        &:nth-child(10) {
-          bottom: 39%;
-          left: 26%;
-        }
-        &:nth-child(11) {
-          bottom: 39%;
+          top: 78%;
           right: 26%;
         }
       }
     }
     & {
-      & .lineupType4-3-3.topTeam .playerItem {
+      & .lineupType4-3-3 .playerItem {
         &:first-child {
           top: 3%;
           left: 50%;
@@ -658,58 +589,9 @@ export default {
           right: 12%;
         }
       }
-      & .lineupType4-3-3.bottomTeam .playerItem {
-        &:first-child {
-          bottom: 3%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: 15%;
-          left: 8.25%;
-        }
-        &:nth-child(3) {
-          bottom: 15%;
-          left: 32%;
-        }
-        &:nth-child(4) {
-          bottom: 15%;
-          right: 32%;
-        }
-        &:nth-child(5) {
-          bottom: 15%;
-          right: 8.25%;
-        }
-        &:nth-child(6) {
-          bottom: 27%;
-          left: 12%;
-        }
-        &:nth-child(7) {
-          bottom: 27%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(8) {
-          bottom: 27%;
-          right: 12%;
-        }
-        &:nth-child(9) {
-          bottom: 39%;
-          left: 12%;
-        }
-        &:nth-child(10) {
-          bottom: 39%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(11) {
-          bottom: 39%;
-          right: 12%;
-        }
-      }
     }
     & {
-      & .lineupType4-5-1.topTeam .playerItem {
+      & .lineupType4-5-1 .playerItem {
         &:first-child {
           top: 3%;
           left: 50%;
@@ -758,58 +640,9 @@ export default {
           transform: translateX(-50%);
         }
       }
-      & .lineupType4-5-1.bottomTeam .playerItem {
-        &:first-child {
-          bottom: 3%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: 13%;
-          left: 8.25%;
-        }
-        &:nth-child(3) {
-          bottom: 13%;
-          left: 32%;
-        }
-        &:nth-child(4) {
-          bottom: 13%;
-          right: 32%;
-        }
-        &:nth-child(5) {
-          bottom: 13%;
-          right: 8.25%;
-        }
-        &:nth-child(6) {
-          bottom: 32%;
-          left: 6%;
-        }
-        &:nth-child(7) {
-          bottom: 23.5%;
-          left: 20%;
-        }
-        &:nth-child(8) {
-          bottom: 23.5%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(9) {
-          bottom: 23.5%;
-          right: 20%;
-        }
-        &:nth-child(10) {
-          bottom: 32%;
-          right: 6%;
-        }
-        &:nth-child(11) {
-          bottom: 39%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
     }
     & {
-      & .lineupType5-3-2.topTeam .playerItem {
+      & .lineupType5-3-2 .playerItem {
         &:first-child {
           top: 3%;
           left: 50%;
@@ -858,58 +691,9 @@ export default {
           right: 26%;
         }
       }
-      & .lineupType5-3-2.bottomTeam .playerItem {
-        &:first-child {
-          bottom: 3%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: 12%;
-          left: 3.25%;
-        }
-        &:nth-child(3) {
-          bottom: 14%;
-          left: 23.25%;
-        }
-        &:nth-child(4) {
-          bottom: 16%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(5) {
-          bottom: 14%;
-          right: 23.25%;
-        }
-        &:nth-child(6) {
-          bottom: 12%;
-          right: 3.25%;
-        }
-        &:nth-child(7) {
-          bottom: 27%;
-          left: 14%;
-        }
-        &:nth-child(8) {
-          bottom: 27%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(9) {
-          bottom: 27%;
-          right: 20%;
-        }
-        &:nth-child(10) {
-          bottom: 39%;
-          left: 26%;
-        }
-        &:nth-child(11) {
-          bottom: 39%;
-          right: 26%;
-        }
-      }
     }
     & {
-      & .lineupType5-4-1.topTeam .playerItem {
+      & .lineupType5-4-1 .playerItem {
         &:first-child {
           top: 3%;
           left: 50%;
@@ -958,59 +742,9 @@ export default {
           transform: translateX(-50%);
         }
       }
-
-      & .lineupType5-4-1.bottomTeam .playerItem {
-        &:first-child {
-          bottom: 3%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: 12%;
-          left: 3.25%;
-        }
-        &:nth-child(3) {
-          bottom: 14%;
-          left: 23.25%;
-        }
-        &:nth-child(4) {
-          bottom: 16%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(5) {
-          bottom: 14%;
-          right: 23.25%;
-        }
-        &:nth-child(6) {
-          bottom: 12%;
-          right: 3.25%;
-        }
-        &:nth-child(7) {
-          bottom: 27%;
-          left: 8.25%;
-        }
-        &:nth-child(8) {
-          bottom: 27%;
-          left: 32%;
-        }
-        &:nth-child(9) {
-          bottom: 27%;
-          right: 32%;
-        }
-        &:nth-child(10) {
-          bottom: 27%;
-          right: 8.25%;
-        }
-        &:nth-child(11) {
-          bottom: 39%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
     }
     & {
-      & .lineupType3-5-2.topTeam .playerItem {
+      & .lineupType3-5-2 .playerItem {
         &:first-child {
           top: 3%;
           left: 50%;
@@ -1060,59 +794,9 @@ export default {
           right: 26%;
         }
       }
-      & .lineupType3-5-2.bottomTeam .playerItem {
-        &:first-child {
-          bottom: 3%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: 15%;
-          left: 14%;
-        }
-        &:nth-child(3) {
-          bottom: 15%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(4) {
-          bottom: 15%;
-          right: 14%;
-        }
-        &:nth-child(5) {
-          bottom: 30%;
-          left: 3.25%;
-        }
-        &:nth-child(6) {
-          bottom: 26%;
-          left: 24.45%;
-        }
-        &:nth-child(7) {
-          bottom: 26%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(8) {
-          bottom: 26%;
-          right: 24.45%;
-        }
-        &:nth-child(9) {
-          bottom: 30%;
-          right: 3.25%;
-        }
-
-        &:nth-child(10) {
-          bottom: 39%;
-          left: 26%;
-        }
-        &:nth-child(11) {
-          bottom: 39%;
-          right: 26%;
-        }
-      }
     }
     & {
-      & .lineupType3-4-3.topTeam .playerItem {
+      & .lineupType3-4-3 .playerItem {
         &:first-child {
           top: 3%;
           left: 50%;
@@ -1161,58 +845,9 @@ export default {
           right: 12%;
         }
       }
-      & .lineupType3-4-3.bottomTeam .playerItem {
-        &:first-child {
-          bottom: 3%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: 15%;
-          left: 20%;
-        }
-        &:nth-child(3) {
-          bottom: 15%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(4) {
-          bottom: 15%;
-          right: 20%;
-        }
-        &:nth-child(5) {
-          bottom: 27%;
-          left: 8.25%;
-        }
-        &:nth-child(6) {
-          bottom: 27%;
-          left: 32%;
-        }
-        &:nth-child(7) {
-          bottom: 27%;
-          right: 32%;
-        }
-        &:nth-child(8) {
-          bottom: 27%;
-          right: 8.25%;
-        }
-        &:nth-child(9) {
-          bottom: 39%;
-          left: 12%;
-        }
-        &:nth-child(10) {
-          bottom: 39%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(11) {
-          bottom: 39%;
-          right: 12%;
-        }
-      }
     }
     & {
-      & .lineupType3-4-3d.topTeam .playerItem {
+      & .lineupType3-4-3d .playerItem {
         &:first-child {
           top: 1%;
           left: 50%;
@@ -1263,60 +898,9 @@ export default {
           right: 12%;
         }
       }
-      & .lineupType3-4-3d.bottomTeam .playerItem {
-        &:first-child {
-          bottom: 1%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: 11%;
-          left: 20%;
-        }
-        &:nth-child(3) {
-          bottom: 11%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(4) {
-          bottom: 11%;
-          right: 20%;
-        }
-        &:nth-child(5) {
-          bottom: 26%;
-          left: 10%;
-        }
-        &:nth-child(6) {
-          bottom: 20.5%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(7) {
-          bottom: 30%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(8) {
-          bottom: 26%;
-          right: 10%;
-        }
-        &:nth-child(9) {
-          bottom: 39.5%;
-          left: 12%;
-        }
-        &:nth-child(10) {
-          bottom: 39.5%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(11) {
-          bottom: 39.5%;
-          right: 12%;
-        }
-      }
     }
     & {
-      & .lineupType4-2-4-0.topTeam .playerItem {
+      & .lineupType4-2-4-0 .playerItem {
         &:first-child {
           top: 3%;
           left: 50%;
@@ -1363,56 +947,9 @@ export default {
           right: 8.25%;
         }
       }
-      & .lineupType4-2-4-0.bottomTeam .playerItem {
-        &:first-child {
-          bottom: 3%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: 15%;
-          left: 8.25%;
-        }
-        &:nth-child(3) {
-          bottom: 15%;
-          left: 32%;
-        }
-        &:nth-child(4) {
-          bottom: 15%;
-          right: 32%;
-        }
-        &:nth-child(5) {
-          bottom: 15%;
-          right: 8.25%;
-        }
-        &:nth-child(6) {
-          bottom: 27%;
-          left: 26%;
-        }
-        &:nth-child(7) {
-          bottom: 27%;
-          right: 26%;
-        }
-        &:nth-child(8) {
-          bottom: 39%;
-          left: 8.25%;
-        }
-        &:nth-child(9) {
-          bottom: 39%;
-          left: 32%;
-        }
-        &:nth-child(10) {
-          bottom: 39%;
-          right: 32%;
-        }
-        &:nth-child(11) {
-          bottom: 39%;
-          right: 8.25%;
-        }
-      }
     }
     & {
-      & .lineupType4-4-1-1.topTeam .playerItem {
+      & .lineupType4-4-1-1 .playerItem {
         &:first-child {
           top: 2%;
           left: 50%;
@@ -1461,58 +998,9 @@ export default {
           transform: translateX(-50%);
         }
       }
-      & .lineupType4-4-1-1.bottomTeam .playerItem {
-        &:first-child {
-          bottom: 2%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: 11%;
-          left: 8.25%;
-        }
-        &:nth-child(3) {
-          bottom: 11%;
-          left: 32%;
-        }
-        &:nth-child(4) {
-          bottom: 11%;
-          right: 32%;
-        }
-        &:nth-child(5) {
-          bottom: 11%;
-          right: 8.25%;
-        }
-        &:nth-child(6) {
-          bottom: 21%;
-          left: 8.25%;
-        }
-        &:nth-child(7) {
-          bottom: 21%;
-          left: 32%;
-        }
-        &:nth-child(8) {
-          bottom: 21%;
-          right: 32%;
-        }
-        &:nth-child(9) {
-          bottom: 21%;
-          right: 8.25%;
-        }
-        &:nth-child(10) {
-          bottom: 29%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(11) {
-          bottom: 39%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
     }
     & {
-      & .lineupType4-1-4-1.topTeam .playerItem {
+      & .lineupType4-1-4-1 .playerItem {
         &:first-child {
           top: 2%;
           left: 50%;
@@ -1562,59 +1050,9 @@ export default {
           transform: translateX(-50%);
         }
       }
-      & .lineupType4-1-4-1.bottomTeam .playerItem {
-        &:first-child {
-          bottom: 2%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: 11%;
-          left: 8.25%;
-        }
-        &:nth-child(3) {
-          bottom: 11%;
-          left: 32%;
-        }
-        &:nth-child(4) {
-          bottom: 11%;
-          right: 32%;
-        }
-        &:nth-child(5) {
-          bottom: 11%;
-          right: 8.25%;
-        }
-        &:nth-child(6) {
-          bottom: 20%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(7) {
-          bottom: 29%;
-          left: 8.25%;
-        }
-        &:nth-child(8) {
-          bottom: 29%;
-          left: 32%;
-        }
-        &:nth-child(9) {
-          bottom: 29%;
-          right: 32%;
-        }
-        &:nth-child(10) {
-          bottom: 29%;
-          right: 8.25%;
-        }
-
-        &:nth-child(11) {
-          bottom: 39%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
     }
     & {
-      & .lineupType4-2-3-1.topTeam .playerItem {
+      & .lineupType4-2-3-1 .playerItem {
         &:first-child {
           top: 2%;
           left: 50%;
@@ -1664,59 +1102,9 @@ export default {
           transform: translateX(-50%);
         }
       }
-      & .lineupType4-2-3-1.bottomTeam .playerItem {
-        &:first-child {
-          bottom: 2%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: 11%;
-          left: 8.25%;
-        }
-        &:nth-child(3) {
-          bottom: 11%;
-          left: 32%;
-        }
-        &:nth-child(4) {
-          bottom: 11%;
-          right: 32%;
-        }
-        &:nth-child(5) {
-          bottom: 11%;
-          right: 8.25%;
-        }
-        &:nth-child(6) {
-          bottom: 20.5%;
-          left: 27%;
-        }
-        &:nth-child(7) {
-          bottom: 20.5%;
-          right: 27%;
-        }
-        &:nth-child(8) {
-          bottom: 29%;
-          left: 14%;
-        }
-        &:nth-child(9) {
-          bottom: 29%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(10) {
-          bottom: 29%;
-          right: 14%;
-        }
-
-        &:nth-child(11) {
-          bottom: 39%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
     }
     & {
-      & .lineupType4-3-2-1.topTeam .playerItem {
+      & .lineupType4-3-2-1 .playerItem {
         &:first-child {
           top: 2%;
           left: 50%;
@@ -1766,59 +1154,9 @@ export default {
           transform: translateX(-50%);
         }
       }
-      & .lineupType4-3-2-1.bottomTeam .playerItem {
-        &:first-child {
-          bottom: 2%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: 11%;
-          left: 8.25%;
-        }
-        &:nth-child(3) {
-          bottom: 11%;
-          left: 32%;
-        }
-        &:nth-child(4) {
-          bottom: 11%;
-          right: 32%;
-        }
-        &:nth-child(5) {
-          bottom: 11%;
-          right: 8.25%;
-        }
-
-        &:nth-child(6) {
-          bottom: 21%;
-          left: 14%;
-        }
-        &:nth-child(7) {
-          bottom: 21%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(8) {
-          bottom: 21%;
-          right: 14%;
-        }
-        &:nth-child(9) {
-          bottom: 30%;
-          left: 27%;
-        }
-        &:nth-child(10) {
-          bottom: 30%;
-          right: 27%;
-        }
-        &:nth-child(11) {
-          bottom: 39%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
     }
     & {
-      & .lineupType4-2-2-2.topTeam .playerItem {
+      & .lineupType4-2-2-2 .playerItem {
         &:first-child {
           top: 2%;
           left: 50%;
@@ -1865,56 +1203,9 @@ export default {
           right: 23%;
         }
       }
-      & .lineupType4-2-2-2.bottomTeam .playerItem {
-        &:first-child {
-          bottom: 2%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: 11%;
-          left: 8.25%;
-        }
-        &:nth-child(3) {
-          bottom: 11%;
-          left: 32%;
-        }
-        &:nth-child(4) {
-          bottom: 11%;
-          right: 32%;
-        }
-        &:nth-child(5) {
-          bottom: 11%;
-          right: 8.25%;
-        }
-        &:nth-child(6) {
-          bottom: 21%;
-          left: 23%;
-        }
-        &:nth-child(7) {
-          bottom: 21%;
-          right: 23%;
-        }
-        &:nth-child(8) {
-          bottom: 30%;
-          left: 32%;
-        }
-        &:nth-child(9) {
-          bottom: 30%;
-          right: 32%;
-        }
-        &:nth-child(10) {
-          bottom: 39%;
-          left: 23%;
-        }
-        &:nth-child(11) {
-          bottom: 39%;
-          right: 23%;
-        }
-      }
     }
     & {
-      & .lineupType3-5-1-1.topTeam .playerItem {
+      & .lineupType3-5-1-1 .playerItem {
         &:first-child {
           top: 1.5%;
           left: 50%;
@@ -1966,61 +1257,9 @@ export default {
           transform: translateX(-50%);
         }
       }
-      & .lineupType3-5-1-1.bottomTeam .playerItem {
-        &:first-child {
-          bottom: 1.5%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: 11%;
-          left: 14%;
-        }
-        &:nth-child(3) {
-          bottom: 11%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(4) {
-          bottom: 11%;
-          right: 14%;
-        }
-        &:nth-child(5) {
-          bottom: 24%;
-          left: 3.25%;
-        }
-        &:nth-child(6) {
-          bottom: 21%;
-          left: 20%;
-        }
-        &:nth-child(7) {
-          bottom: 21%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(8) {
-          bottom: 21%;
-          right: 20%;
-        }
-        &:nth-child(9) {
-          bottom: 24%;
-          right: 3.25%;
-        }
-
-        &:nth-child(10) {
-          bottom: 31%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(11) {
-          bottom: 40%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
     }
     & {
-      & .lineupType3-4-2-1.topTeam .playerItem {
+      & .lineupType3-4-2-1 .playerItem {
         &:first-child {
           top: 1.5%;
           left: 50%;
@@ -2069,58 +1308,9 @@ export default {
           transform: translateX(-50%);
         }
       }
-      & .lineupType3-4-2-1.bottomTeam .playerItem {
-        &:first-child {
-          bottom: 1.5%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: 12%;
-          left: 14%;
-        }
-        &:nth-child(3) {
-          bottom: 12%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(4) {
-          bottom: 12%;
-          right: 14%;
-        }
-        &:nth-child(5) {
-          bottom: 22%;
-          left: 8.25%;
-        }
-        &:nth-child(6) {
-          bottom: 22%;
-          left: 32%;
-        }
-        &:nth-child(7) {
-          bottom: 22%;
-          right: 32%;
-        }
-        &:nth-child(8) {
-          bottom: 22%;
-          right: 8.25%;
-        }
-        &:nth-child(9) {
-          bottom: 32%;
-          left: 26%;
-        }
-        &:nth-child(10) {
-          bottom: 32%;
-          right: 26%;
-        }
-        &:nth-child(11) {
-          bottom: 39%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
     }
     & {
-      & .lineupType3-4-1-2.topTeam .playerItem {
+      & .lineupType3-4-1-2 .playerItem {
         &:first-child {
           top: 1.5%;
           left: 50%;
@@ -2169,58 +1359,9 @@ export default {
           right: 26%;
         }
       }
-      & .lineupType3-4-1-2.bottomTeam .playerItem {
-        &:first-child {
-          bottom: 1.5%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: 12%;
-          left: 14%;
-        }
-        &:nth-child(3) {
-          bottom: 12%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(4) {
-          bottom: 12%;
-          right: 14%;
-        }
-        &:nth-child(5) {
-          bottom: 22%;
-          left: 8.25%;
-        }
-        &:nth-child(6) {
-          bottom: 22%;
-          left: 32%;
-        }
-        &:nth-child(7) {
-          bottom: 22%;
-          right: 32%;
-        }
-        &:nth-child(8) {
-          bottom: 22%;
-          right: 8.25%;
-        }
-        &:nth-child(9) {
-          bottom: 32%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(10) {
-          bottom: 39%;
-          left: 26%;
-        }
-        &:nth-child(11) {
-          bottom: 39%;
-          right: 26%;
-        }
-      }
     }
     & {
-      & .lineupType3-1-4-2.topTeam .playerItem {
+      & .lineupType3-1-4-2 .playerItem {
         &:first-child {
           top: 1.5%;
           left: 50%;
@@ -2270,59 +1411,9 @@ export default {
           right: 26%;
         }
       }
-      & .lineupType3-1-4-2.bottomTeam .playerItem {
-        &:first-child {
-          bottom: 1.5%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: 11.5%;
-          left: 14%;
-        }
-        &:nth-child(3) {
-          bottom: 11.5%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(4) {
-          bottom: 11.5%;
-          right: 14%;
-        }
-        &:nth-child(5) {
-          bottom: 21%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(6) {
-          bottom: 29%;
-          left: 8.25%;
-        }
-        &:nth-child(7) {
-          bottom: 29%;
-          left: 32%;
-        }
-        &:nth-child(8) {
-          bottom: 29%;
-          right: 32%;
-        }
-        &:nth-child(9) {
-          bottom: 29%;
-          right: 8.25%;
-        }
-
-        &:nth-child(10) {
-          bottom: 39%;
-          left: 26%;
-        }
-        &:nth-child(11) {
-          bottom: 39%;
-          right: 26%;
-        }
-      }
     }
     & {
-      & .lineupType4-1-3-2.topTeam .playerItem {
+      & .lineupType4-1-3-2 .playerItem {
         &:first-child {
           top: 1.5%;
           left: 50%;
@@ -2372,59 +1463,9 @@ export default {
           right: 26%;
         }
       }
-      & .lineupType4-1-3-2.bottomTeam .playerItem {
-        &:first-child {
-          bottom: 1.5%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: 11.5%;
-          left: 8.25%;
-        }
-        &:nth-child(3) {
-          bottom: 11.5%;
-          left: 32%;
-        }
-        &:nth-child(4) {
-          bottom: 11.5%;
-          right: 32%;
-        }
-        &:nth-child(5) {
-          bottom: 11.5%;
-          right: 8.25%;
-        }
-
-        &:nth-child(6) {
-          bottom: 20%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(7) {
-          bottom: 30%;
-          left: 14%;
-        }
-        &:nth-child(8) {
-          bottom: 30%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(9) {
-          bottom: 30%;
-          right: 14%;
-        }
-        &:nth-child(10) {
-          bottom: 39%;
-          left: 26%;
-        }
-        &:nth-child(11) {
-          bottom: 39%;
-          right: 26%;
-        }
-      }
     }
     & {
-      & .lineupType4-3-1-2.topTeam .playerItem {
+      & .lineupType4-3-1-2 .playerItem {
         &:first-child {
           top: 1.5%;
           left: 50%;
@@ -2473,58 +1514,9 @@ export default {
           right: 26%;
         }
       }
-      & .lineupType4-3-1-2.bottomTeam .playerItem {
-        &:first-child {
-          bottom: 1.5%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: 11.5%;
-          left: 8.25%;
-        }
-        &:nth-child(3) {
-          bottom: 11.5%;
-          left: 32%;
-        }
-        &:nth-child(4) {
-          bottom: 11.5%;
-          right: 32%;
-        }
-        &:nth-child(5) {
-          bottom: 11.5%;
-          right: 8.25%;
-        }
-        &:nth-child(6) {
-          bottom: 21%;
-          left: 14%;
-        }
-        &:nth-child(7) {
-          bottom: 21%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(8) {
-          bottom: 21%;
-          right: 14%;
-        }
-        &:nth-child(9) {
-          bottom: 31%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(10) {
-          bottom: 39%;
-          left: 26%;
-        }
-        &:nth-child(11) {
-          bottom: 39%;
-          right: 26%;
-        }
-      }
     }
     & {
-      & .lineupType3-2-4-1.topTeam .playerItem {
+      & .lineupType3-2-4-1 .playerItem {
         &:first-child {
           top: 1.5%;
           left: 50%;
@@ -2573,360 +1565,160 @@ export default {
           transform: translateX(-50%);
         }
       }
-      & .lineupType3-2-4-1.bottomTeam .playerItem {
-        &:first-child {
-          bottom: 1.5%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: 12%;
-          left: 14%;
-        }
-        &:nth-child(3) {
-          bottom: 12%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(4) {
-          bottom: 12%;
-          right: 14%;
-        }
-        &:nth-child(5) {
-          bottom: 20.5%;
-          left: 26%;
-        }
-        &:nth-child(6) {
-          bottom: 20.5%;
-          right: 26%;
-        }
-        &:nth-child(7) {
-          bottom: 30.5%;
-          left: 8.25%;
-        }
-        &:nth-child(8) {
-          bottom: 30.5%;
-          left: 32%;
-        }
-        &:nth-child(9) {
-          bottom: 30.5%;
-          right: 32%;
-        }
-        &:nth-child(10) {
-          bottom: 30.5%;
-          right: 8.25%;
-        }
-        &:nth-child(11) {
-          bottom: 39%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
     }
     & {
-      & .lineupType3-3-3-1.topTeam .playerItem {
-        &:first-child {
-          top: 0.5%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          top: 10%;
-          left: 16%;
-        }
-        &:nth-child(3) {
-          top: 10%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(4) {
-          top: 10%;
-          right: 16%;
-        }
-        &:nth-child(5) {
-          top: 20%;
-          left: 16%;
-        }
-        &:nth-child(6) {
-          top: 20%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(7) {
-          top: 20%;
-          right: 16%;
-        }
-        &:nth-child(8) {
-          top: 30%;
-          left: 6%;
-        }
-        &:nth-child(9) {
-          top: 30%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(10) {
-          top: 30%;
-          right: 6%;
-        }
-        &:nth-child(11) {
-          top: 39.5%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
-      & .lineupType3-3-3-1.bottomTeam .playerItem {
-        &:first-child {
-          bottom: 0.5%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: 10%;
-          left: 16%;
-        }
-        &:nth-child(3) {
-          bottom: 10%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(4) {
-          bottom: 10%;
-          right: 16%;
-        }
-        &:nth-child(5) {
-          bottom: 20%;
-          left: 16%;
-        }
-        &:nth-child(6) {
-          bottom: 20%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(7) {
-          bottom: 20%;
-          right: 16%;
-        }
-        &:nth-child(8) {
-          bottom: 30%;
-          left: 6%;
-        }
-        &:nth-child(9) {
-          bottom: 30%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(10) {
-          bottom: 30%;
-          right: 6%;
-        }
-        &:nth-child(11) {
-          bottom: 39.5%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
-    }
-    & {
-      & .lineupType4-1-2-1-2.topTeam .playerItem {
+      & .lineupType3-3-3-1 .playerItem {
         &:first-child {
           top: 1%;
           left: 50%;
           transform: translateX(-50%);
         }
         &:nth-child(2) {
-          top: 11%;
-          left: 8.25%;
+          top: 20%;
+          left: 16%;
         }
         &:nth-child(3) {
-          top: 11%;
-          left: 30%;
-        }
-        &:nth-child(4) {
-          top: 11%;
-          right: 30%;
-        }
-        &:nth-child(5) {
-          top: 11%;
-          right: 8.25%;
-        }
-        &:nth-child(6) {
           top: 20%;
           left: 50%;
           transform: translateX(-50%);
         }
+        &:nth-child(4) {
+          top: 20%;
+          right: 16%;
+        }
+        &:nth-child(5) {
+          top: 40%;
+          left: 16%;
+        }
+        &:nth-child(6) {
+          top: 40%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
         &:nth-child(7) {
-          top: 25%;
-          left: 12%;
+          top: 40%;
+          right: 16%;
         }
         &:nth-child(8) {
-          top: 25%;
-          right: 12%;
+          top: 60%;
+          left: 6%;
         }
         &:nth-child(9) {
-          top: 32%;
+          top: 60%;
           left: 50%;
           transform: translateX(-50%);
         }
         &:nth-child(10) {
-          top: 38%;
-          left: 20%;
+          top: 60%;
+          right: 6%;
         }
         &:nth-child(11) {
-          top: 38%;
-          right: 20%;
+          top: 80%;
+          left: 50%;
+          transform: translateX(-50%);
         }
       }
-      & .lineupType4-1-2-1-2.bottomTeam .playerItem {
+    }
+    & {
+      & .lineupType4-1-2-1-2 .playerItem {
         &:first-child {
-          bottom: 1%;
+          top: 2%;
           left: 50%;
           transform: translateX(-50%);
         }
         &:nth-child(2) {
-          bottom: 11%;
+          top: 22%;
           left: 8.25%;
         }
         &:nth-child(3) {
-          bottom: 11%;
+          top: 22%;
           left: 30%;
         }
         &:nth-child(4) {
-          bottom: 11%;
+          top: 22%;
           right: 30%;
         }
         &:nth-child(5) {
-          bottom: 11%;
+          top: 22%;
           right: 8.25%;
         }
         &:nth-child(6) {
-          bottom: 20%;
+          top: 40%;
           left: 50%;
           transform: translateX(-50%);
         }
         &:nth-child(7) {
-          bottom: 25%;
+          top: 50%;
           left: 12%;
         }
         &:nth-child(8) {
-          bottom: 25%;
+          top: 50%;
           right: 12%;
         }
         &:nth-child(9) {
-          bottom: 32%;
+          top: 64%;
           left: 50%;
           transform: translateX(-50%);
         }
         &:nth-child(10) {
-          bottom: 38%;
+          top: 82%;
           left: 20%;
         }
         &:nth-child(11) {
-          bottom: 38%;
+          top: 82%;
           right: 20%;
         }
       }
     }
     & {
-      & .lineupType3-1-3-1-2.topTeam .playerItem {
+      & .lineupType3-1-3-1-2 .playerItem {
         &:first-child {
-          top: 0.3%;
+          top: 1%;
           left: 50%;
           transform: translateX(-50%);
         }
         &:nth-child(2) {
-          top: 9%;
+          top: 18%;
           left: 20%;
         }
         &:nth-child(3) {
-          top: 9%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(4) {
-          top: 9%;
-          right: 20%;
-        }
-        &:nth-child(5) {
           top: 18%;
           left: 50%;
           transform: translateX(-50%);
         }
-        &:nth-child(6) {
-          top: 27%;
-          left: 6%;
+        &:nth-child(4) {
+          top: 18%;
+          right: 20%;
         }
-        &:nth-child(7) {
-          top: 27%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(8) {
-          top: 27%;
-          right: 6%;
-        }
-        &:nth-child(9) {
+        &:nth-child(5) {
           top: 36%;
           left: 50%;
           transform: translateX(-50%);
         }
-        &:nth-child(10) {
-          top: 40.5%;
-          left: 26%;
-        }
-        &:nth-child(11) {
-          top: 40.5%;
-          right: 26%;
-        }
-      }
-      & .lineupType3-1-3-1-2.bottomTeam .playerItem {
-        &:first-child {
-          bottom: 0.3%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: 9%;
-          left: 20%;
-        }
-        &:nth-child(3) {
-          bottom: 9%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(4) {
-          bottom: 9%;
-          right: 20%;
-        }
-        &:nth-child(5) {
-          bottom: 18%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
         &:nth-child(6) {
-          bottom: 27%;
+          top: 54%;
           left: 6%;
         }
         &:nth-child(7) {
-          bottom: 27%;
+          top: 54%;
           left: 50%;
           transform: translateX(-50%);
         }
         &:nth-child(8) {
-          bottom: 27%;
+          top: 54%;
           right: 6%;
         }
         &:nth-child(9) {
-          bottom: 36%;
+          top: 72%;
           left: 50%;
           transform: translateX(-50%);
         }
         &:nth-child(10) {
-          bottom: 40.5%;
+          top: 88%;
           left: 26%;
         }
         &:nth-child(11) {
-          bottom: 40.5%;
+          top: 88%;
           right: 26%;
         }
       }
