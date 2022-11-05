@@ -5,7 +5,7 @@
         <div class="group-title">{{item.groupName}}</div>
         <div class="table">
           <div class="table-header">
-            <div class="label-first"><span>#</span>球队</div>
+            <div class="label-first"><span class="icon">#</span><span>球队</span></div>
             <div class="label">场次</div>
             <div class="label">胜</div>
             <div class="label">平</div>
@@ -30,7 +30,7 @@
       <div class="group-logo"></div>
     </div>
     <div class="tips">
-      <div class="legend"></div>晋级淘汰赛资格
+      <div class="legend"></div><span>晋级淘汰赛资格</span>
     </div>
   </div>
 </template>
@@ -557,7 +557,7 @@ export default {
           .label-first {
             flex-basis: 125px;
             text-align: left;
-            > span {
+            .icon {
               margin-right: vw(14);
             }
           }

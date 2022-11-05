@@ -247,32 +247,25 @@ export default {
       padding-left: vw(8);
       margin: vw(10) 0 vw(15) 0;
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
       height: vw(24);
       line-height: vw(24);
       .lock-text {
-        // font-family: "PingFang SC";
+        font-family: "PingFang SC";
         font-style: normal;
         font-weight: 400;
         font-size: vw(10);
-        // display: flex;
-        // align-items: center;
-        // text-transform: uppercase;
-        // transform: scale(0.83);
-        // width: 120%;
-        @extend .font-10;
+        transform: scale(0.73);
         transform-origin: 0 50%;
-        flex: 0 0 vw(200);
-        > span {
-          }
-        .lock-num{
+        zoom: 0.97;
+        flex: 1 0 vw(202);
+        .lock-num {
           font-size: vw(18);
           padding: 0 vw(5);
-
         }
       }
       .lock-btn {
-        flex: 0 0 vw(75);
+        flex: 0 0 vw(72);
         background: linear-gradient(
           90deg,
           #8d3588 0%,
@@ -284,6 +277,8 @@ export default {
         align-items: center;
         justify-content: space-between;
         margin: vw(2) 0;
+        transform: scale(1);
+        transform-origin: 0 50%;
         .unlock {
           font-family: "PingFang SC";
           font-style: normal;

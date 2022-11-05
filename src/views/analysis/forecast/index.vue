@@ -4,7 +4,9 @@
     <Session></Session>
     <Win></Win>
     <Score></Score>
+    <goal-number></goal-number>
     <both-score></both-score>
+    <Hot></Hot>
   </div>
 </template>
 <script>
@@ -14,8 +16,10 @@ import { matchPredicted } from "../../../api/forecast";
 import Win from "./win";
 import Score from "./score";
 import BothScore from "./bothScore";
+import GoalNumber from './goalNumber';
+import Hot from './hot';
 export default {
-  components: { Ai, Session, Win, Score,BothScore },
+  components: { Ai, Session, Win, Score,BothScore,GoalNumber,Hot },
 
   mounted() {
     // const data = {

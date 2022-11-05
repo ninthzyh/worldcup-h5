@@ -11,7 +11,7 @@
             <div class="top1">
               <div class="top1-content">
                 <div class="ratio">1:3</div>
-                <div class="text">6.6<span>%</span></div>
+                <div class="text"><span>6.6</span><span class="unit">%</span></div>
               </div>
               <div class="top1-star">
                 <div class="start-icon"></div>
@@ -20,11 +20,11 @@
             <div class="top2-3">
               <div class="top2">
                 <div class="ratio">1:2</div>
-                <div class="text">6.6<span>%</span></div>
+                <div class="text"><span>6.6</span><span class="unit">%</span></div>
               </div>
               <div class="top3">
                 <div class="ratio">2:3</div>
-                <div class="text">6.4<span>%</span></div>
+                <div class="text"><span>6.4</span><span class="unit">%</span></div>
               </div>
             </div>
           </div>
@@ -65,7 +65,7 @@ export default {
       display: flex;
       height: vw(120);
       .top1 {
-        flex: 1;
+        flex: 1 0 vw(120);
         margin-right: vw(5);
         padding: vw(1);
         border: none;
@@ -95,7 +95,7 @@ export default {
             line-height: vw(13);
             display: flex;
             justify-content: center;
-            > span {
+            .unit {
               display: block;
             }
           }
@@ -160,7 +160,7 @@ export default {
           line-height: vw(13);
           display: flex;
           justify-content: center;
-          > span {
+          .unit {
             display: block;
           }
         }

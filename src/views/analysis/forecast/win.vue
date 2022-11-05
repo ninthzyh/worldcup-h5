@@ -9,16 +9,16 @@
           <div class="win-describe">主队获胜，平局和和客队获胜的概率：</div>
           <div class="win-percent">
             <div class="home-win">
-              <div class="percent">18<span>%</span></div>
+              <div class="percent"><span>18</span><span class="unit">%</span></div>
               <div class="text">主胜</div>
             </div>
             <div class="draw">
-              <div class="percent">18<span>%</span></div>
+              <div class="percent"><span>18</span><span class="unit">%</span></div>
               <div class="text">平</div>
             </div>
             <div class="away-win">
               <div class="away-win-content">
-                <div class="percent">64<span>%</span></div>
+                <div class="percent"><span>64</span><span class="unit">%</span></div>
                 <div class="text">客胜</div>
               </div>
               <div class="away-star">
@@ -81,7 +81,7 @@ export default {
           display: flex;
           align-items: baseline;
           margin-bottom: vw(3);
-          > span {
+          .unit {
             font-size: vw(12);
             display: block;
             transform: scale(0.8);
@@ -97,7 +97,7 @@ export default {
         }
       }
       .away-win {
-        flex: 1;
+        flex: 1 0 vw(142);
         margin-left: vw(2);
         padding: vw(1);
         border: none;
@@ -121,7 +121,7 @@ export default {
             display: flex;
             align-items: baseline;
             margin-bottom: vw(3);
-            > span {
+            .unit {
               font-size: vw(12);
               display: block;
             }

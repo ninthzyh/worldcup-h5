@@ -85,7 +85,7 @@ export default {
     .start-time-content {
       display: flex;
       justify-content: center;
-      align-items: end;
+      align-items: flex-end;
       padding-bottom: vw(16);
       .start-number {
         text-align: center;

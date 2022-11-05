@@ -11,7 +11,7 @@
             <div class="today">今日 {{bannerData.matchDatetime}}</div>
           </div>
           <div class="vs">
-            <div>{{bannerData.homeName}}<span class="line">-</span></div>
+            <div><span>{{bannerData.homeName}}</span><span class="line">-</span></div>
             <div>{{bannerData.awayName}}</div>
           </div>
           <div class="flag">
@@ -56,7 +56,7 @@
         </div>
       </div>
       <div class="today-schedule">
-        <div class="title">今日赛程<span>查看所有</span></div>
+        <div class="title"><span>今日赛程</span><span class="check-all">查看所有</span></div>
         <schedule-list :dataList="matchList" />
       </div>
     </div>
@@ -249,7 +249,7 @@ export default {
         .screen-live {
           display: flex;
           height: vw(12);
-          margin-bottom: vw(12);
+          margin-bottom: vw(7);
           .common-status {
             width: vw(23);
             height: vw(12);
@@ -279,7 +279,6 @@ export default {
           font-size: vw(24);
           line-height: vw(29);
           padding-bottom: vw(7);
-          margin-top: vw(-10);
           .line {
             padding: vw(8);
           }
@@ -292,7 +291,7 @@ export default {
           }
         }
         .watching {
-          width: vw(40);
+          width: vw(44);
           height: vw(16);
           background: url("~@/assets/images/watching.svg") no-repeat
             center/contain;
@@ -301,6 +300,8 @@ export default {
         .des {
           display: flex;
           justify-content: end;
+          transform: scale(0.65306);
+          transform-origin: 100% 50%;
           @mixin des-icon($url) {
             margin-right: vw(4);
             width: vw(12);
@@ -327,8 +328,6 @@ export default {
                 font-weight: 500;
                 color: rgba(255, 255, 255, 0.7);
                 margin-bottom: vw(4);
-                // transform: scale(0.5);
-                // transform-origin: 0 0;
               }
               .des-cn {
                 line-height: vw(10);
@@ -348,7 +347,7 @@ export default {
       font-weight: 500;
       line-height: vw(28);
       padding: vw(16) vw(18) vw(8) vw(18);
-      > span {
+      .check-all {
         float: right;
         font-weight: 500;
         font-size: vw(12);

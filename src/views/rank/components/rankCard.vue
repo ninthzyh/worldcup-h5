@@ -1,7 +1,7 @@
 <template>
   <div class="rank-card">
     <div class="rank-title">
-      {{title}}
+      <span>{{title}}</span> 
       <div class="arrow-right" @click="jumpTo"></div>
     </div>
     <div class="rank-content" ref="scroll">
@@ -10,7 +10,7 @@
           <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`"  
             :img="item[config.flag]" />
           <div class="text">
-            {{item[config.name]}}
+            <span>{{item[config.name]}}</span>            
             <div class="describe">{{item[config.position]}}</div>
           </div>
         </div>
