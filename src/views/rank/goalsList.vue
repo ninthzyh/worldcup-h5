@@ -329,7 +329,7 @@ export default {
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: url("~@/assets/images/bg.svg") no-repeat center/contain;
+  background: url("~@/assets/images/bg.png") no-repeat center/contain;
 
   .menu-container {
     height: vw(76);

@@ -512,7 +512,7 @@ export default {
   font-family: "PingFang SC";
   font-style: normal;
   color: #fff;
-  background: url("~@/assets/images/bg.svg") no-repeat center/contain;
+  background: url("~@/assets/images/bg.png") no-repeat center/contain;
 
   .groups-content {
     padding: vw(56) vw(24) 0 vw(24);

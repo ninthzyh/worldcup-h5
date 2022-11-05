@@ -198,7 +198,7 @@ export default {
   font-weight: 500;
   color: #ffffff;
   height: calc(100vh - #{vw(116)});
-  background: url("~@/assets/images/bg.svg") no-repeat center/contain;
+  background: url("~@/assets/images/bg.png") no-repeat center/contain;
   .radio {
     font-size: vw(12);
     line-height: vw(32);
