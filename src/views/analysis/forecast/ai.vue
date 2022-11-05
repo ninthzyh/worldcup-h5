@@ -48,7 +48,11 @@
             <div class="gradient"></div>
           </div>
           <div class="lock-bar">
-            <div class="lock-text">解锁四大解析数据，低至 ¥<span>8</span>/每场</div>
+            <div class="lock-text">
+              <span>解锁四大解析数据，低至 ¥</span>
+              <span class="lock-num">8</span>
+              <span>/每场</span>
+            </div>
             <div class="lock-btn">
               <div class="unlock">立即解锁</div>
               <div class="arrow-circle"></div>
@@ -243,22 +247,32 @@ export default {
       padding-left: vw(8);
       margin: vw(10) 0 vw(15) 0;
       display: flex;
+      justify-content: flex-start;
+      height: vw(24);
+      line-height: vw(24);
       .lock-text {
-        font-family: "PingFang SC";
+        // font-family: "PingFang SC";
         font-style: normal;
         font-weight: 400;
         font-size: vw(10);
-        display: flex;
-        align-items: center;
-        text-transform: uppercase;
-        transform: scale(0.83);
+        // display: flex;
+        // align-items: center;
+        // text-transform: uppercase;
+        // transform: scale(0.83);
+        // width: 120%;
+        @extend .font-10;
         transform-origin: 0 50%;
+        flex: 0 0 vw(200);
         > span {
+          }
+        .lock-num{
           font-size: vw(18);
           padding: 0 vw(5);
+
         }
       }
       .lock-btn {
+        flex: 0 0 vw(75);
         background: linear-gradient(
           90deg,
           #8d3588 0%,

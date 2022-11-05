@@ -4,16 +4,18 @@
     <Session></Session>
     <Win></Win>
     <Score></Score>
+    <both-score></both-score>
   </div>
 </template>
 <script>
 import Ai from "./ai";
 import Session from "./session";
 import { matchPredicted } from "../../../api/forecast";
-import Win from "./win.vue";
-import Score from "./score.vue";
+import Win from "./win";
+import Score from "./score";
+import BothScore from "./bothScore";
 export default {
-  components: { Ai, Session, Win, Score },
+  components: { Ai, Session, Win, Score,BothScore },
 
   mounted() {
     // const data = {

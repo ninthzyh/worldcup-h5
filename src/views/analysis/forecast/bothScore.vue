@@ -1,31 +1,25 @@
 <template>
-  <div class="score">
-    <ForecastCard title="比分预测 / 前 3 项">
+  <div class="both-score">
+    <ForecastCard title="两队都进球">
       <template v-slot:title-right>
         <div class="title-icon"></div>
       </template>
       <template v-slot:card-content>
-        <div class="score-content">
-          <div class="score-describe">根据 AI 算法推测出的最有可能结果：</div>
-          <div class="score-percent">
-            <div class="top1">
-              <div class="top1-content">
-                <div class="ratio">1:3</div>
-                <div class="text">6.6<span>%</span></div>
+        <div class="both-score-content">
+          <div class="both-score-describe">比赛双方都有进球的概率</div>
+          <div class="both-score-percent">
+            <div class="has-score">
+              <div class="has-score-content">
+                <div class="percent">79.53<span>%</span></div>
+                <div class="text">是</div>
               </div>
-              <div class="top1-star">
+              <div class="has-score-star">
                 <div class="start-icon"></div>
               </div>
             </div>
-            <div class="top2-3">
-              <div class="top2">
-                <div class="ratio">1:2</div>
-                <div class="text">6.6<span>%</span></div>
-              </div>
-              <div class="top3">
-                <div class="ratio">2:3</div>
-                <div class="text">6.4<span>%</span></div>
-              </div>
+            <div class="no-score">
+              <div class="percent">20.47<span>%</span></div>
+              <div class="text">否</div>
             </div>
           </div>
         </div>
@@ -41,7 +35,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "~@/assets/vw";
-.score {
+.both-score {
   font-style: normal;
   margin-bottom: vw(16);
   .title-icon {
@@ -49,22 +43,22 @@ export default {
     width: vw(16);
     background: url("~@/assets/images/info-white.svg") no-repeat center/contain;
   }
-  .score-content {
+  .both-score-content {
     padding: 0 vw(16);
     font-family: "PingFang SC";
     font-style: normal;
-    .score-describe {
+    .both-score-describe {
       padding-top: vw(13);
       border-top: 1px solid rgba(255, 255, 255, 0.12);
       font-weight: 300;
       font-size: vw(10);
       line-height: 110%;
     }
-    .score-percent {
+    .both-score-percent {
       margin: vw(24) 0;
       display: flex;
       height: vw(120);
-      .top1 {
+      .has-score {
         flex: 1;
         margin-right: vw(5);
         padding: vw(1);
@@ -80,13 +74,19 @@ export default {
         justify-content: center;
         align-items: center;
         position: relative;
-        .top1-content {
-          .ratio {
+        .has-score-content {
+          .percent {
             font-family: "Inter";
             line-height: vw(35);
             font-weight: 700;
             font-size: vw(32);
             margin-bottom: vw(3);
+            display: flex;
+            align-items: baseline;
+            > span {
+              font-size: vw(12);
+              display: block;
+            }
           }
           .text {
             font-family: "PingFang SC";
@@ -95,12 +95,9 @@ export default {
             line-height: vw(13);
             display: flex;
             justify-content: center;
-            > span {
-              display: block;
-            }
           }
         }
-        .top1-star {
+        .has-score-star {
           position: absolute;
           top: 0;
           right: 0;
@@ -122,20 +119,8 @@ export default {
           }
         }
       }
-      .top2-3 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-      .top2 {
-        padding: vw(8) vw(50);
-        @extend .top2-3-common;
-      }
-      .top3 {
-        padding: vw(11) vw(50);
-        @extend .top2-3-common;
-      }
-      .top2-3-common {
+      .no-score {
+        padding: vw(40) vw(18);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -144,7 +129,7 @@ export default {
         border: vw(1) solid rgba(255, 255, 255, 0.54);
         border-radius: vw(4);
 
-        .ratio {
+        .percent {
           font-family: "Inter";
           line-height: vw(22);
           font-weight: 700;
@@ -152,6 +137,10 @@ export default {
           display: flex;
           align-items: baseline;
           margin-bottom: vw(3);
+          > span {
+            font-size: vw(12);
+              display: block;
+          }
         }
         .text {
           font-family: "PingFang SC";
@@ -160,9 +149,6 @@ export default {
           line-height: vw(13);
           display: flex;
           justify-content: center;
-          > span {
-            display: block;
-          }
         }
       }
     }
