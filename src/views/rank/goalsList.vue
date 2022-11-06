@@ -9,7 +9,7 @@
     <div class="list-content">
       <div class="rank-card">
         <div class="rank-title">
-          {{$route.params.title}}
+          <span>{{$route.params.title}}</span>
           <div class="subtitle">进球</div>
         </div>
         <div class="rank-content" ref="scroll">
@@ -17,7 +17,7 @@
             <div class="item-left">
               <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :img="item[queryParams.config.flag]" />
               <div class="text">
-                {{item[queryParams.config.name]}}
+               <span>{{item[queryParams.config.name]}}</span> 
                 <div class="describe">{{item[queryParams.config.position]}}</div>
               </div>
             </div>
@@ -274,7 +274,7 @@ export default {
   },
   methods: {
     onBack() {
-      this.$router.go(-1);
+      this.$router.push('/catalogue/rank');
     },
     getList() {
       // 取列表中前pageSize条
@@ -361,7 +361,7 @@ export default {
       border: 1px solid rgba(255, 255, 255, 0.12);
       backdrop-filter: blur(#{vw(8)});
       border-radius: vw(16);
-      font-family: "PingFang SC";
+      // font-family: "PingFang SC";
       font-style: normal;
       color: #ffffff;
       height: calc(100% - #{vw(65)});

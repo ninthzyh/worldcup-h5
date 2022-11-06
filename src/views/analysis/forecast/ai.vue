@@ -15,24 +15,15 @@
           </div>
           <div class="match-10">
             <div class="match-10-above">
-              <div class="label">近10场</div>
+              <div class="label"><span>近</span>{{cardList&&cardList.matchNum}}<span>场</span></div>
               <div class="red-bg">
-                <div class="red">w</div>
-                <div class="red">w</div>
-                <div class="red">w</div>
-                <div class="red">w</div>
-                <div class="red">w</div>
-                <div class="red">w</div>
-                <div class="red">w</div>
-                <div class="red">w</div>
-                <div class="red">w</div>
-                <div class="red">w</div>
+                <div class="red" v-for="(item,index) in (cardList&&cardList.predictedList)" :key="index">{{item}}</div>
               </div>
             </div>
             <div class="match-10-hit">
-              <div class="hit-label">近十场命中</div>
+              <div class="hit-label"><span>近</span>{{cardList&&cardList.matchNumCn}}<span>场命中</span></div>
               <div class="percent">
-                <div class="number">100.00</div>
+                <div class="number">{{cardList&&cardList.successRatio}}</div>
                 <div class="unit">%</div>
               </div>
             </div>
@@ -67,7 +58,16 @@
 <script>
 import ForecastCard from "../components/forecastCard";
 export default {
+  props: ["cardList"],
   components: { ForecastCard },
+  watch: {
+    cardList: {
+      immediate: true,
+      handler(newData) {
+        this.cardList = newData;
+      },
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -88,7 +88,7 @@ export default {
       display: flex;
       align-items: center;
       .start-forecast-box {
-        font-family: "PingFang SC";
+        // font-family: "PingFang SC";
         font-style: normal;
         padding: vw(4) vw(8);
         font-weight: 400;
@@ -131,7 +131,7 @@ export default {
         align-items: center;
         justify-content: center;
         .label {
-          font-family: "PingFang SC";
+          // font-family: "PingFang SC";
           font-style: normal;
           font-weight: 500;
           font-size: vw(10);
@@ -163,7 +163,7 @@ export default {
         justify-content: center;
         padding-top: vw(12);
         .hit-label {
-          font-family: "PingFang SC";
+          // font-family: "PingFang SC";
           font-style: normal;
           font-weight: 600;
           font-size: vw(12);
@@ -199,7 +199,7 @@ export default {
       }
       .brain-text {
         > div {
-          font-family: "PingFang SC";
+          // font-family: "PingFang SC";
           font-style: normal;
           font-weight: 500;
           font-size: vw(10);
@@ -247,7 +247,7 @@ export default {
       padding-left: vw(8);
       margin: vw(10) 0 vw(15) 0;
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
       height: vw(24);
       line-height: vw(24);
       .lock-text {
@@ -255,24 +255,17 @@ export default {
         font-style: normal;
         font-weight: 400;
         font-size: vw(10);
-        // display: flex;
-        // align-items: center;
-        // text-transform: uppercase;
-        // transform: scale(0.83);
-        // width: 120%;
-        @extend .font-10;
+        transform: scale(0.73);
         transform-origin: 0 50%;
-        flex: 0 0 vw(200);
-        > span {
-          }
-        .lock-num{
+        zoom: 0.97;
+        flex: 1 0 vw(202);
+        .lock-num {
           font-size: vw(18);
           padding: 0 vw(5);
-
         }
       }
       .lock-btn {
-        flex: 0 0 vw(75);
+        flex: 0 0 vw(72);
         background: linear-gradient(
           90deg,
           #8d3588 0%,
@@ -284,8 +277,10 @@ export default {
         align-items: center;
         justify-content: space-between;
         margin: vw(2) 0;
+        transform: scale(1);
+        transform-origin: 0 50%;
         .unlock {
-          font-family: "PingFang SC";
+          // font-family: "PingFang SC";
           font-style: normal;
           font-weight: 500;
           font-size: vw(10);

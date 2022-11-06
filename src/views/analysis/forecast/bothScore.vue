@@ -10,7 +10,7 @@
           <div class="both-score-percent">
             <div class="has-score">
               <div class="has-score-content">
-                <div class="percent">79.53<span>%</span></div>
+                <div class="percent"><span>{{cardList&&cardList.agreeValue}}</span><span class="unit">%</span></div>
                 <div class="text">是</div>
               </div>
               <div class="has-score-star">
@@ -18,7 +18,7 @@
               </div>
             </div>
             <div class="no-score">
-              <div class="percent">20.47<span>%</span></div>
+              <div class="percent"><span>{{cardList&&cardList.disagreeValue}}</span><span class="unit">%</span></div>
               <div class="text">否</div>
             </div>
           </div>
@@ -30,7 +30,16 @@
 <script>
 import ForecastCard from "../components/forecastCard";
 export default {
+  props: ["cardList"],
   components: { ForecastCard },
+  watch: {
+    cardList: {
+      immediate: true,
+      handler(newData) {
+        this.cardList = newData;
+      },
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -45,7 +54,7 @@ export default {
   }
   .both-score-content {
     padding: 0 vw(16);
-    font-family: "PingFang SC";
+    // font-family: "PingFang SC";
     font-style: normal;
     .both-score-describe {
       padding-top: vw(13);
@@ -59,7 +68,7 @@ export default {
       display: flex;
       height: vw(120);
       .has-score {
-        flex: 1;
+        flex: 1 0 vw(170);
         margin-right: vw(5);
         padding: vw(1);
         border: none;
@@ -78,18 +87,19 @@ export default {
           .percent {
             font-family: "Inter";
             line-height: vw(35);
+            height: vw(35);
             font-weight: 700;
             font-size: vw(32);
             margin-bottom: vw(3);
             display: flex;
             align-items: baseline;
-            > span {
+            .unit {
               font-size: vw(12);
               display: block;
             }
           }
           .text {
-            font-family: "PingFang SC";
+            // font-family: "PingFang SC";
             font-weight: 500;
             font-size: vw(12);
             line-height: vw(13);
@@ -132,18 +142,19 @@ export default {
         .percent {
           font-family: "Inter";
           line-height: vw(22);
+          height: vw(22);
           font-weight: 700;
           font-size: vw(20);
           display: flex;
           align-items: baseline;
           margin-bottom: vw(3);
-          > span {
+          .unit {
             font-size: vw(12);
-              display: block;
+            display: block;
           }
         }
         .text {
-          font-family: "PingFang SC";
+          // font-family: "PingFang SC";
           font-weight: 500;
           font-size: vw(12);
           line-height: vw(13);

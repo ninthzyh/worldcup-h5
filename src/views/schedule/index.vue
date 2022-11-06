@@ -166,7 +166,7 @@ export default {
 <style lang="scss" scoped>
 @import "~@/assets/vw";
 .schedule {
-  font-family: "PingFang SC";
+  // font-family: "PingFang SC";
   font-style: normal;
   height: calc(100vh - #{vw(116)});
   background: url("~@/assets/images/bg.png") no-repeat center/contain;

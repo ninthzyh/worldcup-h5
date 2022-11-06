@@ -9,16 +9,16 @@
           <div class="win-describe">主队获胜，平局和和客队获胜的概率：</div>
           <div class="win-percent">
             <div class="home-win">
-              <div class="percent">18<span>%</span></div>
+              <div class="percent"><span>{{cardList&&cardList.homeValue}}</span><span class="unit">%</span></div>
               <div class="text">主胜</div>
             </div>
             <div class="draw">
-              <div class="percent">18<span>%</span></div>
+              <div class="percent"><span>{{cardList&&cardList.draw}}</span><span class="unit">%</span></div>
               <div class="text">平</div>
             </div>
             <div class="away-win">
               <div class="away-win-content">
-                <div class="percent">64<span>%</span></div>
+                <div class="percent"><span>{{cardList&&cardList.awayValue}}</span><span class="unit">%</span></div>
                 <div class="text">客胜</div>
               </div>
               <div class="away-star">
@@ -34,7 +34,16 @@
 <script>
 import ForecastCard from "../components/forecastCard";
 export default {
+  props: ["cardList"],
   components: { ForecastCard },
+  watch: {
+    cardList: {
+      immediate: true,
+      handler(newData) {
+        this.cardList = newData;
+      },
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -49,7 +58,7 @@ export default {
   }
   .win-content {
     padding: 0 vw(16);
-    font-family: "PingFang SC";
+    // font-family: "PingFang SC";
     font-style: normal;
     .win-describe {
       padding-top: vw(13);
@@ -81,7 +90,7 @@ export default {
           display: flex;
           align-items: baseline;
           margin-bottom: vw(3);
-          > span {
+          .unit {
             font-size: vw(12);
             display: block;
             transform: scale(0.8);
@@ -89,7 +98,7 @@ export default {
           }
         }
         .text {
-          font-family: "PingFang SC";
+          // font-family: "PingFang SC";
           font-weight: 500;
           font-size: vw(14);
           line-height: vw(15);
@@ -97,7 +106,7 @@ export default {
         }
       }
       .away-win {
-        flex: 1;
+        flex: 1 0 vw(142);
         margin-left: vw(2);
         padding: vw(1);
         border: none;
@@ -121,13 +130,13 @@ export default {
             display: flex;
             align-items: baseline;
             margin-bottom: vw(3);
-            > span {
+            .unit {
               font-size: vw(12);
               display: block;
             }
           }
           .text {
-            font-family: "PingFang SC";
+            // font-family: "PingFang SC";
             font-weight: 500;
             font-size: vw(16);
             line-height: vw(18);
@@ -138,7 +147,14 @@ export default {
           position: absolute;
           top: 0;
           right: 0;
-          background:linear-gradient(to top right, transparent 0%, transparent 49.9%, #8D3588 0%, #D1383B 48.86%, #E49640 100%);
+          background: linear-gradient(
+            to top right,
+            transparent 0%,
+            transparent 49.9%,
+            #8d3588 0%,
+            #d1383b 48.86%,
+            #e49640 100%
+          );
           padding: vw(3) vw(3) vw(11) vw(11);
           border-radius: vw(4);
           .start-icon {

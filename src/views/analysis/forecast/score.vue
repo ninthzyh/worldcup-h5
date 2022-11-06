@@ -10,8 +10,8 @@
           <div class="score-percent">
             <div class="top1">
               <div class="top1-content">
-                <div class="ratio">1:3</div>
-                <div class="text">6.6<span>%</span></div>
+                <div class="ratio">{{cardList&&cardList[0].score}}</div>
+                <div class="text"><span>{{cardList&&cardList[0].value}}</span><span class="unit">%</span></div>
               </div>
               <div class="top1-star">
                 <div class="start-icon"></div>
@@ -19,12 +19,12 @@
             </div>
             <div class="top2-3">
               <div class="top2">
-                <div class="ratio">1:2</div>
-                <div class="text">6.6<span>%</span></div>
+                <div class="ratio">{{cardList&&cardList[1].score}}</div>
+                <div class="text"><span>{{cardList&&cardList[1].value}}</span><span class="unit">%</span></div>
               </div>
               <div class="top3">
-                <div class="ratio">2:3</div>
-                <div class="text">6.4<span>%</span></div>
+                <div class="ratio">{{cardList&&cardList[2].score}}</div>
+                <div class="text"><span>{{cardList&&cardList[2].value}}</span><span class="unit">%</span></div>
               </div>
             </div>
           </div>
@@ -36,7 +36,16 @@
 <script>
 import ForecastCard from "../components/forecastCard";
 export default {
+  props: ["cardList"],
   components: { ForecastCard },
+  watch: {
+    cardList: {
+      immediate: true,
+      handler(newData) {
+        this.cardList = newData;
+      },
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -51,7 +60,7 @@ export default {
   }
   .score-content {
     padding: 0 vw(16);
-    font-family: "PingFang SC";
+    // font-family: "PingFang SC";
     font-style: normal;
     .score-describe {
       padding-top: vw(13);
@@ -65,7 +74,7 @@ export default {
       display: flex;
       height: vw(120);
       .top1 {
-        flex: 1;
+        flex: 1 0 vw(120);
         margin-right: vw(5);
         padding: vw(1);
         border: none;
@@ -89,13 +98,13 @@ export default {
             margin-bottom: vw(3);
           }
           .text {
-            font-family: "PingFang SC";
+            // font-family: "PingFang SC";
             font-weight: 500;
             font-size: vw(12);
             line-height: vw(13);
             display: flex;
             justify-content: center;
-            > span {
+            .unit {
               display: block;
             }
           }
@@ -154,13 +163,13 @@ export default {
           margin-bottom: vw(3);
         }
         .text {
-          font-family: "PingFang SC";
+          // font-family: "PingFang SC";
           font-weight: 500;
           font-size: vw(12);
           line-height: vw(13);
           display: flex;
           justify-content: center;
-          > span {
+          .unit {
             display: block;
           }
         }
