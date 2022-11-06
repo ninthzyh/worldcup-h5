@@ -4,72 +4,35 @@
       <div class="title">
         <span class="text">预测首发阵容</span>
         <div class="tab">
-          <SwitchTab :tabList="tabList" />
+          <SwitchTab :tabList="tabList" @tabChange="tabChange" />
         </div>
       </div>
       <span class="formation">
-        {{teamInfors[0].lineup}}
+        {{formationUsed}}
       </span>
-      <StartLineup
-        :list="startLineup"
-        :teamInfors="[teamInfors[0]]"
-      ></StartLineup>
+      <Squad
+        :lineUpInfo="lineUpInfo"
+        :formationUsed="formationUsed"
+      ></Squad>
     </div>
   </div>
 </template>
 
 <script>
-import StartLineup from "./squadComponent";
+import Squad from "./squad";
 import SwitchTab from "../../components/SwitchTab";
 export default {
   name: "lineup",
   components: {
-    StartLineup,
+    Squad,
     SwitchTab
-  },
-  props: {
-    // resData: {
-    //   type: Object,
-    //   default: () => {
-    //     return {};
-    //   },
-    // },
   },
   data() {
     return {
       resData: {},
       matchInfo: {},
-      type: "startLineup",
-      teamInfors: null,
-      startLineup: null,
-      visible: false,
-      popPlayerId: null,
-      matchId: null,
+      selectedTab:0,
     };
-  },
-  watch: {
-    resData: {
-      handler(newVal) {
-        let homeStartLineup = [],
-          awayStartLineup = [];
-        if (newVal.homeMatchLineup) {
-          homeStartLineup = newVal.homeMatchLineup.startingLineUp
-            ? newVal.homeMatchLineup.startingLineUp
-            : [];
-        }
-        if (newVal.guestMatchLineup) {
-          awayStartLineup = newVal.guestMatchLineup.startingLineUp
-            ? newVal.guestMatchLineup.startingLineUp
-            : [];
-        }
-        this.teamInfors = this.teamInforsFormatHandler(
-          newVal.homeMatchLineup,
-          newVal.guestMatchLineup
-        ); //函数中处理了没有数据的情况
-        this.startLineup = [homeStartLineup, awayStartLineup];
-      },
-      immediate: true,
-    },
   },
   computed:{
     tabList(){
@@ -80,61 +43,28 @@ export default {
         text: this.matchInfo.awayName || '',
         logo: this.matchInfo.awayFlag || ''
       }]
+    },
+    lineUpInfo(){
+      console.log(this.resData.lineupMap && this.resData.lineupMap.home)
+      return (this.resData.lineupMap ? this.resData.lineupMap[this.selectedTab === 0 ? 'home' : 'away'] : {});
+    },
+    formationUsed(){
+      return this.lineUpInfo.formationUsed ? this.lineUpInfo.formationUsed.split('').join('-') : ''
+    },
+    teamInfors(){
+      return this.resData
     }
   },
   mounted() {
-    new Promise((resolve)=>(resolve(require('./lineup.json')))).then((res)=>{
-      console.log(res)
-      this.resData = res.data
-    })
     new Promise((resolve)=>(resolve(require('./data.json')))).then((res)=>{
+      this.resData = res.data;
       this.matchInfo = res.data.matchInfo
     })
   },
   methods: {
-    teamInforsFormatHandler(home, away) {
-      const arr = [];
-      const teamInforKey_origin = [
-        "teamName",
-        "teamId",
-        "teamLogo",
-        "coachName",
-        "formation",
-      ];
-      const teamInforKey_new = [
-        "teamName",
-        "teamId",
-        "teamLogo",
-        "coach",
-        "lineup",
-      ];
-      const defaultObj = {
-        teamName: "",
-        teamId: null,
-        teamLogo: "",
-        coach: "",
-        lineup: null,
-      };
-      if (home && home.teamId) {
-        let obj = {};
-        teamInforKey_origin.forEach((key, index) => {
-          obj[teamInforKey_new[index]] = home[key] ? home[key] : null;
-        });
-        arr.push(obj);
-      } else {
-        arr.push(defaultObj);
-      }
-      if (away && away.teamId) {
-        let obj = {};
-        teamInforKey_origin.forEach((key, index) => {
-          obj[teamInforKey_new[index]] = away[key] ? away[key] : null;
-        });
-        arr.push(obj);
-      } else {
-        arr.push(defaultObj);
-      }
-      return arr;
-    },
+    tabChange(index){
+      this.selectedTab = index;
+    }
   },
 };
 </script>

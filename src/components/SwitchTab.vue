@@ -50,7 +50,8 @@ export default {
   methods:{
     change(index){
       this.position = index ? 'right' : 'left';
-      this.selected = this.tabList[index]
+      this.selected = this.tabList[index];
+      this.$emit('tabChange',index);
     }
   }
 }
