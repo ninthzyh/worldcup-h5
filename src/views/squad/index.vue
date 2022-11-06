@@ -45,11 +45,16 @@ export default {
       }]
     },
     lineUpInfo(){
-      console.log(this.resData.lineupMap && this.resData.lineupMap.home)
       return (this.resData.lineupMap ? this.resData.lineupMap[this.selectedTab === 0 ? 'home' : 'away'] : {});
     },
     formationUsed(){
-      return this.lineUpInfo.formationUsed ? this.lineUpInfo.formationUsed.split('').join('-') : ''
+      if(this.lineUpInfo.formationUsed){
+        if(this.lineUpInfo.formationUsed.indexOf('d') !== -1){
+          return '3-4-3d';
+        }
+        return this.lineUpInfo.formationUsed.split('').join('-')
+      }
+      return ''
     },
     teamInfors(){
       return this.resData

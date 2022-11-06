@@ -529,7 +529,7 @@ export default {
         right: 12%;
       }
     }
-    & .lineupType3-4-3-d .playerItem {
+    & .lineupType3-4-3d .playerItem {
       &:first-child {
         top: 2%;
         left: 50%;
