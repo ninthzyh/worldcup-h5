@@ -559,7 +559,27 @@
       "homeValue": 0,
       "drawValue": 0,
       "awayValue": 0,
-      "relateMatchList": []
+      "relateMatchList": [
+        {
+          "awayFlag":"https://images.mixtmt.com/hyper/football/opta/world-cup/2022/team/default.png",	
+          "awayName":"冰岛",
+          "awayScore":2,
+          "homeFlag":"",
+          "homeName":"阿根廷",
+          "homeScore":1,
+          "matchDate":"2018-06-16",
+          "competitionName":"友谊赛"
+        },{
+          "awayFlag":"https://images.mixtmt.com/hyper/football/opta/world-cup/2022/team/default.png",	
+          "awayName":"冰岛",
+          "awayScore":2,
+          "homeFlag":"https://images.mixtmt.com/hyper/football/opta/world-cup/2022/team/default.png",
+          "homeName":"阿根廷",
+          "homeScore":1,
+          "matchDate":"2018-06-16",
+          "competitionName":"友谊赛"
+        }
+      ]
     },
     "finalPredictedList": []
   }

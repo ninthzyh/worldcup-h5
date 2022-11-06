@@ -1,7 +1,8 @@
 <template>
   <div class="match-card">
     <div class="card-header">
-      <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :margin="`0 ${$vw(12)} 0 0`" :img="''" />
+      <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :margin="`0 ${$vw(12)} 0 0`"
+        border="0.5px solid rgba(255, 255, 255, 0.12);" padding="8px" :img="''" />
       <div class="card-title">历史对阵</div>
       <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :img="''" />
     </div>
@@ -28,20 +29,19 @@
         </div>
       </div>
     </div>
-    <div class="match-card-item" v-for="(item,index) in 3" :key="index">
+    <div class="match-card-item" v-for="(item,index) in (cardList&&cardList.relateMatchList)" :key="index">
       <div class="match-card-header">
-        <div class="time">2022年11月20日 18:00</div>
-        <div class="status-hot">热门</div>
-        <!-- <div class="status-not-hot">热门</div> -->
+        <div class="time">{{item.matchDate}}</div>
+        <div class="status">{{item.competitionName}}</div>
       </div>
       <div class="team-match">
-        <div class="team-name left">葡萄牙</div>
-        <national-flag :width="`${$vw(16)}`" :height="`${$vw(16)}`" :img="''" :margin="`0 ${$vw(8)}`" />
-        <div class="team-score">1</div>
+        <div class="team-name left">{{item.homeName}}</div>
+        <national-flag :width="`${$vw(16)}`" :height="`${$vw(16)}`" :img="item.homeFlag" :margin="`0 ${$vw(8)}`" />
+        <div class="team-score">{{item.homeScore}}</div>
         <div class="team-score">-</div>
-        <div class="team-score">1</div>
-        <national-flag :width="`${$vw(16)}`" :height="`${$vw(16)}`" :img="''" :margin="`0 ${$vw(8)}`" />
-        <div class="team-name">葡萄牙</div>
+        <div class="team-score">{{item.awayScore}}</div>
+        <national-flag :width="`${$vw(16)}`" :height="`${$vw(16)}`" :img="item.awayFlag" :margin="`0 ${$vw(8)}`" />
+        <div class="team-name">{{item.awayName}}</div>
       </div>
     </div>
   </div>
@@ -141,19 +141,12 @@ export default {
         color: rgba(255, 255, 255, 0.7);
       }
       .status {
-        padding: vw(2) vw(8);
+        padding: vw(2) vw(11);
         border-radius: vw(58);
         font-weight: 400;
-        transform: scale(0.5455);
+        font-size: vw(10);
+        transform: scale(0.75);
         transform-origin: 100% 50%;
-        background: #bd3853;
-      }
-      .status-hot {
-        @extend .status;
-        background: #bd3853;
-      }
-      .status-not-hot {
-        @extend .status;
         background: rgba(255, 255, 255, 0.12);
         color: rgba(255, 255, 255, 0.7);
       }
