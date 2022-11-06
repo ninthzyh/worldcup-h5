@@ -4,20 +4,36 @@ $pad_vw_base: 1024;
   @return($px / $vw_base) * 100vw
 }
 @function vwPad($px) {
-  @return($px / $pad_vw_base) * 100vw
+  @return $px * 1px
+}
+@media screen and (max-device-width: 600px) {
+  .font-10{
+    font-size: vw(12);
+    width: 120%;
+    transform: scale(0.83333);
+    transform-origin: 50% 50%;
+  }
+  .font-12{
+    font-size: vw(12);
+  }
+  .font-14{
+    font-size: vw(14);
+  }
 }
 
-.font-10{
-  font-size: vw(12);
-  width: 120%;
-  transform: scale(0.83333);
-  transform-origin: 50% 50%;
-}
-.font-12{
-  font-size: vw(12);
-}
-.font-14{
-  font-size: vw(14);
+@media screen and (min-device-width: 600px) {
+  .font-10{
+    font-size: 12px;
+    width: 120%;
+    transform: scale(0.83333);
+    transform-origin: 50% 50%;
+  }
+  .font-12{
+    font-size: 12px;
+  }
+  .font-14{
+    font-size: 14px;
+  }
 }
 
 .flex-center{
