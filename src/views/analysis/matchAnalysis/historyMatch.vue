@@ -3,7 +3,7 @@
     <div class="card-header">
       <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :margin="`0 ${$vw(12)} 0 0`" :img="''" />
       <div class="card-title">历史对阵</div>
-      <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :img="bannerData.awayFlag" />
+      <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :img="''" />
     </div>
     <div class="match-card-item" v-for="(item,index) in 3" :key="index">
       <div class="match-card-header">
