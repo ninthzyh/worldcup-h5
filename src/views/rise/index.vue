@@ -148,31 +148,62 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../assets/vw";
-.groups-container{
-  // background-color: #0c0e11;
-  height: calc(100vh - #{vw(116)});
-  overflow: auto;
-  padding: vw(48) 0;
-  box-sizing: border-box;
-  .match-list{
-    display: flex;
-    justify-content: space-around;
-  }
-  .center-container{
-    display: flex;
-    justify-content: space-around;
-    .champion-container{
-      width: vw(80);
-      text-align: center;
-      .champion{
-        display: inline-block;
-        box-sizing: border-box;
-        width: vw(62);
-        height: vw(62);
-        border-radius: 50%;
-        border: vw(4) solid #4a1e26;
+
+@media screen and (max-device-width: 600px) {
+  .groups-container{
+    height: calc(100vh - #{vw(116)});
+    overflow: auto;
+    padding: vw(48) 0;
+    box-sizing: border-box;
+    .match-list{
+      display: flex;
+      justify-content: space-around;
+    }
+    .center-container{
+      display: flex;
+      justify-content: space-around;
+      .champion-container{
+        width: vw(80);
+        text-align: center;
+        .champion{
+          display: inline-block;
+          box-sizing: border-box;
+          width: vw(62);
+          height: vw(62);
+          border-radius: 50%;
+          border: vw(4) solid #4a1e26;
+        }
       }
     }
   }
 }
+@media screen and (min-device-width: 600px) {
+  .groups-container{
+    height: calc(100vh - #{vwPad(116)});
+    overflow: auto;
+    padding: vwPad(48) 0;
+    box-sizing: border-box;
+    .match-list{
+      display: flex;
+      justify-content: space-around;
+    }
+    .center-container{
+      display: flex;
+      justify-content: space-around;
+      .champion-container{
+        width: vwPad(160);
+        text-align: center;
+        .champion{
+          display: inline-block;
+          box-sizing: border-box;
+          width: vwPad(62);
+          height: vwPad(62);
+          border-radius: 50%;
+          border: vwPad(4) solid #4a1e26;
+        }
+      }
+    }
+  }
+}
+
 </style>

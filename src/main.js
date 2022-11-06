@@ -4,9 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import './assets/vw.scss';
-
+console.log(window.innerWidth)
 Vue.config.productionTip = false
-Vue.prototype.$vw = function (px) {
+Vue.prototype.$vw = function (px, needVw) {
+  if(window.innerWidth>600 && needVw){
+    return `${px}px`
+  }
   return `${(px / 375) * 100}vw`
 }
 // 比赛状态
