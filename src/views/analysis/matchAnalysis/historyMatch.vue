@@ -5,6 +5,29 @@
       <div class="card-title">历史对阵</div>
       <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :img="''" />
     </div>
+    <div class="history-session">
+      <div class="session-item">
+        <div class="home-bg">{{cardList.homeValue}}</div>
+        <div class="item-text-wrap">
+          <div class="item-text">获胜场次</div>
+          <div class="item-percent">{{cardList.homeRatio}}</div>
+        </div>
+      </div>
+      <div class="session-item">
+        <div class="draw-bg">{{cardList.drawValue}}</div>
+        <div class="item-text-wrap">
+          <div class="item-text">平局场次</div>
+          <div class="item-percent">{{cardList.drawRatio}}</div>
+        </div>
+      </div>
+      <div class="session-item">
+        <div class="away-bg">{{cardList.awayValue}}</div>
+        <div class="item-text-wrap">
+          <div class="item-text">获胜场次</div>
+          <div class="item-percent">{{cardList.awayRatio}}</div>
+        </div>
+      </div>
+    </div>
     <div class="match-card-item" v-for="(item,index) in 3" :key="index">
       <div class="match-card-header">
         <div class="time">2022年11月20日 18:00</div>
@@ -40,12 +63,13 @@ export default {
   border: vw(1) solid rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(#{vw(8)});
   border-radius: vw(16);
+  padding: vw(16);
   .card-header {
-    padding: vw(16) vw(16) vw(15) vw(16);
     font-style: normal;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: vw(16);
     .card-title {
       font-weight: 500;
       font-size: vw(14);
@@ -53,12 +77,55 @@ export default {
     }
     .bold {
       font-weight: 600;
-      font-size: 16px;
-      line-height: 24px;
+      font-size: vw(16);
+      line-height: vw(24);
+    }
+  }
+  .history-session {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: vw(24);
+    .session-item {
+      display: flex;
+      align-items: center;
+      .item-number {
+        width: vw(32);
+        height: vw(32);
+        border-radius: vw(4);
+        margin-right: vw(8);
+        line-height: vw(32);
+        text-align: center;
+      }
+      .home-bg{
+        @extend .item-number;
+        background: #7a293f;
+      }
+      .draw-bg{
+        @extend .item-number;
+        background: #323232;
+      }
+      .away-bg{
+        @extend .item-number;
+        background: #7996BC;
+      }
+      .item-text-wrap {
+        .item-text {
+          font-weight: 500;
+          font-size: vw(12);
+          line-height: vw(16);
+        }
+        .item-percent {
+          font-weight: 400;
+          font-size: vw(12);
+          line-height: vw(16);
+          color: rgba(255, 255, 255, 0.54);
+        }
+      }
     }
   }
   .match-card-item {
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: vw(1) solid rgba(255, 255, 255, 0.12);
     padding-bottom: vw(12);
 
     .match-card-header {

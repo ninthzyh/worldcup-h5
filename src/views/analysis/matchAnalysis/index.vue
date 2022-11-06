@@ -2,7 +2,7 @@
   <div>
     <win-rate :cardList="analysisList.outcomePredicted"></win-rate>
     <advertisement></advertisement>
-    <history-match></history-match>
+    <history-match :cardList="analysisList.historyMeeting"></history-match>
   </div>
 </template>
 <script>
