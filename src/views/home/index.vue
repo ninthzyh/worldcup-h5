@@ -56,7 +56,7 @@
         </div>
       </div>
       <div class="today-schedule">
-        <div class="title"><span>今日赛程</span><span class="check-all">查看所有</span></div>
+        <div class="title"><span>今日赛程</span><span class="check-all" @click="jumpTo">查看所有</span></div>
         <schedule-list :dataList="matchList" />
       </div>
     </div>
@@ -204,6 +204,10 @@ export default {
     onNavClick(url) {
       this.$router.push(url);
     },
+    // 赛程查看全部
+    jumpTo(){
+      this.$router.push('/catalogue/schedule')
+    }
   },
 };
 </script>

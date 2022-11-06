@@ -1,7 +1,4 @@
 {
-  "status": 0,
-  "message": "success",
-  "data": {
     "matchInfo": {
       "matchId": "a5bn20ladyztuqtjzv2l57bvt",
       "matchDate": "2018-06-16",
@@ -27,7 +24,12 @@
       "homeScore": 1,
       "awayScore": 1
     },
-    "outcomePredicted": null,
+    "outcomePredicted": {
+      "awayValue":1,
+      "drawValue":11,
+      "homeValue":89
+      
+      },
     "groupList": [
       {
         "groupName": "A组",
@@ -561,4 +563,3 @@
     },
     "finalPredictedList": []
   }
-}

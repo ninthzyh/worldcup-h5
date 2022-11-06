@@ -274,7 +274,7 @@ export default {
   },
   methods: {
     onBack() {
-      this.$router.go(-1);
+      this.$router.push('/catalogue/rank');
     },
     getList() {
       // 取列表中前pageSize条

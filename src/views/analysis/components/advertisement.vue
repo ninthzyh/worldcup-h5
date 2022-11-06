@@ -7,6 +7,7 @@
 @import "~@/assets/vw";
 .advertisement {
   width: 100%;
+  margin-bottom: vw(16);
   line-height: vw(64);
   background: #a4a4a4;
   font-weight: 500;
