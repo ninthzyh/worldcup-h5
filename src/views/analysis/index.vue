@@ -7,6 +7,7 @@
     <div class="screen"></div>
     <analysis-tab @select-index-event="selectIndexEvent"/>
     <div class="tab-content">
+      <match-data v-if="type===0"/>
       <match-analysis v-if="type===1"/>
       <Forecast v-if="type===2"/>
     </div>
@@ -14,11 +15,13 @@
 </template>
 <script>
 import AnalysisTab from "./components/analysisTab";
+import MatchData from "./matchData";
 import Forecast from "./forecast";
 import MatchAnalysis from "./matchAnalysis";
 export default {
   components: {
     AnalysisTab,
+    MatchData,
     Forecast,
     MatchAnalysis,
   },
