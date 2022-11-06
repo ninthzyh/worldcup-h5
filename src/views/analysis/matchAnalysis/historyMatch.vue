@@ -7,24 +7,24 @@
     </div>
     <div class="history-session">
       <div class="session-item">
-        <div class="home-bg">{{cardList.homeValue}}</div>
+        <div class="home-bg">{{cardList&&cardList.homeValue}}</div>
         <div class="item-text-wrap">
           <div class="item-text">获胜场次</div>
-          <div class="item-percent">{{cardList.homeRatio}}</div>
+          <div class="item-percent">{{cardList&&cardList.homeRatio}}</div>
         </div>
       </div>
       <div class="session-item">
-        <div class="draw-bg">{{cardList.drawValue}}</div>
+        <div class="draw-bg">{{cardList&&cardList.drawValue}}</div>
         <div class="item-text-wrap">
           <div class="item-text">平局场次</div>
-          <div class="item-percent">{{cardList.drawRatio}}</div>
+          <div class="item-percent">{{cardList&&cardList.drawRatio}}</div>
         </div>
       </div>
       <div class="session-item">
-        <div class="away-bg">{{cardList.awayValue}}</div>
+        <div class="away-bg">{{cardList&&cardList.awayValue}}</div>
         <div class="item-text-wrap">
           <div class="item-text">获胜场次</div>
-          <div class="item-percent">{{cardList.awayRatio}}</div>
+          <div class="item-percent">{{cardList&&cardList.awayRatio}}</div>
         </div>
       </div>
     </div>
@@ -97,17 +97,17 @@ export default {
         line-height: vw(32);
         text-align: center;
       }
-      .home-bg{
+      .home-bg {
         @extend .item-number;
         background: #7a293f;
       }
-      .draw-bg{
+      .draw-bg {
         @extend .item-number;
         background: #323232;
       }
-      .away-bg{
+      .away-bg {
         @extend .item-number;
-        background: #7996BC;
+        background: #7996bc;
       }
       .item-text-wrap {
         .item-text {
