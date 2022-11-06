@@ -581,5 +581,16 @@
         }
       ]
     },
-    "finalPredictedList": []
+    "finalPredictedList": [
+      {
+        "simulationValue":10,
+        "teamFlag":"",
+        "teamName":"阿根廷"
+      },
+      {
+        "simulationValue":50,
+        "teamFlag":"",
+        "teamName":"阿根廷"
+      }
+    ]
   }
