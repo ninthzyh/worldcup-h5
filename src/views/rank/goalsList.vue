@@ -361,7 +361,7 @@ export default {
       border: 1px solid rgba(255, 255, 255, 0.12);
       backdrop-filter: blur(#{vw(8)});
       border-radius: vw(16);
-      font-family: "PingFang SC";
+      // font-family: "PingFang SC";
       font-style: normal;
       color: #ffffff;
       height: calc(100% - #{vw(65)});

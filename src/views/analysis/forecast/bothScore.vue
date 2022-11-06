@@ -10,7 +10,7 @@
           <div class="both-score-percent">
             <div class="has-score">
               <div class="has-score-content">
-                <div class="percent"><span>79.53</span><span class="unit">%</span></div>
+                <div class="percent"><span>{{cardList&&cardList.agreeValue}}</span><span class="unit">%</span></div>
                 <div class="text">是</div>
               </div>
               <div class="has-score-star">
@@ -18,7 +18,7 @@
               </div>
             </div>
             <div class="no-score">
-              <div class="percent"><span>20.47</span><span class="unit">%</span></div>
+              <div class="percent"><span>{{cardList&&cardList.disagreeValue}}</span><span class="unit">%</span></div>
               <div class="text">否</div>
             </div>
           </div>
@@ -30,7 +30,16 @@
 <script>
 import ForecastCard from "../components/forecastCard";
 export default {
+  props: ["cardList"],
   components: { ForecastCard },
+  watch: {
+    cardList: {
+      immediate: true,
+      handler(newData) {
+        this.cardList = newData;
+      },
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -45,7 +54,7 @@ export default {
   }
   .both-score-content {
     padding: 0 vw(16);
-    font-family: "PingFang SC";
+    // font-family: "PingFang SC";
     font-style: normal;
     .both-score-describe {
       padding-top: vw(13);
@@ -90,7 +99,7 @@ export default {
             }
           }
           .text {
-            font-family: "PingFang SC";
+            // font-family: "PingFang SC";
             font-weight: 500;
             font-size: vw(12);
             line-height: vw(13);
@@ -141,11 +150,11 @@ export default {
           margin-bottom: vw(3);
           .unit {
             font-size: vw(12);
-              display: block;
+            display: block;
           }
         }
         .text {
-          font-family: "PingFang SC";
+          // font-family: "PingFang SC";
           font-weight: 500;
           font-size: vw(12);
           line-height: vw(13);

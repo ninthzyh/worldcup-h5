@@ -45,7 +45,7 @@ export default {
 <style lang="scss" scoped>
 @import "~@/assets/vw";
 .session {
-  font-family: "PingFang SC";
+  // font-family: "PingFang SC";
   font-style: normal;
   margin-bottom: vw(16);
   .title-icon {
@@ -77,7 +77,7 @@ export default {
     .start-time-title {
       padding: vw(16) 0;
       border-top: 1px solid rgba(255, 255, 255, 0.12);
-      font-family: "PingFang SC";
+      // font-family: "PingFang SC";
       font-style: normal;
       line-height: 100.02%;
       text-align: center;

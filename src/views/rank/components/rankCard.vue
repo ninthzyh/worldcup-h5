@@ -89,7 +89,7 @@ export default {
   backdrop-filter: blur(#{vw(8)});
   border-radius: vw(16);
   padding: vw(16);
-  font-family: "PingFang SC";
+  // font-family: "PingFang SC";
   font-style: normal;
   color: #ffffff;
   .rank-title {

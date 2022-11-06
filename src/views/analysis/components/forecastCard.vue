@@ -32,7 +32,7 @@ export default {
   backdrop-filter: blur(#{vw(32)});
   .card-header {
     padding: vw(16) vw(16) vw(15) vw(16);
-    font-family: "PingFang SC";
+    // font-family: "PingFang SC";
     font-style: normal;
     display: flex;
     align-items: center;

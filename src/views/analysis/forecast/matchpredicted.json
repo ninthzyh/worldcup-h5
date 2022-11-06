@@ -1,0 +1,84 @@
+{
+    "matchInfo": {
+      "matchId": "a5bn20ladyztuqtjzv2l57bvt",
+      "matchDate": "2018-06-16",
+      "matchDatetime": "21:00",
+      "homeId": "ak48fkypnql8y4n69cvcq5ghc",
+      "homeCode": "ARG",
+      "homeName": "阿根廷",
+      "homeShortName": null,
+      "homeOfficialName": null,
+      "homeFlag": "https://images.mixtmt.com/hyper/football/opta/world-cup/2022/team/default.png",
+      "awayId": "5gv6rrm6m6ixf8nff08vx7i9m",
+      "awayCode": "冰岛",
+      "awayName": "冰岛",
+      "awayShortName": null,
+      "awayOfficialName": null,
+      "awayFlag": "https://images.mixtmt.com/hyper/football/opta/world-cup/2022/team/default.png",
+      "stageId": "81j6wd3p6e18bp6dipk0clfyg",
+      "stageName": "小组赛",
+      "seriesId": "1e92x08matge65g8jdj6g6p8e",
+      "seriesName": "D组",
+      "matchStatus": "Played",
+      "matchOutcome": "draw",
+      "homeScore": 1,
+      "awayScore": 1
+    },
+    "starPredicted": {
+      "matchNum": 10,
+      "matchNumCn": "十",
+      "predictedList": [
+        "W",
+        "W",
+        "W",
+        "W",
+        "W",
+        "W",
+        "W",
+        "W",
+        "W",
+        "W"
+      ],
+      "successRatio": "100.00%"
+    },
+    "outcomePredicted": {
+      "homeValue": 60,
+      "drawValue": 5,
+      "awayValue": 25
+    },
+    "scorePredicted": [
+      {
+        "score": "2-1",
+        "value": "7.60"
+      },
+      {
+        "score": "1-1",
+        "value": "5.61"
+      },
+      {
+        "score": "1-2",
+        "value": "5.30"
+      }
+    ],
+    "goalPredicted": [
+      {
+        "goals": "1.5",
+        "moreValue": 82,
+        "lessValue": 18
+      },
+      {
+        "goals": "2.5",
+        "moreValue": 78,
+        "lessValue": 22
+      },
+      {
+        "goals": "3.5",
+        "moreValue": 45,
+        "lessValue": 55
+      }
+    ],
+    "bothGoal": {
+      "agreeValue": "23.45",
+      "disagreeValue": "76.55"
+    }
+  }

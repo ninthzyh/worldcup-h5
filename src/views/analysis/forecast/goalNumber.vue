@@ -6,27 +6,27 @@
       </template>
       <template v-slot:card-content>
         <div class="goal-number-content">
-          <div class="goal-number-item" v-for="(item,index) in 3" :key="index">
+          <div class="goal-number-item" v-for="(item,index) in cardList" :key="index">
             <div class="more-card-item">
               <div class="more-than-card">
                 <div class="more-than-star">
                   <div class="start-icon"></div>
                 </div>
                 <div class="percent">
-                  <div>95</div>
+                  <div>{{item.moreValue}}</div>
                   <div class="unit">%</div>
                 </div>
               </div>
-              <div class="tip">多于 1.5 个</div>
+              <div class="tip"><span>多于</span> {{item.goals}} <span>个</span></div>
             </div>
             <div class="less-card-item">
               <div class="less-than-card">
                 <div class="percent">
-                  <div>95</div>
+                  <div>{{item.lessValue}}</div>
                   <div class="unit">%</div>
                 </div>
               </div>
-              <div class="tip">少于 1.5 个</div>
+              <div class="tip"><span>少于</span> {{item.goals}} <span>个</span></div>
             </div>
           </div>
         </div>
@@ -37,7 +37,16 @@
 <script>
 import ForecastCard from "../components/forecastCard";
 export default {
+  props: ["cardList"],
   components: { ForecastCard },
+  watch: {
+    cardList: {
+      immediate: true,
+      handler(newData) {
+        this.cardList = newData;
+      },
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -53,7 +62,7 @@ export default {
   .goal-number-content {
     margin: 0 vw(16);
     padding: vw(24) 0 vw(15) 0;
-    font-family: "PingFang SC";
+    // font-family: "PingFang SC";
     font-style: normal;
     border-top: vw(1) solid rgba(255, 255, 255, 0.12);
     .goal-number-item {

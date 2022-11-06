@@ -92,7 +92,7 @@ export default {
   .container {
     display: flex;
     justify-content: center;
-    font-family: "PingFang SC";
+    // font-family: "PingFang SC";
     .menu-item {
       font-size: vw(14);
       line-height: vw(24);

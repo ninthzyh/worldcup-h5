@@ -50,7 +50,7 @@ export default {
 <style lang="scss" scoped>
 @import "~@/assets/vw";
 .schedule-list {
-  font-family: "PingFang SC";
+  // font-family: "PingFang SC";
   font-style: normal;
   color: #ffffff;
   font-size: vw(14);
@@ -106,7 +106,7 @@ export default {
       }
       .postponed {
         font-weight: 400;
-        font-family: "PingFang SC";
+        // font-family: "PingFang SC";
         color: #42c0b3;
         display: flex;
         align-items: center;

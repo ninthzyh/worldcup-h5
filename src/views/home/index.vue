@@ -211,7 +211,7 @@ export default {
 @import "~@/assets/vw";
 .home {
   color: #ffffff;
-  font-family: "PingFang SC";
+  // font-family: "PingFang SC";
   font-size: vw(14);
   height: 100%;
   overflow: auto;
@@ -269,7 +269,7 @@ export default {
             transform-origin: 0 0;
             font-size: vw(17);
             color: rgba(255, 255, 255, 0.7);
-            font-family: "PingFang SC";
+            // font-family: "PingFang SC";
             font-weight: 600;
             line-height: vw(24);
           }
@@ -331,7 +331,7 @@ export default {
               }
               .des-cn {
                 line-height: vw(10);
-                font-family: "PingFang SC";
+                // font-family: "PingFang SC";
                 font-weight: 400;
                 color: rgba(255, 255, 255, 0.32);
               }

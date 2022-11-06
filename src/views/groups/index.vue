@@ -509,7 +509,7 @@ export default {
 @import "~@/assets/vw";
 .groups {
   height: calc(100vh - #{vw(116)});
-  font-family: "PingFang SC";
+  // font-family: "PingFang SC";
   font-style: normal;
   color: #fff;
   background: url("~@/assets/images/bg.png") no-repeat center/contain;
@@ -532,7 +532,7 @@ export default {
       border: vw(1) solid rgba(255, 255, 255, 0.12);
       backdrop-filter: blur(vw(8));
       border-radius: vw(16);
-      font-family: "PingFang SC";
+      // font-family: "PingFang SC";
       font-style: normal;
       &:not(:last-child) {
         margin-bottom: vw(16);
@@ -593,7 +593,7 @@ export default {
               font-family: "Formular";
             }
             .team-name {
-              font-family: "PingFang SC";
+              // font-family: "PingFang SC";
               font-weight: 400;
               font-size: vw(12);
             }

@@ -3,7 +3,7 @@
     <div class="menu-container">
       <div class="container">
         <div :class="`menu-item ${index === selectIndex ? 'menu-item-selected' : ''}`" v-for="(item,index) in menuList"
-          :key="index" @click="jumpTo(index,item)">
+          :key="index" @click="onClick(index,item)">
           <div class="menu-title">{{item.text}}</div>
           <div :class="`menu-underline ${index === selectIndex ? 'menu-underline-selected' : ''}`"></div>
         </div>
@@ -15,6 +15,9 @@
 
 <script>
 export default {
+  mounted() {
+    this.$emit("select-index-event", this.selectIndex);
+  },
   data() {
     return {
       menuList: [
@@ -28,12 +31,13 @@ export default {
           text: "智能预测",
         },
       ],
-      selectIndex: 0,
+      selectIndex: 1,
     };
   },
   methods: {
-    jumpTo(index, menu) {
+    onClick(index, menu) {
       this.selectIndex = index;
+      this.$emit("select-index-event", index);
     },
   },
 };
@@ -46,7 +50,7 @@ export default {
   .container {
     display: flex;
     justify-content: center;
-    font-family: "PingFang SC";
+    // font-family: "PingFang SC";
     .menu-item {
       font-size: vw(14);
       line-height: vw(15);

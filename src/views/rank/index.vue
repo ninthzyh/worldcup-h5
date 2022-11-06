@@ -193,7 +193,7 @@ export default {
 <style lang="scss" scoped>
 @import "~@/assets/vw";
 .rank {
-  font-family: "PingFang SC";
+  // font-family: "PingFang SC";
   font-style: normal;
   font-weight: 500;
   color: #ffffff;

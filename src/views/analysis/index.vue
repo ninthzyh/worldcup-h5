@@ -5,24 +5,35 @@
       <div class="label">葡萄牙 vs 乌拉圭</div>
     </div>
     <div class="screen"></div>
-    <analysis-tab />
+    <analysis-tab @select-index-event="selectIndexEvent"/>
     <div class="tab-content">
-      <Forecast />
+      <match-analysis v-if="type===1"/>
+      <Forecast v-if="type===2"/>
     </div>
   </div>
 </template>
 <script>
 import AnalysisTab from "./components/analysisTab";
 import Forecast from "./forecast";
+import MatchAnalysis from "./matchAnalysis";
 export default {
   components: {
     AnalysisTab,
     Forecast,
+    MatchAnalysis,
+  },
+  data(){
+    return{
+      type:null,
+    }
   },
   methods: {
     onBack() {
       this.$router.push("/home");
     },
+    selectIndexEvent(type){
+      this.type=type
+    }
   },
 };
 </script>
@@ -45,7 +56,7 @@ export default {
     }
     .label {
       margin: 0 auto;
-      font-family: "PingFang SC";
+      // font-family: "PingFang SC";
       font-style: normal;
       font-weight: 500;
       font-size: vw(14);
