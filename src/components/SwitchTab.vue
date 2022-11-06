@@ -60,47 +60,134 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/vw";
 
-.switch-container{
-  height: vw(24);
-  line-height: vw(24);
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: vw(20);
-  position: relative;
-  text-align: center;
-  .show-item{
-    display: flex;
-    .switch-item{
-      border-radius: vw(20);
-      @extend .flex-center;
-      flex: 1;
+@media screen and (max-device-width: 600px) {
+  .switch-container {
+    height: vw(24);
+    line-height: vw(24);
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: vw(20);
+    position: relative;
+    text-align: center;
+
+    .show-item {
+      display: flex;
+      .switch-item {
+        border-radius: vw(20);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+      }
     }
-  }
-  .logo{
-    @extend .flex-center;
-    width: vw(12);
-    height: vw(12);
-  }
-  .select-item{
-    position: absolute;
-    top:vw(2);
-    left: 0;
-    width: 55%;
-    height: vw(20);
-    background: #FFFFFF;
-    color: rgba(0, 0, 0, 0.87);
-    border-radius: vw(12);
-    @extend .flex-center;
-    &.left{
-      right: unset;
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: vw(12);
+      height: vw(12);
+    }
+
+    .select-item {
+      position: absolute;
+      top: vw(2);
       left: 0;
-      animation-name: left;
-      animation-duration: 0.3s;
+      width: 55%;
+      height: vw(20);
+      background: #FFFFFF;
+      color: rgba(0, 0, 0, 0.87);
+      border-radius: vw(12);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.left {
+        right: unset;
+        left: 0;
+        animation-name: left;
+        animation-duration: 0.3s;
+      }
+
+      &.right {
+        left: unset;
+        right: 0;
+        animation-name: right;
+        animation-duration: 0.3s;
+      }
     }
-    &.right{
-      left: unset;
+  }
+  @keyframes left {
+    0% {
+      left: 45%;
+    }
+    100% {
+      left: 0;
+    }
+  }
+  @keyframes right {
+    0% {
+      right: 45%;
+    }
+    100% {
       right: 0;
-      animation-name: right;
-      animation-duration: 0.3s;
+    }
+  }
+}
+
+@media screen and (min-device-width: 600px) {
+  .switch-container {
+    height: vwPad(24);
+    line-height: vwPad(24);
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: vwPad(20);
+    position: relative;
+    text-align: center;
+
+    .show-item {
+      display: flex;
+      .switch-item {
+        border-radius: vwPad(20);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+      }
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: vwPad(12);
+      height: vwPad(12);
+    }
+
+    .select-item {
+      position: absolute;
+      top: vwPad(2);
+      left: 0;
+      width: 55%;
+      height: vwPad(20);
+      background: #FFFFFF;
+      color: rgba(0, 0, 0, 0.87);
+      border-radius: vwPad(12);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.left {
+        right: unset;
+        left: 0;
+        animation-name: left;
+        animation-duration: 0.3s;
+      }
+
+      &.right {
+        left: unset;
+        right: 0;
+        animation-name: right;
+        animation-duration: 0.3s;
+      }
     }
   }
   @keyframes left {
