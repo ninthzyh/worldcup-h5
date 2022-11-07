@@ -56,9 +56,6 @@ export default {
       }
       return ''
     },
-    teamInfors(){
-      return this.resData
-    }
   },
   mounted() {
     new Promise((resolve)=>(resolve(require('./data.json')))).then((res)=>{

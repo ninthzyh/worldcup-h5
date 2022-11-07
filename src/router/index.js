@@ -9,6 +9,7 @@ import Rise from "@/views/rise";
 import GoalsList from "@/views/rank/goalsList";
 import Analysis from "@/views/analysis";
 import Squad from "@/views/squad";
+import Event from "@/views/event";
 
 Vue.use(Router)
 
@@ -46,6 +47,10 @@ export default new Router({
     {
       path: '/analysis',
       component: Analysis,
+    },
+    {
+      path: '/event',
+      component: Event,
     },
   ]
 })
