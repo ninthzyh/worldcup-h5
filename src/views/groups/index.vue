@@ -36,6 +36,7 @@
 </template>
 <script>
 import NationalFlag from "../../components/NationalFlag";
+import scheduleList from './schedulelist.json';
 
 export default {
   components: {
