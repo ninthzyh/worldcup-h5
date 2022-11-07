@@ -1,8 +1,8 @@
 <template>
   <div class="overview-stat-list">
     <div class="team-name">
-      <div>葡萄牙</div>
-      <div>葡萄牙</div>
+      <div>{{matchInfo&&matchInfo.homeName}}</div>
+      <div>{{matchInfo&&matchInfo.awayName}}</div>
     </div>
     <div class="overview-stat" v-for="(item,index) in cardList" :key="index">
       <div :class="`${item.statType}`"></div>

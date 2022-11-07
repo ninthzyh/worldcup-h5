@@ -1,6 +1,6 @@
 <template>
   <div>
-    <overview-stat-list :cardList="matchDataList.overviewStatList"/>
+    <overview-stat-list :cardList="matchDataList.overviewStatList" :matchInfo="matchDataList.matchInfo"/>
     <technology-statistic :cardList="matchDataList.detailStatList" :matchInfo="matchDataList.matchInfo"/>
     <advertisement></advertisement>
     <Squad />
