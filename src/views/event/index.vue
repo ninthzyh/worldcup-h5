@@ -9,19 +9,22 @@
     </div>
     <div class="container">
       <template v-for="(event, index) in eventList">
-        <div v-if="event.teamType === 'away'" :class="event.teamType" class="message">
-          <span class="icon-container">
-            <span class="icon" :class="getIcon(event.eventCode)"></span>
-          </span>
-          <span class="time">
-            {{ event.timeMin }}’
-          </span>
-          <span>
-            {{ event.eventDes }}
-          </span>
-        </div>
         <div v-if="event.teamType === 'home'" :class="event.teamType" class="message">
-          <span>
+          <span v-if="event.eventCode === 'SubsMade'" class="subs-made">
+            <p>
+              <span class="event-name">
+                {{event.playerNameList && event.playerNameList[0]}}
+              </span>
+              <span class="icon up"></span>
+            </p>
+            <p>
+              <span class="event-name">
+                {{event.playerNameList && event.playerNameList[1]}}
+              </span>
+              <span class="icon down"></span>
+            </p>
+          </span>
+          <span v-else>
             {{ event.eventDes }}
           </span>
           <span class="time">
@@ -30,6 +33,31 @@
           <span class="icon-container">
               <span class="icon" :class="getIcon(event.eventCode)"></span>
             </span>
+        </div>
+        <div v-if="event.teamType === 'away'" :class="event.teamType" class="message">
+          <span class="icon-container">
+            <span class="icon" :class="getIcon(event.eventCode)"></span>
+          </span>
+          <span class="time">
+            {{ event.timeMin }}’
+          </span>
+          <span v-if="event.eventCode === 'SubsMade'" class="subs-made">
+            <p>
+              <span class="icon up"></span>
+              <span class="event-name">
+                {{event.playerNameList && event.playerNameList[0]}}
+              </span>
+            </p>
+            <p>
+              <span class="icon down"></span>
+              <span class="event-name">
+                {{event.playerNameList && event.playerNameList[1]}}
+              </span>
+            </p>
+          </span>
+          <span v-else>
+            {{ event.eventDes }}
+          </span>
         </div>
         <div v-if="event.teamType === 'both'" :class="event.teamType" class="message">
           <span>
@@ -150,10 +178,16 @@ export default {
       text-align: center;
       color: rgba(255, 255, 255, 0.54);
     }
+    .event-name{
+      display: inline-block;
+      vertical-align: middle;
+      width: vw(60);
+    }
     .line{
       display: inline-block;
       width: 50%;
-      height: vw(24);
+      height: vw(36);
+      margin-bottom: vw(-4);
       border-right: vw(1) solid rgba(255, 255, 255, 0.12);;
     }
     .icon-container{
@@ -179,6 +213,12 @@ export default {
       width: vw(24);
       padding: 0 vw(5);
     }
+    .subs-made{
+      vertical-align: text-top;
+      >p{
+        margin: 0;
+      }
+    }
     .goal{
       background-image: url("../../assets/images/goal.svg");
     }
@@ -201,9 +241,17 @@ export default {
       background-image: url("../../assets/images/yellow-2-card.svg");
     }
     .up{
+      display: inline-block;
+      width: vw(16);
+      height: vw(16);
+      background-size: 100% 100%;
       background-image: url("../../assets/images/up.svg");
     }
     .down{
+      display: inline-block;
+      width: vw(16);
+      height: vw(16);
+      background-size: 100% 100%;
       background-image: url("../../assets/images/down.svg");
     }
     .replace{
