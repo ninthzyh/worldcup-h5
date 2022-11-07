@@ -1,0 +1,659 @@
+{
+      "goalList": [
+        {
+          "teamId": "pfvmhackqyhhk02majd2tb8l",
+          "teamName": "比利时1",
+          "teamFlag": null,
+          "statValue": 16,
+          "statValueStr": "16"
+        },
+        {
+          "teamId": "4pz87gsel7183b7kcadw1dwzv",
+          "teamName": "法国",
+          "teamFlag": null,
+          "statValue": 14,
+          "statValueStr": "14"
+        },
+        {
+          "teamId": "4njsfszcgd9m765d6suktsz2a",
+          "teamName": "克罗地亚",
+          "teamFlag": null,
+          "statValue": 14,
+          "statValueStr": "14"
+        },
+        {
+          "teamId": "ck8m1cn23sukwsurgx5qakttk",
+          "teamName": "英格兰",
+          "teamFlag": null,
+          "statValue": 12,
+          "statValueStr": "12"
+        },
+        {
+          "teamId": "f0frccyrlq2jjihdraoie2e2d",
+          "teamName": "俄罗斯",
+          "teamFlag": null,
+          "statValue": 11,
+          "statValueStr": "11"
+        },
+        {
+          "teamId": "ajab3nmpoltsoeqcuoyi4pwzx",
+          "teamName": "巴西",
+          "teamFlag": null,
+          "statValue": 8,
+          "statValueStr": "8"
+        },
+        {
+          "teamId": "eh7yt2x2wck51oixw8012ux5j",
+          "teamName": "西班牙",
+          "teamFlag": null,
+          "statValue": 7,
+          "statValueStr": "7"
+        },
+        {
+          "teamId": "9l06impjllgop0gte8fldb4zo",
+          "teamName": "乌拉圭",
+          "teamFlag": null,
+          "statValue": 7,
+          "statValueStr": "7"
+        },
+        {
+          "teamId": "ak48fkypnql8y4n69cvcq5ghc",
+          "teamName": "阿根廷",
+          "teamFlag": null,
+          "statValue": 6,
+          "statValueStr": "6"
+        },
+        {
+          "teamId": "8gxg8f7p9299jbrz30u8bsc7g",
+          "teamName": "葡萄牙",
+          "teamFlag": null,
+          "statValue": 6,
+          "statValueStr": "6"
+        },
+        {
+          "teamId": "7km4szeh6fs5bbdgypshh0snd",
+          "teamName": "哥伦比亚",
+          "teamFlag": null,
+          "statValue": 6,
+          "statValueStr": "6"
+        },
+        {
+          "teamId": "6duaxcbrofil112qfq4v895go",
+          "teamName": "日本",
+          "teamFlag": null,
+          "statValue": 6,
+          "statValueStr": "6"
+        },
+        {
+          "teamId": "4w1ktgu1nbbgqfe3ssbb4fg5v",
+          "teamName": "瑞典",
+          "teamFlag": null,
+          "statValue": 6,
+          "statValueStr": "6"
+        },
+        {
+          "teamId": "ctp7ovvf34m7fzshua9ogbr6i",
+          "teamName": "突尼斯",
+          "teamFlag": null,
+          "statValue": 5,
+          "statValueStr": "5"
+        },
+        {
+          "teamId": "339wxbt07ltnva7hop6m5o477",
+          "teamName": "瑞士",
+          "teamFlag": null,
+          "statValue": 5,
+          "statValueStr": "5"
+        },
+        {
+          "teamId": "2wk1549tkz80oet8226euj7jp",
+          "teamName": "塞内加尔",
+          "teamFlag": null,
+          "statValue": 4,
+          "statValueStr": "4"
+        },
+        {
+          "teamId": "ao3zo8i0kn3grl47nol24gck0",
+          "teamName": "尼日利亚",
+          "teamFlag": null,
+          "statValue": 3,
+          "statValueStr": "3"
+        },
+        {
+          "teamId": "akblgvrthxxgta4ou9lnslxgb",
+          "teamName": "丹麦",
+          "teamFlag": null,
+          "statValue": 3,
+          "statValueStr": "3"
+        },
+        {
+          "teamId": "4vofb84dzb5fyc81n2ssws6ah",
+          "teamName": "墨西哥",
+          "teamFlag": null,
+          "statValue": 3,
+          "statValueStr": "3"
+        },
+        {
+          "teamId": "1yghbv1c71b37eenutbwnvvq",
+          "teamName": "韩国",
+          "teamFlag": null,
+          "statValue": 3,
+          "statValueStr": "3"
+        },
+        {
+          "teamId": "cubclbw5k5gdqdau95bnav0nn",
+          "teamName": "伊朗",
+          "teamFlag": null,
+          "statValue": 2,
+          "statValueStr": "2"
+        },
+        {
+          "teamId": "bl4fd8cxe6kjvjx8br82gkhnq",
+          "teamName": "澳大利亚",
+          "teamFlag": null,
+          "statValue": 2,
+          "statValueStr": "2"
+        },
+        {
+          "teamId": "bfgqfm4qa3mal7fll74wd04mu",
+          "teamName": "哥斯达黎加",
+          "teamFlag": null,
+          "statValue": 2,
+          "statValueStr": "2"
+        },
+        {
+          "teamId": "ba25ib8pofxr85hkbs8lt7kw7",
+          "teamName": "波兰",
+          "teamFlag": null,
+          "statValue": 2,
+          "statValueStr": "2"
+        },
+        {
+          "teamId": "avggs3u2b5cu8i1dnzknhth52",
+          "teamName": "摩洛哥",
+          "teamFlag": null,
+          "statValue": 2,
+          "statValueStr": "2"
+        },
+        {
+          "teamId": "a9sendamrqqz1uv4jc89mfum8",
+          "teamName": "秘鲁",
+          "teamFlag": null,
+          "statValue": 2,
+          "statValueStr": "2"
+        },
+        {
+          "teamId": "9l4imoomrnyceg5u3kdxf5l5r",
+          "teamName": "沙特阿拉伯",
+          "teamFlag": null,
+          "statValue": 2,
+          "statValueStr": "2"
+        },
+        {
+          "teamId": "8856r86rattc8kxn6a0l9tb2t",
+          "teamName": "巴拿马",
+          "teamFlag": null,
+          "statValue": 2,
+          "statValueStr": "2"
+        },
+        {
+          "teamId": "5gv6rrm6m6ixf8nff08vx7i9m",
+          "teamName": "冰岛",
+          "teamFlag": null,
+          "statValue": 2,
+          "statValueStr": "2"
+        },
+        {
+          "teamId": "3l2t2db0c5ow2f7s7bhr6mij4",
+          "teamName": "德国",
+          "teamFlag": null,
+          "statValue": 2,
+          "statValueStr": "2"
+        },
+        {
+          "teamId": "3669sbeijslw88073qlw1cbcp",
+          "teamName": "埃及",
+          "teamFlag": null,
+          "statValue": 2,
+          "statValueStr": "2"
+        },
+        {
+          "teamId": "2ome9qbio8c3r9lmhx2hg6kif",
+          "teamName": "塞尔维亚",
+          "teamFlag": null,
+          "statValue": 2,
+          "statValueStr": "2"
+        }
+      ],
+      "assistList": [
+        {
+          "teamId": "pfvmhackqyhhk02majd2tb8l",
+          "teamName": "比利时",
+          "teamFlag": null,
+          "statValue": 12,
+          "statValueStr": "12"
+        },
+        {
+          "teamId": "f0frccyrlq2jjihdraoie2e2d",
+          "teamName": "俄罗斯",
+          "teamFlag": null,
+          "statValue": 8,
+          "statValueStr": "8"
+        },
+        {
+          "teamId": "4njsfszcgd9m765d6suktsz2a",
+          "teamName": "克罗地亚",
+          "teamFlag": null,
+          "statValue": 8,
+          "statValueStr": "8"
+        },
+        {
+          "teamId": "ck8m1cn23sukwsurgx5qakttk",
+          "teamName": "英格兰",
+          "teamFlag": null,
+          "statValue": 6,
+          "statValueStr": "6"
+        },
+        {
+          "teamId": "ajab3nmpoltsoeqcuoyi4pwzx",
+          "teamName": "巴西",
+          "teamFlag": null,
+          "statValue": 6,
+          "statValueStr": "6"
+        },
+        {
+          "teamId": "4pz87gsel7183b7kcadw1dwzv",
+          "teamName": "法国",
+          "teamFlag": null,
+          "statValue": 6,
+          "statValueStr": "6"
+        },
+        {
+          "teamId": "ak48fkypnql8y4n69cvcq5ghc",
+          "teamName": "阿根廷",
+          "teamFlag": null,
+          "statValue": 5,
+          "statValueStr": "5"
+        },
+        {
+          "teamId": "7km4szeh6fs5bbdgypshh0snd",
+          "teamName": "哥伦比亚",
+          "teamFlag": null,
+          "statValue": 5,
+          "statValueStr": "5"
+        },
+        {
+          "teamId": "6duaxcbrofil112qfq4v895go",
+          "teamName": "日本",
+          "teamFlag": null,
+          "statValue": 5,
+          "statValueStr": "5"
+        },
+        {
+          "teamId": "ctp7ovvf34m7fzshua9ogbr6i",
+          "teamName": "突尼斯",
+          "teamFlag": null,
+          "statValue": 4,
+          "statValueStr": "4"
+        },
+        {
+          "teamId": "9l06impjllgop0gte8fldb4zo",
+          "teamName": "乌拉圭",
+          "teamFlag": null,
+          "statValue": 4,
+          "statValueStr": "4"
+        },
+        {
+          "teamId": "8gxg8f7p9299jbrz30u8bsc7g",
+          "teamName": "葡萄牙",
+          "teamFlag": null,
+          "statValue": 4,
+          "statValueStr": "4"
+        },
+        {
+          "teamId": "339wxbt07ltnva7hop6m5o477",
+          "teamName": "瑞士",
+          "teamFlag": null,
+          "statValue": 4,
+          "statValueStr": "4"
+        },
+        {
+          "teamId": "eh7yt2x2wck51oixw8012ux5j",
+          "teamName": "西班牙",
+          "teamFlag": null,
+          "statValue": 3,
+          "statValueStr": "3"
+        },
+        {
+          "teamId": "akblgvrthxxgta4ou9lnslxgb",
+          "teamName": "丹麦",
+          "teamFlag": null,
+          "statValue": 3,
+          "statValueStr": "3"
+        },
+        {
+          "teamId": "4w1ktgu1nbbgqfe3ssbb4fg5v",
+          "teamName": "瑞典",
+          "teamFlag": null,
+          "statValue": 3,
+          "statValueStr": "3"
+        },
+        {
+          "teamId": "ba25ib8pofxr85hkbs8lt7kw7",
+          "teamName": "波兰",
+          "teamFlag": null,
+          "statValue": 2,
+          "statValueStr": "2"
+        },
+        {
+          "teamId": "ao3zo8i0kn3grl47nol24gck0",
+          "teamName": "尼日利亚",
+          "teamFlag": null,
+          "statValue": 2,
+          "statValueStr": "2"
+        },
+        {
+          "teamId": "4vofb84dzb5fyc81n2ssws6ah",
+          "teamName": "墨西哥",
+          "teamFlag": null,
+          "statValue": 2,
+          "statValueStr": "2"
+        },
+        {
+          "teamId": "3l2t2db0c5ow2f7s7bhr6mij4",
+          "teamName": "德国",
+          "teamFlag": null,
+          "statValue": 2,
+          "statValueStr": "2"
+        },
+        {
+          "teamId": "1yghbv1c71b37eenutbwnvvq",
+          "teamName": "韩国",
+          "teamFlag": null,
+          "statValue": 2,
+          "statValueStr": "2"
+        },
+        {
+          "teamId": "bfgqfm4qa3mal7fll74wd04mu",
+          "teamName": "哥斯达黎加",
+          "teamFlag": null,
+          "statValue": 1,
+          "statValueStr": "1"
+        },
+        {
+          "teamId": "avggs3u2b5cu8i1dnzknhth52",
+          "teamName": "摩洛哥",
+          "teamFlag": null,
+          "statValue": 1,
+          "statValueStr": "1"
+        },
+        {
+          "teamId": "a9sendamrqqz1uv4jc89mfum8",
+          "teamName": "秘鲁",
+          "teamFlag": null,
+          "statValue": 1,
+          "statValueStr": "1"
+        },
+        {
+          "teamId": "9l4imoomrnyceg5u3kdxf5l5r",
+          "teamName": "沙特阿拉伯",
+          "teamFlag": null,
+          "statValue": 1,
+          "statValueStr": "1"
+        },
+        {
+          "teamId": "8856r86rattc8kxn6a0l9tb2t",
+          "teamName": "巴拿马",
+          "teamFlag": null,
+          "statValue": 1,
+          "statValueStr": "1"
+        },
+        {
+          "teamId": "3669sbeijslw88073qlw1cbcp",
+          "teamName": "埃及",
+          "teamFlag": null,
+          "statValue": 1,
+          "statValueStr": "1"
+        },
+        {
+          "teamId": "2wk1549tkz80oet8226euj7jp",
+          "teamName": "塞内加尔",
+          "teamFlag": null,
+          "statValue": 1,
+          "statValueStr": "1"
+        },
+        {
+          "teamId": "2ome9qbio8c3r9lmhx2hg6kif",
+          "teamName": "塞尔维亚",
+          "teamFlag": null,
+          "statValue": 1,
+          "statValueStr": "1"
+        }
+      ],
+      "possessionList": [
+        {
+          "teamId": "eh7yt2x2wck51oixw8012ux5j",
+          "teamName": "西班牙",
+          "teamFlag": null,
+          "statValue": 74,
+          "statValueStr": "74%"
+        },
+        {
+          "teamId": "3l2t2db0c5ow2f7s7bhr6mij4",
+          "teamName": "德国",
+          "teamFlag": null,
+          "statValue": 71,
+          "statValueStr": "71%"
+        },
+        {
+          "teamId": "ak48fkypnql8y4n69cvcq5ghc",
+          "teamName": "阿根廷",
+          "teamFlag": null,
+          "statValue": 65,
+          "statValueStr": "65%"
+        },
+        {
+          "teamId": "9l4imoomrnyceg5u3kdxf5l5r",
+          "teamName": "沙特阿拉伯",
+          "teamFlag": null,
+          "statValue": 59,
+          "statValueStr": "59%"
+        },
+        {
+          "teamId": "339wxbt07ltnva7hop6m5o477",
+          "teamName": "瑞士",
+          "teamFlag": null,
+          "statValue": 59,
+          "statValueStr": "59%"
+        },
+        {
+          "teamId": "ajab3nmpoltsoeqcuoyi4pwzx",
+          "teamName": "巴西",
+          "teamFlag": null,
+          "statValue": 58,
+          "statValueStr": "58%"
+        },
+        {
+          "teamId": "4njsfszcgd9m765d6suktsz2a",
+          "teamName": "克罗地亚",
+          "teamFlag": null,
+          "statValue": 57,
+          "statValueStr": "57%"
+        },
+        {
+          "teamId": "ck8m1cn23sukwsurgx5qakttk",
+          "teamName": "英格兰",
+          "teamFlag": null,
+          "statValue": 54,
+          "statValueStr": "54%"
+        },
+        {
+          "teamId": "pfvmhackqyhhk02majd2tb8l",
+          "teamName": "比利时",
+          "teamFlag": null,
+          "statValue": 53,
+          "statValueStr": "53%"
+        },
+        {
+          "teamId": "ctp7ovvf34m7fzshua9ogbr6i",
+          "teamName": "突尼斯",
+          "teamFlag": null,
+          "statValue": 53,
+          "statValueStr": "53%"
+        },
+        {
+          "teamId": "8gxg8f7p9299jbrz30u8bsc7g",
+          "teamName": "葡萄牙",
+          "teamFlag": null,
+          "statValue": 53,
+          "statValueStr": "53%"
+        },
+        {
+          "teamId": "6duaxcbrofil112qfq4v895go",
+          "teamName": "日本",
+          "teamFlag": null,
+          "statValue": 53,
+          "statValueStr": "53%"
+        },
+        {
+          "teamId": "bl4fd8cxe6kjvjx8br82gkhnq",
+          "teamName": "澳大利亚",
+          "teamFlag": null,
+          "statValue": 52,
+          "statValueStr": "52%"
+        },
+        {
+          "teamId": "4vofb84dzb5fyc81n2ssws6ah",
+          "teamName": "墨西哥",
+          "teamFlag": null,
+          "statValue": 52,
+          "statValueStr": "52%"
+        },
+        {
+          "teamId": "a9sendamrqqz1uv4jc89mfum8",
+          "teamName": "秘鲁",
+          "teamFlag": null,
+          "statValue": 51,
+          "statValueStr": "51%"
+        },
+        {
+          "teamId": "ba25ib8pofxr85hkbs8lt7kw7",
+          "teamName": "波兰",
+          "teamFlag": null,
+          "statValue": 50,
+          "statValueStr": "50%"
+        },
+        {
+          "teamId": "7km4szeh6fs5bbdgypshh0snd",
+          "teamName": "哥伦比亚",
+          "teamFlag": null,
+          "statValue": 50,
+          "statValueStr": "50%"
+        },
+        {
+          "teamId": "4pz87gsel7183b7kcadw1dwzv",
+          "teamName": "法国",
+          "teamFlag": null,
+          "statValue": 49,
+          "statValueStr": "49%"
+        },
+        {
+          "teamId": "9l06impjllgop0gte8fldb4zo",
+          "teamName": "乌拉圭",
+          "teamFlag": null,
+          "statValue": 48,
+          "statValueStr": "48%"
+        },
+        {
+          "teamId": "avggs3u2b5cu8i1dnzknhth52",
+          "teamName": "摩洛哥",
+          "teamFlag": null,
+          "statValue": 47,
+          "statValueStr": "47%"
+        },
+        {
+          "teamId": "ao3zo8i0kn3grl47nol24gck0",
+          "teamName": "尼日利亚",
+          "teamFlag": null,
+          "statValue": 46,
+          "statValueStr": "46%"
+        },
+        {
+          "teamId": "akblgvrthxxgta4ou9lnslxgb",
+          "teamName": "丹麦",
+          "teamFlag": null,
+          "statValue": 43,
+          "statValueStr": "43%"
+        },
+        {
+          "teamId": "3669sbeijslw88073qlw1cbcp",
+          "teamName": "埃及",
+          "teamFlag": null,
+          "statValue": 43,
+          "statValueStr": "43%"
+        },
+        {
+          "teamId": "2ome9qbio8c3r9lmhx2hg6kif",
+          "teamName": "塞尔维亚",
+          "teamFlag": null,
+          "statValue": 42,
+          "statValueStr": "42%"
+        },
+        {
+          "teamId": "2wk1549tkz80oet8226euj7jp",
+          "teamName": "塞内加尔",
+          "teamFlag": null,
+          "statValue": 41,
+          "statValueStr": "41%"
+        },
+        {
+          "teamId": "bfgqfm4qa3mal7fll74wd04mu",
+          "teamName": "哥斯达黎加",
+          "teamFlag": null,
+          "statValue": 39,
+          "statValueStr": "39%"
+        },
+        {
+          "teamId": "4w1ktgu1nbbgqfe3ssbb4fg5v",
+          "teamName": "瑞典",
+          "teamFlag": null,
+          "statValue": 38,
+          "statValueStr": "38%"
+        },
+        {
+          "teamId": "8856r86rattc8kxn6a0l9tb2t",
+          "teamName": "巴拿马",
+          "teamFlag": null,
+          "statValue": 37,
+          "statValueStr": "37%"
+        },
+        {
+          "teamId": "1yghbv1c71b37eenutbwnvvq",
+          "teamName": "韩国",
+          "teamFlag": null,
+          "statValue": 37,
+          "statValueStr": "37%"
+        },
+        {
+          "teamId": "f0frccyrlq2jjihdraoie2e2d",
+          "teamName": "俄罗斯",
+          "teamFlag": null,
+          "statValue": 36,
+          "statValueStr": "36%"
+        },
+        {
+          "teamId": "5gv6rrm6m6ixf8nff08vx7i9m",
+          "teamName": "冰岛",
+          "teamFlag": null,
+          "statValue": 33,
+          "statValueStr": "33%"
+        },
+        {
+          "teamId": "cubclbw5k5gdqdau95bnav0nn",
+          "teamName": "伊朗",
+          "teamFlag": null,
+          "statValue": 27,
+          "statValueStr": "27%"
+        }
+      ]
+    }
