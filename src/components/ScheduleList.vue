@@ -56,7 +56,7 @@ export default {
   font-size: vw(14);
   .schedule-item {
     background: rgba(0, 0, 0, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: vw(1) solid rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(#{vw(8)});
     border-radius: vw(16);
     padding: vw(15);
@@ -85,7 +85,7 @@ export default {
       }
     }
     .item-right {
-      border-left: 1px solid rgba(255, 255, 255, 0.24);
+      border-left: vw(1) solid rgba(255, 255, 255, 0.24);
       padding: vw(13) vw(26) vw(13) vw(42);
       text-align: center;
       font-family: "Inter";

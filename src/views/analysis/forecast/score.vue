@@ -64,7 +64,7 @@ export default {
     font-style: normal;
     .score-describe {
       padding-top: vw(13);
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      border-top: vw(1) solid rgba(255, 255, 255, 0.12);
       font-weight: 300;
       font-size: vw(10);
       line-height: 110%;

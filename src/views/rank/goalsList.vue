@@ -358,7 +358,7 @@ export default {
     padding: vw(24) vw(22) vw(40) vw(26);
     .rank-card {
       background: rgba(0, 0, 0, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      border: vw(1) solid rgba(255, 255, 255, 0.12);
       backdrop-filter: blur(#{vw(8)});
       border-radius: vw(16);
       // font-family: "PingFang SC";
@@ -418,7 +418,7 @@ export default {
             font-family: "Inter";
           }
           &:not(:last-child) {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            border-bottom: vw(1) solid rgba(255, 255, 255, 0.12);
           }
         }
       }

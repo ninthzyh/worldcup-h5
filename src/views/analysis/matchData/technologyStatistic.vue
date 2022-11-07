@@ -1,17 +1,28 @@
 <template>
   <div class="technology-card">
     <div class="card-header">
-      <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" border="0.5px solid rgba(255, 255, 255, 0.12)"
-        padding="8px" :img="''" />
+      <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`"
+        :border="`${$vw(0.5)} solid rgba(255, 255, 255, 0.12)`" :padding="`${$vw(8)}`"
+        :img="matchInfo&&matchInfo.homeFlag" />
       <div class="card-title">技术统计</div>
-      <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" border="0.5px solid rgba(255, 255, 255, 0.12)"
-        padding="8px" :img="''" />
+      <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`"
+        :border="`${$vw(0.5)} solid rgba(255, 255, 255, 0.12)`" :padding="`${$vw(8)}`"
+        :img="matchInfo&&matchInfo.awayFlag" />
     </div>
     <div class="technology-content">
       <div class="card-subtitle">控球率</div>
       <div class="progress-bar-wrap">
-        <div class="left-bar"></div>
-        <div class="right-bar"></div>
+        <div class="left-bar" :style="`width:${cardList&&cardList[0].homeValueStr}`">
+          <div class="bar-percent">{{cardList&&cardList[0].homeValueStr}}</div>
+        </div>
+        <div class="right-bar" :style="`width:${cardList&&cardList[0].awayValueStr}`">
+          <div class="bar-percent">{{cardList&&cardList[0].awayValueStr}}</div>
+        </div>
+      </div>
+      <div class="detail-item" v-for="(item,index) in cardList&&cardList.slice(1)" :key="index">
+        <div :class="`${true?'left-bg':''} detail-item-num`">{{item.homeValue}}</div>
+        <div class="technology-name">{{item.statName}}</div>
+        <div :class="`${true?'':'right-bg'} detail-item-num`">{{item.awayValue}}</div>
       </div>
     </div>
   </div>
@@ -20,7 +31,7 @@
 import NationalFlag from "../../../components/NationalFlag";
 
 export default {
-  props: ["cardList"],
+  props: ["cardList", "matchInfo"],
   components: {
     NationalFlag,
   },
@@ -55,8 +66,8 @@ export default {
   .technology-content {
     .card-subtitle {
       font-weight: 500;
-      font-size: 12px;
-      line-height: 17px;
+      font-size: vw(12);
+      line-height: vw(17);
       padding-bottom: vw(12);
       text-align: center;
     }
@@ -64,26 +75,66 @@ export default {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding-bottom: vw(12);
       @mixin progress-bar($radius, $background) {
-        border-radius: 4px;
+        border-radius: vw(4);
         line-height: vw(24);
         font-family: "Inter";
         font-style: normal;
         font-weight: 600;
-        font-size: 12px;
-        line-height: 12px;
-        height: 12px;
+        font-size: vw(12);
+        line-height: vw(24);
+        height: vw(24);
         background: $background;
         border-radius: $radius;
+        .bar-percent {
+          font-family: "Inter";
+          font-weight: 600;
+          line-height: vw(24);
+          height: vw(24);
+          padding: 0 vw(6);
+        }
       }
       .left-bar {
-        @include progress-bar(4px 0px 0px 4px, #7a293f);
+        @include progress-bar(vw(4) 0 0 vw(4), #7a293f);
         margin-right: vw(4);
-        width: 10%;
       }
       .right-bar {
-        @include progress-bar(0px 4px 4px 0px, #7996bc);
-        width: 10%;
+        @include progress-bar(0 vw(4) vw(4) 0, #7996bc);
+        > div {
+          text-align: right;
+        }
+      }
+    }
+    .detail-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .detail-item-num {
+        font-family: "Inter";
+        font-weight: 600;
+        font-size: vw(12);
+        line-height: vw(12);
+        border-radius: vw(4);
+        padding: vw(5);
+      }
+      .left-bg {
+        background: #7a293f;
+      }
+      .technology-name {
+        flex: 1 0 vw(80);
+        text-align: center;
+        font-family: "PingFang SC";
+        font-weight: 500;
+        font-size: vw(12);
+        line-height: vw(17);
+        color: rgba(255, 255, 255, 0.54);
+      }
+      .right-bg {
+        background: #7996bc;
+      }
+      &:not(:last-child) {
+        padding-bottom: vw(12);
       }
     }
   }

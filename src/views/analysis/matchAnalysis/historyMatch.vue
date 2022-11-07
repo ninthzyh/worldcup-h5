@@ -1,11 +1,11 @@
 <template>
   <div class="match-card">
     <div class="card-header">
-      <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" border="0.5px solid rgba(255, 255, 255, 0.12)"
-        padding="8px" :img="cardList&&cardList.relateMatchList[0].homeFlag" />
+      <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :border="`${$vw(0.5)} solid rgba(255, 255, 255, 0.12)`"
+        :padding="`${$vw(8)}`" :img="cardList&&cardList.relateMatchList[0].homeFlag" />
       <div class="card-title">历史对阵</div>
-      <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" border="0.5px solid rgba(255, 255, 255, 0.12)"
-        padding="8px" :img="cardList&&cardList.relateMatchList[0].awayFlag" />
+      <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :border="`${$vw(0.5)} solid rgba(255, 255, 255, 0.12)`"
+        :padding="`${$vw(8)}`" :img="cardList&&cardList.relateMatchList[0].awayFlag" />
     </div>
     <div class="history-session">
       <div class="session-item">

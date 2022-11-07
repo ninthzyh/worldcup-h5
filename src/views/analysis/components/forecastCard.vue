@@ -44,8 +44,8 @@ export default {
     }
     .bold {
       font-weight: 600;
-      font-size: 16px;
-      line-height: 24px;
+      font-size: w(16);
+      line-height: w(24);
     }
   }
 }

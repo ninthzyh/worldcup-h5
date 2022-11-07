@@ -100,8 +100,8 @@ export default {
     }
   }
   .switch-group {
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 8px;
+    border: vw(1) solid rgba(255, 255, 255, 0.12);
+    border-radius: vw(8);
     padding: 0 vw(8);
     display: flex;
     align-items: center;
@@ -181,7 +181,7 @@ export default {
         position: absolute;
         left: 0;
         background: #bd223b;
-        border-radius: 2px;
+        border-radius: vw(2);
       }
       .rows-first {
         flex-basis: vw(108);

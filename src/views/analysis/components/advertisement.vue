@@ -32,7 +32,7 @@
       rgba(255, 255, 255, 0) 0%
     );
   background-position: top, right, bottom, left;
-  background-size: 30px 1px, 1px 30px, 30px 1px, 1px 30px;
+  background-size: vw(30) vw(1), vw(1) vw(30), vw(30) vw(1), vw(1) vw(30);
   background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
 }
 </style>

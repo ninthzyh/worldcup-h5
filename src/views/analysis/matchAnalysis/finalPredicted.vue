@@ -12,7 +12,7 @@
         <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :img="item.teamFlag" />
         <div class="team-name">{{item.teamName}}</div>
         <div class="progress-bg">
-          <div class="progress" :style="`width:${item.simulationValue}px`"></div>
+          <div class="progress" :style="`width:${$vw(item.simulationValue)}`"></div>
         </div>
         <div class="final-predicted-percent">{{item.simulationValue}}<span>%</span></div>
       </div>
