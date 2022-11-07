@@ -1,5 +1,5 @@
 <template>
-  <img :src="`${img?'':defaultFlag}`" alt="" class="national-flag" :style="{
+  <img :src="`${img?img:defaultFlag}`" alt="" class="national-flag" :style="{
         width: computedWidth,
         height: computedHeight,
         border: computedBorder,

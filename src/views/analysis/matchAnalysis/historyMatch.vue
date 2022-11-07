@@ -1,10 +1,11 @@
 <template>
   <div class="match-card">
     <div class="card-header">
-      <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :margin="`0 ${$vw(12)} 0 0`"
-        border="0.5px solid rgba(255, 255, 255, 0.12);" padding="8px" :img="''" />
+      <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :border="`${$vw(0.5)} solid rgba(255, 255, 255, 0.12)`"
+        :padding="`${$vw(8)}`" :img="cardList&&cardList.relateMatchList[0].homeFlag" />
       <div class="card-title">历史对阵</div>
-      <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :img="''" />
+      <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :border="`${$vw(0.5)} solid rgba(255, 255, 255, 0.12)`"
+        :padding="`${$vw(8)}`" :img="cardList&&cardList.relateMatchList[0].awayFlag" />
     </div>
     <div class="history-session">
       <div class="session-item">
@@ -64,6 +65,7 @@ export default {
   backdrop-filter: blur(#{vw(8)});
   border-radius: vw(16);
   padding: vw(16);
+  margin-bottom: vw(16);
   .card-header {
     font-style: normal;
     display: flex;

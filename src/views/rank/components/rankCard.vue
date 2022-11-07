@@ -113,7 +113,7 @@ export default {
       align-items: center;
       justify-content: space-between;
       padding: vw(8) 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      border-bottom: vw(1) solid rgba(255, 255, 255, 0.12);
       .item-left {
         display: flex;
         align-items: center;

@@ -31,7 +31,7 @@ export default {
           text: "智能预测",
         },
       ],
-      selectIndex: 1,
+      selectIndex: 0,
     };
   },
   methods: {

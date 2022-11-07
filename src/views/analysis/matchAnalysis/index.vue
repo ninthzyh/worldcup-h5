@@ -2,17 +2,21 @@
   <div>
     <win-rate :cardList="analysisList.outcomePredicted"></win-rate>
     <advertisement></advertisement>
+    <Scoreboard :cardList="analysisList.groupList"></Scoreboard>
     <history-match :cardList="analysisList.historyMeeting"></history-match>
+    <final-predicted :cardList="analysisList.finalPredictedList"></final-predicted>
   </div>
 </template>
 <script>
 import Advertisement from "../components/advertisement";
 import WinRate from "./winRate";
 import HistoryMatch from "./historyMatch";
+import Scoreboard from "./scoreboard";
+import FinalPredicted from "./finalPredicted";
 import json from "./matchanalysis.json";
 
 export default {
-  components: { Advertisement, WinRate,HistoryMatch },
+  components: { Advertisement, WinRate,HistoryMatch,Scoreboard,FinalPredicted },
   data() {
     return {
       analysisList: {},

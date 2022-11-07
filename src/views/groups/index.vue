@@ -509,7 +509,6 @@ export default {
 @import "~@/assets/vw";
 .groups {
   height: calc(100vh - #{vw(116)});
-  // font-family: "PingFang SC";
   font-style: normal;
   color: #fff;
   background: url("~@/assets/images/bg.png") no-repeat center/contain;
@@ -522,7 +521,8 @@ export default {
     .group-logo {
       width: vw(56);
       height: vw(56);
-      background: url("~@/assets/images/group-logo.svg") no-repeat;
+      background: url("~@/assets/images/group-logo.svg") no-repeat
+        center/contain;
       position: absolute;
       top: vw(28);
       left: calc((100% - #{vw(56)}) / 2);
@@ -555,15 +555,16 @@ export default {
           padding: vw(12) vw(12) vw(12) vw(16);
           border-bottom: vw(1) solid rgba(255, 255, 255, 0.12);
           .label-first {
-            flex-basis: 125px;
+            flex-basis: vw(125);
             text-align: left;
             .icon {
               margin-right: vw(14);
             }
           }
           .label {
-            flex: 1;
+            flex: 1 0 vw(24);
             text-align: center;
+            word-break: break-all;
           }
         }
         .table-content {
@@ -576,6 +577,7 @@ export default {
           font-size: vw(14);
           &:not(:last-child) {
             border-bottom: vw(1) solid rgba(255, 255, 255, 0.12);
+            position: relative;
           }
           .line {
             width: vw(3);
@@ -583,10 +585,10 @@ export default {
             position: absolute;
             left: 0;
             background: #bd223b;
-            border-radius: 2px;
+            border-radius: vw(2);
           }
           .rows-first {
-            flex-basis: 125px;
+            flex-basis: vw(125);
             display: flex;
             align-items: center;
             .index {
@@ -599,8 +601,9 @@ export default {
             }
           }
           .rows-other {
-            flex: 1;
+            flex: 1 0 vw(24);
             text-align: center;
+            word-break: break-all;
           }
         }
       }
@@ -614,8 +617,8 @@ export default {
     display: flex;
     align-items: center;
     padding: vw(16) vw(24) vw(28) vw(24);
-    position: absolute;
-    bottom: 0;
+    width: calc(100% - vw(48));
+    background: #0c0e11;
     .legend {
       width: vw(8);
       height: vw(8);

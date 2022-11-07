@@ -241,8 +241,8 @@ export default {
       height: vw(194);
       background: url("~@/assets/images/home-header.svg") no-repeat
         center/contain;
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      border-top: vw(1) solid rgba(255, 255, 255, 0.12);
+      border-bottom: vw(1) solid rgba(255, 255, 255, 0.12);
       .screen-label {
         padding: vw(16);
         font-family: "Inter";
@@ -376,9 +376,9 @@ export default {
           justify-content: center;
           .icon-wrap {
             background: #8d2537;
-            border-radius: 2px;
-            width: 24px;
-            height: 24px;
+            border-radius: vw(2);
+            width: vw(24);
+            height: vw(24);
             display: flex;
             align-items: center;
             justify-content: center;

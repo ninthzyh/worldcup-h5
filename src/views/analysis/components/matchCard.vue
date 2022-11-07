@@ -32,8 +32,8 @@ export default {
 @import "~@/assets/vw";
 .match-card {
   .match-card-item {
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: vw(1) solid rgba(255, 255, 255, 0.12);
+    border-bottom: vw(1) solid rgba(255, 255, 255, 0.12);
     padding-bottom: vw(12);
 
     .match-card-header {

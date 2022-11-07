@@ -175,7 +175,7 @@ export default {
     align-items: center;
     justify-content: space-between;
     padding: vw(16) 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: vw(1) solid rgba(255, 255, 255, 0.12);
     @mixin common-icon($url) {
       width: vw(16);
       height: vw(16);
@@ -190,7 +190,7 @@ export default {
     }
     .calender {
       background: rgba(255, 255, 255, 0.12);
-      border-radius: 2px;
+      border-radius: vw(2);
       flex: 1;
       height: vw(40);
       text-align: center;

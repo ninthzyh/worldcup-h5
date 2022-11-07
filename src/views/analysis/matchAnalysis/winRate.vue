@@ -3,7 +3,7 @@
     <div class="match-card-title">实时胜率预测</div>
     <div class="match-card-content">
       <div class="home-win">
-        <div class="bar" :style="`height:${cardList&&cardList.homeValue?`${46/24*cardList.homeValue}`:0}px`">
+        <div class="bar" :style="`height:${cardList&&cardList.homeValue?`${$vw(46/24*cardList.homeValue)}`:0}`">
           <div>
             <span>{{cardList&&cardList.homeValue}}</span>
             <span class="unit">%</span>
@@ -12,7 +12,7 @@
         <div class="label">主胜</div>
       </div>
       <div class="team-draw">
-        <div class="bar" :style="`height:${cardList&&cardList.drawValue?`${46/24*cardList.drawValue}`:0}px`">
+        <div class="bar" :style="`height:${cardList&&cardList.drawValue?`${$vw(46/24*cardList.drawValue)}`:0}`">
           <div>
             <span>{{cardList&&cardList.drawValue}}</span>
             <span class="unit">%</span>
@@ -21,7 +21,7 @@
         <div class="label">平局</div>
       </div>
       <div class="away-win">
-        <div class="bar" :style="`height:${cardList&&cardList.awayValue?`${46/24*cardList.awayValue}`:0}px`">
+        <div class="bar" :style="`height:${cardList&&cardList.awayValue?`${$vw(46/24*cardList.awayValue)}`:0}`">
           <div>
             <span>{{cardList&&cardList.awayValue}}</span>
             <span class="unit">%</span>

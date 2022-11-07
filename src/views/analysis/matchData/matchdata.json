@@ -1,0 +1,941 @@
+{
+    "matchInfo": {
+      "matchId": "a5bn20ladyztuqtjzv2l57bvt",
+      "matchDate": "2018-06-16",
+      "matchDatetime": "21:00",
+      "homeId": "ak48fkypnql8y4n69cvcq5ghc",
+      "homeCode": "ARG",
+      "homeName": "阿根廷",
+      "homeShortName": null,
+      "homeOfficialName": null,
+      "homeFlag": "https://images.mixtmt.com/hyper/football/opta/world-cup/2022/team/default.png",
+      "awayId": "5gv6rrm6m6ixf8nff08vx7i9m",
+      "awayCode": "冰岛",
+      "awayName": "冰岛",
+      "awayShortName": null,
+      "awayOfficialName": null,
+      "awayFlag": "https://images.mixtmt.com/hyper/football/opta/world-cup/2022/team/default.png",
+      "stageId": "81j6wd3p6e18bp6dipk0clfyg",
+      "stageName": "小组赛",
+      "seriesId": "1e92x08matge65g8jdj6g6p8e",
+      "seriesName": "D组",
+      "matchStatus": "Played",
+      "matchOutcome": "draw",
+      "homeScore": 1,
+      "awayScore": 1
+    },
+    "overviewStatList": [
+      {
+        "statType": "cornerTaken",
+        "statName": "角球",
+        "homeValue": 10,
+        "awayValue": 2,
+        "awayValueStr": "2",
+        "homeValueStr": "10"
+      },
+      {
+        "statType": "totalYellowCard",
+        "statName": "黄牌",
+        "homeValue": 0,
+        "awayValue": 0,
+        "awayValueStr": "0",
+        "homeValueStr": "0"
+      },
+      {
+        "statType": "totalRedCard",
+        "statName": "红牌",
+        "homeValue": 0,
+        "awayValue": 0,
+        "awayValueStr": "0",
+        "homeValueStr": "0"
+      },
+      {
+        "statType": "subsMade",
+        "statName": "换人",
+        "homeValue": 3,
+        "awayValue": 3,
+        "awayValueStr": "3",
+        "homeValueStr": "3"
+      },
+      {
+        "statType": "ontargetScoringAtt",
+        "statName": "射正",
+        "homeValue": 7,
+        "awayValue": 2,
+        "awayValueStr": "2",
+        "homeValueStr": "7"
+      },
+      {
+        "statType": "goals",
+        "statName": "进球",
+        "homeValue": 1,
+        "awayValue": 1,
+        "awayValueStr": "1",
+        "homeValueStr": "1"
+      }
+    ],
+    "detailStatList": [
+      {
+        "statType": "possessionPercentage",
+        "statName": "控球率",
+        "homeValue": 77,
+        "awayValue": 22,
+        "awayValueStr": "22%",
+        "homeValueStr": "77%"
+      },
+      {
+        "statType": "totalScoringAtt",
+        "statName": "射门",
+        "homeValue": 27,
+        "awayValue": 8,
+        "awayValueStr": "8",
+        "homeValueStr": "27"
+      },
+      {
+        "statType": "ontargetScoringAtt",
+        "statName": "射正",
+        "homeValue": 7,
+        "awayValue": 2,
+        "awayValueStr": "2",
+        "homeValueStr": "7"
+      },
+      {
+        "statType": "blockedScoringAtt",
+        "statName": "被封堵",
+        "homeValue": 10,
+        "awayValue": 1,
+        "awayValueStr": "1",
+        "homeValueStr": "10"
+      },
+      {
+        "statType": "postScoringAtt",
+        "statName": "击中门框",
+        "homeValue": 0,
+        "awayValue": 0,
+        "awayValueStr": "0",
+        "homeValueStr": "0"
+      },
+      {
+        "statType": "cornerTaken",
+        "statName": "角球",
+        "homeValue": 10,
+        "awayValue": 2,
+        "awayValueStr": "2",
+        "homeValueStr": "10"
+      },
+      {
+        "statType": "totalOffside",
+        "statName": "越位",
+        "homeValue": 0,
+        "awayValue": 0,
+        "awayValueStr": "0",
+        "homeValueStr": "0"
+      },
+      {
+        "statType": "fouls",
+        "statName": "犯规",
+        "homeValue": 10,
+        "awayValue": 15,
+        "awayValueStr": "15",
+        "homeValueStr": "10"
+      },
+      {
+        "statType": "totalYellowCard",
+        "statName": "黄牌",
+        "homeValue": 0,
+        "awayValue": 0,
+        "awayValueStr": "0",
+        "homeValueStr": "0"
+      },
+      {
+        "statType": "totalRedCard",
+        "statName": "红牌",
+        "homeValue": 0,
+        "awayValue": 0,
+        "awayValueStr": "0",
+        "homeValueStr": "0"
+      },
+      {
+        "statType": "totalPass",
+        "statName": "传球",
+        "homeValue": 752,
+        "awayValue": 209,
+        "awayValueStr": "209",
+        "homeValueStr": "752"
+      },
+      {
+        "statType": "accuratePassRatio",
+        "statName": "传球成功率",
+        "homeValue": 89,
+        "awayValue": 63,
+        "awayValueStr": "63%",
+        "homeValueStr": "89%"
+      },
+      {
+        "statType": "bigChanceCreated",
+        "statName": "绝佳机会",
+        "homeValue": 0,
+        "awayValue": 0,
+        "awayValueStr": "0",
+        "homeValueStr": "0"
+      },
+      {
+        "statType": "bigChanceMissed",
+        "statName": "错失绝佳机会",
+        "homeValue": 1,
+        "awayValue": 1,
+        "awayValueStr": "1",
+        "homeValueStr": "1"
+      },
+      {
+        "statType": "totalContest",
+        "statName": "过人",
+        "homeValue": 23,
+        "awayValue": 14,
+        "awayValueStr": "14",
+        "homeValueStr": "23"
+      },
+      {
+        "statType": "wonContestRatio",
+        "statName": "过人成功率",
+        "homeValue": 73,
+        "awayValue": 64,
+        "awayValueStr": "64%",
+        "homeValueStr": "73%"
+      },
+      {
+        "statType": "totalTackle",
+        "statName": "抢断",
+        "homeValue": 13,
+        "awayValue": 21,
+        "awayValueStr": "21",
+        "homeValueStr": "13"
+      },
+      {
+        "statType": "interception",
+        "statName": "拦截",
+        "homeValue": 5,
+        "awayValue": 23,
+        "awayValueStr": "23",
+        "homeValueStr": "5"
+      },
+      {
+        "statType": "totalClearance",
+        "statName": "解围",
+        "homeValue": 24,
+        "awayValue": 36,
+        "awayValueStr": "36",
+        "homeValueStr": "24"
+      }
+    ],
+    "eventList": [
+      {
+        "eventNum": 609,
+        "eventCode": "Second Half End",
+        "eventDes": "下半场结束 比分 1-1",
+        "teamId": "5gv6rrm6m6ixf8nff08vx7i9m",
+        "teamType": "both",
+        "timeMin": 95,
+        "timeSec": 1,
+        "playerIdList": [],
+        "playerNameList": [],
+        "goalsFlag": false,
+        "eventTimestamp": "2018-06-16 14:54:20"
+      },
+      {
+        "eventNum": 568,
+        "eventCode": "SubsMade",
+        "eventDes": "换人",
+        "teamId": "5gv6rrm6m6ixf8nff08vx7i9m",
+        "teamType": "away",
+        "timeMin": 88,
+        "timeSec": 11,
+        "playerIdList": [
+          "2hr1gio07c52bj52qjh7jrljp",
+          "5phv874rxdk8ues3ef6hnd80l"
+        ],
+        "playerNameList": [
+          "B. 西古尔达森",
+          "芬博加松"
+        ],
+        "goalsFlag": false,
+        "eventTimestamp": "2018-06-16 14:47:31"
+      },
+      {
+        "eventNum": 1045,
+        "eventCode": "SubsMade",
+        "eventDes": "换人",
+        "teamId": "ak48fkypnql8y4n69cvcq5ghc",
+        "teamType": "home",
+        "timeMin": 83,
+        "timeSec": 43,
+        "playerIdList": [
+          "d3w4np40y5dshxm58rr67ld5h",
+          "bdibb4tinr5kyhu8va15rmok5"
+        ],
+        "playerNameList": [
+          "伊瓜因",
+          "巴里恩托斯"
+        ],
+        "goalsFlag": false,
+        "eventTimestamp": "2018-06-16 14:43:02"
+      },
+      {
+        "eventNum": 467,
+        "eventCode": "SubsMade",
+        "eventDes": "换人",
+        "teamId": "5gv6rrm6m6ixf8nff08vx7i9m",
+        "teamType": "away",
+        "timeMin": 75,
+        "timeSec": 33,
+        "playerIdList": [
+          "5aoxw7yh8oupho0wx6pcndlg5",
+          "3yyipm8f8tlrvcgalq2t056mt"
+        ],
+        "playerNameList": [
+          "斯库拉森",
+          "贡纳尔松"
+        ],
+        "goalsFlag": false,
+        "eventTimestamp": "2018-06-16 14:34:53"
+      },
+      {
+        "eventNum": 939,
+        "eventCode": "SubsMade",
+        "eventDes": "换人",
+        "teamId": "ak48fkypnql8y4n69cvcq5ghc",
+        "teamType": "home",
+        "timeMin": 74,
+        "timeSec": 57,
+        "playerIdList": [
+          "7oo4hc0f4uuwch965rw82jbv9",
+          "7glxasv2ed6ey82dknto1y66t"
+        ],
+        "playerNameList": [
+          "克里斯蒂安·帕文",
+          "迪马里亚"
+        ],
+        "goalsFlag": false,
+        "eventTimestamp": "2018-06-16 14:34:16"
+      },
+      {
+        "eventNum": 789,
+        "eventCode": "PenaltyNotGoal",
+        "eventDes": "点球未进",
+        "teamId": "ak48fkypnql8y4n69cvcq5ghc",
+        "teamType": "home",
+        "timeMin": 63,
+        "timeSec": 7,
+        "playerIdList": [
+          "c5ryhn04g9goikd0blmh83aol"
+        ],
+        "playerNameList": [
+          "梅西"
+        ],
+        "goalsFlag": false,
+        "eventTimestamp": "2018-06-16 14:22:27"
+      },
+      {
+        "eventNum": 400,
+        "eventCode": "SubsMade",
+        "eventDes": "换人",
+        "teamId": "5gv6rrm6m6ixf8nff08vx7i9m",
+        "teamType": "away",
+        "timeMin": 62,
+        "timeSec": 20,
+        "playerIdList": [
+          "ax38wcnkcn13t6v3wg1e2kij9",
+          "7sr1pnf0p9xmgu7xx6bbd4w5x"
+        ],
+        "playerNameList": [
+          "R. 吉斯拉森",
+          "古德蒙德松"
+        ],
+        "goalsFlag": false,
+        "eventTimestamp": "2018-06-16 14:21:39"
+      },
+      {
+        "eventNum": 676,
+        "eventCode": "SubsMade",
+        "eventDes": "换人",
+        "teamId": "ak48fkypnql8y4n69cvcq5ghc",
+        "teamType": "home",
+        "timeMin": 53,
+        "timeSec": 13,
+        "playerIdList": [
+          "68cm9uvlgmi1q5xfki3g31i39",
+          "5ji5xba84jprom03hf269kdzp"
+        ],
+        "playerNameList": [
+          "巴内加",
+          "比格利亚"
+        ],
+        "goalsFlag": false,
+        "eventTimestamp": "2018-06-16 14:12:33"
+      },
+      {
+        "eventNum": 271,
+        "eventCode": "First Half End",
+        "eventDes": "上半场结束 比分 1-1，进入下半场",
+        "teamId": "5gv6rrm6m6ixf8nff08vx7i9m",
+        "teamType": "both",
+        "timeMin": 46,
+        "timeSec": 7,
+        "playerIdList": [],
+        "playerNameList": [],
+        "goalsFlag": false,
+        "eventTimestamp": "2018-06-16 13:46:56"
+      },
+      {
+        "eventNum": 135,
+        "eventCode": "Goal",
+        "eventDes": "进球",
+        "teamId": "5gv6rrm6m6ixf8nff08vx7i9m",
+        "teamType": "away",
+        "timeMin": 22,
+        "timeSec": 49,
+        "playerIdList": [
+          "5phv874rxdk8ues3ef6hnd80l"
+        ],
+        "playerNameList": [
+          "芬博加松(1-1)"
+        ],
+        "goalsFlag": true,
+        "eventTimestamp": "2018-06-16 13:23:38"
+      },
+      {
+        "eventNum": 231,
+        "eventCode": "Goal",
+        "eventDes": "进球",
+        "teamId": "ak48fkypnql8y4n69cvcq5ghc",
+        "teamType": "home",
+        "timeMin": 18,
+        "timeSec": 37,
+        "playerIdList": [
+          "5ch5dk1z9opa2iwd64kb4e5sl"
+        ],
+        "playerNameList": [
+          "阿圭罗(1-0)"
+        ],
+        "goalsFlag": true,
+        "eventTimestamp": "2018-06-16 13:19:26"
+      }
+    ],
+    "lineupMap": {
+      "away": {
+        "formationUsed": "4411",
+        "startingList": [
+          {
+            "playerId": "3i82k304lzm5yg3ceylp64mhh",
+            "playerName": "H. 霍尔多森",
+            "shirtNumber": 1,
+            "position": "Goalkeeper",
+            "positionSide": "Centre",
+            "formationPlace": "1",
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "ds89m6kmr9pydaej4niy3bqad",
+            "playerName": "马格努松",
+            "shirtNumber": 18,
+            "position": "Defender",
+            "positionSide": "Left",
+            "formationPlace": "3",
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "2eyoucq3okoiri7azycltfdud",
+            "playerName": "西古德森",
+            "shirtNumber": 6,
+            "position": "Defender",
+            "positionSide": "Left/Centre",
+            "formationPlace": "6",
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "evaih3tz4rb4nbtql1l843s2d",
+            "playerName": "阿纳松",
+            "shirtNumber": 14,
+            "position": "Defender",
+            "positionSide": "Centre/Right",
+            "formationPlace": "5",
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "36getp56va89i4kwylyq6e66t",
+            "playerName": "B·萨瓦森",
+            "shirtNumber": 2,
+            "position": "Defender",
+            "positionSide": "Right",
+            "formationPlace": "2",
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "b82n3xu4x2xwjl1witk6w7mc5",
+            "playerName": "比尔科尔·巴贾纳松",
+            "shirtNumber": 8,
+            "position": "Midfielder",
+            "positionSide": "Left",
+            "formationPlace": "11",
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "c9115nfosqd99wik982shl9lh",
+            "playerName": "哈尔弗雷德松",
+            "shirtNumber": 20,
+            "position": "Midfielder",
+            "positionSide": "Left/Centre",
+            "formationPlace": "8",
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "3yyipm8f8tlrvcgalq2t056mt",
+            "playerName": "贡纳尔松",
+            "shirtNumber": 17,
+            "position": "Midfielder",
+            "positionSide": "Centre/Right",
+            "formationPlace": "4",
+            "absentType": null,
+            "eventList": [
+              {
+                "eventName": "PlayerOff",
+                "timeMin": 75
+              }
+            ]
+          },
+          {
+            "playerId": "7sr1pnf0p9xmgu7xx6bbd4w5x",
+            "playerName": "古德蒙德松",
+            "shirtNumber": 7,
+            "position": "Midfielder",
+            "positionSide": "Right",
+            "formationPlace": "7",
+            "absentType": null,
+            "eventList": [
+              {
+                "eventName": "PlayerOff",
+                "timeMin": 62
+              }
+            ]
+          },
+          {
+            "playerId": "709tvsyynpz1tx7snba1whwwl",
+            "playerName": "西于尔兹松",
+            "shirtNumber": 10,
+            "position": "Attacking Midfielder",
+            "positionSide": "Centre",
+            "formationPlace": "10",
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "5phv874rxdk8ues3ef6hnd80l",
+            "playerName": "芬博加松",
+            "shirtNumber": 11,
+            "position": "Striker",
+            "positionSide": "Centre",
+            "formationPlace": "9",
+            "absentType": null,
+            "eventList": [
+              {
+                "eventName": "PlayerOff",
+                "timeMin": 88
+              },
+              {
+                "eventName": "Goal",
+                "timeMin": 22
+              }
+            ]
+          }
+        ],
+        "substituteList": [
+          {
+            "playerId": "c4esrbgbv6v715768v2cb676d",
+            "playerName": "施拉姆",
+            "shirtNumber": 12,
+            "position": "Goalkeeper",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "2hr1gio07c52bj52qjh7jrljp",
+            "playerName": "B. 西古尔达森",
+            "shirtNumber": 9,
+            "position": "Attacker",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "7h6eazahfe5epf6zgx1b1urpx",
+            "playerName": "伯瓦尔松",
+            "shirtNumber": 22,
+            "position": "Attacker",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "97bom04546uuqzgc8waq95jv9",
+            "playerName": "艾约尔弗森",
+            "shirtNumber": 15,
+            "position": "Defender",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "c6i4rhajpikr2bmv109qvpj9x",
+            "playerName": "弗里德松松",
+            "shirtNumber": 3,
+            "position": "Midfielder",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "ejzxqtdo5xxvbg6gvtju3lk9h",
+            "playerName": "古德曼德森",
+            "shirtNumber": 4,
+            "position": "Attacker",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "ax38wcnkcn13t6v3wg1e2kij9",
+            "playerName": "R. 吉斯拉森",
+            "shirtNumber": 19,
+            "position": "Attacker",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "8rtqlort1o8uaf4lmceasuwnp",
+            "playerName": "因加松",
+            "shirtNumber": 5,
+            "position": "Defender",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "quh8tfvwi106toymoh38tbrp",
+            "playerName": "鲁恩森",
+            "shirtNumber": 13,
+            "position": "Goalkeeper",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "2rn7j0n4cba9a4r6wu7a3ot79",
+            "playerName": "斯库拉森",
+            "shirtNumber": 16,
+            "position": "Midfielder",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "5aoxw7yh8oupho0wx6pcndlg5",
+            "playerName": "斯库拉森",
+            "shirtNumber": 23,
+            "position": "Midfielder",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "9d08simhpio6vi217mqtro6ad",
+            "playerName": "A·特劳什塔森",
+            "shirtNumber": 21,
+            "position": "Midfielder",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          }
+        ],
+        "absentList": []
+      },
+      "home": {
+        "formationUsed": "4231",
+        "startingList": [
+          {
+            "playerId": "6bhm9cfkwxv5ojh49rqv11g45",
+            "playerName": "卡瓦列罗",
+            "shirtNumber": 23,
+            "position": "Goalkeeper",
+            "positionSide": "Centre",
+            "formationPlace": "1",
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "40hu79d2a4k94nc52z7dblpsl",
+            "playerName": "伊万·罗西",
+            "shirtNumber": 3,
+            "position": "Defender",
+            "positionSide": "Left",
+            "formationPlace": "3",
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "5nt3khx8jtvz8n83tzuaot68l",
+            "playerName": "罗霍",
+            "shirtNumber": 16,
+            "position": "Defender",
+            "positionSide": "Left/Centre",
+            "formationPlace": "6",
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "x32fbvwwxkda9ruezw67b3dh",
+            "playerName": "奥塔门迪",
+            "shirtNumber": 17,
+            "position": "Defender",
+            "positionSide": "Centre/Right",
+            "formationPlace": "5",
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "2tht23qfehpts84z7aq52sixh",
+            "playerName": "萨尔维奥",
+            "shirtNumber": 18,
+            "position": "Defender",
+            "positionSide": "Right",
+            "formationPlace": "2",
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "5ji5xba84jprom03hf269kdzp",
+            "playerName": "比格利亚",
+            "shirtNumber": 5,
+            "position": "Defensive Midfielder",
+            "positionSide": "Left/Centre",
+            "formationPlace": "4",
+            "absentType": null,
+            "eventList": [
+              {
+                "eventName": "PlayerOff",
+                "timeMin": 53
+              }
+            ]
+          },
+          {
+            "playerId": "80eao1ehm2jrb3ccojj0xqz11",
+            "playerName": "马斯切拉诺",
+            "shirtNumber": 14,
+            "position": "Defensive Midfielder",
+            "positionSide": "Centre/Right",
+            "formationPlace": "8",
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "7glxasv2ed6ey82dknto1y66t",
+            "playerName": "迪马里亚",
+            "shirtNumber": 11,
+            "position": "Attacking Midfielder",
+            "positionSide": "Left",
+            "formationPlace": "11",
+            "absentType": null,
+            "eventList": [
+              {
+                "eventName": "PlayerOff",
+                "timeMin": 74
+              }
+            ]
+          },
+          {
+            "playerId": "c5ryhn04g9goikd0blmh83aol",
+            "playerName": "梅西",
+            "shirtNumber": 10,
+            "position": "Attacking Midfielder",
+            "positionSide": "Centre",
+            "formationPlace": "10",
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "bdibb4tinr5kyhu8va15rmok5",
+            "playerName": "巴里恩托斯",
+            "shirtNumber": 13,
+            "position": "Attacking Midfielder",
+            "positionSide": "Right",
+            "formationPlace": "7",
+            "absentType": null,
+            "eventList": [
+              {
+                "eventName": "PlayerOff",
+                "timeMin": 83
+              }
+            ]
+          },
+          {
+            "playerId": "5ch5dk1z9opa2iwd64kb4e5sl",
+            "playerName": "阿圭罗",
+            "shirtNumber": 19,
+            "position": "Striker",
+            "positionSide": "Centre",
+            "formationPlace": "9",
+            "absentType": null,
+            "eventList": [
+              {
+                "eventName": "Goal",
+                "timeMin": 18
+              }
+            ]
+          }
+        ],
+        "substituteList": [
+          {
+            "playerId": "djal5dsafpnhip4lu0ait94np",
+            "playerName": "阿库尼亚",
+            "shirtNumber": 8,
+            "position": "Defender",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "140ehcmf8mbibw8jkfwncupjp",
+            "playerName": "安萨尔迪",
+            "shirtNumber": 4,
+            "position": "Defender",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "cqvys9cb3es2kekgaxwc05k2d",
+            "playerName": "阿马尼",
+            "shirtNumber": 12,
+            "position": "Goalkeeper",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "68cm9uvlgmi1q5xfki3g31i39",
+            "playerName": "巴内加",
+            "shirtNumber": 7,
+            "position": "Midfielder",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "93i0gcndi2m8giqqcm4knduxh",
+            "playerName": "迪瓦拉",
+            "shirtNumber": 21,
+            "position": "Attacker",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "3ftcqipzb86lzdztg4j1oz2s5",
+            "playerName": "法奇奥",
+            "shirtNumber": 6,
+            "position": "Defender",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "7uuli7jqi66bkkotgkypsignp",
+            "playerName": "古斯曼",
+            "shirtNumber": 1,
+            "position": "Goalkeeper",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "d3w4np40y5dshxm58rr67ld5h",
+            "playerName": "伊瓜因",
+            "shirtNumber": 9,
+            "position": "Attacker",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "dhtb9gizk25k1u3h0b7xgy4tl",
+            "playerName": "洛塞尔索",
+            "shirtNumber": 20,
+            "position": "Midfielder",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "bt7svp1ekxzu47qn50iw6x045",
+            "playerName": "梅尔卡多",
+            "shirtNumber": 2,
+            "position": "Defender",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "7oo4hc0f4uuwch965rw82jbv9",
+            "playerName": "克里斯蒂安·帕文",
+            "shirtNumber": 22,
+            "position": "Attacker",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          },
+          {
+            "playerId": "cpvhvr7q1z8ogtgloq9qafahh",
+            "playerName": "佩雷斯",
+            "shirtNumber": 15,
+            "position": "Midfielder",
+            "positionSide": null,
+            "formationPlace": null,
+            "absentType": null,
+            "eventList": []
+          }
+        ],
+        "absentList": []
+      }
+    }
+  }

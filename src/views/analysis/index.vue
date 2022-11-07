@@ -59,8 +59,6 @@ export default {
     }
     .label {
       margin: 0 auto;
-      // font-family: "PingFang SC";
-      font-style: normal;
       font-weight: 500;
       font-size: vw(14);
       line-height: vw(24);

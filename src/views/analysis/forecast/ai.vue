@@ -212,16 +212,6 @@ export default {
           }
         }
       }
-      // .transparent {
-      //   position: absolute;
-      //   top: 0;
-      //   left: 0;
-      //   height: 100%;
-      //   width: vw(103);
-      //   background: rgba(0, 0, 0, 0.04);
-      //   backdrop-filter: blur(32px);
-      //   z-index: 0;
-      // }
       .gradient {
         position: absolute;
         top: 0;
@@ -293,8 +283,8 @@ export default {
           width: vw(14);
           background: url("~@/assets/images/arrow-circle.svg") no-repeat
             center/contain;
-          margin-right: 8px;
-          margin-left: 2px;
+          margin-right: vw(8);
+          margin-left: vw(2);
         }
       }
     }
@@ -305,7 +295,7 @@ export default {
       height: 100%;
       width: 100%;
       background: rgba(0, 0, 0, 0.04);
-      backdrop-filter: blur(32px);
+      backdrop-filter: blur(#{vw(32)});
       z-index: -1;
     }
   }

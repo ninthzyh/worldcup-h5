@@ -55,7 +55,7 @@ export default {
     align-items: center;
     justify-content: space-between;
     margin: vw(2) 0;
-    padding: 0 8px;
+    padding: 0 vw(8);
     .lock-icon {
       height: vw(16);
       width: vw(16);
@@ -76,7 +76,7 @@ export default {
     font-weight: 400;
     .start-time-title {
       padding: vw(16) 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      border-top: vw(1) solid rgba(255, 255, 255, 0.12);
       // font-family: "PingFang SC";
       font-style: normal;
       line-height: 100.02%;
