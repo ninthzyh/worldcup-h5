@@ -4,7 +4,7 @@
       <span class="text">事件直播</span>
       <span class="icon-container">
         <span class="icon" :class="'uncheck'"></span>
-        <span>只看进球</span>
+        <span>{{ $lang.eventList.goalOnly }}</span>
       </span>
     </div>
     <div class="container">

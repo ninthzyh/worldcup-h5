@@ -22,6 +22,20 @@ Vue.prototype.$matchStatus = {
   'Suspended':'暂停',
   'Awarded':'官方裁定',
 }
+const search = location.search.split('?');
+let paramsMap = {};
+if(search && search[1]) {
+  const params = search[1].split('&');
+  params.forEach(item => {
+    const param = item.split('=');
+    paramsMap = {
+      ...paramsMap,
+      [param[0]]: param[1]
+    }
+  })
+}
+Vue.prototype.$lang = require(`./utils/language-${paramsMap.lang === 'en' ? 'en' : 'cn'}.json`)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
