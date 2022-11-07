@@ -209,8 +209,8 @@ export default {
     position: relative;
     width: 100%;
     height: vwPad(320);
-    background-image: url('../../assets/images/half.svg');
-    background-size: cover;
+    background-image: url('../../assets/images/hlaf-big.svg');
+    background-size: 100% 100%;
     background-position: left top;
     background-repeat: no-repeat;
 

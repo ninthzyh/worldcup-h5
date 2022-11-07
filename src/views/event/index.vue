@@ -1,13 +1,214 @@
 <template>
-
+  <div class="event-container">
+    <div class="title">
+      <span class="text">事件直播</span>
+      <span class="icon-container">
+        <span class="icon" :class="'uncheck'"></span>
+        <span>只看进球</span>
+      </span>
+    </div>
+    <div class="container">
+      <template v-for="(event, index) in eventList">
+        <div v-if="event.teamType === 'away'" :class="event.teamType" class="message">
+          <span class="icon-container">
+            <span class="icon" :class="getIcon(event.eventCode)"></span>
+          </span>
+          <span class="time">
+            {{ event.timeMin }}’
+          </span>
+          <span>
+            {{ event.eventDes }}
+          </span>
+        </div>
+        <div v-if="event.teamType === 'home'" :class="event.teamType" class="message">
+          <span>
+            {{ event.eventDes }}
+          </span>
+          <span class="time">
+            {{ event.timeMin }}’
+          </span>
+          <span class="icon-container">
+              <span class="icon" :class="getIcon(event.eventCode)"></span>
+            </span>
+        </div>
+        <div v-if="event.teamType === 'both'" :class="event.teamType" class="message">
+          <span>
+            {{ event.eventDes }}
+          </span>
+        </div>
+        <span :style="
+        event.teamType === 'both'
+        || (eventList[index+1] && eventList[index+1].teamType === 'both')
+        || index === eventList.length - 1
+         ? 'border:none' : ''" class="line">
+        </span>
+      </template>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "index"
+  name: "index",
+  data() {
+    return {
+      resData: {},
+      matchInfo: {},
+    };
+  },
+  computed:{
+    eventList(){
+      return (this.resData.eventList ? this.resData.eventList : []);
+    },
+  },
+  mounted() {
+    new Promise((resolve)=>(resolve(require('../squad/data.json')))).then((res)=>{
+      this.resData = res.data;
+      this.matchInfo = res.data.matchInfo
+    })
+  },
+  methods:{
+    getIcon(type){
+      switch (type){
+        case 'Goal' : return 'goal';
+        case 'PenaltyGoal' : return 'penalties-in';
+        case 'PenaltyNotGoal' : return 'penalties-not-in';
+        case 'OwnGoal' : return 'own-goal';
+        case 'YellowCard' : return 'yellow-card';
+        case 'RedCard' : return 'red-card';
+        case 'DoubleYellow' : return 'yellow-2-card';
+        case 'PlayerOn' : return 'up';
+        case 'PlayerOff' : return 'down';
+        case 'SubsMade' : return 'replace';
+        default: return '';
+      }
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
+@import "../../assets/vw";
 
+.event-container{
+  width: vw(311);
+  background: rgba(0, 0, 0, 0.04);
+  border: vw(1) solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(vw(8));
+  border-radius: vw(16);
+  margin: 0 auto;
+  .title{
+    height: vw(56);
+    line-height: vw(56);
+    .text{
+      font-weight: 600;
+      font-size: vw(16);
+      line-height: vw(24);
+      padding: 0 vw(16);
+    }
+
+    .icon-container{
+      display: inline-block;
+      height: vw(24);
+      font-size: vw(10);
+      line-height: vw(16);
+      width: vw(190);
+      text-align: right;
+      .icon{
+        vertical-align: middle;
+        display: inline-block;
+        width: vw(16);
+        height: vw(16);
+        background-image: url("../../assets/images/uncheck.svg");
+        background-size: 100% 100%;
+      }
+    }
+  }
+  .container{
+    height: vw(280);
+    overflow-y: scroll;
+    background: rgba(255, 255, 255, 0.04);
+    box-sizing: border-box;
+    padding: vw(12) 0;
+    >div>span{
+      display: inline-block;
+    }
+    .message{
+      font-size: vw(12);
+      height: vw(24);
+      line-height: vw(16);
+    }
+    .home{
+      width: calc(50% + #{vw(12)});
+      text-align: right;
+    }
+    .away{
+      padding-left: calc(50% - #{vw(12)});
+    }
+    .both{
+      width: 100%;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.54);
+    }
+    .line{
+      display: inline-block;
+      width: 50%;
+      height: vw(24);
+      border-right: vw(1) solid rgba(255, 255, 255, 0.12);;
+    }
+    .icon-container{
+      display: inline-block;
+      width: vw(24);
+      height: vw(24);
+      padding-top: vw(4);
+      box-sizing: border-box;
+      background: #33353A;
+      border: vw(1) solid rgba(255, 255, 255, 0.12);
+      border-radius: 50%;
+      text-align: center;
+      vertical-align: middle;
+      .icon{
+        display: inline-block;
+        width: vw(16);
+        height: vw(16);
+        background-size: 100% 100%;
+      }
+    }
+    .time{
+      display: inline-block;
+      width: vw(24);
+      padding: 0 vw(5);
+    }
+    .goal{
+      background-image: url("../../assets/images/goal.svg");
+    }
+    .own-goal{
+      background-image: url("../../assets/images/own-goal.svg");
+    }
+    .penalties{
+      background-image: url("../../assets/images/penalties.svg");
+    }
+    .penalties-not-in{
+      background-image: url("../../assets/images/penalties-not-in.svg");
+    }
+    .yellow-card{
+      background-image: url("../../assets/images/yellow-card.svg");
+    }
+    .red-card{
+      background-image: url("../../assets/images/red-card.svg");
+    }
+    .yellow-2-card{
+      background-image: url("../../assets/images/yellow-2-card.svg");
+    }
+    .up{
+      background-image: url("../../assets/images/up.svg");
+    }
+    .down{
+      background-image: url("../../assets/images/down.svg");
+    }
+    .replace{
+      background-image: url("../../assets/images/replace.svg");
+    }
+  }
+}
 </style>
