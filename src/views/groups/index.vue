@@ -617,8 +617,6 @@ export default {
     display: flex;
     align-items: center;
     padding: vw(16) vw(24) vw(28) vw(24);
-    position: fixed;
-    bottom: 0;
     width: calc(100% - vw(48));
     background: #0c0e11;
     .legend {
