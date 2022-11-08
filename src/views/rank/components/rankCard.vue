@@ -164,6 +164,7 @@ export default {
   .rank-card {
     display: inline-block;
     width: vwPad(327);
+    min-height: vwPad(184);
     margin-right: vwPad(16);
     background: rgba(0, 0, 0, 0.04);
     border: vwPad(1) solid rgba(255, 255, 255, 0.12);
