@@ -1,10 +1,10 @@
 <template>
   <div class="event-container">
     <div class="title">
-      <span class="text">事件直播</span>
+      <span class="text">{{ $lang.eventList.title }}</span>
       <span class="icon-container">
-        <span class="icon" :class="'uncheck'"></span>
-        <span>{{ $lang.eventList.goalOnly }}</span>
+        <span @click="onlyGoal = !onlyGoal" class="icon" :class="onlyGoal ? 'checked' : ''"></span>
+        <span @click="onlyGoal = !onlyGoal" :style="`color:${onlyGoal ? '#ffffff' : 'rgba(255,255,255,0.54)'}`" class="font-10">{{ $lang.eventList.goalOnly }}</span>
       </span>
     </div>
     <div class="container">
@@ -23,6 +23,12 @@
               </span>
               <span class="icon down"></span>
             </p>
+          </span>
+          <span v-else-if="event.eventCode === 'Goal'" class="subs-made">
+            {{event.playerNameList && event.playerNameList[0]}}
+          </span>
+          <span v-else-if="event.playerNameList && event.playerNameList[0]" class="subs-made">
+            {{event.playerNameList && event.playerNameList[0]}}
           </span>
           <span v-else>
             {{ event.eventDes }}
@@ -55,6 +61,12 @@
               </span>
             </p>
           </span>
+          <span v-else-if="event.eventCode === 'Goal'" class="subs-made">
+            {{event.playerNameList && event.playerNameList[0]}}
+          </span>
+          <span v-else-if="event.playerNameList && event.playerNameList[0]" class="subs-made">
+            {{event.playerNameList && event.playerNameList[0]}}
+          </span>
           <span v-else>
             {{ event.eventDes }}
           </span>
@@ -72,6 +84,12 @@
         </span>
       </template>
     </div>
+    <div class="tag-container">
+      <div v-for="item in bottomIconList">
+        <span class="icon" :class="item.icon"></span>
+        <span>{{item.text}}</span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -82,11 +100,32 @@ export default {
     return {
       resData: {},
       matchInfo: {},
+      onlyGoal: false,
+      bottomIconList:[
+        {
+          icon: 'goal',
+          text: this.$lang.eventList.goal,
+        },
+        {
+          icon: 'penalties',
+          text: this.$lang.eventList.penalty,
+        },
+        {
+          icon: 'penalties-not-in',
+          text: this.$lang.eventList.penaltyNotInto,
+        },
+        {
+          icon: 'own-goal',
+          text: this.$lang.eventList.ownGoal,
+        },
+      ]
     };
   },
   computed:{
     eventList(){
-      return (this.resData.eventList ? this.resData.eventList : []);
+      return (this.resData.eventList ? this.resData.eventList.filter(item=>{
+        return !this.onlyGoal || item.goalsFlag
+      }) : []);
     },
   },
   mounted() {
@@ -149,11 +188,14 @@ export default {
         height: vw(16);
         background-image: url("../../assets/images/uncheck.svg");
         background-size: 100% 100%;
+        &.checked{
+          background-image: url("../../assets/images/check.svg");
+        }
       }
     }
   }
   .container{
-    height: vw(280);
+    height: vw(304);
     overflow-y: scroll;
     background: rgba(255, 255, 255, 0.04);
     box-sizing: border-box;
@@ -181,7 +223,7 @@ export default {
     .event-name{
       display: inline-block;
       vertical-align: middle;
-      width: vw(60);
+      width: vw(84);
     }
     .line{
       display: inline-block;
@@ -211,51 +253,70 @@ export default {
     .time{
       display: inline-block;
       width: vw(24);
-      padding: 0 vw(5);
+      padding: 0 vw(2);
     }
     .subs-made{
       vertical-align: text-top;
+      width: vw(106);
       >p{
         margin: 0;
       }
     }
-    .goal{
-      background-image: url("../../assets/images/goal.svg");
+  }
+
+  .goal{
+    background-image: url("../../assets/images/goal.svg");
+  }
+  .own-goal{
+    background-image: url("../../assets/images/own-goal.svg");
+  }
+  .penalties{
+    background-image: url("../../assets/images/penalties.svg");
+  }
+  .penalties-not-in{
+    background-image: url("../../assets/images/penalties-not-in.svg");
+  }
+  .yellow-card{
+    background-image: url("../../assets/images/yellow-card.svg");
+  }
+  .red-card{
+    background-image: url("../../assets/images/red-card.svg");
+  }
+  .yellow-2-card{
+    background-image: url("../../assets/images/yellow-2-card.svg");
+  }
+  .up{
+    display: inline-block;
+    width: vw(12);
+    height: vw(12);
+    background-size: 100% 100%;
+    background-image: url("../../assets/images/up.svg");
+  }
+  .down{
+    display: inline-block;
+    width: vw(12);
+    height: vw(12);
+    background-size: 100% 100%;
+    background-image: url("../../assets/images/down.svg");
+  }
+  .replace{
+    background-image: url("../../assets/images/replace.svg");
+  }
+  .tag-container{
+    height: vw(48);
+    line-height: vw(48);
+    display: flex;
+    font-size: vw(12);
+    text-align: center;
+    >div{
+      flex: 1;
     }
-    .own-goal{
-      background-image: url("../../assets/images/own-goal.svg");
-    }
-    .penalties{
-      background-image: url("../../assets/images/penalties.svg");
-    }
-    .penalties-not-in{
-      background-image: url("../../assets/images/penalties-not-in.svg");
-    }
-    .yellow-card{
-      background-image: url("../../assets/images/yellow-card.svg");
-    }
-    .red-card{
-      background-image: url("../../assets/images/red-card.svg");
-    }
-    .yellow-2-card{
-      background-image: url("../../assets/images/yellow-2-card.svg");
-    }
-    .up{
+    .icon{
+      vertical-align: middle;
       display: inline-block;
       width: vw(16);
       height: vw(16);
       background-size: 100% 100%;
-      background-image: url("../../assets/images/up.svg");
-    }
-    .down{
-      display: inline-block;
-      width: vw(16);
-      height: vw(16);
-      background-size: 100% 100%;
-      background-image: url("../../assets/images/down.svg");
-    }
-    .replace{
-      background-image: url("../../assets/images/replace.svg");
     }
   }
 }

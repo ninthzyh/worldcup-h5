@@ -1,5 +1,10 @@
 {
   "eventList": {
-    "goalOnly": "Goal Only"
+    "title": "Events",
+    "goalOnly": "Goal Only",
+    "goal": "进球",
+    "penalty": "点球",
+    "penaltyNotInto": "点球未进",
+    "ownGoal": "乌龙球"
   }
 }
