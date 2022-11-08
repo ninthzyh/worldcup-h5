@@ -26,6 +26,12 @@
   "matchData": {
     "topStats": "技术统计"
   },
+  "common": {
+    "schedule": "赛程",
+    "rank": "排名",
+    "groups": "分组",
+    "rise": "晋级"
+  },
   "eventList": {
     "title": "事件直播",
     "goalOnly": "只看进球",
