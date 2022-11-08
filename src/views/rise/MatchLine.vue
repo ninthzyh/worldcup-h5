@@ -1,5 +1,5 @@
 <template>
-<div class="match-line" :style="`width: ${$vw(width)}`">
+<div class="match-line" :style="`width: ${$vw(width,true)}`">
   <div v-if="position === 'top'" class="top-two"></div>
   <div  class="one"></div>
   <div v-if="position === 'bottom'" class="bottom-two"></div>

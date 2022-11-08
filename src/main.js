@@ -7,7 +7,7 @@ import './assets/vw.scss';
 console.log(window.innerWidth)
 Vue.config.productionTip = false
 Vue.prototype.$vw = function (px, needVw) {
-  if(window.innerWidth>600 && needVw){
+  if(window.innerWidth>600 && !needVw){
     return `${px}px`
   }
   return `${(px / 375) * 100}vw`

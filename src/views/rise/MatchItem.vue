@@ -20,7 +20,7 @@
       <span class="score-">-</span>
       <span>{{matchItem.awayScore}}</span>
     </div>
-    <div v-if="tips" class="tips" :style="`left:calc(50% - ${$vw(tipsWidth/2,true)});width:${$vw(tipsWidth,true)};`">
+    <div v-if="tips" class="tips" :style="`left:calc(50% - ${$vw(tipsWidth/2)});width:${$vw(tipsWidth)};`">
       {{tips}}
     </div>
   </div>
