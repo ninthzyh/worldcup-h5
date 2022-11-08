@@ -1,7 +1,7 @@
 <template>
     <div class="forecast">
         <Ai :cardList="predictedList.starPredicted"></Ai>
-        <Session :cardList="predictedList.matchInfo"></Session>
+        <Session :cardList="predictedList.matchInfo" :isPaid="predictedList.isPaid"></Session>
         <div class="is-pay">
             <Win :cardList="predictedList.outcomePredicted"></Win>
             <Score :cardList="predictedList.scorePredicted"></Score>

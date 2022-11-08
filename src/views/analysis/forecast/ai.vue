@@ -1,6 +1,6 @@
 <template>
   <div class="ai">
-    <ForecastCard title="AI 智能分析" cus-class="bold">
+    <ForecastCard :title="`${$lang.forecast.aIInsight}`" cus-class="bold">
       <template v-slot:title-right>
         <div class="title-icon"></div>
       </template>
@@ -9,19 +9,28 @@
           <div class="start-forecast">
             <div class="start-forecast-box">
               <div class="start"></div>
-              <div>星级预测</div>
+              <div>{{$lang.forecast.starPrediction}}</div>
             </div>
             <div class="line"></div>
           </div>
           <div class="match-10">
             <div class="match-10-above">
-              <div class="label"><span>近</span>{{cardList&&cardList.matchNum}}<span>场</span></div>
+              <div class="label">
+                <span>{{$lang.forecast.recently}}</span>
+                <span>{{cardList&&cardList.matchNum}}</span>
+                <span>{{$lang.forecast.turn}}</span>
+              </div>
               <div class="red-bg">
                 <div class="red" v-for="(item,index) in (cardList&&cardList.predictedList)" :key="index">{{item}}</div>
               </div>
             </div>
             <div class="match-10-hit">
-              <div class="hit-label"><span>近</span>{{cardList&&cardList.matchNumCn}}<span>场命中</span></div>
+              <div class="hit-label">
+                <span>{{$lang.forecast.recently}}</span>
+                <span>{{cardList&&cardList.matchNumCn}}</span>
+                <span>{{$lang.forecast.turn}}</span>
+                <span>{{$lang.forecast.hit}}</span>
+              </div>
               <div class="percent">
                 <div class="number">{{cardList&&cardList.successRatio}}</div>
                 <div class="unit">%</div>
@@ -32,20 +41,20 @@
             <div class="brain-bg"></div>
             <div class="brain-icon"></div>
             <div class="brain-text">
-              <div>全球最权威的体育数据库</div>
-              <div>每场实时采集 3000+ 数据点</div>
-              <div>预测多种结果类型，迅速更新</div>
+              <div>{{$lang.forecast.describe1}}</div>
+              <div>{{$lang.forecast.describe2}}</div>
+              <div>{{$lang.forecast.describe3}}</div>
             </div>
             <div class="gradient"></div>
           </div>
           <div class="lock-bar">
             <div class="lock-text">
-              <span>解锁四大解析数据，低至 ¥</span>
+              <span>{{$lang.forecast.lockDescribe}}</span>
               <span class="lock-num">8</span>
-              <span>/每场</span>
+              <span>{{$lang.forecast.perMatch}}</span>
             </div>
             <div class="lock-btn">
-              <div class="unlock">立即解锁</div>
+              <div class="unlock">{{$lang.forecast.unlock}}</div>
               <div class="arrow-circle"></div>
             </div>
           </div>

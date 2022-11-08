@@ -1,12 +1,12 @@
 <template>
   <div class="score">
-    <ForecastCard title="比分预测 / 前 3 项">
+    <ForecastCard :title="`${$lang.forecast.resultTop3}`">
       <template v-slot:title-right>
-        <div class="title-icon"></div>
+        <div class="title-icon" @click="isShow=!isShow"></div>
       </template>
       <template v-slot:card-content>
         <div class="score-content">
-          <div class="score-describe">根据 AI 算法推测出的最有可能结果：</div>
+          <div class="score-describe">{{$lang.forecast.resultDescribe}}</div>
           <div class="score-percent">
             <div class="top1">
               <div class="top1-content">
@@ -28,6 +28,7 @@
               </div>
             </div>
           </div>
+          <info-dialog v-if="isShow"></info-dialog>
         </div>
       </template>
     </ForecastCard>
@@ -35,9 +36,11 @@
 </template>
 <script>
 import ForecastCard from "../components/forecastCard";
+import InfoDialog from "../components/infoDialog";
+
 export default {
   props: ["cardList"],
-  components: { ForecastCard },
+  components: { ForecastCard, InfoDialog },
   watch: {
     cardList: {
       immediate: true,
@@ -45,6 +48,11 @@ export default {
         this.cardList = newData;
       },
     },
+  },
+  data() {
+    return {
+      isShow: false, //提示框
+    };
   },
 };
 </script>
@@ -59,15 +67,15 @@ export default {
     background: url("~@/assets/images/info-white.svg") no-repeat center/contain;
   }
   .score-content {
-    padding: 0 vw(16);
-    // font-family: "PingFang SC";
-    font-style: normal;
+    padding: 0 vw(16);    
+    position: relative;
     .score-describe {
       padding-top: vw(13);
       border-top: vw(1) solid rgba(255, 255, 255, 0.12);
       font-weight: 300;
       font-size: vw(10);
       line-height: 110%;
+      color: rgba(255, 255, 255, 0.7);
     }
     .score-percent {
       margin: vw(24) 0;

@@ -1,11 +1,12 @@
 <template>
   <div class="goal-number">
-    <ForecastCard title="总进球数预测">
+    <ForecastCard :title="`${$lang.forecast.overUnder}`">
       <template v-slot:title-right>
-        <div class="title-icon"></div>
+        <div class="title-icon" @click="isShow=!isShow"></div>
       </template>
       <template v-slot:card-content>
         <div class="goal-number-content">
+          <div class="line"></div>
           <div class="goal-number-item" v-for="(item,index) in cardList" :key="index">
             <div class="more-card-item">
               <div class="more-than-card">
@@ -17,7 +18,7 @@
                   <div class="unit">%</div>
                 </div>
               </div>
-              <div class="tip"><span>多于</span> {{item.goals}} <span>个</span></div>
+              <div class="tip"><span>{{$lang.forecast.over}}</span> {{item.goals}} <span>个</span></div>
             </div>
             <div class="less-card-item">
               <div class="less-than-card">
@@ -26,9 +27,10 @@
                   <div class="unit">%</div>
                 </div>
               </div>
-              <div class="tip"><span>少于</span> {{item.goals}} <span>个</span></div>
+              <div class="tip"><span>{{$lang.forecast.under}}</span> {{item.goals}} <span>个</span></div>
             </div>
           </div>
+          <info-dialog v-if="isShow"></info-dialog>
         </div>
       </template>
     </ForecastCard>
@@ -36,9 +38,10 @@
 </template>
 <script>
 import ForecastCard from "../components/forecastCard";
+import InfoDialog from "../components/infoDialog";
 export default {
   props: ["cardList"],
-  components: { ForecastCard },
+  components: { ForecastCard, InfoDialog },
   watch: {
     cardList: {
       immediate: true,
@@ -47,12 +50,16 @@ export default {
       },
     },
   },
+  data() {
+    return {
+      isShow: false, //提示框
+    };
+  },
 };
 </script>
 <style lang="scss" scoped>
 @import "~@/assets/vw";
 .goal-number {
-  font-style: normal;
   margin-bottom: vw(16);
   .title-icon {
     height: vw(16);
@@ -60,11 +67,13 @@ export default {
     background: url("~@/assets/images/info-white.svg") no-repeat center/contain;
   }
   .goal-number-content {
-    margin: 0 vw(16);
-    padding: vw(24) 0 vw(15) 0;
-    // font-family: "PingFang SC";
-    font-style: normal;
-    border-top: vw(1) solid rgba(255, 255, 255, 0.12);
+    margin-bottom: vw(16);
+    padding: 0 vw(16);
+    position: relative;
+    .line {
+      border-top: vw(1) solid rgba(255, 255, 255, 0.12);
+      margin-bottom: vw(24);
+    }
     .goal-number-item {
       display: flex;
       justify-content: space-between;

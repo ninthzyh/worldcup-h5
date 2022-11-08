@@ -1,33 +1,33 @@
 <template>
   <div class="session">
-    <ForecastCard title="本场预测">
+    <ForecastCard :title="`${$lang.forecast.predictionsMatch}`">
       <template v-slot:title-right>
         <div class="title-icon">
-          <div class="lock-icon"></div>
-          <div class="lock-text">已解锁</div>
+          <div :class="`${isPaid?'lock-icon':'not-lock-icon'}`"></div>
+          <div class="lock-text">{{isPaid?$lang.forecast.unlocked:$lang.forecast.locked}}</div>
         </div>
       </template>
       <template v-slot:card-content>
         <div class="session-content">
-          <div class="start-time-title">距比赛开始</div>
+          <div class="start-time-title">{{$lang.forecast.startMatch}}</div>
           <div class="start-time-content">
             <div class="start-number">
-              <div class="time-label">天</div>
+              <div class="time-label">{{$lang.forecast.days}}</div>
               <div class="time-num">01</div>
             </div>
             <div class="colon">:</div>
             <div class="start-number">
-              <div class="time-label">时</div>
+              <div class="time-label">{{$lang.forecast.hours}}</div>
               <div class="time-num">12</div>
             </div>
             <div class="colon">:</div>
             <div class="start-number">
-              <div class="time-label">分</div>
+              <div class="time-label">{{$lang.forecast.minutes}}</div>
               <div class="time-num">56</div>
             </div>
             <div class="colon">:</div>
             <div class="start-number">
-              <div class="time-label">秒</div>
+              <div class="time-label">{{$lang.forecast.seconds}}</div>
               <div class="time-num">46</div>
             </div>
           </div>
@@ -39,6 +39,7 @@
 <script>
 import ForecastCard from "../components/forecastCard";
 export default {
+  props:['isPaid'],
   components: { ForecastCard },
 };
 </script>
@@ -56,12 +57,19 @@ export default {
     justify-content: space-between;
     margin: vw(2) 0;
     padding: 0 vw(8);
-    .lock-icon {
+    @mixin lock-common($url){
       height: vw(16);
       width: vw(16);
-      background: url("~@/assets/images/lock.svg") no-repeat
+      background: url($url) no-repeat
         center/contain;
       margin-right: vw(4);
+
+    }
+    .lock-icon {
+      @include lock-common("~@/assets/images/lock.svg")
+    }
+    .not-lock-icon {
+      @include lock-common("~@/assets/images/not-lock.svg")
     }
     .lock-text {
       font-weight: 400;

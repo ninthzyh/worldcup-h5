@@ -1,17 +1,17 @@
 <template>
   <div class="both-score">
-    <ForecastCard title="两队都进球">
+    <ForecastCard :title="`${$lang.forecast.bothScore}`">
       <template v-slot:title-right>
-        <div class="title-icon"></div>
+        <div class="title-icon" @click="isShow=!isShow"></div>
       </template>
       <template v-slot:card-content>
         <div class="both-score-content">
-          <div class="both-score-describe">比赛双方都有进球的概率</div>
+          <div class="both-score-describe">{{$lang.forecast.bothScoreDescribe}}</div>
           <div class="both-score-percent">
             <div class="has-score">
               <div class="has-score-content">
                 <div class="percent"><span>{{cardList&&cardList.agreeValue}}</span><span class="unit">%</span></div>
-                <div class="text">是</div>
+                <div class="text">{{$lang.forecast.yes}}</div>
               </div>
               <div class="has-score-star">
                 <div class="start-icon"></div>
@@ -19,9 +19,10 @@
             </div>
             <div class="no-score">
               <div class="percent"><span>{{cardList&&cardList.disagreeValue}}</span><span class="unit">%</span></div>
-              <div class="text">否</div>
+              <div class="text">{{$lang.forecast.no}}</div>
             </div>
           </div>
+          <info-dialog v-if="isShow"></info-dialog>
         </div>
       </template>
     </ForecastCard>
@@ -29,9 +30,10 @@
 </template>
 <script>
 import ForecastCard from "../components/forecastCard";
+import InfoDialog from "../components/infoDialog";
 export default {
   props: ["cardList"],
-  components: { ForecastCard },
+  components: { ForecastCard, InfoDialog },
   watch: {
     cardList: {
       immediate: true,
@@ -39,6 +41,11 @@ export default {
         this.cardList = newData;
       },
     },
+  },
+  data() {
+    return {
+      isShow: false, //提示框
+    };
   },
 };
 </script>
@@ -54,14 +61,14 @@ export default {
   }
   .both-score-content {
     padding: 0 vw(16);
-    // font-family: "PingFang SC";
-    font-style: normal;
+    position: relative;
     .both-score-describe {
       padding-top: vw(13);
       border-top: vw(1) solid rgba(255, 255, 255, 0.12);
       font-weight: 300;
       font-size: vw(10);
       line-height: 110%;
+      color: rgba(255, 255, 255, 0.7);
     }
     .both-score-percent {
       margin: vw(24) 0;

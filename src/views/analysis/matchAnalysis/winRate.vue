@@ -15,7 +15,7 @@
                 <div class="bar" :style="`height:${cardList&&cardList.drawValue?`${$vw(46/24*cardList.drawValue)}`:0}`">
                     <div>
                         <span>{{cardList&&cardList.drawValue}}</span>
-                        <span class="unit">%</span>{{cardList.drawValue}}
+                        <span class="unit">%</span>
                     </div>
                 </div>
                 <div class="label">{{$lang.matchAnalysis.draw}}</div>
