@@ -1,8 +1,8 @@
 import request from "../utils/request";
 
-export const rise = (params)=>{
+export const rise = (params) => {
   return request({
-    url: '/standing/promotion',
+    url: '/api/standing/promotion',
     method: 'GET',
     params
   })

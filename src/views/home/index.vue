@@ -8,15 +8,15 @@
                 <div class="screen-label">
                     <div class="screen-live">
                         <div :class="`${true?'live-icon':'hot-icon'}`"></div>
-                        <div class="today">今日 {{bannerData.matchDatetime}}</div>
+                        <div class="today">今日 {{bannerData&&bannerData.matchDatetime}}</div>
                     </div>
                     <div class="vs">
-                        <div><span>{{bannerData.homeName}}</span><span class="line">-</span></div>
-                        <div>{{bannerData.awayName}}</div>
+                        <div><span>{{bannerData&&bannerData.homeName}}</span><span class="line">-</span></div>
+                        <div>{{bannerData&&bannerData.awayName}}</div>
                     </div>
                     <div class="flag">
-                        <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :margin="`0 ${$vw(12)} 0 0`" :img="bannerData.homeFlag" />
-                        <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :img="bannerData.awayFlag" />
+                        <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :margin="`0 ${$vw(12)} 0 0`" :img="bannerData&&bannerData.homeFlag" />
+                        <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :img="bannerData&&bannerData.awayFlag" />
                     </div>
                     <div class="watching"></div>
                     <div class="des">
@@ -68,7 +68,6 @@ import NationalFlag from "../../components/NationalFlag";
 // import bannerData from "./scheduleplaying.json";
 // import schedulelist from './schedulelist.json';
 import { schedulePlaying, scheduleList } from "@/api/home";
-// 编译后代码
 export default {
     components: {
         ScheduleList,

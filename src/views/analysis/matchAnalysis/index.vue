@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <win-rate :cardList="analysisList.outcomePredicted"></win-rate>
-    <advertisement></advertisement>
-    <Scoreboard :cardList="analysisList.groupList"></Scoreboard>
-    <history-match :cardList="analysisList.historyMeeting"></history-match>
-    <final-predicted :cardList="analysisList.finalPredictedList"></final-predicted>
-  </div>
+    <div>
+        <win-rate :cardList="analysisList.outcomePredicted"></win-rate>
+        <advertisement></advertisement>
+        <Scoreboard :cardList="analysisList.groupList"></Scoreboard>
+        <history-match :cardList="analysisList.historyMeeting"></history-match>
+        <final-predicted :cardList="analysisList.finalPredictedList"></final-predicted>
+    </div>
 </template>
 <script>
 import Advertisement from "../components/advertisement";
@@ -14,23 +14,34 @@ import HistoryMatch from "./historyMatch";
 import Scoreboard from "./scoreboard";
 import FinalPredicted from "./finalPredicted";
 import json from "./matchanalysis.json";
-
+import { matchAnalysis } from "@/api/analysis";
 export default {
-  components: { Advertisement, WinRate,HistoryMatch,Scoreboard,FinalPredicted },
-  data() {
-    return {
-      analysisList: {},
-    };
-  },
-  mounted() {
-    console.log(json);
-    this.analysisList = json;
-    // const data = {
-    //   matchId: "a5bn20ladyztuqtjzv2l57bvt",
-    // };
-    // matchPredicted(data).then((res) => {
-    //   console.log(res);
-    // });
-  },
+    components: {
+        Advertisement,
+        WinRate,
+        HistoryMatch,
+        Scoreboard,
+        FinalPredicted,
+    },
+    mounted() {
+        // this.analysisList = json;
+        this.getMatchAnalysis();
+    },
+    data() {
+        return {
+            analysisList: {},
+        };
+    },
+    methods: {
+        // 比赛分析
+        getMatchAnalysis() {
+            const data = {
+                matchId: "6p8l3bm8q34z4sa7tg976qi95",
+            };
+            matchAnalysis(data).then((res) => {
+                this.analysisList = res;
+            });
+        },
+    },
 };
 </script>
