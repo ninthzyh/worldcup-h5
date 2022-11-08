@@ -1,0 +1,2156 @@
+{
+      "goalList": [
+        {
+          "playerId": "b9g4qurpll4wizajo95c406hh",
+          "playerName": "凯恩",
+          "playerFlag": null,
+          "statValue": 6
+        },
+        {
+          "playerId": "h17s3qts1dz1zqjw19jazzkl",
+          "playerName": "C·罗纳尔多",
+          "playerFlag": null,
+          "statValue": 4
+        },
+        {
+          "playerId": "8qgbxff7xlg0zjtyees7ljljp",
+          "playerName": "卢卡库",
+          "playerFlag": null,
+          "statValue": 4
+        },
+        {
+          "playerId": "7t9fp83ctywtk6mx94tipf7it",
+          "playerName": "切里舍夫",
+          "playerFlag": null,
+          "statValue": 4
+        },
+        {
+          "playerId": "716n1970vi9rvw5b4w9qmjfth",
+          "playerName": "格列兹曼",
+          "playerFlag": null,
+          "statValue": 4
+        },
+        {
+          "playerId": "5e9ilgrz3tzg9kd1gk3yvrahh",
+          "playerName": "姆巴佩·洛丁",
+          "playerFlag": null,
+          "statValue": 4
+        },
+        {
+          "playerId": "d4vdrtte9kb9qmlkrx1rvgk45",
+          "playerName": "米纳",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "afyga3n1mliw0btcuixt6xolx",
+          "playerName": "卡瓦尼",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "9w4e95xjhgvrlvq07rgij9cyd",
+          "playerName": "祖尤巴",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "6s577yqayjceifu1e05f280yd",
+          "playerName": "迭戈·科斯塔",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "54h69199gtsavspwblux98dsl",
+          "playerName": "阿扎尔",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "2gsq05yyxwe4f8t79j6d49q6t",
+          "playerName": "佩里西奇",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "1ywlxygilfor1z4i54ve4ojit",
+          "playerName": "曼朱基奇",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "ecyjzmih6skpyp9zc6dihodsl",
+          "playerName": "穆萨",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "diod1hv5hv7v7z7mfleev1txx",
+          "playerName": "莫德里奇",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "d92yjctlxrjuk1wem4nmq00k5",
+          "playerName": "苏亚雷斯",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "d8m8y59eum57eu7kiat38rkk5",
+          "playerName": "哈兹里",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "bhe1i96mzkz4i2a9tfz368slx",
+          "playerName": "耶迪纳克",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "779rrkp47akkd5usq53begatx",
+          "playerName": "内马尔",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "638vrhxwi8xt1imqh7w0z8m39",
+          "playerName": "乾贵士",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "5ilkkfbsss0bxd6ttdlqg0uz9",
+          "playerName": "萨拉赫",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "5ch5dk1z9opa2iwd64kb4e5sl",
+          "playerName": "阿圭罗",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "3vxh219sef8mooilemi8xbs9h",
+          "playerName": "库蒂尼奥",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "3vhxswfl8dczeopf1osn5979",
+          "playerName": "安德烈斯·格兰奎斯特",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "3gem1jrrkgye0omb88fk1lsk5",
+          "playerName": "斯通斯",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "12ekwo6gbza410blv4b4r7ydx",
+          "playerName": "孙兴慜",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "yq0cm7vwr0tkv7nvt9vo77bp",
+          "playerName": "帕瓦德",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "pconfrmsdy9aikioqz9s9lg5",
+          "playerName": "夸德拉多",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "oel537m4mtjwwnyusz6efj6d",
+          "playerName": "巴舒亚伊",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "f482w50k80zbyb2ykh84yijf9",
+          "playerName": "博格巴",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "f475gwop8aob4mg6sti3yjys5",
+          "playerName": "多马哥·维达",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "eyra5urhrm92240e7qbll736d",
+          "playerName": "雷比奇",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "ew18qvvupaejxubhqmxmbd39x",
+          "playerName": "克拉马里奇",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "euy5vga7vds4a3js0pecaks0l",
+          "playerName": "保利尼奥",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "emcopqd6dilgnr8w4dq2gotsl",
+          "playerName": "格雷罗",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "eb48g14m2erkf7yzqz8gj4u6t",
+          "playerName": "奥古斯廷森",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "e14uqk4uguxiq2i95bjb7ztud",
+          "playerName": "夸雷斯马",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "dt76pdhwp3nyo6dt2y39wehn9",
+          "playerName": "萨西",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "djqagc8dcwm3kvsikrrirkzpx",
+          "playerName": "埃尔南德斯",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "depu0zp8jqcyv0jzf5r9yums5",
+          "playerName": "拉基蒂奇",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "deoif7y6l43fo1xcqt66oiq51",
+          "playerName": "沃特森",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "d4e0d51gajxau9pbdt8ccrys5",
+          "playerName": "巴德利",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "cwanyl6uih4b22xu66y4u9lud",
+          "playerName": "摩西",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "cs2yx3hiqjsb4i5ul2r5kmdat",
+          "playerName": "阿斯帕斯",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "cotiiu6mjkfx5xa63nhfbdf4l",
+          "playerName": "马内",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "ckox9w95duwhmt72xxk7lt2vp",
+          "playerName": "福尔斯伯格",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "cen5nxf8sb8binjr7apt9nb2t",
+          "playerName": "洛萨诺",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "cdcbi6xmy0uts703489e0acb9",
+          "playerName": "克罗斯",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "c6pqhaqusk8s1c2m21i5wtrkl",
+          "playerName": "蒂亚戈·席尔瓦",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "c5ryhn04g9goikd0blmh83aol",
+          "playerName": "梅西",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "c2jqa9vozhqu7x79h5rr2n1ed",
+          "playerName": "德布劳内",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "c295wl8m8rgajmm2a157i3jrp",
+          "playerName": "F. 巴罗伊",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "btzfq6521zl3q5uqus8ltov6d",
+          "playerName": "罗伊斯",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "bt7svp1ekxzu47qn50iw6x045",
+          "playerName": "梅尔卡多",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "blo3zmhar2mujyp9z7kjnsut",
+          "playerName": "布朗恩",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "bh68atk3ghb7iwgcvp82swnv9",
+          "playerName": "加津斯基",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "bb6glt8n0ar47cmhmj6gnfiz9",
+          "playerName": "托马斯·穆尼耶",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "b27pmpcvny40pkcx87tdddsyd",
+          "playerName": "米特罗维奇",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "awda32rw2clw0sjemf7rkcel1",
+          "playerName": "埃里克森",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "avk3mhac3rfx7re4w2ngoj4d1",
+          "playerName": "杜禾伦",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "a91tlewrrjx5f2boz9bglyevp",
+          "playerName": "费尔南德斯",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "a0u7d45znqedd35fvpxnkmuol",
+          "playerName": "胡安·金特罗",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "9qk1hoxri8dee6yat0cateqxh",
+          "playerName": "尼昂",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "8sllxmpst47s6c46fgtv1q47p",
+          "playerName": "科里佐维亚克",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "8oc3lpz3xttrnwxk1fnnv7owl",
+          "playerName": "法尔考",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "8mlps3xgwbxa7svajxfk2exud",
+          "playerName": "乌姆蒂蒂",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "8l0am8k4pg2s9g9qbkhwte6dx",
+          "playerName": "鲍尔森",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "7tcnz9r7dprteao47jjw9w0r9",
+          "playerName": "祖贝尔",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "7s1q4rd90gi1gwbko34fuvhlh",
+          "playerName": "沙奇里",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "7o4nc6jwsi3quvnwinstqwyj9",
+          "playerName": "纳乔",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "7mxwp86ylr1rvounew1auzwet",
+          "playerName": "德尔米奇",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "7k9lyh24hr3duclodac56vu8l",
+          "playerName": "本·优素福",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "7glxasv2ed6ey82dknto1y66t",
+          "playerName": "迪马里亚",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "7atmb373dynu9s9gnl613ox5h",
+          "playerName": "贾努扎伊",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "78fx1xqqtcqm2g4h1dj8beml1",
+          "playerName": "费尔通亨",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "77487qauk9fkzlesgze21odsl",
+          "playerName": "香川真司",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "709tvsyynpz1tx7snba1whwwl",
+          "playerName": "西于尔兹松",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "6b9erfx1rf9nff83300tntadx",
+          "playerName": "菲尔米诺",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "65z99j774kjnbf7vm0u2q0jit",
+          "playerName": "特里皮尔",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "6264xjr1y00yu7b9j2pknalzp",
+          "playerName": "扎卡",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "5phv874rxdk8ues3ef6hnd80l",
+          "playerName": "芬博加松",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "5nt3khx8jtvz8n83tzuaot68l",
+          "playerName": "罗霍",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "5f72vvw62zdlyrj3mwux2udat",
+          "playerName": "林加德",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "58i5y98ceb55anpucpru7skb9",
+          "playerName": "佩佩",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "581nre288dpdtmqwfsls02b4l",
+          "playerName": "哲马伊利",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "548jzfl9higq44w9bgqvcjh05",
+          "playerName": "何塞·希门尼斯",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "53ii8a2tn0kbcxyp0hfqhu02d",
+          "playerName": "金英权",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "4bbqmasyopxoymo4umcxd4e09",
+          "playerName": "恩奈斯里",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "48hur5fmszaqltysykkb4js2d",
+          "playerName": "阿里",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "45zetxtrvjb3muvcrr9b5it3p",
+          "playerName": "马蒂亚斯·约根森",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "45s1v9805id09m5zkcylueod1",
+          "playerName": "伊斯科",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "44cdiqqqu0dmuhaxgisgpnf11",
+          "playerName": "科拉罗夫",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "3pwoy992h7y5pwk7trrhsqml1",
+          "playerName": "博塔伊布",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "3dph74ixutmbpscaon0b25sl",
+          "playerName": "瓦拉内",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "36cdm30lm4hf1t6ajakity8k5",
+          "playerName": "塞欧曼·奥·费如俄",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "351v0ovetkdkympri37ldwez9",
+          "playerName": "费莱尼",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "30xm5l8766spqmchnhl3q2w2d",
+          "playerName": "K. 安萨里fard",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "2w5xjif5lfjq0qhwox0ha11x",
+          "playerName": "贝拉",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "2lkra7wic5b481l7qybjh8lx",
+          "playerName": "安德烈·卡利略",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "2jhbr1v0z2fak1tbxptbnipjp",
+          "playerName": "默滕斯",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "2j8y06wuinnx87eetadj55zo5",
+          "playerName": "沙兹利",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "2hw2n5d7kzrvfop40yc4onkrt",
+          "playerName": "瓦格约",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "2ghv5nqgyn0wv9ekdx1ow0445",
+          "playerName": "萨勒姆·阿尔·达萨里",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "2bm517905b6annqp5o0ckvs9h",
+          "playerName": "本田圭佑",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "28x7i681wkjueanvkevew3bh1",
+          "playerName": "戈洛文",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "254i1zsifi2er9rvuxgi9katx",
+          "playerName": "原口元气",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "22imd9on624739u8fym5n640l",
+          "playerName": "大迫勇也",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "1vz038uyzmq8saskeeo0qhm8l",
+          "playerName": "马圭尔",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "1tbc8iokapjgu8zjrc1knq28l",
+          "playerName": "J·贝德纳雷克",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "1m5tzmiid9pwk7okgj4c4t2ad",
+          "playerName": "奥古斯托",
+          "playerFlag": null,
+          "statValue": 1
+        }
+      ],
+      "assistList": [
+        {
+          "playerId": "716n1970vi9rvw5b4w9qmjfth",
+          "playerName": "格列兹曼",
+          "playerFlag": null,
+          "statValue": 6
+        },
+        {
+          "playerId": "9w4e95xjhgvrlvq07rgij9cyd",
+          "playerName": "祖尤巴",
+          "playerFlag": null,
+          "statValue": 5
+        },
+        {
+          "playerId": "8qgbxff7xlg0zjtyees7ljljp",
+          "playerName": "卢卡库",
+          "playerFlag": null,
+          "statValue": 5
+        },
+        {
+          "playerId": "54h69199gtsavspwblux98dsl",
+          "playerName": "阿扎尔",
+          "playerFlag": null,
+          "statValue": 5
+        },
+        {
+          "playerId": "d8m8y59eum57eu7kiat38rkk5",
+          "playerName": "哈兹里",
+          "playerFlag": null,
+          "statValue": 4
+        },
+        {
+          "playerId": "3vxh219sef8mooilemi8xbs9h",
+          "playerName": "库蒂尼奥",
+          "playerFlag": null,
+          "statValue": 4
+        },
+        {
+          "playerId": "2gsq05yyxwe4f8t79j6d49q6t",
+          "playerName": "佩里西奇",
+          "playerFlag": null,
+          "statValue": 4
+        },
+        {
+          "playerId": "1ywlxygilfor1z4i54ve4ojit",
+          "playerName": "曼朱基奇",
+          "playerFlag": null,
+          "statValue": 4
+        },
+        {
+          "playerId": "diod1hv5hv7v7z7mfleev1txx",
+          "playerName": "莫德里奇",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "d92yjctlxrjuk1wem4nmq00k5",
+          "playerName": "苏亚雷斯",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "c5ryhn04g9goikd0blmh83aol",
+          "playerName": "梅西",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "c2jqa9vozhqu7x79h5rr2n1ed",
+          "playerName": "德布劳内",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "bb6glt8n0ar47cmhmj6gnfiz9",
+          "playerName": "托马斯·穆尼耶",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "a0u7d45znqedd35fvpxnkmuol",
+          "playerName": "胡安·金特罗",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "779rrkp47akkd5usq53begatx",
+          "playerName": "内马尔",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "638vrhxwi8xt1imqh7w0z8m39",
+          "playerName": "乾贵士",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "28x7i681wkjueanvkevew3bh1",
+          "playerName": "戈洛文",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "pconfrmsdy9aikioqz9s9lg5",
+          "playerName": "夸德拉多",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "f475gwop8aob4mg6sti3yjys5",
+          "playerName": "多马哥·维达",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "eo4uva2gnx08xdazfaqzyz2dx",
+          "playerName": "蒂耶勒曼",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "emcopqd6dilgnr8w4dq2gotsl",
+          "playerName": "格雷罗",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "djqagc8dcwm3kvsikrrirkzpx",
+          "playerName": "埃尔南德斯",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "d4e0d51gajxau9pbdt8ccrys5",
+          "playerName": "巴德利",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "cwanyl6uih4b22xu66y4u9lud",
+          "playerName": "摩西",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "cjjo9piy65xdij746y97pyl79",
+          "playerName": "J·罗德里格斯",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "cen5nxf8sb8binjr7apt9nb2t",
+          "playerName": "洛萨诺",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "c80tzy7t4hoa8fpbek1od4lw5",
+          "playerName": "卢卡斯·埃尔南德斯",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "c6auv7bx7m8tpfws9ncfnr4yd",
+          "playerName": "桑切斯",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "btzfq6521zl3q5uqus8ltov6d",
+          "playerName": "罗伊斯",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "bt7svp1ekxzu47qn50iw6x045",
+          "playerName": "梅尔卡多",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "awda32rw2clw0sjemf7rkcel1",
+          "playerName": "埃里克森",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "avk3mhac3rfx7re4w2ngoj4d1",
+          "playerName": "杜禾伦",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "a91tlewrrjx5f2boz9bglyevp",
+          "playerName": "费尔南德斯",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "9qk1hoxri8dee6yat0cateqxh",
+          "playerName": "尼昂",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "8g4r9maz4invihjmdzpfxy0np",
+          "playerName": "克莱森",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "7s1q4rd90gi1gwbko34fuvhlh",
+          "playerName": "沙奇里",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "77487qauk9fkzlesgze21odsl",
+          "playerName": "香川真司",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "68cm9uvlgmi1q5xfki3g31i39",
+          "playerName": "巴内加",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "65z99j774kjnbf7vm0u2q0jit",
+          "playerName": "特里皮尔",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "5f72vvw62zdlyrj3mwux2udat",
+          "playerName": "林加德",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "2jhbr1v0z2fak1tbxptbnipjp",
+          "playerName": "默滕斯",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "2j8y06wuinnx87eetadj55zo5",
+          "playerName": "沙兹利",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "2bm517905b6annqp5o0ckvs9h",
+          "playerName": "本田圭佑",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "1vz038uyzmq8saskeeo0qhm8l",
+          "playerName": "马圭尔",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "eyg1es7a38gntkcel3cylu2fp",
+          "playerName": "道格拉斯·科斯塔",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "ehopba709zukxj4vgcync942d",
+          "playerName": "科瓦契奇",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "e9l5r0txzrjbenli05rn3k4wl",
+          "playerName": "斯特林",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "e6jaaazxqeczj6ziaj0qnqpxx",
+          "playerName": "奇克",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "dkve6gf309h5tglwawqx8mlzp",
+          "playerName": "恩博洛",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "d68byfvk16giaur32gqwpwded",
+          "playerName": "托里索",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "d66tmyj9pt69gub8pcjgo3bh1",
+          "playerName": "热苏斯",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "ciw54ghi1jv1xb5dmtv558xjp",
+          "playerName": "费萨尔",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "calrbl0kagr6zgnw2l8k626s5",
+          "playerName": "布斯克茨",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "c3gtat2a0zd3jl2u0w5z0v4k5",
+          "playerName": "佐布宁",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "bzb96y82gcod1quxxvz6csvyt",
+          "playerName": "坎贝尔",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "bwqqecmqm76v5b83v1cz891p1",
+          "playerName": "李在成",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "aokh8p761x5m20vbtzigk09n9",
+          "playerName": "弗尔萨利科",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "afcwu800ox2u5zx6xaiygg1qt",
+          "playerName": "威廉",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "a0dnp86z9w1aotw6ousq4zs2d",
+          "playerName": "扎戈耶夫",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "9tc6mprxpu2rc5ptlp5ljw7h1",
+          "playerName": "阿尔德韦雷尔德",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "9l7ph5603tbb7xwyxpvjg22fp",
+          "playerName": "穆蒂尼奥",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "9knq8u3gvl2kho5mih512n2z9",
+          "playerName": "阿德里安·席尔瓦",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "9alwmyk45xpxb6sp2nto9iod1",
+          "playerName": "伊涅斯塔",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "8qqyedn2t1qs6nwtq2m11gi51",
+          "playerName": "H·纳格斯",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "85u93ynnokcrady5fj4nc7lk9",
+          "playerName": "阿维拉",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "7s512fj69e44qt9a3doc92itx",
+          "playerName": "加弗拉诺维奇",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "7pmigpf4yfi6dfih8e1ogdwb9",
+          "playerName": "贡卡洛·古埃德斯",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "7paw998ux29k7hx4t1g0wu85x",
+          "playerName": "阿什利·扬",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "7oykphzczagr975xsqt70s89h",
+          "playerName": "卡瓦哈尔",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "6m2pk6odyb3atayt6u8cifahh",
+          "playerName": "塔迪奇",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "6ie5meimavc8kwohr6lrdyket",
+          "playerName": "古列罗",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "64orrvhh1or23zgu10vvwgted",
+          "playerName": "实巴萨科",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "5awkzgwwh48prwgvxwewuc5hx",
+          "playerName": "吉鲁",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "4y27qc4y3as8k8yw1a4v0mvh1",
+          "playerName": "R·库尔萨瓦",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "4gqnyyx3i92fayq6cxvekqwut",
+          "playerName": "托马斯·德拉尼",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "4ewc486q7lv7jho1t7qviprdh",
+          "playerName": "朱世钟",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "4ekfascwt616ygdw63sv2po7p",
+          "playerName": "库特波夫",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "3wp8fuk07m1ph1fpmbqe7tf55",
+          "playerName": "本坦库尔",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "3gadvs69ctyipg6jhbqfjjlxx",
+          "playerName": "A. 萨义德",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "3ddsnnhxo0mem95lcph71ix1x",
+          "playerName": "布罗佐维奇",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "3ck17gtvtur0a5g1235h8b3yt",
+          "playerName": "格罗西茨基",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "3an9i104b866io46tuacb793p",
+          "playerName": "约根森",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "2z1ljopuf264plkrdu0bagxqt",
+          "playerName": "奥梅罗",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "2ni3t3qktwmetm4vy9uz2gzbp",
+          "playerName": "哈达迪",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "2jc6sdkse1kxjztsgystidot1",
+          "playerName": "扎卡利亚",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "2i9cy7dt9zn1jz96h61oo2m6t",
+          "playerName": "阿卜杜拉·奥塔伊夫",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "1vwobe7b57c0i7a1840ulwyqd",
+          "playerName": "马里奥·戈麦斯",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "1vodims2kc52x1ew6acbj0wr9",
+          "playerName": "长友佑都",
+          "playerFlag": null,
+          "statValue": 1
+        }
+      ],
+      "goalAndAssistList": [
+        {
+          "playerId": "b9g4qurpll4wizajo95c406hh",
+          "playerName": "凯恩",
+          "playerFlag": null,
+          "statValue": 6
+        },
+        {
+          "playerId": "716n1970vi9rvw5b4w9qmjfth",
+          "playerName": "格列兹曼",
+          "playerFlag": null,
+          "statValue": 6
+        },
+        {
+          "playerId": "9w4e95xjhgvrlvq07rgij9cyd",
+          "playerName": "祖尤巴",
+          "playerFlag": null,
+          "statValue": 5
+        },
+        {
+          "playerId": "8qgbxff7xlg0zjtyees7ljljp",
+          "playerName": "卢卡库",
+          "playerFlag": null,
+          "statValue": 5
+        },
+        {
+          "playerId": "54h69199gtsavspwblux98dsl",
+          "playerName": "阿扎尔",
+          "playerFlag": null,
+          "statValue": 5
+        },
+        {
+          "playerId": "h17s3qts1dz1zqjw19jazzkl",
+          "playerName": "C·罗纳尔多",
+          "playerFlag": null,
+          "statValue": 4
+        },
+        {
+          "playerId": "d8m8y59eum57eu7kiat38rkk5",
+          "playerName": "哈兹里",
+          "playerFlag": null,
+          "statValue": 4
+        },
+        {
+          "playerId": "7t9fp83ctywtk6mx94tipf7it",
+          "playerName": "切里舍夫",
+          "playerFlag": null,
+          "statValue": 4
+        },
+        {
+          "playerId": "5e9ilgrz3tzg9kd1gk3yvrahh",
+          "playerName": "姆巴佩·洛丁",
+          "playerFlag": null,
+          "statValue": 4
+        },
+        {
+          "playerId": "3vxh219sef8mooilemi8xbs9h",
+          "playerName": "库蒂尼奥",
+          "playerFlag": null,
+          "statValue": 4
+        },
+        {
+          "playerId": "2gsq05yyxwe4f8t79j6d49q6t",
+          "playerName": "佩里西奇",
+          "playerFlag": null,
+          "statValue": 4
+        },
+        {
+          "playerId": "1ywlxygilfor1z4i54ve4ojit",
+          "playerName": "曼朱基奇",
+          "playerFlag": null,
+          "statValue": 4
+        },
+        {
+          "playerId": "diod1hv5hv7v7z7mfleev1txx",
+          "playerName": "莫德里奇",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "d92yjctlxrjuk1wem4nmq00k5",
+          "playerName": "苏亚雷斯",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "d4vdrtte9kb9qmlkrx1rvgk45",
+          "playerName": "米纳",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "c5ryhn04g9goikd0blmh83aol",
+          "playerName": "梅西",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "c2jqa9vozhqu7x79h5rr2n1ed",
+          "playerName": "德布劳内",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "bb6glt8n0ar47cmhmj6gnfiz9",
+          "playerName": "托马斯·穆尼耶",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "afyga3n1mliw0btcuixt6xolx",
+          "playerName": "卡瓦尼",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "a0u7d45znqedd35fvpxnkmuol",
+          "playerName": "胡安·金特罗",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "779rrkp47akkd5usq53begatx",
+          "playerName": "内马尔",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "6s577yqayjceifu1e05f280yd",
+          "playerName": "迭戈·科斯塔",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "638vrhxwi8xt1imqh7w0z8m39",
+          "playerName": "乾贵士",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "28x7i681wkjueanvkevew3bh1",
+          "playerName": "戈洛文",
+          "playerFlag": null,
+          "statValue": 3
+        },
+        {
+          "playerId": "pconfrmsdy9aikioqz9s9lg5",
+          "playerName": "夸德拉多",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "f475gwop8aob4mg6sti3yjys5",
+          "playerName": "多马哥·维达",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "eo4uva2gnx08xdazfaqzyz2dx",
+          "playerName": "蒂耶勒曼",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "emcopqd6dilgnr8w4dq2gotsl",
+          "playerName": "格雷罗",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "ecyjzmih6skpyp9zc6dihodsl",
+          "playerName": "穆萨",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "djqagc8dcwm3kvsikrrirkzpx",
+          "playerName": "埃尔南德斯",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "d4e0d51gajxau9pbdt8ccrys5",
+          "playerName": "巴德利",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "cwanyl6uih4b22xu66y4u9lud",
+          "playerName": "摩西",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "cjjo9piy65xdij746y97pyl79",
+          "playerName": "J·罗德里格斯",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "cen5nxf8sb8binjr7apt9nb2t",
+          "playerName": "洛萨诺",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "c80tzy7t4hoa8fpbek1od4lw5",
+          "playerName": "卢卡斯·埃尔南德斯",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "c6auv7bx7m8tpfws9ncfnr4yd",
+          "playerName": "桑切斯",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "btzfq6521zl3q5uqus8ltov6d",
+          "playerName": "罗伊斯",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "bt7svp1ekxzu47qn50iw6x045",
+          "playerName": "梅尔卡多",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "bhe1i96mzkz4i2a9tfz368slx",
+          "playerName": "耶迪纳克",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "awda32rw2clw0sjemf7rkcel1",
+          "playerName": "埃里克森",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "avk3mhac3rfx7re4w2ngoj4d1",
+          "playerName": "杜禾伦",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "a91tlewrrjx5f2boz9bglyevp",
+          "playerName": "费尔南德斯",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "9qk1hoxri8dee6yat0cateqxh",
+          "playerName": "尼昂",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "8g4r9maz4invihjmdzpfxy0np",
+          "playerName": "克莱森",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "7s1q4rd90gi1gwbko34fuvhlh",
+          "playerName": "沙奇里",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "77487qauk9fkzlesgze21odsl",
+          "playerName": "香川真司",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "68cm9uvlgmi1q5xfki3g31i39",
+          "playerName": "巴内加",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "65z99j774kjnbf7vm0u2q0jit",
+          "playerName": "特里皮尔",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "5ilkkfbsss0bxd6ttdlqg0uz9",
+          "playerName": "萨拉赫",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "5f72vvw62zdlyrj3mwux2udat",
+          "playerName": "林加德",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "5ch5dk1z9opa2iwd64kb4e5sl",
+          "playerName": "阿圭罗",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "3vhxswfl8dczeopf1osn5979",
+          "playerName": "安德烈斯·格兰奎斯特",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "3gem1jrrkgye0omb88fk1lsk5",
+          "playerName": "斯通斯",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "2jhbr1v0z2fak1tbxptbnipjp",
+          "playerName": "默滕斯",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "2j8y06wuinnx87eetadj55zo5",
+          "playerName": "沙兹利",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "2bm517905b6annqp5o0ckvs9h",
+          "playerName": "本田圭佑",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "1vz038uyzmq8saskeeo0qhm8l",
+          "playerName": "马圭尔",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "12ekwo6gbza410blv4b4r7ydx",
+          "playerName": "孙兴慜",
+          "playerFlag": null,
+          "statValue": 2
+        },
+        {
+          "playerId": "yq0cm7vwr0tkv7nvt9vo77bp",
+          "playerName": "帕瓦德",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "oel537m4mtjwwnyusz6efj6d",
+          "playerName": "巴舒亚伊",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "f482w50k80zbyb2ykh84yijf9",
+          "playerName": "博格巴",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "eyra5urhrm92240e7qbll736d",
+          "playerName": "雷比奇",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "eyg1es7a38gntkcel3cylu2fp",
+          "playerName": "道格拉斯·科斯塔",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "ew18qvvupaejxubhqmxmbd39x",
+          "playerName": "克拉马里奇",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "euy5vga7vds4a3js0pecaks0l",
+          "playerName": "保利尼奥",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "ehopba709zukxj4vgcync942d",
+          "playerName": "科瓦契奇",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "eb48g14m2erkf7yzqz8gj4u6t",
+          "playerName": "奥古斯廷森",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "e9l5r0txzrjbenli05rn3k4wl",
+          "playerName": "斯特林",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "e6jaaazxqeczj6ziaj0qnqpxx",
+          "playerName": "奇克",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "e14uqk4uguxiq2i95bjb7ztud",
+          "playerName": "夸雷斯马",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "dt76pdhwp3nyo6dt2y39wehn9",
+          "playerName": "萨西",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "dkve6gf309h5tglwawqx8mlzp",
+          "playerName": "恩博洛",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "depu0zp8jqcyv0jzf5r9yums5",
+          "playerName": "拉基蒂奇",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "deoif7y6l43fo1xcqt66oiq51",
+          "playerName": "沃特森",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "d68byfvk16giaur32gqwpwded",
+          "playerName": "托里索",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "d66tmyj9pt69gub8pcjgo3bh1",
+          "playerName": "热苏斯",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "cs2yx3hiqjsb4i5ul2r5kmdat",
+          "playerName": "阿斯帕斯",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "cotiiu6mjkfx5xa63nhfbdf4l",
+          "playerName": "马内",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "ckox9w95duwhmt72xxk7lt2vp",
+          "playerName": "福尔斯伯格",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "ciw54ghi1jv1xb5dmtv558xjp",
+          "playerName": "费萨尔",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "cdcbi6xmy0uts703489e0acb9",
+          "playerName": "克罗斯",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "calrbl0kagr6zgnw2l8k626s5",
+          "playerName": "布斯克茨",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "c6pqhaqusk8s1c2m21i5wtrkl",
+          "playerName": "蒂亚戈·席尔瓦",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "c3gtat2a0zd3jl2u0w5z0v4k5",
+          "playerName": "佐布宁",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "c295wl8m8rgajmm2a157i3jrp",
+          "playerName": "F. 巴罗伊",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "bzb96y82gcod1quxxvz6csvyt",
+          "playerName": "坎贝尔",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "bwqqecmqm76v5b83v1cz891p1",
+          "playerName": "李在成",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "blo3zmhar2mujyp9z7kjnsut",
+          "playerName": "布朗恩",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "bh68atk3ghb7iwgcvp82swnv9",
+          "playerName": "加津斯基",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "b27pmpcvny40pkcx87tdddsyd",
+          "playerName": "米特罗维奇",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "aokh8p761x5m20vbtzigk09n9",
+          "playerName": "弗尔萨利科",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "afcwu800ox2u5zx6xaiygg1qt",
+          "playerName": "威廉",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "a0dnp86z9w1aotw6ousq4zs2d",
+          "playerName": "扎戈耶夫",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "9tc6mprxpu2rc5ptlp5ljw7h1",
+          "playerName": "阿尔德韦雷尔德",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "9l7ph5603tbb7xwyxpvjg22fp",
+          "playerName": "穆蒂尼奥",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "9knq8u3gvl2kho5mih512n2z9",
+          "playerName": "阿德里安·席尔瓦",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "9alwmyk45xpxb6sp2nto9iod1",
+          "playerName": "伊涅斯塔",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "8sllxmpst47s6c46fgtv1q47p",
+          "playerName": "科里佐维亚克",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "8qqyedn2t1qs6nwtq2m11gi51",
+          "playerName": "H·纳格斯",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "8oc3lpz3xttrnwxk1fnnv7owl",
+          "playerName": "法尔考",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "8mlps3xgwbxa7svajxfk2exud",
+          "playerName": "乌姆蒂蒂",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "8l0am8k4pg2s9g9qbkhwte6dx",
+          "playerName": "鲍尔森",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "85u93ynnokcrady5fj4nc7lk9",
+          "playerName": "阿维拉",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "7tcnz9r7dprteao47jjw9w0r9",
+          "playerName": "祖贝尔",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "7s512fj69e44qt9a3doc92itx",
+          "playerName": "加弗拉诺维奇",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "7pmigpf4yfi6dfih8e1ogdwb9",
+          "playerName": "贡卡洛·古埃德斯",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "7paw998ux29k7hx4t1g0wu85x",
+          "playerName": "阿什利·扬",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "7oykphzczagr975xsqt70s89h",
+          "playerName": "卡瓦哈尔",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "7o4nc6jwsi3quvnwinstqwyj9",
+          "playerName": "纳乔",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "7mxwp86ylr1rvounew1auzwet",
+          "playerName": "德尔米奇",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "7k9lyh24hr3duclodac56vu8l",
+          "playerName": "本·优素福",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "7glxasv2ed6ey82dknto1y66t",
+          "playerName": "迪马里亚",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "7atmb373dynu9s9gnl613ox5h",
+          "playerName": "贾努扎伊",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "78fx1xqqtcqm2g4h1dj8beml1",
+          "playerName": "费尔通亨",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "709tvsyynpz1tx7snba1whwwl",
+          "playerName": "西于尔兹松",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "6m2pk6odyb3atayt6u8cifahh",
+          "playerName": "塔迪奇",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "6ie5meimavc8kwohr6lrdyket",
+          "playerName": "古列罗",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "6b9erfx1rf9nff83300tntadx",
+          "playerName": "菲尔米诺",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "64orrvhh1or23zgu10vvwgted",
+          "playerName": "实巴萨科",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "6264xjr1y00yu7b9j2pknalzp",
+          "playerName": "扎卡",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "5phv874rxdk8ues3ef6hnd80l",
+          "playerName": "芬博加松",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "5nt3khx8jtvz8n83tzuaot68l",
+          "playerName": "罗霍",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "5awkzgwwh48prwgvxwewuc5hx",
+          "playerName": "吉鲁",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "58i5y98ceb55anpucpru7skb9",
+          "playerName": "佩佩",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "581nre288dpdtmqwfsls02b4l",
+          "playerName": "哲马伊利",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "548jzfl9higq44w9bgqvcjh05",
+          "playerName": "何塞·希门尼斯",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "53ii8a2tn0kbcxyp0hfqhu02d",
+          "playerName": "金英权",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "4y27qc4y3as8k8yw1a4v0mvh1",
+          "playerName": "R·库尔萨瓦",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "4gqnyyx3i92fayq6cxvekqwut",
+          "playerName": "托马斯·德拉尼",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "4ewc486q7lv7jho1t7qviprdh",
+          "playerName": "朱世钟",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "4ekfascwt616ygdw63sv2po7p",
+          "playerName": "库特波夫",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "4bbqmasyopxoymo4umcxd4e09",
+          "playerName": "恩奈斯里",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "48hur5fmszaqltysykkb4js2d",
+          "playerName": "阿里",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "45zetxtrvjb3muvcrr9b5it3p",
+          "playerName": "马蒂亚斯·约根森",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "45s1v9805id09m5zkcylueod1",
+          "playerName": "伊斯科",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "44cdiqqqu0dmuhaxgisgpnf11",
+          "playerName": "科拉罗夫",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "3wp8fuk07m1ph1fpmbqe7tf55",
+          "playerName": "本坦库尔",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "3pwoy992h7y5pwk7trrhsqml1",
+          "playerName": "博塔伊布",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "3gadvs69ctyipg6jhbqfjjlxx",
+          "playerName": "A. 萨义德",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "3dph74ixutmbpscaon0b25sl",
+          "playerName": "瓦拉内",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "3ddsnnhxo0mem95lcph71ix1x",
+          "playerName": "布罗佐维奇",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "3ck17gtvtur0a5g1235h8b3yt",
+          "playerName": "格罗西茨基",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "3an9i104b866io46tuacb793p",
+          "playerName": "约根森",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "36cdm30lm4hf1t6ajakity8k5",
+          "playerName": "塞欧曼·奥·费如俄",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "351v0ovetkdkympri37ldwez9",
+          "playerName": "费莱尼",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "30xm5l8766spqmchnhl3q2w2d",
+          "playerName": "K. 安萨里fard",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "2z1ljopuf264plkrdu0bagxqt",
+          "playerName": "奥梅罗",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "2w5xjif5lfjq0qhwox0ha11x",
+          "playerName": "贝拉",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "2ni3t3qktwmetm4vy9uz2gzbp",
+          "playerName": "哈达迪",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "2lkra7wic5b481l7qybjh8lx",
+          "playerName": "安德烈·卡利略",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "2jc6sdkse1kxjztsgystidot1",
+          "playerName": "扎卡利亚",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "2i9cy7dt9zn1jz96h61oo2m6t",
+          "playerName": "阿卜杜拉·奥塔伊夫",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "2hw2n5d7kzrvfop40yc4onkrt",
+          "playerName": "瓦格约",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "2ghv5nqgyn0wv9ekdx1ow0445",
+          "playerName": "萨勒姆·阿尔·达萨里",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "254i1zsifi2er9rvuxgi9katx",
+          "playerName": "原口元气",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "22imd9on624739u8fym5n640l",
+          "playerName": "大迫勇也",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "1vwobe7b57c0i7a1840ulwyqd",
+          "playerName": "马里奥·戈麦斯",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "1vodims2kc52x1ew6acbj0wr9",
+          "playerName": "长友佑都",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "1tbc8iokapjgu8zjrc1knq28l",
+          "playerName": "J·贝德纳雷克",
+          "playerFlag": null,
+          "statValue": 1
+        },
+        {
+          "playerId": "1m5tzmiid9pwk7okgj4c4t2ad",
+          "playerName": "奥古斯托",
+          "playerFlag": null,
+          "statValue": 1
+        }
+      ]
+    }

@@ -49,8 +49,7 @@ export default {
   padding-top: vw(13);
   .container {
     display: flex;
-    justify-content: center;
-    // font-family: "PingFang SC";
+    padding: 0 vw(24);
     .menu-item {
       font-size: vw(14);
       line-height: vw(15);
@@ -68,7 +67,7 @@ export default {
       }
       .menu-underline {
         display: inline-block;
-        width: vw(28);
+        width: vw(58);
         height: vw(2);
         border-radius: vw(2);
         margin-top: vw(9);
