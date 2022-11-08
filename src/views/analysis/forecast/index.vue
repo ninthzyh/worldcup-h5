@@ -40,7 +40,7 @@ export default {
         // 比赛分析
         getMatchPredicted() {
             const data = {
-                matchId: "6p8l3bm8q34z4sa7tg976qi95",
+                matchId: "7fgtsy0p8qdoexvf3bof98s9g",
             };
             matchPredicted(data).then((res) => {
                 this.predictedList = res;

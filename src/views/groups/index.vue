@@ -5,12 +5,12 @@
                 <div class="group-title">{{item.groupName}}</div>
                 <div class="table">
                     <div class="table-header">
-                        <div class="label-first"><span class="icon">#</span><span>球队</span></div>
-                        <div class="label">场次</div>
-                        <div class="label">胜</div>
-                        <div class="label">平</div>
-                        <div class="label">负</div>
-                        <div class="label">积分</div>
+                        <div class="label-first"><span class="icon">#</span><span>{{$lang.groups.team}}</span></div>
+                        <div class="label">{{$lang.groups.PL}}</div>
+                        <div class="label">{{$lang.groups.W}}</div>
+                        <div class="label">{{$lang.groups.D}}</div>
+                        <div class="label">{{$lang.groups.L}}</div>
+                        <div class="label">{{$lang.groups.PTS}}</div>
                     </div>
                     <div class="table-content" v-for="(it,idx) in item.dataList" :key="idx">
                         <div :class="`${idx<2?'line':''}`"></div>
@@ -30,7 +30,7 @@
             <div class="group-logo"></div>
         </div>
         <div class="tips">
-            <div class="legend"></div><span>晋级淘汰赛资格</span>
+            <div class="legend"></div><span>{{$lang.groups.playOff}}</span>
         </div>
     </div>
 </template>

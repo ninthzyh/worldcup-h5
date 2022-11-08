@@ -1,4 +1,31 @@
 {
+  "home": {
+    "today": "今日",
+    "watch": "立即观赛",
+    "stadium": "球场",
+    "capacity": "容纳人数",
+    "grass": "草地",
+    "surface": "场地表面",
+    "fifaWorldCup": "世界杯导航",
+    "schedule": "赛程",
+    "ranking": "排名",
+    "group": "分组",
+    "playoff": "晋级",
+    "todayMatches": "今日赛程",
+    "seeAll": "查看所有"
+  },
+  "groups": {
+    "team": "球队",
+    "PL": "场次",
+    "W": "胜",
+    "D": "平",
+    "L": "负",
+    "PTS": "积分",
+    "playOff": "晋级淘汰赛资格"
+  },
+  "matchData": {
+    "topStats": "技术统计"
+  },
   "eventList": {
     "title": "事件直播",
     "goalOnly": "只看进球",

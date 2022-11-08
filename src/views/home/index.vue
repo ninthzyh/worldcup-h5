@@ -8,55 +8,61 @@
                 <div class="screen-label">
                     <div class="screen-live">
                         <div :class="`${true?'live-icon':'hot-icon'}`"></div>
-                        <div class="today">今日 {{bannerData&&bannerData.matchDatetime}}</div>
+                        <div class="today">
+                            <span>{{$lang.home.today}}</span>
+                            <span>{{bannerData&&bannerData.matchDatetime}}</span>
+                        </div>
                     </div>
                     <div class="vs">
-                        <div><span>{{bannerData&&bannerData.homeName}}</span><span class="line">-</span></div>
+                        <div>
+                            <span>{{bannerData&&bannerData.homeName}}</span>
+                            <span class="line">-</span>
+                        </div>
                         <div>{{bannerData&&bannerData.awayName}}</div>
                     </div>
                     <div class="flag">
                         <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :margin="`0 ${$vw(12)} 0 0`" :img="bannerData&&bannerData.homeFlag" />
                         <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :img="bannerData&&bannerData.awayFlag" />
                     </div>
-                    <div class="watching"></div>
+                    <div class="watching">{{$lang.home.watch}}</div>
                     <div class="des">
                         <div class="des-item">
                             <div class="position"></div>
                             <div class="des-laguage">
                                 <div class="des-en">Al Thumama Stadium</div>
-                                <div class="des-cn">球场</div>
+                                <div class="des-cn">{{$lang.home.stadium}}</div>
                             </div>
                         </div>
                         <div class="des-item">
                             <div class="people"></div>
                             <div class="des-laguage">
                                 <div class="des-en">120,000</div>
-                                <div class="des-cn">容纳人数</div>
+                                <div class="des-cn">{{$lang.home.capacity}}</div>
                             </div>
                         </div>
                         <div class="des-item">
                             <div class="lawn"></div>
                             <div class="des-laguage">
-                                <div class="des-en">草地</div>
-                                <div class="des-cn">场地表面</div>
+                                <div class="des-en">{{$lang.home.grass}}</div>
+                                <div class="des-cn">{{$lang.home.surface}}</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="nav-wrap">
-                <div class="title">世界杯导航</div>
+                <div class="title">{{$lang.home.fifaWorldCup}}</div>
                 <div class="nav">
                     <div class="nav-item" v-for="(item,index) in navList" :key="index" @click="()=>onNavClick(item.url)">
                         <div class="icon-wrap">
                             <div :class="item.class"></div>
                         </div>
-                        <div class="nav-item-label">{{item.label}}</div>
+                        <div class="nav-item-label">{{$lang.home[item.label]}}</div>
                     </div>
                 </div>
             </div>
             <div class="today-schedule">
-                <div class="title"><span>今日赛程</span><span class="check-all" @click="jumpTo">查看所有</span></div>
+                <div class="title"><span>{{$lang.home.todayMatches}}</span><span class="check-all" @click="jumpTo">{{$lang.home.seeAll}}</span></div>
                 <schedule-list :dataList="matchList" />
             </div>
         </div>
@@ -81,22 +87,22 @@ export default {
         return {
             navList: [
                 {
-                    label: "赛程",
+                    label: "schedule",
                     class: "schedule",
                     url: "/catalogue/schedule",
                 },
                 {
-                    label: "排名",
+                    label: "ranking",
                     class: "rank",
                     url: "/catalogue/rank",
                 },
                 {
-                    label: "分组",
+                    label: "group",
                     class: "groups",
                     url: "/catalogue/groups",
                 },
                 {
-                    label: "晋级",
+                    label: "playoff",
                     class: "rise",
                     url: "/catalogue/rise",
                 },
@@ -193,7 +199,6 @@ export default {
                         transform-origin: 0 0;
                         font-size: vw(17);
                         color: rgba(255, 255, 255, 0.7);
-                        // font-family: "PingFang SC";
                         font-weight: 600;
                         line-height: vw(24);
                     }
@@ -201,8 +206,9 @@ export default {
                 .vs {
                     font-family: "Inter";
                     font-size: vw(24);
-                    line-height: vw(29);
                     padding-bottom: vw(7);
+                    line-height: vw(29);
+                    height: vw(56);
                     .line {
                         padding: vw(8);
                     }
@@ -215,11 +221,20 @@ export default {
                     }
                 }
                 .watching {
-                    width: vw(44);
+                    // width: vw(44);
                     height: vw(16);
-                    background: url("~@/assets/images/watching.svg") no-repeat
-                        center/contain;
+                    display: inline-block;
+                    // background: url("~@/assets/images/watching.svg") no-repeat
+                    //     center/contain;
+                    background: rgba(255, 255, 255, 0.87);
+                    border-radius: vw(2);
                     margin-bottom: vw(1);
+                    color: #000000;
+                    transform: scale(0.6666);
+                    transform-origin: 0 50%;
+                    font-size: vw(8);
+                    line-height: vw(16);
+                    padding: vw(4) vw(9);
                 }
                 .des {
                     display: flex;
