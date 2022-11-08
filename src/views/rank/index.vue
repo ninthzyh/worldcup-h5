@@ -129,6 +129,9 @@ export default {
       padding: vwPad(24);
       overflow: auto;
       height: calc(100% - #{vwPad(104)});
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
     }
   }
 }
