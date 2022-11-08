@@ -1,8 +1,8 @@
 import request from "../utils/request";
-
-export const matchPredicted = (params)=>{
+// 分组积分榜
+export const standingGroup = (params) => {
   return request({
-    url: '/match/predicted',
+    url: '/api/standing/group',
     method: 'GET',
     params
   })

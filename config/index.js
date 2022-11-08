@@ -11,9 +11,16 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/standing': {
-        target: 'http://duguweilin.w3.luyouxia.net/',
-        changeOrigin: true
+      // '/standing': {
+      //   target: 'http://192.168.144.30:8080',
+      //   changeOrigin: true
+      // },
+      '/api': {
+        target: 'http://192.168.144.30:8080',
+        changeOrigin: true,
+        pathRewrite: {
+          "^/api": ""
+        }
       },
     },
 

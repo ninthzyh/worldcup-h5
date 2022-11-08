@@ -22,7 +22,9 @@
 import Vue from "vue";
 import { Calendar } from "vant";
 import ScheduleList from "../../components/ScheduleList";
-import schedulelist from './schedulelist.json';
+// import schedulelist from './schedulelist.json';
+import { scheduleList } from "@/api/home";
+
 Vue.use(Calendar);
 export default {
   components: {
@@ -35,10 +37,25 @@ export default {
       dateStr: this.formatDate(new Date(2022, 10, 20)), //日期默认：2022-11-20 string
       date: new Date(2022, 10, 20), // value:Date
       show: false,
-      stageList: schedulelist.stageList,
+      // stageList: schedulelist.stageList,
+      stageList: [],
     };
   },
+  mounted() {
+    this.getScheduleList();
+  },
   methods: {
+    // 日期赛程
+    getScheduleList() {
+      const data = {
+        currDate: `${this.date.getFullYear()}-${
+          this.date.getMonth() + 1
+        }-${this.date.getDate()}`,
+      };
+      scheduleList(data).then((res) => {
+        this.stageList = res.stageList;
+      });
+    },
     // 当前时间＋、-
     onClick(num) {
       // 选中时间不超过限制的最大最小时间，Date类型比较大小
@@ -55,6 +72,7 @@ export default {
       // 修改时间弹窗中选中的日期颜色
       this.$nextTick(() => {
         this.$refs.calender.reset(this.date);
+        this.getScheduleList();
       });
     },
     // 日期选中确定
@@ -62,6 +80,7 @@ export default {
       this.show = false;
       this.date = date;
       this.dateStr = this.formatDate(date);
+      this.getScheduleList();
     },
     // 选中日期，月日星期
     formatDate(date) {
