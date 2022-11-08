@@ -20,10 +20,15 @@
 </template>
 <script>
 import RankCard from "./components/rankCard";
-import rankplayer from './rankplayer.json';
-import rankteam from './rankteam.json';
+import rankplayer from "./rankplayer.json";
+import rankteam from "./rankteam.json";
+import { rankPlayer, rankTeam } from "@/api/rank.js";
 export default {
   components: { RankCard },
+  mounted() {
+    // this.geRankPlayer();
+    // this.geRankTeam();
+  },
   data() {
     return {
       isSelect: true,

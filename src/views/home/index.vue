@@ -15,7 +15,7 @@
             <div>{{bannerData.awayName}}</div>
           </div>
           <div class="flag">
-            <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :margin="`0 ${$vw(12)} 0 0`" :img="''" />
+            <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :margin="`0 ${$vw(12)} 0 0`" :img="bannerData.homeFlag" />
             <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :img="bannerData.awayFlag" />
           </div>
           <div class="watching"></div>
@@ -65,14 +65,19 @@
 <script>
 import ScheduleList from "../../components/ScheduleList";
 import NationalFlag from "../../components/NationalFlag";
-import bannerData from './scheduleplaying.json';
-import scheduleList from './schedulelist.json';
+// import bannerData from "./scheduleplaying.json";
+// import schedulelist from './schedulelist.json';
+import { schedulePlaying, scheduleList } from "@/api/home";
 
 // 编译后代码
 export default {
   components: {
     ScheduleList,
     NationalFlag,
+  },
+  mounted() {
+    this.getSchedulePlaying();
+    this.getScheduleList();
   },
   data() {
     return {
@@ -98,18 +103,32 @@ export default {
           url: "/catalogue/rise",
         },
       ],
-      matchList: scheduleList.matchList,
-      bannerData: bannerData[0],
+      // matchList: scheduleList.matchList,
+      // bannerData: bannerData[0],
+      matchList: [],
+      bannerData: [],
     };
   },
   methods: {
+    // 首页轮播图 
+    getSchedulePlaying() {
+      schedulePlaying().then((res) => {
+        this.bannerData=res[0]
+      });
+    },
+    // 日期赛程 
+    getScheduleList() {
+      scheduleList().then((res) => {
+        this.matchList=res.matchList
+      });
+    },
     onNavClick(url) {
       this.$router.push(url);
     },
     // 赛程查看全部
-    jumpTo(){
-      this.$router.push('/catalogue/schedule')
-    }
+    jumpTo() {
+      this.$router.push("/catalogue/schedule");
+    },
   },
 };
 </script>

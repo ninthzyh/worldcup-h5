@@ -2,7 +2,7 @@ import axios from "axios";
 
 axios.defaults.headers["Content-Type"] = "application/json;";
 // let isBuildDev;
-let httpBase = '';
+// let httpBase = '';
 // if (
 //   process.env.NODE_ENV === "development" &&
 //   process.env.VUE_APP_API === "development"
@@ -79,7 +79,7 @@ service.interceptors.response.use(
     if (code !== 200) {
       return Promise.reject("业务错误");
     } else {
-      return res.data;
+      return res.data.data;
     }
   },
   (error) => {
