@@ -57,7 +57,7 @@
                         <div class="icon-wrap">
                             <div :class="item.class"></div>
                         </div>
-                        <div class="nav-item-label">{{$lang.home[item.label]}}</div>
+                        <div class="nav-item-label">{{item.label}}</div>
                     </div>
                 </div>
             </div>
@@ -87,22 +87,22 @@ export default {
         return {
             navList: [
                 {
-                    label: "schedule",
+                    label: this.$lang.home.schedule,
                     class: "schedule",
                     url: "/catalogue/schedule",
                 },
                 {
-                    label: "ranking",
+                    label: this.$lang.home.ranking,
                     class: "rank",
                     url: "/catalogue/rank",
                 },
                 {
-                    label: "group",
+                    label: this.$lang.home.group,
                     class: "groups",
                     url: "/catalogue/groups",
                 },
                 {
-                    label: "playoff",
+                    label: this.$lang.home.playoff,
                     class: "rise",
                     url: "/catalogue/rise",
                 },

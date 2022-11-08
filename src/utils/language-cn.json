@@ -26,6 +26,28 @@
   "matchData": {
     "topStats": "技术统计"
   },
+  "matchAnalysis": {
+    "liveWinProbability": "实时胜率预测",
+    "home": "主胜",
+    "draw": "平局",
+    "away": "客胜",
+    "scoreboard": "世界杯小组赛 积分榜",
+    "team": "球队",
+    "PL": "场次",
+    "WDL": "胜/平/负",
+    "goalStatus": "进/失",
+    "PTS": "积分",
+    "playOff": "晋级淘汰赛资格",
+    "H2H": "历史对阵",
+    "homeWins": "获胜场次",
+    "draws": "平局场次",
+    "awayWins": "获胜场次",
+    "ChanceOfWinning": "夺冠预测 %",
+    "worldCup2022": "2022 卡塔尔世界杯"
+  },
+  "forecast": {
+    "pay": "购买后可查看"
+  },
   "common": {
     "schedule": "赛程",
     "rank": "排名",

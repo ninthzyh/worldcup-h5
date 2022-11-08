@@ -3,8 +3,8 @@
         <div class="final-predicted-header">
             <div class="logo"></div>
             <div class="title-wrap">
-                <div class="subtitle">夺冠预测 %</div>
-                <div class="title">2022 卡塔尔世界杯</div>
+                <div class="subtitle">{{$lang.matchAnalysis.ChanceOfWinning}}</div>
+                <div class="title">{{$lang.matchAnalysis.worldCup2022}}</div>
             </div>
         </div>
         <div class="final-predicted-content">

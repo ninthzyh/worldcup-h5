@@ -2,7 +2,7 @@
     <div class="technology-card">
         <div class="card-header">
             <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :border="`${$vw(0.5)} solid rgba(255, 255, 255, 0.12)`" :padding="`${$vw(8)}`" :img="matchInfo&&matchInfo.homeFlag" />
-            <div class="card-title">技术统计</div>
+            <div class="card-title">{{this.$lang.matchData.topStats}}</div>
             <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :border="`${$vw(0.5)} solid rgba(255, 255, 255, 0.12)`" :padding="`${$vw(8)}`" :img="matchInfo&&matchInfo.awayFlag" />
         </div>
         <div class="technology-content">

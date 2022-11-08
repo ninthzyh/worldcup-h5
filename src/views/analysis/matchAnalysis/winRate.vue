@@ -1,6 +1,6 @@
 <template>
     <div class="match-card">
-        <div class="match-card-title">实时胜率预测</div>
+        <div class="match-card-title">{{$lang.matchAnalysis.liveWinProbability}}</div>
         <div class="match-card-content">
             <div class="home-win">
                 <div class="bar" :style="`height:${cardList&&cardList.homeValue?`${$vw(46/24*cardList.homeValue)}`:0}`">
@@ -9,7 +9,7 @@
                         <span class="unit">%</span>
                     </div>
                 </div>
-                <div class="label">主胜</div>
+                <div class="label">{{$lang.matchAnalysis.home}}</div>
             </div>
             <div class="team-draw">
                 <div class="bar" :style="`height:${cardList&&cardList.drawValue?`${$vw(46/24*cardList.drawValue)}`:0}`">
@@ -18,7 +18,7 @@
                         <span class="unit">%</span>{{cardList.drawValue}}
                     </div>
                 </div>
-                <div class="label">平局</div>
+                <div class="label">{{$lang.matchAnalysis.draw}}</div>
             </div>
             <div class="away-win">
                 <div class="bar" :style="`height:${cardList&&cardList.awayValue?`${$vw(46/24*cardList.awayValue)}`:0}`">
@@ -27,7 +27,7 @@
                         <span class="unit">%</span>
                     </div>
                 </div>
-                <div class="label">客胜</div>
+                <div class="label">{{$lang.matchAnalysis.away}}</div>
             </div>
         </div>
 

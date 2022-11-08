@@ -13,7 +13,7 @@ import WinRate from "./winRate";
 import HistoryMatch from "./historyMatch";
 import Scoreboard from "./scoreboard";
 import FinalPredicted from "./finalPredicted";
-import json from "./matchanalysis.json";
+// import json from "./matchanalysis.json";
 import { matchAnalysis } from "@/api/analysis";
 export default {
     components: {
