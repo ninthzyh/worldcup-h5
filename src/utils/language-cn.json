@@ -5,6 +5,14 @@
     "groups": "分组",
     "rise": "晋级"
   },
+  "rank": {
+    "teamAttack": "进球榜",
+    "teamAssists": "助攻榜",
+    "averagePercentageOfPossession": "平均控球率",
+    "playerAttack": "进球榜",
+    "playerAssists": "助攻榜",
+    "attackAddAssists": "进球+助攻"
+  },
   "eventList": {
     "title": "事件直播",
     "goalOnly": "只看进球",
