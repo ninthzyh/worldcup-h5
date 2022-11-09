@@ -29,8 +29,8 @@ export default {
   },
   props: {
     lineupMap:{
-      type: Array,
-      default:()=>{}
+      type: Object,
+      default:()=>({})
     },
     matchInfo:{
       type: Object,

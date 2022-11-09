@@ -1,7 +1,7 @@
 <template>
   <div class="match-data-container">
-    <overview-stat-list :cardList="matchDataList.overviewStatList" :matchInfo="matchDataList.matchInfo"/>
-    <technology-statistic :cardList="matchDataList.detailStatList" :matchInfo="matchDataList.matchInfo"/>
+    <overview-stat-list v-if="overviewStatList && overviewStatList.length" :cardList="overviewStatList" :matchInfo="matchInfo"/>
+    <technology-statistic v-if="detailStatList && detailStatList.length" :cardList="detailStatList" :matchInfo="matchInfo"/>
     <advertisement></advertisement>
     <Event v-if="eventList && eventList.length" :eventData="eventList" :matchInfo="matchInfo" />
     <Squad v-if="lineupMap && Object.values(lineupMap).length" :lineupMap="lineupMap" :matchInfo="matchInfo"  />
@@ -24,6 +24,12 @@ export default {
     OverviewStatList,
   },
   computed:{
+    overviewStatList(){
+      return this.matchDataList ? this.matchDataList.overviewStatList : [];
+    },
+    detailStatList(){
+      return this.matchDataList ? this.matchDataList.detailStatList : [];
+    },
     eventList(){
       return this.matchDataList ? this.matchDataList.eventList : [];
     },
