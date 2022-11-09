@@ -14,7 +14,8 @@
     <MatchItem tips="决赛" :tips-width="48" :match-item="firstFinal"/>
     <div v-if="champion && champion.championName" class="champion-container">
       <div class="champion">
-        <NationalFlag />
+        <NationalFlag v-if="champion.championFlag" />
+        <span v-else>?</span>
       </div>
       <p>{{ champion.championName }}</p>
     </div>
@@ -172,6 +173,12 @@ export default {
           height: vw(62);
           border-radius: 50%;
           border: vw(4) solid #4a1e26;
+          background-color: #404040;
+          text-align: center;
+          >span{
+            line-height: vw(62);
+            font-size: vw(24);
+          }
         }
       }
     }
@@ -200,6 +207,12 @@ export default {
           height: vwPad(62);
           border-radius: 50%;
           border: vwPad(4) solid #4a1e26;
+          background-color: #404040;
+          text-align: center;
+          >span{
+            line-height: vwPad(62);
+            font-size: vwPad(24);
+          }
         }
       }
     }

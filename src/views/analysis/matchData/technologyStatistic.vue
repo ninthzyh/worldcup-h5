@@ -10,7 +10,7 @@
         :img="matchInfo&&matchInfo.awayFlag" />
     </div>
     <div class="technology-content">
-      <div class="card-subtitle">控球率</div>
+      <div class="card-subtitle">{{cardList&&cardList[0].statName}}</div>
       <div class="progress-bar-wrap">
         <div class="left-bar" :style="`width:${cardList&&cardList[0].homeValueStr}`">
           <div class="bar-percent">{{cardList&&cardList[0].homeValueStr}}</div>

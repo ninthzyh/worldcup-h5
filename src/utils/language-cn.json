@@ -102,5 +102,11 @@
     "penalty": "点球",
     "penaltyNotInto": "点球未进",
     "ownGoal": "乌龙球"
+  },
+  "analysis": {
+    "matchData": "比赛数据",
+    "matchAnalysis": "赛事分析",
+    "forecast": "智能预测",
+    "percentageOfPossession": "控球率"
   }
 }

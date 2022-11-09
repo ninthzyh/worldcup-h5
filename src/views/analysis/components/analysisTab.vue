@@ -24,15 +24,15 @@ export default {
     return {
       menuList: [
         {
-          text: "比赛数据",
+          text: this.$lang.analysis.matchData,
           route: "/analysis/match-data",
         },
         {
-          text: "赛事分析",
+          text: this.$lang.analysis.matchAnalysis,
           route: "/analysis/match-analysis",
         },
         {
-          text: "智能预测",
+          text: this.$lang.analysis.forecast,
           route: "/analysis/forecast",
         },
       ],

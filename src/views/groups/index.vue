@@ -69,7 +69,6 @@ export default {
     font-style: normal;
     color: #fff;
     background: url("~@/assets/images/bg.png") no-repeat center/contain;
-
     .groups-content {
       padding: vw(56) vw(24) 0 vw(24);
       height: calc(100% - #{vw(116)});
@@ -192,6 +191,7 @@ export default {
     font-style: normal;
     color: #fff;
     background: url("~@/assets/images/bg.png") no-repeat center/contain;
+    padding: 0 calc((100% - #{vwPad(1024)})/2);
 
     .groups-content {
       padding: vwPad(56) vwPad(24) 0 vwPad(24);
