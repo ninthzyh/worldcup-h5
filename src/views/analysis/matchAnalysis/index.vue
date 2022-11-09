@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="match-analysis-container">
         <win-rate :cardList="analysisList.outcomePredicted"></win-rate>
         <advertisement></advertisement>
         <Scoreboard :cardList="analysisList.groupList"></Scoreboard>
@@ -45,3 +45,12 @@ export default {
     },
 };
 </script>
+
+<style lang="scss" scoped>
+@import "~@/assets/vw";
+@media screen and (min-device-width: 600px) {
+  .match-analysis-container{
+    padding: vwPad(16) calc((100% - #{vwPad(1024)})/2);
+  }
+}
+</style>

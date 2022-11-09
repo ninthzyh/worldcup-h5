@@ -37,8 +37,9 @@ export default {
 
 <style lang="scss" scoped>
 @import "~@/assets/vw";
-
-.match-data-container{
-  padding: vwPad(16) calc((100% - #{vwPad(1024)})/2);
+@media screen and (min-device-width: 600px) {
+  .match-data-container{
+    padding: vwPad(16) calc((100% - #{vwPad(1024)})/2);
+  }
 }
 </style>
