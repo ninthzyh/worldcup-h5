@@ -73,15 +73,17 @@ import ScheduleList from "../../components/ScheduleList";
 import NationalFlag from "../../components/NationalFlag";
 // import bannerData from "./scheduleplaying.json";
 // import schedulelist from './schedulelist.json';
-import { schedulePlaying, scheduleList } from "@/api/home";
+import { scheduleList } from "@/api/home";
 export default {
     components: {
         ScheduleList,
         NationalFlag,
     },
     mounted() {
-        this.getSchedulePlaying();
         this.getScheduleList();
+    },
+    unmounted() {
+        clearInterval(this.timer);
     },
     data() {
         return {
@@ -111,20 +113,24 @@ export default {
             // bannerData: bannerData[0],
             matchList: [],
             bannerData: [],
+            timer: null,
         };
     },
     methods: {
-        // 首页轮播图
-        getSchedulePlaying() {
-            schedulePlaying().then((res) => {
-                this.bannerData = res[0];
-            });
-        },
-        // 日期赛程
+        // 首页日期赛程&轮播图
         getScheduleList() {
-            scheduleList().then((res) => {
-                this.matchList = res.matchList;
-            });
+            // 30s 刷新
+            let homeDataList = () => {
+                console.log("ads");
+                scheduleList().then((res) => {
+                    this.matchList = res.matchList;
+                    this.bannerData = res.playingList[0];
+                });
+            };
+            // 调用接口立即执行第一次
+            homeDataList();
+            this.timer && clearInterval(this.timer);
+            this.timer = setInterval(homeDataList, 30000);
         },
         onNavClick(url) {
             this.$router.push(url);
