@@ -6,7 +6,7 @@
             <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :border="`${$vw(0.5)} solid rgba(255, 255, 255, 0.12)`" :padding="`${$vw(8)}`" :img="matchInfo&&matchInfo.awayFlag" />
         </div>
         <div class="technology-content">
-            <div class="card-subtitle">控球率</div>
+            <div class="card-subtitle">{{ $lang.analysis.percentageOfPossession }}</div>
             <div class="progress-bar-wrap">
                 <div class="left-bar" :style="`width:${cardList&&cardList[0].homeValueStr}`">
                     <div class="bar-percent">{{cardList&&cardList[0].homeValueStr}}</div>
