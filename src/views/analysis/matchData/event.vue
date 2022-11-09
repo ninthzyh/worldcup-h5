@@ -129,7 +129,7 @@ export default {
     },
   },
   mounted() {
-    new Promise((resolve)=>(resolve(require('../squad/data.json')))).then((res)=>{
+    new Promise((resolve)=>(resolve(require('./squad/data.json')))).then((res)=>{
       this.resData = res.data;
       this.matchInfo = res.data.matchInfo
     })
@@ -155,7 +155,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/vw";
+@import "../../../assets/vw";
 @media screen and (max-device-width: 600px) {
   .event-container{
     width: vw(311);
@@ -188,10 +188,10 @@ export default {
           display: inline-block;
           width: vw(16);
           height: vw(16);
-          background-image: url("../../assets/images/uncheck.svg");
+          background-image: url("../../../assets/images/uncheck.svg");
           background-size: 100% 100%;
           &.checked{
-            background-image: url("../../assets/images/check.svg");
+            background-image: url("../../../assets/images/check.svg");
           }
         }
       }
@@ -267,42 +267,42 @@ export default {
     }
 
     .goal{
-      background-image: url("../../assets/images/goal.svg");
+      background-image: url("../../../assets/images/goal.svg");
     }
     .own-goal{
-      background-image: url("../../assets/images/own-goal.svg");
+      background-image: url("../../../assets/images/own-goal.svg");
     }
     .penalties{
-      background-image: url("../../assets/images/penalties.svg");
+      background-image: url("../../../assets/images/penalties.svg");
     }
     .penalties-not-in{
-      background-image: url("../../assets/images/penalties-not-in.svg");
+      background-image: url("../../../assets/images/penalties-not-in.svg");
     }
     .yellow-card{
-      background-image: url("../../assets/images/yellow-card.svg");
+      background-image: url("../../../assets/images/yellow-card.svg");
     }
     .red-card{
-      background-image: url("../../assets/images/red-card.svg");
+      background-image: url("../../../assets/images/red-card.svg");
     }
     .yellow-2-card{
-      background-image: url("../../assets/images/yellow-2-card.svg");
+      background-image: url("../../../assets/images/yellow-2-card.svg");
     }
     .up{
       display: inline-block;
       width: vw(12);
       height: vw(12);
       background-size: 100% 100%;
-      background-image: url("../../assets/images/up.svg");
+      background-image: url("../../../assets/images/up.svg");
     }
     .down{
       display: inline-block;
       width: vw(12);
       height: vw(12);
       background-size: 100% 100%;
-      background-image: url("../../assets/images/down.svg");
+      background-image: url("../../../assets/images/down.svg");
     }
     .replace{
-      background-image: url("../../assets/images/replace.svg");
+      background-image: url("../../../assets/images/replace.svg");
     }
     .tag-container{
       height: vw(48);
@@ -356,10 +356,10 @@ export default {
           display: inline-block;
           width: vwPad(16);
           height: vwPad(16);
-          background-image: url("../../assets/images/uncheck.svg");
+          background-image: url("../../../assets/images/uncheck.svg");
           background-size: 100% 100%;
           &.checked{
-            background-image: url("../../assets/images/check.svg");
+            background-image: url("../../../assets/images/check.svg");
           }
         }
       }
@@ -435,42 +435,42 @@ export default {
     }
 
     .goal{
-      background-image: url("../../assets/images/goal.svg");
+      background-image: url("../../../assets/images/goal.svg");
     }
     .own-goal{
-      background-image: url("../../assets/images/own-goal.svg");
+      background-image: url("../../../assets/images/own-goal.svg");
     }
     .penalties{
-      background-image: url("../../assets/images/penalties.svg");
+      background-image: url("../../../assets/images/penalties.svg");
     }
     .penalties-not-in{
-      background-image: url("../../assets/images/penalties-not-in.svg");
+      background-image: url("../../../assets/images/penalties-not-in.svg");
     }
     .yellow-card{
-      background-image: url("../../assets/images/yellow-card.svg");
+      background-image: url("../../../assets/images/yellow-card.svg");
     }
     .red-card{
-      background-image: url("../../assets/images/red-card.svg");
+      background-image: url("../../../assets/images/red-card.svg");
     }
     .yellow-2-card{
-      background-image: url("../../assets/images/yellow-2-card.svg");
+      background-image: url("../../../assets/images/yellow-2-card.svg");
     }
     .up{
       display: inline-block;
       width: vwPad(12);
       height: vwPad(12);
       background-size: 100% 100%;
-      background-image: url("../../assets/images/up.svg");
+      background-image: url("../../../assets/images/up.svg");
     }
     .down{
       display: inline-block;
       width: vwPad(12);
       height: vwPad(12);
       background-size: 100% 100%;
-      background-image: url("../../assets/images/down.svg");
+      background-image: url("../../../assets/images/down.svg");
     }
     .replace{
-      background-image: url("../../assets/images/replace.svg");
+      background-image: url("../../../assets/images/replace.svg");
     }
     .tag-container{
       height: vwPad(48);

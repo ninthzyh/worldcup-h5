@@ -8,8 +8,6 @@ import Groups from "@/views/groups";
 import Rise from "@/views/rise";
 import GoalsList from "@/views/rank/goalsList";
 import Analysis from "@/views/analysis";
-import Squad from "@/views/squad";
-import Event from "@/views/event";
 import MatchData from "@/views/analysis/matchData";
 import Forecast from "@/views/analysis/forecast";
 import MatchAnalysis from "@/views/analysis/matchAnalysis";
@@ -44,11 +42,6 @@ export default new Router({
       component: GoalsList,
     },
     {
-      path: '/squad',
-      name: 'squad',
-      component: Squad,
-    },
-    {
       path: '/analysis',
       component: Analysis,
       redirect: "/analysis/match-data",
@@ -57,10 +50,6 @@ export default new Router({
         { path: 'match-analysis', component: MatchAnalysis },
         { path: 'forecast', component: Forecast },
       ]
-    },
-    {
-      path: '/event',
-      component: Event,
     },
   ]
 })

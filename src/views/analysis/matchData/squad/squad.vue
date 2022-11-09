@@ -76,14 +76,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/vw";
+@import "../../../../assets/vw";
 
 @media screen and (max-device-width: 600px) {
   .squadComponent {
     position: relative;
     width: 100%;
     height: vw(277);
-    background-image: url('../../assets/images/half.svg');
+    background-image: url('../../../../assets/images/half.svg');
     background-size: 100% 100%;
     background-position: left top;
     background-repeat: no-repeat;
@@ -144,7 +144,7 @@ export default {
             height: vw(10);
             background-repeat: no-repeat;
             background-position: right top;
-            background-image: url('../../assets/images/goal.svg');
+            background-image: url('../../../../assets/images/goal.svg');
             background-size: auto 100%;
           }
         }
@@ -160,7 +160,7 @@ export default {
             height: vw(10);
             background-repeat: no-repeat;
             background-position: right top;
-            background-image: url('../../assets/images/out.svg');
+            background-image: url('../../../../assets/images/out.svg');
             background-size: auto 100%;
           }
         }
@@ -176,7 +176,7 @@ export default {
             height: vw(10);
             background-repeat: no-repeat;
             background-position: right top;
-            background-image: url('../../assets/images/red-card.svg');
+            background-image: url('../../../../assets/images/red-card.svg');
             background-size: auto 100%;
           }
 
@@ -186,7 +186,7 @@ export default {
             height: vw(10);
             background-repeat: no-repeat;
             background-position: right top;
-            background-image: url('../../assets/images/yellow-card.svg');
+            background-image: url('../../../../assets/images/yellow-card.svg');
             background-size: auto 100%;
           }
 
@@ -196,7 +196,7 @@ export default {
             height: vw(10);
             background-repeat: no-repeat;
             background-position: right top;
-            background-image: url('../../assets/images/yellow-2-card.svg');
+            background-image: url('../../../../assets/images/yellow-2-card.svg');
             background-size: auto 100%;
           }
         }
@@ -209,7 +209,7 @@ export default {
     position: relative;
     width: 100%;
     height: vwPad(320);
-    background-image: url('../../assets/images/hlaf-big.svg');
+    background-image: url('../../../../assets/images/hlaf-big.svg');
     background-size: 100% 100%;
     background-position: left top;
     background-repeat: no-repeat;
@@ -270,7 +270,7 @@ export default {
             height: vwPad(10);
             background-repeat: no-repeat;
             background-position: right top;
-            background-image: url('../../assets/images/goal.svg');
+            background-image: url('../../../../assets/images/goal.svg');
             background-size: auto 100%;
           }
         }
@@ -286,7 +286,7 @@ export default {
             height: vwPad(10);
             background-repeat: no-repeat;
             background-position: right top;
-            background-image: url('../../assets/images/out.svg');
+            background-image: url('../../../../assets/images/out.svg');
             background-size: auto 100%;
           }
         }
@@ -302,7 +302,7 @@ export default {
             height: vwPad(10);
             background-repeat: no-repeat;
             background-position: right top;
-            background-image: url('../../assets/images/red-card.svg');
+            background-image: url('../../../../assets/images/red-card.svg');
             background-size: auto 100%;
           }
 
@@ -312,7 +312,7 @@ export default {
             height: vwPad(10);
             background-repeat: no-repeat;
             background-position: right top;
-            background-image: url('../../assets/images/yellow-card.svg');
+            background-image: url('../../../../assets/images/yellow-card.svg');
             background-size: auto 100%;
           }
 
@@ -322,7 +322,7 @@ export default {
             height: vwPad(10);
             background-repeat: no-repeat;
             background-position: right top;
-            background-image: url('../../assets/images/yellow-2-card.svg');
+            background-image: url('../../../../assets/images/yellow-2-card.svg');
             background-size: auto 100%;
           }
         }

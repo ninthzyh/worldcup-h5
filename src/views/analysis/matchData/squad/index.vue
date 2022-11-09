@@ -20,7 +20,7 @@
 
 <script>
 import Squad from "./squad";
-import SwitchTab from "../../components/SwitchTab";
+import SwitchTab from "../../../../components/SwitchTab";
 export default {
   name: "lineup",
   components: {
@@ -72,7 +72,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/vw";
+@import "../../../../assets/vw";
 @media screen and (max-device-width: 600px) {
   .squad-container{
     padding-top: vw(24);

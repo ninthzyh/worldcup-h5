@@ -99,7 +99,7 @@ export default {
     padding-top: vwPad(13);
     .container {
       display: flex;
-      padding: 0 vwPad(24);
+      padding: 0 calc((100% - #{vwPad(1024)})/2);
       .menu-item {
         font-size: vwPad(14);
         line-height: vwPad(15);
