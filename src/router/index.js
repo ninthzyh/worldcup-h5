@@ -10,6 +10,9 @@ import GoalsList from "@/views/rank/goalsList";
 import Analysis from "@/views/analysis";
 import Squad from "@/views/squad";
 import Event from "@/views/event";
+import MatchData from "@/views/analysis/matchData";
+import Forecast from "@/views/analysis/forecast";
+import MatchAnalysis from "@/views/analysis/matchAnalysis";
 
 Vue.use(Router)
 
@@ -26,6 +29,7 @@ export default new Router({
     },
     {
       path: '/catalogue',
+      redirect: "/catalogue/schedule",
       component: Menu,
       children: [
         { path: 'schedule', component: Schedule },
@@ -47,6 +51,12 @@ export default new Router({
     {
       path: '/analysis',
       component: Analysis,
+      redirect: "/analysis/match-data",
+      children: [
+        { path: 'match-data', component: MatchData },
+        { path: 'match-analysis', component: MatchAnalysis },
+        { path: 'forecast', component: Forecast },
+      ]
     },
     {
       path: '/event',
