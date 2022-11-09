@@ -1,36 +1,44 @@
 <template>
-    <div class="technology-card">
-        <div class="card-header">
-            <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :border="`${$vw(0.5)} solid rgba(255, 255, 255, 0.12)`" :padding="`${$vw(8)}`" :img="matchInfo&&matchInfo.homeFlag" />
-            <div class="card-title">{{this.$lang.matchData.topStats}}</div>
-            <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :border="`${$vw(0.5)} solid rgba(255, 255, 255, 0.12)`" :padding="`${$vw(8)}`" :img="matchInfo&&matchInfo.awayFlag" />
-        </div>
-        <div class="technology-content">
-            <div class="card-subtitle">控球率</div>
-            <div class="progress-bar-wrap">
-                <div class="left-bar" :style="`width:${cardList&&cardList[0].homeValueStr}`">
-                    <div class="bar-percent">{{cardList&&cardList[0].homeValueStr}}</div>
-                </div>
-                <div class="right-bar" :style="`width:${cardList&&cardList[0].awayValueStr}`">
-                    <div class="bar-percent">{{cardList&&cardList[0].awayValueStr}}</div>
-                </div>
-            </div>
-            <div class="detail-item" v-for="(item,index) in cardList&&cardList.slice(1)" :key="index">
-                <div :class="`${true?'left-bg':''} detail-item-num`">{{item.homeValue}}</div>
-                <div class="technology-name">{{item.statName}}</div>
-                <div :class="`${true?'':'right-bg'} detail-item-num`">{{item.awayValue}}</div>
-            </div>
-        </div>
+  <div class="technology-card">
+    <div class="card-header">
+      <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`"
+        :border="`${$vw(0.5)} solid rgba(255, 255, 255, 0.12)`" :padding="`${$vw(8)}`"
+        :img="matchInfo&&matchInfo.homeFlag" />
+      <div class="card-title">{{this.$lang.matchData.topStats}}</div>
+      <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`"
+        :border="`${$vw(0.5)} solid rgba(255, 255, 255, 0.12)`" :padding="`${$vw(8)}`"
+        :img="matchInfo&&matchInfo.awayFlag" />
     </div>
+    <div class="technology-content">
+      <div class="card-subtitle">控球率</div>
+      <div class="progress-bar-wrap">
+        <div class="left-bar" :style="`width:${cardList&&cardList[0].homeValueStr}`">
+          <div class="bar-percent">{{cardList&&cardList[0].homeValueStr}}</div>
+        </div>
+        <div class="right-bar" :style="`width:${cardList&&cardList[0].awayValueStr}`">
+          <div class="bar-percent">{{cardList&&cardList[0].awayValueStr}}</div>
+        </div>
+      </div>
+      <div class="detail-item" v-for="(item,index) in cardList&&cardList.slice(1)" :key="index">
+        <div class="left-num">
+          <span :class="`${true?'left-bg':''}`">{{item.homeValue}}</span>
+        </div>
+        <div class="technology-name">{{item.statName}}</div>
+        <div class="right-num">
+          <span :class="`${true?'right-bg':''}`">{{item.awayValue}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 <script>
 import NationalFlag from "../../../components/NationalFlag";
 
 export default {
-    props: ["cardList", "matchInfo"],
-    components: {
-        NationalFlag,
-    },
+  props: ["cardList", "matchInfo"],
+  components: {
+    NationalFlag,
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -106,18 +114,31 @@ export default {
       .detail-item {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        .detail-item-num {
+        .left-num {
+          flex: 0 0 vw(40);
+          .left-bg {
+            background: #7a293f;
+            @extend %common-bg;
+          }
+        }
+        %common-bg {
           font-family: "Inter";
           font-weight: 600;
           font-size: vw(12);
-          line-height: vw(12);
+          line-height: vw(22);
+          height: vw(22);
           border-radius: vw(4);
-          padding: vw(5);
+          padding: vw(3) vw(5);
         }
-        .left-bg {
-          background: #7a293f;
+        .right-num {
+          flex: 0 0 vw(40);
+          text-align: right;
+          .right-bg {
+            background: #7996bc;
+            @extend %common-bg;
+          }
         }
+
         .technology-name {
           flex: 1 0 vw(80);
           text-align: center;
@@ -126,9 +147,6 @@ export default {
           font-size: vw(12);
           line-height: vw(17);
           color: rgba(255, 255, 255, 0.54);
-        }
-        .right-bg {
-          background: #7996bc;
         }
         &:not(:last-child) {
           padding-bottom: vw(12);

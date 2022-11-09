@@ -30,6 +30,22 @@ export default {
   components: {
     ScheduleList,
   },
+  mounted() {
+    // 路由date参数回显日期
+    if (Object.keys(this.$route.query).length) {
+      const { date } = this.$route.query;
+      const dateList = date.split("-");
+      this.dateStr = this.formatDate(
+        new Date(dateList[0], dateList[1] - 1, dateList[2])
+      );
+      this.date = new Date(dateList[0], dateList[1] - 1, dateList[2]);
+      // 修改时间弹窗中选中的日期颜色
+      this.$nextTick(() => {
+        this.$refs.calender.reset(this.date);
+      });
+    }
+    this.getScheduleList();
+  },
   data() {
     return {
       minDate: new Date(2022, 10, 20), //2022-11-20
@@ -40,9 +56,6 @@ export default {
       // stageList: schedulelist.stageList,
       stageList: [],
     };
-  },
-  mounted() {
-    this.getScheduleList();
   },
   methods: {
     // 日期赛程

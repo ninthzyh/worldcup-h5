@@ -13,7 +13,7 @@
                         <div class="label">{{$lang.groups.PTS}}</div>
                     </div>
                     <div class="table-content" v-for="(it,idx) in item.dataList" :key="idx">
-                        <div :class="`${idx<2?'line':''}`"></div>
+                        <div :class="`${it.riseFlag?'line':''}`"></div>
                         <div class="rows-first">
                             <div class="index">{{idx+1}}</div>
                             <national-flag :width="`${$vw(24)}`" :height="`${$vw(24)}`" :margin="`0 ${$vw(13)}`" :img="it.teamFlag" />

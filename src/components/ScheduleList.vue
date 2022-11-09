@@ -41,7 +41,9 @@ export default {
         onClick(item) {
             this.$router.push({
                 path: "/analysis",
-                query: {},
+                query: {
+                  matchId:item.matchId
+                },
             });
         },
     },
