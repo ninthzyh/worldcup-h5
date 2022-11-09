@@ -30,7 +30,7 @@
                             <div class="tip"><span>{{$lang.forecast.under}}</span> {{item.goals}} <span>个</span></div>
                         </div>
                     </div>
-                    <!-- <info-dialog v-if="isShow"></info-dialog> -->
+                    <info-dialog v-if="isShow"></info-dialog>
                 </div>
             </template>
         </ForecastCard>
@@ -38,12 +38,12 @@
 </template>
 <script>
 import ForecastCard from "../components/forecastCard";
-// import InfoDialog from "../components/infoDialog";
+import InfoDialog from "../components/infoDialog";
 export default {
     props: ["cardList"],
     components: {
         ForecastCard,
-        // InfoDialog
+        InfoDialog
     },
     watch: {
         cardList: {
