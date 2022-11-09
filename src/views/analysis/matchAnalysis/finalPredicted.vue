@@ -151,6 +151,7 @@ export default {
         line-height: vwPad(24);
         font-size: vwPad(14);
         display: flex;
+        align-items: center;
 
         &:not(:last-child) {
           padding-bottom: vwPad(16);
@@ -158,7 +159,7 @@ export default {
 
         .team-name {
           font-weight: 600;
-          flex: 0 0 vwPad(62);
+          flex: 0 0 vwPad(122);
           padding: 0 vwPad(8);
           word-break: break-all;
         }
