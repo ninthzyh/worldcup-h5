@@ -4,7 +4,7 @@
         height: computedHeight,
         border: computedBorder,
         margin: computedMargin,
-        padding:computedPadding,
+        padding:computedPadding
   }" />
 </template>
 <script>
