@@ -138,106 +138,216 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "~@/assets/vw";
-.goals-list {
+@media screen and (max-device-width: 600px) {
+  .goals-list {
     height: 100%;
     display: flex;
     flex-direction: column;
     background: url("~@/assets/images/bg.png") no-repeat center/contain;
 
     .menu-container {
-        height: vw(76);
-        background: linear-gradient(180deg, #96263a 12.77%, #0c0e11 88.3%);
-        .menu-header {
-            display: flex;
-            align-items: center;
-            padding: vw(23) vw(34) vw(20) vw(10);
-            .back {
-                height: vw(24);
-                width: vw(24);
-                background: url("~@/assets/images/back.svg") no-repeat
-                    center/contain;
-            }
-            .world-cup-logo {
-                width: vw(112);
-                height: vw(33);
-                background: url("~@/assets/images/world-cup-logo.svg") no-repeat
-                    center/contain;
-                margin: 0 auto;
-            }
+      height: vw(76);
+      background: linear-gradient(180deg, #96263a 12.77%, #0c0e11 88.3%);
+      .menu-header {
+        display: flex;
+        align-items: center;
+        padding: vw(23) vw(34) vw(20) vw(10);
+        .back {
+          height: vw(24);
+          width: vw(24);
+          background: url("~@/assets/images/back.svg") no-repeat
+          center/contain;
         }
+        .world-cup-logo {
+          width: vw(112);
+          height: vw(33);
+          background: url("~@/assets/images/world-cup-logo.svg") no-repeat
+          center/contain;
+          margin: 0 auto;
+        }
+      }
     }
     .list-content {
-        flex: 1 0;
-        border-top: vw(1) solid rgba(255, 255, 255, 0.12);
-        padding: vw(24) vw(22) vw(40) vw(26);
-        .rank-card {
-            background: rgba(0, 0, 0, 0.04);
-            border: vw(1) solid rgba(255, 255, 255, 0.12);
-            backdrop-filter: blur(#{vw(8)});
-            border-radius: vw(16);
-            color: #ffffff;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            .rank-title {
-                font-weight: 600;
-                font-size: vw(14);
-                line-height: vw(24);
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: vw(12) vw(16);
-                border-bottom: vw(1) solid rgba(255, 255, 255, 0.12);
+      flex: 1 0;
+      border-top: vw(1) solid rgba(255, 255, 255, 0.12);
+      padding: vw(24) vw(22) vw(40) vw(26);
+      .rank-card {
+        background: rgba(0, 0, 0, 0.04);
+        border: vw(1) solid rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(#{vw(8)});
+        border-radius: vw(16);
+        color: #ffffff;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .rank-title {
+          font-weight: 600;
+          font-size: vw(14);
+          line-height: vw(24);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: vw(12) vw(16);
+          border-bottom: vw(1) solid rgba(255, 255, 255, 0.12);
 
-                .subtitle {
-                    font-weight: 500;
-                    font-size: vw(12);
-                    line-height: vw(24);
+          .subtitle {
+            font-weight: 500;
+            font-size: vw(12);
+            line-height: vw(24);
+          }
+        }
+        .rank-content {
+          flex: 1 0 0;
+          overflow: auto;
+          padding: 0 vw(16);
+          .rank-content-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: vw(16) 0;
+            .item-left {
+              display: flex;
+              align-items: center;
+              .text {
+                padding-left: vw(16);
+                font-weight: 500;
+                font-size: vw(12);
+                line-height: vw(16);
+                .describe {
+                  font-weight: 400;
+                  line-height: vw(16);
+                  color: rgba(255, 255, 255, 0.54);
                 }
+              }
             }
-            .rank-content {
-                flex: 1 0 0;
-                overflow: auto;
-                padding: 0 vw(16);
-                .rank-content-item {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    padding: vw(16) 0;
-                    .item-left {
-                        display: flex;
-                        align-items: center;
-                        .text {
-                            padding-left: vw(16);
-                            font-weight: 500;
-                            font-size: vw(12);
-                            line-height: vw(16);
-                            .describe {
-                                font-weight: 400;
-                                line-height: vw(16);
-                                color: rgba(255, 255, 255, 0.54);
-                            }
-                        }
-                    }
-                    .score {
-                        font-weight: 600;
-                        font-size: vw(12);
-                        line-height: vw(16);
-                        width: vw(26);
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        font-family: "Inter";
-                    }
-                    &:not(:last-child) {
-                        border-bottom: vw(1) solid rgba(255, 255, 255, 0.12);
-                    }
-                }
+            .score {
+              font-weight: 600;
+              font-size: vw(12);
+              line-height: vw(16);
+              width: vw(26);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-family: "Inter";
             }
             &:not(:last-child) {
-                margin-bottom: vw(16);
+              border-bottom: vw(1) solid rgba(255, 255, 255, 0.12);
             }
+          }
         }
+        &:not(:last-child) {
+          margin-bottom: vw(16);
+        }
+      }
     }
+  }
+}
+@media screen and (min-device-width: 600px) {
+  .goals-list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: url("~@/assets/images/bg.png") no-repeat center/contain;
+
+    .menu-container {
+      padding: 0 calc((100% - #{vwPad(1024)})/2);
+      height: vwPad(76);
+      background: #000000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      .menu-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: vwPad(23) vwPad(34) vwPad(20) vwPad(10);
+        .back {
+          height: vwPad(24);
+          width: vwPad(24);
+          margin-right: vwPad(24);
+          background: url("~@/assets/images/back.svg") no-repeat
+          center/contain;
+        }
+        .world-cup-logo {
+          width: vwPad(90);
+          height: vwPad(33);
+          background-image: url("~@/assets/images/logo.svg");
+          background-size: 100% 100%;
+          margin: 0;
+        }
+      }
+    }
+    .list-content {
+      padding: vwPad(24) calc((100% - #{vwPad(1024)})/2) vwPad(40) calc((100% - #{vwPad(1024)})/2);
+      flex: 1 0;
+      border-top: vwPad(1) solid rgba(255, 255, 255, 0.12);
+      .rank-card {
+        background: rgba(0, 0, 0, 0.04);
+        border: vwPad(1) solid rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(#{vwPad(8)});
+        border-radius: vwPad(16);
+        color: #ffffff;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .rank-title {
+          font-weight: 600;
+          font-size: vwPad(14);
+          line-height: vwPad(24);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: vwPad(12) vwPad(16);
+          border-bottom: vwPad(1) solid rgba(255, 255, 255, 0.12);
+
+          .subtitle {
+            font-weight: 500;
+            font-size: vwPad(12);
+            line-height: vwPad(24);
+          }
+        }
+        .rank-content {
+          flex: 1 0 0;
+          overflow: auto;
+          padding: 0 vwPad(16);
+          .rank-content-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: vwPad(16) 0;
+            .item-left {
+              display: flex;
+              align-items: center;
+              .text {
+                padding-left: vwPad(16);
+                font-weight: 500;
+                font-size: vwPad(12);
+                line-height: vwPad(16);
+                .describe {
+                  font-weight: 400;
+                  line-height: vwPad(16);
+                  color: rgba(255, 255, 255, 0.54);
+                }
+              }
+            }
+            .score {
+              font-weight: 600;
+              font-size: vwPad(12);
+              line-height: vwPad(16);
+              width: vwPad(26);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-family: "Inter";
+            }
+            &:not(:last-child) {
+              border-bottom: vwPad(1) solid rgba(255, 255, 255, 0.12);
+            }
+          }
+        }
+        &:not(:last-child) {
+          margin-bottom: vwPad(16);
+        }
+      }
+    }
+  }
 }
 </style>

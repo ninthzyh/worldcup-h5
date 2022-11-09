@@ -138,7 +138,7 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 vwPad(80);
+    padding: 0 calc((100% - #{vwPad(1024)})/2);
     .menu-header {
       display: flex;
       align-items: center;

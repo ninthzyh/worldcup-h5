@@ -165,7 +165,6 @@ export default {
     display: inline-block;
     width: vwPad(327);
     min-height: vwPad(184);
-    margin-right: vwPad(16);
     background: rgba(0, 0, 0, 0.04);
     border: vwPad(1) solid rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(#{vwPad(8)});
@@ -174,6 +173,9 @@ export default {
     // font-family: "PingFang SC";
     font-style: normal;
     color: #ffffff;
+    &:not(:nth-child(3n+3)){
+      margin-right: vwPad(16);
+    }
     .rank-title {
       font-weight: 600;
       font-size: vwPad(14);

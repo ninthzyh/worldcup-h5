@@ -94,59 +94,120 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "~@/assets/vw";
-.schedule {
-  // font-family: "PingFang SC";
-  font-style: normal;
-  height: calc(100vh - #{vw(116)});
-  background: url("~@/assets/images/bg.png") no-repeat center/contain;
-  .calender-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: vw(16) 0;
-    border-bottom: vw(1) solid rgba(255, 255, 255, 0.12);
-    @mixin common-icon($url) {
-      width: vw(16);
-      height: vw(16);
-      background: url($url) no-repeat center/contain;
-      margin: 0 vw(18);
+@media screen and (max-device-width: 600px) {
+  .schedule {
+    // font-family: "PingFang SC";
+    font-style: normal;
+    height: calc(100vh - #{vw(116)});
+    background: url("~@/assets/images/bg.png") no-repeat center/contain;
+    .calender-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: vw(16) 0;
+      border-bottom: vw(1) solid rgba(255, 255, 255, 0.12);
+      @mixin common-icon($url) {
+        width: vw(16);
+        height: vw(16);
+        background: url($url) no-repeat center/contain;
+        margin: 0 vw(18);
+      }
+      .arrow-left {
+        @include common-icon("~@/assets/images/arrow-left.svg");
+      }
+      .arrow-right {
+        @include common-icon("~@/assets/images/arrow-right.svg");
+      }
+      .calender {
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: vw(2);
+        flex: 1;
+        height: vw(40);
+        text-align: center;
+        line-height: vw(40);
+      }
     }
-    .arrow-left {
-      @include common-icon("~@/assets/images/arrow-left.svg");
+    .schedule-content {
+      padding: vw(26) vw(16);
+      height: calc(100vh - #{vw(241)});
+      overflow: auto;
+      .round-title {
+        font-weight: 500;
+        font-size: vw(16);
+        line-height: vw(22);
+        margin-bottom: vw(-16);
+      }
+      .group-subtitle {
+        font-family: "Formular";
+        font-weight: 400;
+        font-size: vw(14);
+        line-height: vw(17);
+        color: rgba(255, 255, 255, 0.7);
+        padding: vw(32) 0 vw(16) 0;
+      }
     }
-    .arrow-right {
-      @include common-icon("~@/assets/images/arrow-right.svg");
-    }
-    .calender {
-      background: rgba(255, 255, 255, 0.12);
-      border-radius: vw(2);
-      flex: 1;
-      height: vw(40);
-      text-align: center;
-      line-height: vw(40);
+    .calender-popup {
+      color: #000;
     }
   }
-  .schedule-content {
-    padding: vw(26) vw(16);
-    height: calc(100vh - #{vw(241)});
-    overflow: auto;
-    .round-title {
-      font-weight: 500;
-      font-size: vw(16);
-      line-height: vw(22);
-      margin-bottom: vw(-16);
+}
+@media screen and (min-device-width: 600px) {
+  .schedule {
+    // font-family: "PingFang SC";
+    font-style: normal;
+    height: calc(100vh - #{vwPad(116)});
+    width: vwPad(1024);
+    margin: auto;
+    background: url("~@/assets/images/bg.png") no-repeat center/contain;
+    .calender-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: vwPad(16) 0;
+      border-bottom: vwPad(1) solid rgba(255, 255, 255, 0.12);
+      @mixin common-icon($url) {
+        width: vwPad(16);
+        height: vwPad(16);
+        background: url($url) no-repeat center/contain;
+        margin: 0 vwPad(18);
+      }
+      .arrow-left {
+        @include common-icon("~@/assets/images/arrow-left.svg");
+      }
+      .arrow-right {
+        @include common-icon("~@/assets/images/arrow-right.svg");
+      }
+      .calender {
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: vwPad(2);
+        flex: 1;
+        height: vwPad(40);
+        text-align: center;
+        line-height: vwPad(40);
+      }
     }
-    .group-subtitle {
-      font-family: "Formular";
-      font-weight: 400;
-      font-size: vw(14);
-      line-height: vw(17);
-      color: rgba(255, 255, 255, 0.7);
-      padding: vw(32) 0 vw(16) 0;
+    .schedule-content {
+      padding: vwPad(26) vwPad(16);
+      height: calc(100vh - #{vwPad(241)});
+      overflow: auto;
+      .round-title {
+        font-weight: 500;
+        font-size: vwPad(16);
+        line-height: vwPad(22);
+        margin-bottom: vwPad(-16);
+      }
+      .group-subtitle {
+        font-family: "Formular";
+        font-weight: 400;
+        font-size: vwPad(14);
+        line-height: vwPad(17);
+        color: rgba(255, 255, 255, 0.7);
+        padding: vwPad(32) 0 vwPad(16) 0;
+      }
     }
-  }
-  .calender-popup {
-    color: #000;
+    .calender-popup {
+      color: #000;
+    }
   }
 }
 </style>

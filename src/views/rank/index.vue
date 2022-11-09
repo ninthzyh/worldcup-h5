@@ -110,6 +110,7 @@ export default {
     font-weight: 500;
     color: #ffffff;
     height: calc(100vh - #{vwPad(116)});
+    padding: 0 calc((100% - #{vwPad(1024)})/2);
     background: url("~@/assets/images/bg.png") no-repeat center/contain;
     .radio {
       font-size: vwPad(12);
@@ -126,7 +127,7 @@ export default {
       }
     }
     .rank-content {
-      padding: vwPad(24);
+      padding: vwPad(24) 0;
       overflow: auto;
       height: calc(100% - #{vwPad(104)});
       display: flex;
