@@ -73,6 +73,7 @@ export default {
         line-height: vw(24);
         font-size: vw(14);
         display: flex;
+        align-items: center;
 
         &:not(:last-child) {
           padding-bottom: vw(16);

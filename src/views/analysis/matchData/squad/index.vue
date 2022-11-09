@@ -27,9 +27,18 @@ export default {
     Squad,
     SwitchTab
   },
+  props: {
+    lineupMap:{
+      type: Array,
+      default:()=>{}
+    },
+    matchInfo:{
+      type: Object,
+      default:()=>({})
+    },
+  },
   data() {
     return {
-      resData: {},
       matchInfo: {},
       selectedTab:0,
     };
@@ -45,7 +54,7 @@ export default {
       }]
     },
     lineUpInfo(){
-      return (this.resData.lineupMap ? this.resData.lineupMap[this.selectedTab === 0 ? 'home' : 'away'] : {});
+      return (this.lineupMap ? this.lineupMap[this.selectedTab === 0 ? 'home' : 'away'] : {});
     },
     formationUsed(){
       if(this.lineUpInfo.formationUsed){
@@ -56,12 +65,6 @@ export default {
       }
       return ''
     },
-  },
-  mounted() {
-    new Promise((resolve)=>(resolve(require('./data.json')))).then((res)=>{
-      this.resData = res.data;
-      this.matchInfo = res.data.matchInfo
-    })
   },
   methods: {
     tabChange(index){

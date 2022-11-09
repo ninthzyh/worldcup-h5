@@ -252,7 +252,7 @@ export default {
           top: vwPad(20);
           left: 50%;
           transform: translateX(-50%);
-          width: vwPad(60);
+          width: vwPad(160);
           padding-top: vwPad(5);
           font-size: vwPad(9);
           line-height: vwPad(12);

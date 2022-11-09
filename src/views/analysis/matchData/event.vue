@@ -96,10 +96,18 @@
 <script>
 export default {
   name: "index",
+  props: {
+    eventData:{
+      type: Array,
+      default:()=>[]
+    },
+    matchInfo:{
+      type: Object,
+      default:()=>({})
+    },
+  },
   data() {
     return {
-      resData: {},
-      matchInfo: {},
       onlyGoal: false,
       bottomIconList:[
         {
@@ -123,16 +131,10 @@ export default {
   },
   computed:{
     eventList(){
-      return (this.resData.eventList ? this.resData.eventList.filter(item=>{
+      return (this.eventData ? this.eventData.filter(item=>{
         return !this.onlyGoal || item.goalsFlag
       }) : []);
     },
-  },
-  mounted() {
-    new Promise((resolve)=>(resolve(require('./squad/data.json')))).then((res)=>{
-      this.resData = res.data;
-      this.matchInfo = res.data.matchInfo
-    })
   },
   methods:{
     getIcon(type){
@@ -288,6 +290,7 @@ export default {
       background-image: url("../../../assets/images/yellow-2-card.svg");
     }
     .up{
+      vertical-align: middle;
       display: inline-block;
       width: vw(12);
       height: vw(12);
@@ -295,6 +298,7 @@ export default {
       background-image: url("../../../assets/images/up.svg");
     }
     .down{
+      vertical-align: middle;
       display: inline-block;
       width: vw(12);
       height: vw(12);
@@ -456,6 +460,7 @@ export default {
       background-image: url("../../../assets/images/yellow-2-card.svg");
     }
     .up{
+      vertical-align: middle;
       display: inline-block;
       width: vwPad(12);
       height: vwPad(12);
@@ -463,6 +468,7 @@ export default {
       background-image: url("../../../assets/images/up.svg");
     }
     .down{
+      vertical-align: middle;
       display: inline-block;
       width: vwPad(12);
       height: vwPad(12);

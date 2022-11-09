@@ -3,8 +3,8 @@
     <overview-stat-list :cardList="matchDataList.overviewStatList" :matchInfo="matchDataList.matchInfo"/>
     <technology-statistic :cardList="matchDataList.detailStatList" :matchInfo="matchDataList.matchInfo"/>
     <advertisement></advertisement>
-    <Event />
-    <Squad />
+    <Event v-if="eventList && eventList.length" :eventData="eventList" :matchInfo="matchInfo" />
+    <Squad v-if="lineupMap && Object.values(lineupMap).length" :lineupMap="lineupMap" :matchInfo="matchInfo"  />
   </div>
 </template>
 <script>
@@ -23,8 +23,18 @@ export default {
     TechnologyStatistic,
     OverviewStatList,
   },
+  computed:{
+    eventList(){
+      return this.matchDataList ? this.matchDataList.eventList : [];
+    },
+    lineupMap(){
+      return this.matchDataList ? this.matchDataList.lineupMap : {};
+    },
+    matchInfo(){
+      return this.matchDataList ? this.matchDataList.matchInfo : {};
+    },
+  },
   mounted() {
-    console.log(json);
     this.matchDataList = json;
   },
   data() {
