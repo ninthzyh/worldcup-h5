@@ -262,6 +262,7 @@ export default {
         .back {
           height: vwPad(24);
           width: vwPad(24);
+          margin-right: vwPad(24);
           background: url("~@/assets/images/back.svg") no-repeat
           center/contain;
         }
