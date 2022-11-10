@@ -22,7 +22,7 @@
                         <national-flag :width="`${innerWidth<600?$vw(28):$vw(48)}`" :height="`${innerWidth<600?$vw(28):$vw(48)}`" :margin="`0 ${innerWidth<600?$vw(12):$vw(16)} 0 0`" :img="bannerData&&bannerData.homeFlag" />
                         <national-flag :width="`${innerWidth<600?$vw(28):$vw(48)}`" :height="`${innerWidth<600?$vw(28):$vw(48)}`" :img="bannerData&&bannerData.awayFlag" />
                     </div>
-                    <div class="watching">{{$lang.home.watch}}</div>
+                    <div class="watching" @click="onWatch">{{$lang.home.watch}}</div>
                     <div class="des">
                         <div class="des-item">
                             <div class="position"></div>
@@ -114,9 +114,21 @@ export default {
             bannerData: [], //头部banner数据
             timer: null, //定时器
             date: null, //今日日期
+            bannerMatchId: null, //立即观看matchId
         };
     },
     methods: {
+        // 立即观看
+        onWatch() {
+            console.log(this.bannerMatchId);
+            this.$router.push({
+                path: "/analysis",
+                query: {
+                    matchId: this.bannerMatchId,
+                    type: "matchData",
+                },
+            });
+        },
         // 首页日期赛程&轮播图
         getScheduleList() {
             // 30s 刷新
@@ -124,6 +136,7 @@ export default {
                 scheduleList().then((res) => {
                     this.matchList = res.matchList;
                     this.bannerData = res.playingList[0];
+                    this.bannerMatchId = res.playingList[0].matchId;
                     this.date = res.date;
                 });
             };
