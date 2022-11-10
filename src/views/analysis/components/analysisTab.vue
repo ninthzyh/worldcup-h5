@@ -18,6 +18,7 @@ export default {
         this.selectIndex = this.menuList.findIndex((item) => {
             return item.route === this.$route.path;
         });
+        this.$emit("matchid-event", this.$route.query);
     },
     data() {
         return {
@@ -25,14 +26,17 @@ export default {
                 {
                     text: this.$lang.analysis.matchData,
                     route: "/analysis/match-data",
+                    type: "matchData",
                 },
                 {
                     text: this.$lang.analysis.matchAnalysis,
                     route: "/analysis/match-analysis",
+                    type: "ananlysis",
                 },
                 {
                     text: this.$lang.analysis.forecast,
                     route: "/analysis/forecast",
+                    type: "forecast",
                 },
             ],
             selectIndex: 0,
@@ -44,7 +48,14 @@ export default {
             if (menu.route) {
                 this.$router.push({
                     path: menu.route,
-                    query: this.$route.query,
+                    query: {
+                        ...this.$route.query,
+                        type: menu.type,
+                    },
+                });
+                this.$emit("matchid-event", {
+                    ...this.$route.query,
+                    type: menu.type,
                 });
             }
         },

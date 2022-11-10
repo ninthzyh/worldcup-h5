@@ -19,17 +19,27 @@
 <script>
 import Ai from "./ai";
 import Session from "./session";
-import { matchPredicted } from "@/api/analysis";
 import Win from "./win";
 import Score from "./score";
 import BothScore from "./bothScore";
 import GoalNumber from "./goalNumber";
+import { matchPredicted } from "@/api/analysis";
 // import json from "./matchpredicted.json";
 export default {
+    props: ["matchData"],
     components: { Ai, Session, Win, Score, BothScore, GoalNumber },
+    watch: {
+        matchData: {
+            immediate: true,
+            handler(newData) {
+                this.predictedList = newData;
+            },
+            deep: true,
+        },
+    },
     mounted() {
         // this.predictedList = json;
-        this.getMatchPredicted();
+        // this.getMatchPredicted();
     },
     data() {
         return {
@@ -37,11 +47,11 @@ export default {
         };
     },
     methods: {
-        // 比赛分析
+        // 比赛预测
         getMatchPredicted() {
-            const { matchId } = this.$route.query;
+            // const { matchId } = this.$route.query;
             const data = {
-                matchId,
+                matchId: "ak5kkxvpxf1url15gci42ly7e",
             };
             matchPredicted(data).then((res) => {
                 this.predictedList = res;

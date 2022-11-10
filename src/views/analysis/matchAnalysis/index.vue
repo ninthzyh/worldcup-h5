@@ -16,6 +16,7 @@ import FinalPredicted from "./finalPredicted";
 // import json from "./matchanalysis.json";
 import { matchAnalysis } from "@/api/analysis";
 export default {
+    props: ["matchData"],
     components: {
         Advertisement,
         WinRate,
@@ -23,9 +24,18 @@ export default {
         Scoreboard,
         FinalPredicted,
     },
+    watch: {
+        matchData: {
+            immediate: true,
+            handler(newData) {
+                this.analysisList = newData;
+            },
+            deep: true,
+        },
+    },
     mounted() {
         // this.analysisList = json;
-        this.getMatchAnalysis();
+        // this.getMatchAnalysis();
     },
     data() {
         return {
@@ -35,9 +45,9 @@ export default {
     methods: {
         // 比赛分析
         getMatchAnalysis() {
-            const { matchId } = this.$route.query;
+            // const { matchId } = this.$route.query;
             const data = {
-                matchId,
+                matchId: "ak5kkxvpxf1url15gci42ly7e",
             };
             matchAnalysis(data).then((res) => {
                 this.analysisList = res;
