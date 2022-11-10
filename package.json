@@ -6,8 +6,11 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
-    "build": "node build/build.js"
+    "start": "npm run dev development",
+    "buildDev2022": "node build/build.js buildDev2022",
+    "buildDev2018": "node build/build.js buildDev2018",
+    "buildDev": "node build/build.js buildDev",
+    "build": "node build/build.js build"
   },
   "dependencies": {
     "axios": "^1.1.3",

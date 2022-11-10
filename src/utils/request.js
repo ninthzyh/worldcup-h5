@@ -1,37 +1,42 @@
 import axios from "axios";
 
+console.log(process.env)
 axios.defaults.headers["Content-Type"] = "application/json;";
-// let isBuildDev;
-// let httpBase = '';
-// if (
-//   process.env.NODE_ENV === "development" &&
-//   process.env.VUE_APP_API === "development"
-// ) {
-// //   isBuildDev = "location";
-//   httpBase = process.env.VUE_APP_APIURL;
-//   console.log("本地开发");
-// } else if (
-//   process.env.NODE_ENV === "production" &&
-//   process.env.VUE_APP_API === "development"
-// ) {
-// //   isBuildDev = "buildDev";
-//   // httpBase = "https://stag-cctv-wno.mixtmt.com/prov";
-//   httpBase =
-//     process.env.VUE_APP_ISCACHE === "true"
-//       ? process.env.VUE_APP_ISCACHEAPIURL
-//       : process.env.VUE_APP_APIURL;
-//   console.log("测试打包");
-// } else {
-// //   isBuildDev = "production";
-//   // httpBase = "https://stag-cctv-wno.mixtmt.com/prov";
-//   httpBase =
-//     process.env.VUE_APP_ISCACHE === "true"
-//       ? process.env.VUE_APP_ISCACHEAPIURL
-//       : process.env.VUE_APP_APIURL;
-//   console.log("正式打包");
-// }
+const isCache = process.env.VUE_APP_ISCACHE?JSON.parse(process.env.VUE_APP_ISCACHE):false;
+const cacheBasePath = process.env.VUE_APP_CACHEAPIBASEPATH?process.env.VUE_APP_CACHEAPIBASEPATH:'';
+const notCacheBasePath = process.env.VUE_APP_APIBASEPATH?process.env.VUE_APP_APIBASEPATH:'';
+const basePath = isCache?cacheBasePath:notCacheBasePath;
+
+let httpBase;
+
+console.log(process.env)
+if (
+  process.env.NODE_ENV === "development" &&
+  process.env.VUE_APP_API === "development"
+) {
+  httpBase = process.env.VUE_APP_APIURL;
+  console.log("本地开发");
+} else if (
+  process.env.NODE_ENV === "production" &&
+  process.env.VUE_APP_API === "development"
+) {
+  // httpBase = "https://stag-cctv-wno.mixtmt.com/prov";
+  httpBase =
+    process.env.VUE_APP_ISCACHE === "true"
+      ? process.env.VUE_APP_ISCACHEAPIURL
+      : process.env.VUE_APP_APIURL;
+  console.log("测试打包");
+} else {
+  // httpBase = "https://stag-cctv-wno.mixtmt.com/prov";
+  httpBase =
+    process.env.VUE_APP_ISCACHE === "true"
+      ? process.env.VUE_APP_ISCACHEAPIURL
+      : process.env.VUE_APP_APIURL;
+  console.log("正式打包");
+}
+
 const service = axios.create({
-  // baseURL: httpBase,
+  baseURL: `${httpBase}${basePath}`,
   timeout: 60000,
 });
 // request拦截器
@@ -79,11 +84,10 @@ service.interceptors.response.use(
     if (code !== 200) {
       return Promise.reject("业务错误");
     } else {
-      return res.data.data;
+      return res.data;
     }
   },
   (error) => {
-    load.hide();
     let { message } = error;
     if (message == "Network Error") {
       message = "后端接口连接异常";
