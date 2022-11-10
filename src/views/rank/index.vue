@@ -74,66 +74,66 @@ export default {
 <style lang="scss" scoped>
 @import "~@/assets/vw";
 @media screen and (max-device-width: 600px) {
-  .rank {
-    // font-family: "PingFang SC";
-    font-style: normal;
-    font-weight: 500;
-    color: #ffffff;
-    height: calc(100vh - #{vw(116)});
-    background: url("~@/assets/images/bg.png") no-repeat center/contain;
-    .radio {
-      font-size: vw(12);
-      line-height: vw(32);
-      color: rgba(255, 255, 255, 0.54);
-      padding: vw(24) vw(24) 0 vw(24);
-      > span {
-        padding: vw(8) vw(16);
-      }
-      .is-select {
-        background: rgba(255, 255, 255, 0.12);
-        border-radius: vw(36);
+    .rank {
+        // font-family: "PingFang SC";
+        font-style: normal;
+        font-weight: 500;
         color: #ffffff;
-      }
+        height: calc(100vh - #{vw(116)});
+        background: url("~@/assets/images/bg.png") no-repeat center/contain;
+        .radio {
+            font-size: vw(12);
+            line-height: vw(32);
+            color: rgba(255, 255, 255, 0.54);
+            padding: vw(24) vw(24) 0 vw(24);
+            > span {
+                padding: vw(8) vw(16);
+            }
+            .is-select {
+                background: rgba(255, 255, 255, 0.12);
+                border-radius: vw(36);
+                color: #ffffff;
+            }
+        }
+        .rank-content {
+            padding: vw(24);
+            overflow: auto;
+            height: calc(100% - #{vw(104)});
+        }
     }
-    .rank-content {
-      padding: vw(24);
-      overflow: auto;
-      height: calc(100% - #{vw(104)});
-    }
-  }
 }
 
 @media screen and (min-device-width: 600px) {
-  .rank {
-    // font-family: "PingFang SC";
-    font-style: normal;
-    font-weight: 500;
-    color: #ffffff;
-    height: calc(100vh - #{vwPad(116)});
-    padding: 0 calc((100% - #{vwPad(1024)})/2);
-    background: url("~@/assets/images/bg.png") no-repeat center/contain;
-    .radio {
-      font-size: vwPad(12);
-      line-height: vwPad(32);
-      color: rgba(255, 255, 255, 0.54);
-      padding: vwPad(24) vwPad(24) 0 vwPad(24);
-      > span {
-        padding: vwPad(8) vwPad(16);
-      }
-      .is-select {
-        background: rgba(255, 255, 255, 0.12);
-        border-radius: vwPad(36);
+    .rank {
+        // font-family: "PingFang SC";
+        font-style: normal;
+        font-weight: 500;
         color: #ffffff;
-      }
+        height: calc(100vh - #{vwPad(81)});
+        padding: 0 calc((100% - #{vwPad(1024)}) / 2);
+        background: url("~@/assets/images/bg.png") no-repeat center/contain;
+        .radio {
+            font-size: vwPad(12);
+            line-height: vwPad(32);
+            color: rgba(255, 255, 255, 0.54);
+            padding: vwPad(24) vwPad(24) 0 vwPad(24);
+            > span {
+                padding: vwPad(8) vwPad(16);
+            }
+            .is-select {
+                background: rgba(255, 255, 255, 0.12);
+                border-radius: vwPad(36);
+                color: #ffffff;
+            }
+        }
+        .rank-content {
+            padding: vwPad(24) 0;
+            overflow: auto;
+            height: calc(100% - #{vwPad(104)});
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
     }
-    .rank-content {
-      padding: vwPad(24) 0;
-      overflow: auto;
-      height: calc(100% - #{vwPad(104)});
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-    }
-  }
 }
 </style>

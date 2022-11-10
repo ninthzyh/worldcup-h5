@@ -46,17 +46,17 @@
     "worldCup2022": "2022 卡塔尔世界杯"
   },
   "forecast": {
-    "aIInsight":"AI 智能分析",
-    "starPrediction":"星级预测",
-    "recently":"近",
-    "turn":"场",
-    "hit":"命中",
-    "describe1":"全球最权威的体育数据库",
-    "describe2":"每场实时采集 3000+ 数据点",
-    "describe3":"预测多种结果类型，迅速更新",
-    "lockDescribe":"解锁四大解析数据，低至 ¥",
-    "perMatch":"/每场",
-    "unlock":"立即解锁",
+    "aIInsight": "AI 智能分析",
+    "starPrediction": "星级预测",
+    "recently": "近",
+    "turn": "场",
+    "hit": "命中",
+    "describe1": "全球最权威的体育数据库",
+    "describe2": "每场实时采集 3000+ 数据点",
+    "describe3": "预测多种结果类型，迅速更新",
+    "lockDescribe": "解锁四大解析数据，低至 ¥",
+    "perMatch": "/每场",
+    "unlock": "立即解锁",
     "pay": "购买后可查看",
     "predictionsMatch": "本场预测",
     "unlocked": "已解锁",
@@ -65,7 +65,7 @@
     "days": "天",
     "hours": "时",
     "minutes": "分",
-    "seconds":"秒",
+    "seconds": "秒",
     "trendPrognosis": "胜率预测",
     "trendDescribe": "主队获胜，平局和和客队获胜的概率：",
     "home": "主胜",
@@ -106,7 +106,6 @@
   "analysis": {
     "matchData": "比赛数据",
     "matchAnalysis": "赛事分析",
-    "forecast": "智能预测",
-    "percentageOfPossession": "控球率"
+    "forecast": "智能预测"
   }
 }

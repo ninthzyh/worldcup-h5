@@ -35,9 +35,9 @@ export default {
     methods: {
         // 比赛分析
         getMatchAnalysis() {
-            console.log(this.$route.query);
+            const { matchId } = this.$route.query;
             const data = {
-                matchId: "7fgtsy0p8qdoexvf3bof98s9g",
+                matchId,
             };
             matchAnalysis(data).then((res) => {
                 this.analysisList = res;
@@ -50,8 +50,8 @@ export default {
 <style lang="scss" scoped>
 @import "~@/assets/vw";
 @media screen and (min-device-width: 600px) {
-  .match-analysis-container{
-    padding: vwPad(16) calc((100% - #{vwPad(1024)})/2);
-  }
+    .match-analysis-container {
+        padding: vwPad(16) calc((100% - #{vwPad(1024)}) / 2);
+    }
 }
 </style>

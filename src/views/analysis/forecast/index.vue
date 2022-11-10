@@ -39,8 +39,9 @@ export default {
     methods: {
         // 比赛分析
         getMatchPredicted() {
+            const { matchId } = this.$route.query;
             const data = {
-                matchId: "7fgtsy0p8qdoexvf3bof98s9g",
+                matchId,
             };
             matchPredicted(data).then((res) => {
                 this.predictedList = res;
