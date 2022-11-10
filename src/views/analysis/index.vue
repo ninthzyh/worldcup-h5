@@ -25,12 +25,16 @@ export default {
     created() {
         console.log(this.$route.query && this.$route.query.matchId);
     },
+    unmounted() {
+        clearInterval(this.timer);
+    },
     data() {
         return {
             type: null,
             matchParams: null,
             matchData: {},
             headerTitle: null, //顶部对阵队伍名称
+            timer: null, //定时器
         };
     },
     methods: {
@@ -52,23 +56,35 @@ export default {
         },
         // 比赛分析
         getMatchAnalysis(matchId) {
-            const data = {
-                matchId,
+            // 30s 刷新
+            let matchAnalysisData = () => {
+                const data = {
+                    matchId,
+                };
+                matchAnalysis(data).then((res) => {
+                    this.matchData = res;
+                    this.headerTitle = `${res.matchInfo.homeName} vs ${res.matchInfo.awayName}`;
+                });
             };
-            matchAnalysis(data).then((res) => {
-                this.matchData = res;
-                this.headerTitle = `${res.matchInfo.homeName} vs ${res.matchInfo.awayName}`;
-            });
+            matchAnalysisData();
+            this.timer && clearInterval(this.timer);
+            this.timer = setInterval(matchAnalysisData, 30000);
         },
         // 比赛预测
         getMatchPredicted(matchId) {
-            const data = {
-                matchId,
+            // 30s 刷新
+            let matchPredictedData = () => {
+                const data = {
+                    matchId,
+                };
+                matchPredicted(data).then((res) => {
+                    this.matchData = res;
+                    this.headerTitle = `${res.matchInfo.homeName} vs ${res.matchInfo.awayName}`;
+                });
             };
-            matchPredicted(data).then((res) => {
-                this.matchData = res;
-                this.headerTitle = `${res.matchInfo.homeName} vs ${res.matchInfo.awayName}`;
-            });
+            matchPredictedData();
+            this.timer && clearInterval(this.timer);
+            this.timer = setInterval(matchPredictedData, 30000);
         },
     },
 };
