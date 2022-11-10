@@ -19,8 +19,8 @@
                         <div class="vs-team-name">{{bannerData&&bannerData.awayName}}</div>
                     </div>
                     <div class="flag">
-                        <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :margin="`0 ${$vw(12)} 0 0`" :img="bannerData&&bannerData.homeFlag" />
-                        <national-flag :width="`${$vw(28)}`" :height="`${$vw(28)}`" :img="bannerData&&bannerData.awayFlag" />
+                        <national-flag :width="`${innerWidth<600?$vw(28):$vw(48)}`" :height="`${innerWidth<600?$vw(28):$vw(48)}`" :margin="`0 ${innerWidth<600?$vw(12):$vw(16)} 0 0`" :img="bannerData&&bannerData.homeFlag" />
+                        <national-flag :width="`${innerWidth<600?$vw(28):$vw(48)}`" :height="`${innerWidth<600?$vw(28):$vw(48)}`" :img="bannerData&&bannerData.awayFlag" />
                     </div>
                     <div class="watching">{{$lang.home.watch}}</div>
                     <div class="des">
@@ -85,6 +85,7 @@ export default {
     },
     data() {
         return {
+            innerWidth: window.innerWidth, //窗口尺寸
             navList: [
                 {
                     label: this.$lang.home.schedule,
@@ -374,7 +375,6 @@ export default {
 }
 @media screen and(min-device-width:600px) {
     .home {
-        height: vwPad(80);
         background: #000000;
         border-bottom: 1px solid rgba(255, 255, 255, 0.12);
         padding: 0 calc((100% - #{vwPad(1024)}) / 2);
@@ -478,7 +478,7 @@ export default {
                     .des {
                         display: flex;
                         justify-content: end;
-                        transform: scale(0.65306);
+                        transform: scale(0.74);
                         transform-origin: 100% 50%;
                         @mixin des-icon($url) {
                             margin-right: vwPad(4);
