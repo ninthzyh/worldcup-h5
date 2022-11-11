@@ -12,7 +12,6 @@ import Squad from "./squad";
 import Event from "./event";
 import TechnologyStatistic from "./technologyStatistic";
 import OverviewStatList from "./overviewStatList";
-import json from "./matchdata.json";
 import Advertisement from "../components/advertisement";
 
 export default {
@@ -26,30 +25,22 @@ export default {
     },
     computed: {
         overviewStatList() {
-            return this.matchDataList
-                ? this.matchDataList.overviewStatList
+            return this.matchData
+                ? this.matchData.overviewStatList
                 : [];
         },
         detailStatList() {
-            return this.matchDataList ? this.matchDataList.detailStatList : [];
+            return this.matchData ? this.matchData.detailStatList : [];
         },
         eventList() {
-            return this.matchDataList ? this.matchDataList.eventList : [];
+            return this.matchData ? this.matchData.eventList : [];
         },
         lineupMap() {
-            return this.matchDataList ? this.matchDataList.lineupMap : {};
+            return this.matchData ? this.matchData.lineupMap : {};
         },
         matchInfo() {
-            return this.matchDataList ? this.matchDataList.matchInfo : {};
+            return this.matchData ? this.matchData.matchInfo : {};
         },
-    },
-    mounted() {
-        this.matchDataList = json;
-    },
-    data() {
-        return {
-            matchDataList: {},
-        };
     },
 };
 </script>

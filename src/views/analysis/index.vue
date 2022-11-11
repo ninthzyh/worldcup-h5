@@ -18,6 +18,7 @@
 <script>
 import AnalysisTab from "./components/analysisTab";
 import { matchAnalysis, matchPredicted } from "@/api/analysis";
+import {matchData} from "../../api/analysis";
 export default {
     components: {
         AnalysisTab,
@@ -44,6 +45,7 @@ export default {
         matchIdEvent(e) {
             switch (e.type) {
                 case "matchData":
+                    this.getMatchData(e.matchId);
                     break;
                 case "ananlysis":
                     this.getMatchAnalysis(e.matchId);
@@ -86,6 +88,21 @@ export default {
             this.timer && clearInterval(this.timer);
             this.timer = setInterval(matchPredictedData, 30000);
         },
+        getMatchData(matchId){
+          // 30s 刷新
+          let matchPredictedData = () => {
+            const data = {
+              matchId,
+            };
+            matchData(data).then((res) => {
+              this.matchData = res;
+              this.headerTitle = `${res.matchInfo.homeName} vs ${res.matchInfo.awayName}`;
+            });
+          };
+          matchPredictedData();
+          this.timer && clearInterval(this.timer);
+          this.timer = setInterval(matchPredictedData, 30000);
+        }
     },
 };
 </script>

@@ -1,6 +1,5 @@
 import axios from "axios";
 
-console.log(process.env)
 axios.defaults.headers["Content-Type"] = "application/json;";
 const isCache = process.env.VUE_APP_ISCACHE ? JSON.parse(process.env.VUE_APP_ISCACHE) : false;
 const cacheBasePath = process.env.VUE_APP_CACHEAPIBASEPATH ? process.env.VUE_APP_CACHEAPIBASEPATH : '';
@@ -9,7 +8,6 @@ const basePath = isCache ? cacheBasePath : notCacheBasePath;
 
 let httpBase;
 
-console.log(process.env)
 if (
   process.env.NODE_ENV === "development" &&
   process.env.VUE_APP_API === "development"
@@ -20,14 +18,12 @@ if (
   process.env.NODE_ENV === "production" &&
   process.env.VUE_APP_API === "development"
 ) {
-  // httpBase = "https://stag-cctv-wno.mixtmt.com/prov";
   httpBase =
     process.env.VUE_APP_ISCACHE === "true"
       ? process.env.VUE_APP_ISCACHEAPIURL
       : process.env.VUE_APP_APIURL;
   console.log("测试打包");
 } else {
-  // httpBase = "https://stag-cctv-wno.mixtmt.com/prov";
   httpBase =
     process.env.VUE_APP_ISCACHE === "true"
       ? process.env.VUE_APP_ISCACHEAPIURL
@@ -60,7 +56,7 @@ service.interceptors.request.use(
           }
         }
       }
-      url = url.slice(0, -1);
+      url = url+ `language=${window.lang}`;
       config.params = {};
       config.url = url;
     }
@@ -75,7 +71,6 @@ service.interceptors.request.use(
 // 响应拦截器
 service.interceptors.response.use(
   (res) => {
-    console.log(1111, res);
     // 未设置状态码则默认成功状态
     const code = res.data.code || 200;
     // 获取错误信息

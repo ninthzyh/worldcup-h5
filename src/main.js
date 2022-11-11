@@ -4,7 +4,6 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import './assets/vw.scss';
-console.log(window.innerWidth)
 Vue.config.productionTip = false
 Vue.prototype.$vw = function (px, needVw) {
   if(window.innerWidth>600 && !needVw){
@@ -35,7 +34,7 @@ if(search && search[1]) {
   })
 }
 Vue.prototype.$lang = require(`./utils/language-${paramsMap.lang === 'en' ? 'en' : 'cn'}.json`)
-
+window.lang = paramsMap.lang === 'en' ? 'en-gb' : 'zh-cn'
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

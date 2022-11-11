@@ -7,12 +7,12 @@
             <Score :cardList="predictedList.scorePredicted"></Score>
             <goal-number :cardList="predictedList.goalPredicted"></goal-number>
             <both-score :cardList="predictedList.bothGoal"></both-score>
-<!--            <div class="pay" v-if="!predictedList.isPaid">-->
-<!--                <div class="lock">-->
-<!--                    <div class="lock-icon"></div>-->
-<!--                </div>-->
-<!--                <div class="pay-text">{{$lang.forecast.pay}}</div>-->
-<!--            </div>-->
+            <div class="pay" v-if="!predictedList.isPaid">
+                <div class="lock">
+                    <div class="lock-icon"></div>
+                </div>
+                <div class="pay-text">{{$lang.forecast.pay}}</div>
+            </div>
         </div>
     </div>
 </template>
