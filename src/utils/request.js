@@ -2,10 +2,10 @@ import axios from "axios";
 
 console.log(process.env)
 axios.defaults.headers["Content-Type"] = "application/json;";
-const isCache = process.env.VUE_APP_ISCACHE?JSON.parse(process.env.VUE_APP_ISCACHE):false;
-const cacheBasePath = process.env.VUE_APP_CACHEAPIBASEPATH?process.env.VUE_APP_CACHEAPIBASEPATH:'';
-const notCacheBasePath = process.env.VUE_APP_APIBASEPATH?process.env.VUE_APP_APIBASEPATH:'';
-const basePath = isCache?cacheBasePath:notCacheBasePath;
+const isCache = process.env.VUE_APP_ISCACHE ? JSON.parse(process.env.VUE_APP_ISCACHE) : false;
+const cacheBasePath = process.env.VUE_APP_CACHEAPIBASEPATH ? process.env.VUE_APP_CACHEAPIBASEPATH : '';
+const notCacheBasePath = process.env.VUE_APP_APIBASEPATH ? process.env.VUE_APP_APIBASEPATH : '';
+const basePath = isCache ? cacheBasePath : notCacheBasePath;
 
 let httpBase;
 
@@ -75,6 +75,7 @@ service.interceptors.request.use(
 // 响应拦截器
 service.interceptors.response.use(
   (res) => {
+    console.log(1111, res);
     // 未设置状态码则默认成功状态
     const code = res.data.code || 200;
     // 获取错误信息
@@ -84,7 +85,7 @@ service.interceptors.response.use(
     if (code !== 200) {
       return Promise.reject("业务错误");
     } else {
-      return res.data;
+      return res.data.data;
     }
   },
   (error) => {

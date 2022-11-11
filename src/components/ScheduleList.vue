@@ -31,7 +31,7 @@ export default {
     props: {
         dataList: {
             type: Array,
-            default: [],
+            default: () => [],
         },
     },
     components: {
