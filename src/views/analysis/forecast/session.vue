@@ -13,22 +13,22 @@
           <div class="start-time-content">
             <div class="start-number">
               <div class="time-label">{{$lang.forecast.days}}</div>
-              <div class="time-num">01</div>
+              <div class="time-num">{{ days }}</div>
             </div>
             <div class="colon">:</div>
             <div class="start-number">
               <div class="time-label">{{$lang.forecast.hours}}</div>
-              <div class="time-num">12</div>
+              <div class="time-num">{{ hours }}</div>
             </div>
             <div class="colon">:</div>
             <div class="start-number">
               <div class="time-label">{{$lang.forecast.minutes}}</div>
-              <div class="time-num">56</div>
+              <div class="time-num">{{minutes}}</div>
             </div>
             <div class="colon">:</div>
             <div class="start-number">
               <div class="time-label">{{$lang.forecast.seconds}}</div>
-              <div class="time-num">46</div>
+              <div class="time-num">{{seconds}}</div>
             </div>
           </div>
         </div>
@@ -39,8 +39,40 @@
 <script>
 import ForecastCard from "../components/forecastCard";
 export default {
-  props:['isPaid'],
+  props:['isPaid','matchInfo'],
+  data(){
+    return{
+      now:new Date(),
+      interval: null
+    }
+  },
   components: { ForecastCard },
+  computed:{
+    date(){
+      const startTime = new Date(1668211200000);
+      return startTime - this.now
+    },
+    days(){
+      return Math.floor(this.date/(1000*60*60*24))
+    },
+    hours(){
+      return Math.floor(this.date/(1000*60*60)%24)
+    },
+    minutes(){
+      return Math.floor(this.date/(1000*60)%60)
+    },
+    seconds(){
+      return Math.floor(this.date/1000%60)
+    },
+  },
+  mounted() {
+    this.interval = setInterval(()=>{
+      this.now = new Date()
+    },1000)
+  },
+  beforeDestroy() {
+    clearInterval(this.interval)
+  }
 };
 </script>
 <style lang="scss" scoped>
@@ -97,6 +129,7 @@ export default {
       padding-bottom: vw(16);
       .start-number {
         text-align: center;
+        flex: 0 0 vw(30);
         .time-label {
           padding-bottom: vw(15);
           line-height: 100.02%;

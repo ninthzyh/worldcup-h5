@@ -8,10 +8,11 @@ export const matchAnalysis = (params) => {
   })
 }
 // 智能预测
-export const matchPredicted = (params) => {
-  return request({
-    url: '/api/match/predicted',
-    method: 'GET',
-    params
-  })
+export const matchPredicted = async (params) => {
+  // return request({
+  //   url: '/api/match/predicted',
+  //   method: 'GET',
+  //   params
+  // })
+  return require('../json/matchPredicted.json')
 }
