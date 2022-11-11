@@ -7,12 +7,12 @@
             <Score :cardList="predictedList.scorePredicted"></Score>
             <goal-number :cardList="predictedList.goalPredicted"></goal-number>
             <both-score :cardList="predictedList.bothGoal"></both-score>
-            <div class="pay" v-if="!predictedList.isPaid">
-                <div class="lock">
-                    <div class="lock-icon"></div>
-                </div>
-                <div class="pay-text">{{$lang.forecast.pay}}</div>
-            </div>
+<!--            <div class="pay" v-if="!predictedList.isPaid">-->
+<!--                <div class="lock">-->
+<!--                    <div class="lock-icon"></div>-->
+<!--                </div>-->
+<!--                <div class="pay-text">{{$lang.forecast.pay}}</div>-->
+<!--            </div>-->
         </div>
     </div>
 </template>
@@ -62,45 +62,90 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "~@/assets/vw";
-.forecast {
+@media screen and (max-device-width: 600px) {
+  .forecast {
     height: 100%;
     // padding: 0 vw(32);
 
     .is-pay {
-        position: relative;
-        .pay {
-            position: absolute;
-            width: calc(100% + #{vw(64)});
-            height: 100%;
-            top: 0;
-            left: vw(-32);
-            background: rgba(0, 0, 0, 0.04);
-            backdrop-filter: blur(vw(5));
-            z-index: 22;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: vw(40);
-            .lock {
-                background: #0c0e11;
-                border: vw(1) solid rgba(255, 255, 255, 0.12);
-                border-radius: 50%;
-                display: inline-block;
-                padding: vw(8);
-                margin-bottom: vw(8);
-                .lock-icon {
-                    height: vw(16);
-                    width: vw(16);
-                    background: url("~@/assets/images/lock.svg") no-repeat
-                        center/contain;
-                }
-            }
-            .pay-text {
-                font-weight: 400;
-                font-size: vw(12);
-                line-height: vw(13);
-            }
+      position: relative;
+      .pay {
+        position: absolute;
+        width: calc(100% + #{vw(64)});
+        height: 100%;
+        top: 0;
+        left: vw(-32);
+        background: rgba(0, 0, 0, 0.04);
+        backdrop-filter: blur(vw(5));
+        z-index: 22;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: vw(40);
+        .lock {
+          background: #0c0e11;
+          border: vw(1) solid rgba(255, 255, 255, 0.12);
+          border-radius: 50%;
+          display: inline-block;
+          padding: vw(8);
+          margin-bottom: vw(8);
+          .lock-icon {
+            height: vw(16);
+            width: vw(16);
+            background: url("~@/assets/images/lock.svg") no-repeat
+            center/contain;
+          }
         }
+        .pay-text {
+          font-weight: 400;
+          font-size: vw(12);
+          line-height: vw(13);
+        }
+      }
     }
+  }
+}
+@media screen and (min-device-width: 600px) {
+  .forecast {
+    height: 100%;
+    // padding: 0 vw(32);
+    padding: 0 calc((100% - #{vwPad(1024)})/2);
+    .is-pay {
+      position: relative;
+      .pay {
+        position: absolute;
+        width: calc(100% + #{vwPad(64)});
+        height: 100%;
+        top: 0;
+        left: vwPad(-32);
+        background: rgba(0, 0, 0, 0.04);
+        backdrop-filter: blur(vwPad(5));
+        z-index: 22;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: vwPad(40);
+        .lock {
+          background: #0c0e11;
+          border: vwPad(1) solid rgba(255, 255, 255, 0.12);
+          border-radius: 50%;
+          display: inline-block;
+          padding: vwPad(8);
+          margin-bottom: vwPad(8);
+          .lock-icon {
+            height: vwPad(16);
+            width: vwPad(16);
+            background: url("~@/assets/images/lock.svg") no-repeat
+            center/contain;
+          }
+        }
+        .pay-text {
+          font-weight: 400;
+          font-size: vwPad(12);
+          line-height: vwPad(13);
+        }
+      }
+    }
+  }
 }
 </style>

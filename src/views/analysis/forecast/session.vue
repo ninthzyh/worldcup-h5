@@ -1,6 +1,6 @@
 <template>
   <div class="session">
-    <ForecastCard :title="`${$lang.forecast.predictionsMatch}`">
+    <ForecastCard :width="$vw(311)" :title="`${$lang.forecast.predictionsMatch}`">
       <template v-slot:title-right>
         <div class="title-icon">
           <div :class="`${isPaid?'lock-icon':'not-lock-icon'}`"></div>
@@ -77,75 +77,154 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "~@/assets/vw";
-.session {
-  // font-family: "PingFang SC";
-  font-style: normal;
-  margin-bottom: vw(16);
-  .title-icon {
-    background: rgba(255, 255, 255, 0.12);
-    border-radius: vw(28);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: vw(2) 0;
-    padding: 0 vw(8);
-    @mixin lock-common($url){
-      height: vw(16);
-      width: vw(16);
-      background: url($url) no-repeat
-        center/contain;
-      margin-right: vw(4);
-
-    }
-    .lock-icon {
-      @include lock-common("~@/assets/images/lock.svg")
-    }
-    .not-lock-icon {
-      @include lock-common("~@/assets/images/not-lock.svg")
-    }
-    .lock-text {
-      font-weight: 400;
-      font-size: vw(12);
-      line-height: vw(24);
-      color: rgba(255, 255, 255, 0.87);
-    }
-  }
-  .session-content {
-    padding: 0 vw(16);
-    font-size: vw(12);
-    font-weight: 400;
-    .start-time-title {
-      padding: vw(16) 0;
-      border-top: vw(1) solid rgba(255, 255, 255, 0.12);
-      // font-family: "PingFang SC";
-      font-style: normal;
-      line-height: 100.02%;
-      text-align: center;
-    }
-    .start-time-content {
+@media screen and (max-device-width: 600px) {
+  .session {
+    // font-family: "PingFang SC";
+    font-style: normal;
+    margin-bottom: vw(16);
+    .title-icon {
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: vw(28);
       display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      padding-bottom: vw(16);
-      .start-number {
+      align-items: center;
+      justify-content: space-between;
+      margin: vw(2) 0;
+      padding: 0 vw(8);
+      @mixin lock-common($url){
+        height: vw(16);
+        width: vw(16);
+        background: url($url) no-repeat
+        center/contain;
+        margin-right: vw(4);
+
+      }
+      .lock-icon {
+        @include lock-common("~@/assets/images/lock.svg")
+      }
+      .not-lock-icon {
+        @include lock-common("~@/assets/images/not-lock.svg")
+      }
+      .lock-text {
+        font-weight: 400;
+        font-size: vw(12);
+        line-height: vw(24);
+        color: rgba(255, 255, 255, 0.87);
+      }
+    }
+    .session-content {
+      padding: 0 vw(16);
+      font-size: vw(12);
+      font-weight: 400;
+      .start-time-title {
+        padding: vw(16) 0;
+        border-top: vw(1) solid rgba(255, 255, 255, 0.12);
+        // font-family: "PingFang SC";
+        font-style: normal;
+        line-height: 100.02%;
         text-align: center;
-        flex: 0 0 vw(30);
-        .time-label {
-          padding-bottom: vw(15);
-          line-height: 100.02%;
-          color: rgba(255, 255, 255, 0.7);
+      }
+      .start-time-content {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: vw(16);
+        .start-number {
+          text-align: center;
+          flex: 0 0 vw(30);
+          .time-label {
+            padding-bottom: vw(15);
+            line-height: 100.02%;
+            color: rgba(255, 255, 255, 0.7);
+          }
+          .time-num {
+            font-family: "Sahar";
+            font-weight: 700;
+            font-size: vw(24);
+          }
         }
-        .time-num {
+        .colon {
+          padding: 0 vw(16);
           font-family: "Sahar";
           font-weight: 700;
           font-size: vw(24);
         }
       }
-      .colon {
-        padding: 0 vw(16);
-        font-family: "Sahar";
+    }
+  }
+}
+@media screen and (min-device-width: 600px) {
+  .session {
+    display: inline-block;
+    vertical-align: top;
+    // font-family: "PingFang SC";
+    font-style: normal;
+    margin-bottom: vwPad(16);
+    .title-icon {
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: vwPad(28);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: vwPad(2) 0;
+      padding: 0 vwPad(8);
+      @mixin lock-common($url){
+        height: vwPad(16);
+        width: vwPad(16);
+        background: url($url) no-repeat
+        center/contain;
+        margin-right: vwPad(4);
+
+      }
+      .lock-icon {
+        @include lock-common("~@/assets/images/lock.svg")
+      }
+      .not-lock-icon {
+        @include lock-common("~@/assets/images/not-lock.svg")
+      }
+      .lock-text {
+        font-weight: 400;
+        font-size: vwPad(12);
+        line-height: vwPad(24);
+        color: rgba(255, 255, 255, 0.87);
+      }
+    }
+    .session-content {
+      padding: 0 vwPad(16);
+      font-size: vwPad(12);
+      font-weight: 400;
+      .start-time-title {
+        padding: vwPad(16) 0;
+        border-top: vwPad(1) solid rgba(255, 255, 255, 0.12);
+        // font-family: "PingFang SC";
+        font-style: normal;
+        line-height: 100.02%;
+        text-align: center;
+      }
+      .start-time-content {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: vwPad(16);
+        .start-number {
+          text-align: center;
+          flex: 0 0 vwPad(30);
+          .time-label {
+            padding-bottom: vwPad(15);
+            line-height: 100.02%;
+            color: rgba(255, 255, 255, 0.7);
+          }
+          .time-num {
+            font-family: "Sahar";
+            font-weight: 700;
+            font-size: vwPad(24);
+          }
+        }
+        .colon {
+          padding: 0 vwPad(16);
+          font-family: "Sahar";
           font-weight: 700;
-          font-size: vw(24);
+          font-size: vwPad(24);
+        }
       }
     }
   }
